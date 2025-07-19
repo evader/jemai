@@ -1,4 +1,5 @@
 # == JEMAI AGI OS ULTRA GODMODE ==
+#INSERT V
 
 import sys, os, subprocess, time, datetime, platform, json, socket, shutil, re, uuid, difflib, base64, threading
 from flask import Flask, request, jsonify, render_template_string, redirect
