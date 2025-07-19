@@ -1,1 +1,0 @@
-\n\n    Or to search for base64-encoded terms, or use other special triggers.\n\n- **Shell/Scripts:** You can ask me to run a Windows (or bash) shell command by using:\n\n

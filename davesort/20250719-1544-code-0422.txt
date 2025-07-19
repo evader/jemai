@@ -1,1 +1,0 @@
-nano fix_lt_py.sh

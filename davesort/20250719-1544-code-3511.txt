@@ -1,1 +1,0 @@
-\n   docker container prune\n

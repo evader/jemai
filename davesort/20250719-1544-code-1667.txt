@@ -1,1 +1,0 @@
-\n/home/jemai/venv/bin/python /app/jemai_core.py\n

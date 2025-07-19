@@ -1,1 +1,0 @@
-\ngrep -i \"running on\" /home/jemai/synapz_core/synapz_core.log\ntail -40 /home/jemai/synapz_core/synapz_core.log\n

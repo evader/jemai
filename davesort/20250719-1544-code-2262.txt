@@ -1,1 +1,0 @@
-\nollama pull llama3:8b\n

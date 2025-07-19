@@ -1,1 +1,0 @@
-\n   nano ~/bin/jemai\n

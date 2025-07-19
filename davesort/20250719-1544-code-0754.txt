@@ -1,1 +1,0 @@
-\n   chmod +x quick_ollama_patch.sh\n   ./quick_ollama_patch.sh\n

@@ -1,1 +1,0 @@
-\n   docker compose down code-server\n   docker compose up -d code-server\n

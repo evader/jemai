@@ -1,1 +1,0 @@
-\nENV MY_VAR=\"value\"\n

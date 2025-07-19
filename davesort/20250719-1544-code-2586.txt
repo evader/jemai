@@ -1,1 +1,0 @@
-\ndocker compose -f /home/jemai/ai_offline_setup_downloads/docker_setup/docker-compose.yml up -d\n

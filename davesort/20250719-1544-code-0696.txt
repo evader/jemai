@@ -1,1 +1,0 @@
-\ndocker system df\ndocker volume ls\n

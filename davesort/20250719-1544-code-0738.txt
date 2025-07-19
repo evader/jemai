@@ -1,1 +1,0 @@
-\ndocker volume ls | grep ollama\n

@@ -1,1 +1,0 @@
-\necho \"If you want to enforce stricter login or use a different model, just edit:\"\necho \"    sudo nano \\$DATA_VOL/config.json\"\nEOF\n\nchmod +x ~/setup_openwebui_gpt4.sh\necho \"[INFO] Ready. Now run:\"\necho \"      bash ~/setup_openwebui_gpt4.sh\"\n

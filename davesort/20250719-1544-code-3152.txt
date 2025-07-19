@@ -1,1 +1,0 @@
-\n\n4. **In another terminal, trigger a relay:**\n

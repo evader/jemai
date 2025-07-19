@@ -1,4 +1,0 @@
-# In your current terminal, DO NOT run this here.
-# Go to VSCode menu: Terminal > New Terminal (or Ctrl+Shift+` (backtick))
-# In the NEW terminal, execute the following:
-cd /opt/ai_offline_setup/docker_setup

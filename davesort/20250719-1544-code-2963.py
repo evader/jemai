@@ -1,1 +1,0 @@
-\ndef prevent_manual_launch():\n    ppid = os.getppid()\n    try:\n        parent = psutil.Process(ppid)\n        if parent.name() not in [\"systemd\", \"python3\"]:\n            print(\"\u274c Synapz Core must be started by systemd. Use: sudo systemctl restart synapz_core\")\n            sys.exit(1)\n

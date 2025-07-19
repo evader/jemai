@@ -1,1 +1,0 @@
-\n\n---\n\n### How to use:\n\n1. Save the above to a file, e.g. `/home/jemai/jemai_backup.sh`\n2. Make it executable:\n\n

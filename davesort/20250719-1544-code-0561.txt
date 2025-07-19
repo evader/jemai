@@ -1,2 +1,0 @@
-cd /opt/jemai_prod/docker_setup
-sudo docker compose up -d --build

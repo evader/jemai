@@ -1,1 +1,0 @@
-\nls -l /home/jemai/synapz_core/\n

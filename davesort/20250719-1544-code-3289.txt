@@ -1,1 +1,0 @@
-\n     sudo ln -s /etc/nginx/sites-available/jemai.local /etc/nginx/sites-enabled/\n

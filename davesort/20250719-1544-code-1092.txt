@@ -1,1 +1,0 @@
-\n   source ~/.synapz_presence.sh\n

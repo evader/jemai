@@ -1,1 +1,0 @@
-\n   docker logs portainer\n

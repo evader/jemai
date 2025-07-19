@@ -1,1 +1,0 @@
-\njupall    # containers up\njrst      # restart core\njlogs     # show logs\njtest     # curl system status\n

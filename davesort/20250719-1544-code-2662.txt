@@ -1,1 +1,0 @@
-\nsudo systemctl daemon-reload\nsudo systemctl enable synapz-core\nsudo systemctl start synapz-core\n

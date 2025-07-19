@@ -1,1 +1,0 @@
-\n\nbecause it\u2019s a websocket event, not a REST endpoint.\n\nInstead, run a simple Python script (or your existing `test_rag_query.py`) that connects over SocketIO and emits the `query_rag` event like this example:\n\n

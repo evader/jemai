@@ -1,1 +1,0 @@
-\ngrep route /home/jemai/synapz_core/*.py\n

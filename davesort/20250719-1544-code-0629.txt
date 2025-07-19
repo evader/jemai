@@ -1,1 +1,0 @@
-\n  ls -lh > VERSIONS.txt\n

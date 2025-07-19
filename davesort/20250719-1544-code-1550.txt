@@ -1,1 +1,0 @@
-\npwd\nls -l /opt\nls -l /opt/jemai_prod\n

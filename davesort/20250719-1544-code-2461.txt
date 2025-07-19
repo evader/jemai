@@ -1,1 +1,0 @@
-\ncurl http://localhost:11436/notes\n

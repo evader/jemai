@@ -1,1 +1,0 @@
-\n{\"response\":\"System status normal...\" }  # or your configured personality\n

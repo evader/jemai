@@ -1,1 +1,0 @@
-\nsudo lsof -i -nP | grep 11438\n

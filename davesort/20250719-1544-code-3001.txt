@@ -1,1 +1,0 @@
-\nThis will capture everything in your main project directory. You can then paste the contents of `synapz_core_tree.txt` here.\n\n---\n\n### **2. Show only folder structure, not all file details:**\n

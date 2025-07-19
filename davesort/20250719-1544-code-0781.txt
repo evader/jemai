@@ -1,1 +1,0 @@
-\n  /usr/share/ollama/.ollama/models/\n    \u251c\u2500\u2500 blobs/\n    \u2502     \u2514\u2500\u2500 sha256-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n    \u2514\u2500\u2500 manifests/\n          \u2514\u2500\u2500 my-model-name.ollama\n

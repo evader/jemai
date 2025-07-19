@@ -1,1 +1,0 @@
-\n   code-server --cert=cert.pem --cert-key=key.pem\n

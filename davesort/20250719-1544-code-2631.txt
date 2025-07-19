@@ -1,1 +1,0 @@
-\ndocker compose up -d open-webui\n

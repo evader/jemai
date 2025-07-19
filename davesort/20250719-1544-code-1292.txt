@@ -1,1 +1,0 @@
-\necho $PATH | tr ':' '\\n' | grep \"$HOME/bin\"\n

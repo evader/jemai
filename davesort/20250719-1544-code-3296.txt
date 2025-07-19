@@ -1,1 +1,0 @@
-\nsudo rm /var/lib/dpkg/lock-frontend\nsudo rm /var/cache/apt/archives/lock\nsudo dpkg --configure -a\n

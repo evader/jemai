@@ -1,1 +1,0 @@
-\n4. To send a command to Jemai, create `~/synapz_core/relay_command.json` with:\n

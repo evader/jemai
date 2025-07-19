@@ -1,1 +1,0 @@
-\n\nSuppose it\u2019s `/usr/bin/docker`. Then your `ExecStart` in systemd should be:\n\n

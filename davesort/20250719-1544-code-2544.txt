@@ -1,1 +1,0 @@
-\ndocker ps | grep ollama\n

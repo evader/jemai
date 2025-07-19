@@ -1,8 +1,0 @@
-ollama:
-    image: ollama/ollama:latest
-    container_name: jemai_ollama
-    # ... other configurations ...
-    volumes:
-      - ollama_data:/root/.ollama # This is Ollama's primary data volume (for internally pulled models)
-      - "${OFFLINE_SETUP_DIR}/ai_models:/root/.ollama/models_external:ro" # <--- THIS IS THE MAGIC LINE
-    # ... rest ...

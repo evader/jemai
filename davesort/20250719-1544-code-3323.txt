@@ -1,1 +1,0 @@
-\ndocker run -e MY_VAR=\"value\" your_image_name\n

@@ -1,1 +1,0 @@
-\nfrom TTS.api import TTS\nimport sys\n\n# Load model\ntts = TTS(model_name=\"tts_models/multilingual/multi-dataset/xtts_v2\", gpu=True)\n\ntext = sys.argv[1] if len(sys.argv) > 1 else \"Hello, this is Synapz Core. Voice activated.\"\ntts.tts_to_file(text=text, file_path=\"output.wav\")\n

@@ -1,1 +1,0 @@
-\n# Launch Docker Ollama using local compose file\nOLYAML=\"$CORE_DIR/docker/ollama-compose.yml\"\nif [ -f \"$OLYAML\" ]; then\n  echo \"\ud83d\udd04 Starting Ollama via Docker Compose...\"\n  docker compose -f \"$OLYAML\" up -d\nelse\n  echo \"\u274c Missing $OLYAML. Cannot launch Ollama.\"\nfi\n

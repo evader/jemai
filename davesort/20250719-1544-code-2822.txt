@@ -1,1 +1,0 @@
-\ndup       # Should start your Docker stack\nscreb     # Restart Synapz Core service\nsclog     # Show Synapz Core logs\n

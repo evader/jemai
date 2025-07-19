@@ -1,1 +1,0 @@
-\ndocker system prune -af\ndocker volume prune -f\nsudo apt-get clean\nsudo rm -rf /var/cache/apt/archives/*\nsudo journalctl --vacuum-time=2d\nsudo rm -rf /var/log/*.gz /var/log/*.[0-9]\nrm -rf ~/.cache/*\nrm -rf ~/.local/share/Trash/*\n

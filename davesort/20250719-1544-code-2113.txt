@@ -1,1 +1,0 @@
-\n\nThen query RAG with HTTP POST JSON:\n\n

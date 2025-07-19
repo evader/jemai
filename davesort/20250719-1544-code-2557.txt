@@ -1,1 +1,0 @@
-\ndocker compose -f ~/synapz_core/docker/docker-compose.yml up -d\n

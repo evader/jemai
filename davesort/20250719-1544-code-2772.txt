@@ -1,1 +1,0 @@
-\nStandardOutput=append:/var/log/synapz_core.log\nStandardError=append:/var/log/synapz_core.err\n

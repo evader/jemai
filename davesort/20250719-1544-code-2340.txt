@@ -1,1 +1,0 @@
-\nPOST /agent/docker\n{\n  \"command\": \"list\"\n}\n

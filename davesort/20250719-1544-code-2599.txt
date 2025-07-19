@@ -1,1 +1,0 @@
-\ngrep 11434 /home/jemai/ai_offline_setup_downloads/docker_setup/docker-compose.yml\n

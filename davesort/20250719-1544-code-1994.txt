@@ -1,1 +1,0 @@
-\n\n---\n\n### How to use:\n\n1. Save as `setup.sh` anywhere you want (preferably empty folder or `$HOME`).\n2. Run:\n

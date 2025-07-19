@@ -1,1 +1,0 @@
-\n# Already in venv\npython3 synapz_core.py\n

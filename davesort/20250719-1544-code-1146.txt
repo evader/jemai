@@ -1,1 +1,0 @@
-\n  sed -i 's|api/v1/status|status|g' ~/.synapz_presence.sh\n  source ~/.bashrc\n

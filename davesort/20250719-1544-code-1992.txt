@@ -1,1 +1,0 @@
-\nand look for `^[[` or other non-ASCII chars.\n\n4. **Try a minimal test curl after restarting the container interactively** to isolate if the issue is RAG init or something else:  \n

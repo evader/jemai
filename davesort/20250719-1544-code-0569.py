@@ -1,1 +1,0 @@
-\nMEMORY_API = \"http://localhost:8089\"\n

@@ -1,1 +1,0 @@
-or any extra code block delimiter and remove it.\n   - Ensure that the Python code follows the correct format without any stray characters.\n\n3. **Save & Exit**:\n   Press `Ctrl + X`, then press `Y` to confirm changes, and `Enter` to save.\n\n4. **Retry**:\n   After fixing the file, restart Synapz Core again:\n

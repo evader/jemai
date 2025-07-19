@@ -1,1 +1,0 @@
-\nNAME           ID          SIZE   MODIFIED\nllama2:latest  XXXXXXXX    3.8GB  <date>\n

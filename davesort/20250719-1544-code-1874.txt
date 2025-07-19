@@ -1,1 +1,0 @@
-\n\nOR\n\n2. Change Dockerfile and docker-compose to map accordingly (e.g. expose 5001 and map ports `5000:5001`).\n\n---\n\n### For simplicity, I recommend updating `lt.py` to use port 5000, then your Dockerfile as above is perfect.\n\nThen your docker-compose can map host port 5000 to container port 5000 like this:\n\n

@@ -1,1 +1,0 @@
-\necho \"STEP 1: Starting\"\n# ...step 1 code...\necho \"STEP 2: After Docker install\"\n# ...step 2 code...\n

@@ -1,1 +1,0 @@
-\nfind ~ -maxdepth 2 -type d \\( -name \"synapz*\" -o -name \"jemai*\" -o -name \"rag*\" \\) | while read dir; do\n  echo \"--- $dir ---\"\n  ls \"$dir\"\n  if [ -f \"$dir/requirements.txt\" ]; then\n    echo \"requirements.txt found in $dir\"\n  fi\n  if ls \"$dir\"/*.py 1>/dev/null 2>&1; then\n    echo \"Python files found:\"\n    ls \"$dir\"/*.py\n  fi\n  echo\ndone\n

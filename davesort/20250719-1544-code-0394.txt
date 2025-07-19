@@ -1,1 +1,0 @@
-\nAdd-Type \u2013AssemblyName System.Speech\n(New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak(\"Hello Dave, this is your AI speaking\")\n

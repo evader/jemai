@@ -1,1 +1,0 @@
-conda deactivate # Deactivate base environment if automatically activated

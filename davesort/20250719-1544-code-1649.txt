@@ -1,1 +1,0 @@
-\ndocker logs jemai_prod_core --tail=200\n

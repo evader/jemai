@@ -1,1 +1,0 @@
-\necho '--- S Y N A P Z ---'\n

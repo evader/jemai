@@ -1,1 +1,0 @@
-\n   - If you get a JSON response right away:  \n     API is good, relay should also succeed.\n   - If curl *also* hangs for 10s and then dies:  \n     API is hanging on incoming POST.\n\n2. **Try a GET:**\n

@@ -1,1 +1,0 @@
-\n\n3. **(Optional) Try a GET to `/chat` just to see the error:**\n

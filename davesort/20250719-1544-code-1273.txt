@@ -1,1 +1,0 @@
-\n   unset -f jemai lucky\n   . ~/.bash_aliases\n

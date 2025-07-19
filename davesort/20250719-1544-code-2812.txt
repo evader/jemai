@@ -1,1 +1,0 @@
-\nif [ -f ~/.bashrc ]; then\n    . ~/.bashrc\nfi\n

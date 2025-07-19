@@ -1,1 +1,0 @@
-\ndocker compose run --rm jemai_core\n

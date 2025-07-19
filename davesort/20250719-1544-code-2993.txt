@@ -1,1 +1,0 @@
-\n\n---\n\n## 3. Bash Aliases (~/.bash_aliases)\n\n

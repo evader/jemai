@@ -1,1 +1,0 @@
-\nuvicorn jemai_memory_api_v1.0:app --reload --host 0.0.0.0 --port 8089\n

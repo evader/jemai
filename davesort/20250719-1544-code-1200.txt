@@ -1,1 +1,0 @@
-\nfunction synapz_core_status() {\n  # ...stuff...\n  if [[ \"$api_status\" == *\"status\"* ]]; then\n    # live\n  else\n    export PS1=\"\\[\\033[1;31m\\](SYNAPZ OFF!)\\[\\033[0m\\] $PS1\"\n  fi\n}\n

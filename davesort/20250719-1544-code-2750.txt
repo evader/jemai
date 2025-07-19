@@ -1,1 +1,0 @@
-\nsource ~/synapz_core/venv/bin/activate\npip install --upgrade langchain langchain-community langchain-ollama sentence-transformers\n

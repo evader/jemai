@@ -1,1 +1,0 @@
-\nLOG_FILE=\"$HOME/synapz_core_setup.log\"\n

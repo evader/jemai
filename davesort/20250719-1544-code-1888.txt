@@ -1,1 +1,0 @@
-\n\nLook for logs confirming \u201cSynapz RAG Brain Online\u201d or any errors.\n\n---\n\n### 4. **Access the frontend**\n\nOpen your browser to:\n\n

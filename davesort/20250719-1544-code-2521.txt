@@ -1,1 +1,0 @@
-\npython3 synapz_rag_ingest.py --file imports/chatgpt_migration_2025_07.txt\n

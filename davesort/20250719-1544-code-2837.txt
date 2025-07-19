@@ -1,1 +1,0 @@
-\njupall   # start all containers\njrst     # restart Synapz Core cleanly\njlogs    # tail logs and verify query works again\n

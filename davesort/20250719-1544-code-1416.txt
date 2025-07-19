@@ -1,1 +1,0 @@
-\ndocker ps -a --filter \"ancestor=ghcr.io/open-webui/open-webui:main\" -q | xargs -r docker rm -f\n

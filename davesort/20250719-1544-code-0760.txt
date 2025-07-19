@@ -1,1 +1,0 @@
-\n   cd ~\n   nano ollama_model_shotgun.sh\n

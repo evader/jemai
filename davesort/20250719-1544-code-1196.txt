@@ -1,1 +1,0 @@
-\ngrep -i 'banner' ~/.bashrc ~/.bash_aliases ~/.synapz_presence.sh 2>/dev/null\ngrep -i 'synapz' ~/.bashrc ~/.bash_aliases ~/.synapz_presence.sh 2>/dev/null\n

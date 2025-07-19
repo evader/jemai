@@ -1,1 +1,0 @@
-\n{ \"response\": \"I am Synapz Core...\" }\n

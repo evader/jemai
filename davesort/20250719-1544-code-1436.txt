@@ -1,1 +1,0 @@
-\ndocker-pr  PID  root  ...  TCP *:11434 (LISTEN)\n

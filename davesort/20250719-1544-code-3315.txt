@@ -1,1 +1,0 @@
-\nexport VARIABLE_NAME=\"value\"\n

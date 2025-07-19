@@ -1,1 +1,0 @@
-\n   cp -r ~/ollama_backups/* /opt/ai_offline_setup/ai_models/\n

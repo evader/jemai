@@ -1,1 +1,0 @@
-python ask.py "Based on our last long conversation about the browser's stubborn cache, what was the very first command you told me to run on the T7910?"

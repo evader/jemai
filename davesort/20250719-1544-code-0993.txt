@@ -1,1 +1,0 @@
-\nwget -O ~/synapz_super_bootstrap.sh https://raw.githubusercontent.com/evader-ai/jemai-bootstrap/main/synapz_super_bootstrap.sh\n

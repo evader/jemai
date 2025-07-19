@@ -1,1 +1,0 @@
-\n\n---\n\n### How to use this script:\n\n1. Save this script to a file on your host machine, e.g., `/opt/jemai_prod/docker_setup/reset_and_rebuild.sh`.\n2. Make it executable:\n\n

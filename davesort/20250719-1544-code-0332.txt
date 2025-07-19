@@ -1,2 +1,0 @@
-cd ~/ai_offline_setup_downloads/docker_setup # Ensure you are here
-    sudo docker compose up -d

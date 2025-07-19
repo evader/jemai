@@ -1,1 +1,0 @@
-\nuvicorn jemai_memory_api_v1_0:app --reload --host 0.0.0.0 --port 8089\npython synapz_listener_v1_0.py\npython synapz_overlay_v1_1.py\npython jemai_data_hub.py\n

@@ -1,1 +1,0 @@
-\n    ollama:\n      image: ollama/ollama:latest\n      container_name: jemai_ollama\n      ports:\n        - \"11434:11434\"\n      volumes:\n        - ollama_data:/root/.ollama  # The folder for Ollama's persistent data\n        - /path/to/your/models:/root/.ollama/models:ro  # Read-only access to the models\n      environment:\n        - OLLAMA_HOST=0.0.0.0\n

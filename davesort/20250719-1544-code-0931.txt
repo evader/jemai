@@ -1,1 +1,0 @@
-\ndocker system prune -af\ndocker volume prune -f\ndocker images prune -a -f\n

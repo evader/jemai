@@ -1,1 +1,0 @@
-\nsource ~/.bashrc\nhash -r\n

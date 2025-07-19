@@ -1,1 +1,0 @@
-\ncd ~/synapz_core && source venv/bin/activate && python3 synapz_core.py\n

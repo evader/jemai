@@ -1,1 +1,0 @@
-\ndocker container prune\n

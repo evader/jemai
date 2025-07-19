@@ -1,1 +1,0 @@
-\nsource /home/jemai/synapz_core/venv/bin/activate\npython3 /home/jemai/synapz_core/synapz_core.py\n

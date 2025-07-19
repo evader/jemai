@@ -1,1 +1,0 @@
-\n\nIf that works, it means you have the newer Docker Compose integrated as `docker compose` (two words) but no standalone `docker-compose` binary.\n\n---\n\n**Solution:** Use the full path to `docker` but with the `compose` subcommand, but first let\u2019s find the actual `docker` binary path:\n\n

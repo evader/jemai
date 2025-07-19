@@ -1,1 +1,0 @@
-\n   Cuda compilation tools, release 11.2, V11.2.67\n

@@ -1,1 +1,0 @@
-\n\n3. **Configure Open Ports for Synapz**:\n   Ensure your Docker `docker-compose.yml` or systemd configuration allows Synapz Core to listen on the correct ports (e.g., port `11436` for API).\n\n4. **Open Ports**:\n   If the ports are not open or incorrectly forwarded, update the docker-compose file or systemd service to forward the correct ports and restart:\n

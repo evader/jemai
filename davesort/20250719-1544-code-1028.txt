@@ -1,1 +1,0 @@
-\npip install -r ~/synapz_core/requirements.txt\n

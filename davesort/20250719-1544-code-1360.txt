@@ -1,1 +1,0 @@
-\necho $PATH | grep \"$HOME/bin\" || echo 'export PATH=\"$HOME/bin:$PATH\"' >> ~/.bashrc\nsource ~/.bashrc\n

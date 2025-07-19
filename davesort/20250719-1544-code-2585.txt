@@ -1,1 +1,0 @@
-\n  /opt/ai_offline_setup/ai_models \u2192 /root/.ollama/models_external:ro\n

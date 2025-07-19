@@ -1,1 +1,0 @@
-\nListening on [::]:11434 (version 0.9.6)\n

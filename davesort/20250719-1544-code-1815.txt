@@ -1,1 +1,0 @@
-\n\n- If it's a system process, either kill or reconfigure it.\n\n---\n\n## Step 3: Alternatively, change the port mapping in your `docker-compose.yml`\n\nIf you want to keep the other service, edit your `docker-compose.yml` to map a different host port, for example:\n\n

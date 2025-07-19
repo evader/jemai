@@ -1,1 +1,0 @@
-\ndocker stop <container_id>\n

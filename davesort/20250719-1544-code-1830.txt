@@ -1,1 +1,0 @@
-\n\nIf the problem persists, sometimes Docker\u2019s network stack can get stuck \u2014 try restarting the Docker daemon:\n\n

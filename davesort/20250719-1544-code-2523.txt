@@ -1,1 +1,0 @@
-\n  I was working on a local AI OS called JEM AI with a Synapz Core agent. It runs Flask on port 11436, uses Ollama (LLaMA3), ChromaDB, and local RAG. My agent should behave like a system daemon with full autonomy. Here's my last interaction:\n  [Paste final key parts of the conversation]\n

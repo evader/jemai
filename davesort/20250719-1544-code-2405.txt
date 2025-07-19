@@ -1,1 +1,0 @@
-\nchmod +x install_xtts_local.sh\n./install_xtts_local.sh\n

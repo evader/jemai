@@ -1,1 +1,0 @@
-\n   sudo mv /opt/jemai_prod/synapz_core ~/synapz_core_backup_$(date +%s)\n   mv ~/synapz_local_rag ~/synapz_local_rag_backup_$(date +%s)\n

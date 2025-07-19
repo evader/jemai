@@ -1,1 +1,0 @@
-\\n    conda create -n ai_env python=3.10 # Or 3.11, whatever your frameworks support\\n    conda activate ai_env\\n

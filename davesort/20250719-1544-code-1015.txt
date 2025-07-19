@@ -1,1 +1,0 @@
-\n    echo \"alias jemai='python3 ~/synapz_core/synapz_core.py'\" >> ~/.bash_aliases\n    source ~/.bash_aliases\n

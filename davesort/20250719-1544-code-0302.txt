@@ -1,3 +1,0 @@
-sudo docker ps -a # See if any containers are still stuck 'Up'
-    sudo docker stop $(sudo docker ps -aq) # Stop all running containers
-    sudo docker rm $(sudo docker ps -aq) # Remove all stopped containers

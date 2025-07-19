@@ -1,1 +1,0 @@
-\n\n---\n\n## Step 4: Restart your docker-compose stack\n\n

@@ -1,1 +1,0 @@
-\nollama pull <your-model-name>\n

@@ -1,1 +1,0 @@
-\n   docker run --rm --gpus all nvidia/cuda:11.2.2-base nvidia-smi\n

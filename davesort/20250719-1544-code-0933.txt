@@ -1,1 +1,0 @@
-\nsudo journalctl --vacuum-time=2d\nsudo rm -rf /var/log/*.gz /var/log/*.[0-9]\n

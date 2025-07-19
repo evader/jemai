@@ -1,1 +1,0 @@
-\n   If any process is blocking it, stop or kill the conflicting service.\n\n2. **Access Docker Logs**:\n   Since the issue might be with containerized services (like Open WebUI or Synapz Core), check Docker logs to see if any container fails to start:\n

@@ -1,1 +1,0 @@
-\n\nThis happens because your `docker` is old or doesn\u2019t support the `compose` subcommand.\n\n---\n\n**Options:**\n\n1. **Install the standalone docker-compose binary** (recommended if `docker compose` is unavailable):\n\n

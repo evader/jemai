@@ -1,1 +1,0 @@
-\n/dev/mapper/ubuntu--vg-ubuntu--lv  1.8T  984G  692G  59% /\n

@@ -1,1 +1,0 @@
-\ncurl http://localhost:11438\n

@@ -1,1 +1,0 @@
-\n\n2. **Test backend API manually:**  \nFrom your host machine or inside container shell:  \n

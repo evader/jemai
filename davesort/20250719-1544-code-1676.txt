@@ -1,1 +1,0 @@
-\nsource /home/jemai/miniconda3/bin/activate\npip install --upgrade pip\npip install \"python-socketio[client]\" requests\n

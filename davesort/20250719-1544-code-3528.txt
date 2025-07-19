@@ -1,1 +1,0 @@
-\n   docker stats jemai_ollama\n

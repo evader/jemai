@@ -1,1 +1,0 @@
-const nexusAiButton = document.getElementById('nexus-ai-button');

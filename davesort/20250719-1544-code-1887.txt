@@ -1,1 +1,0 @@
-\n\n---\n\n### 3. **Check logs**\n\nMake sure your backend started without errors:\n\n

@@ -1,1 +1,0 @@
-\ndocker restart jemai_ollama\n

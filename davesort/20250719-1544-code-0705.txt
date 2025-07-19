@@ -1,1 +1,0 @@
-\n   scp C:\\JEMAI_HUB\\*.py jemai@jemai.local:~/synapz_local/\n

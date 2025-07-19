@@ -1,1 +1,0 @@
-\n   pkill -f synapz_core.py\n

@@ -1,1 +1,0 @@
-\nsudo lsof -i :11436\nsudo fuser -k 11436/tcp\n

@@ -1,8 +1,0 @@
-jemai@jemai:/opt/ai_offline_setup/docker_setup$ sudo cat > requirements.txt <<EOF
-    Flask
-    google-generativeai
-    requests
-    pyperclip
-    ollama
-    psutil
-    EOF

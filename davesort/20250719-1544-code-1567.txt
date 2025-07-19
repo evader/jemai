@@ -1,1 +1,0 @@
-\nls -l /opt/jemai_prod/certs\n

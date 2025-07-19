@@ -1,1 +1,0 @@
-\ntry:\n    r = requests.get(f\"http://{MASTER}/nodes\")\n    for node in r.json():\n        print(f\"[NODE] {node['node']} - {node['os']} - {node['status']}\")\nexcept: pass\n

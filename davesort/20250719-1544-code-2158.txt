@@ -1,1 +1,0 @@
-\nchroma:\n  image: chromadb/chroma\n  ports:\n    - \"8000:8000\"\n  volumes:\n    - ./chroma_data:/chroma/chroma\n

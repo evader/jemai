@@ -1,1 +1,0 @@
-\n\nYou can build your own frontend or tools on top of this HTTP API to integrate the assistant into your UI.\n\n---\n\n## 4. Embed in your Python code (example snippet)\n\nIf you want to call the RAG programmatically in Python (e.g., in your own scripts), here\u2019s a minimal example:\n\n

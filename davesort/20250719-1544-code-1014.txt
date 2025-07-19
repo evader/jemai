@@ -1,1 +1,0 @@
-\n    cat ~/.bash_aliases | grep jemai\n

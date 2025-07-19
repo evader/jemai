@@ -1,1 +1,0 @@
-\n   CONTAINER ID   IMAGE                               COMMAND                  CREATED         STATUS                   PORTS                           NAMES\n   6ada201ecca7   portainer/portainer-ce:latest       \"/portainer\"             9 minutes ago   Up 9 minutes             0.0.0.0:9000->9000/tcp          jemai_portainer\n

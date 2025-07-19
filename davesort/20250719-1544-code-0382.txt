@@ -1,2 +1,0 @@
-cd /opt/ai_offline_setup/git_repos/stable-diffusion-webui
-    python launch.py --listen --xformers --no-download-clip # --xformers for performance, only if it installed.

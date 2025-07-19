@@ -1,1 +1,0 @@
-\\n            Flask\\n            google-generativeai\\n            requests\\n            psutil\\n            pyperclip # <-- ADD THIS LINE\\n

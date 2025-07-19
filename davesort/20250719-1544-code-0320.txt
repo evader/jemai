@@ -1,1 +1,0 @@
-python local_og.py "Based on our last discussion, what was my primary goal when asking about the Postman tests?"

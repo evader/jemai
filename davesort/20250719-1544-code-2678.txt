@@ -1,1 +1,0 @@
-\n\u25cf synapz-core.service - Synapz Core Agent\n   Loaded: loaded (/etc/systemd/system/synapz-core.service; enabled)\n   Active: active (running) since ...\n   Main PID: 1532 (python3)\n

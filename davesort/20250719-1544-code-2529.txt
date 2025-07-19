@@ -1,1 +1,0 @@
-\n  systemctl enable synapz-core.service\n  docker update --restart=always <container_id>\n

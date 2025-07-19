@@ -1,1 +1,0 @@
-\nsudo systemctl start synapz_core     # to start\nsudo systemctl stop synapz_core      # to stop\nsudo systemctl restart synapz_core   # to reload new code\nsudo systemctl status synapz_core    # to see logs\n

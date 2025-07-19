@@ -1,1 +1,0 @@
-\n   or if you\u2019re logging to `/var/log/synapz_core_runtime.log`:\n

@@ -1,1 +1,0 @@
-\nsource venv/bin/activate\npip install langchain-community --upgrade\n

@@ -1,1 +1,0 @@
-\n  docker pull codercom/code-server:latest\n  docker compose up -d code-server\n

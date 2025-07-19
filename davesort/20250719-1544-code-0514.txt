@@ -1,5 +1,0 @@
-jemai@jemai:~/ai_offline_setup_downloads/ai_models$ ls -l
-total 12
-drwxrwxr-x 3 jemai jemai 4096 Jul 13 09:19 audio
-drwxrwxr-x 3 jemai jemai 4096 Jul 13 07:14 llm
-drwxrwxr-x 5 jemai jemai 4096 Jul 13 11:20 stable_diffusion

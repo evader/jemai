@@ -1,1 +1,0 @@
-\n   docker pull ollama/ollama:latest\n

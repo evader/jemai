@@ -1,1 +1,0 @@
-OLLAMA_API_URL = "http://localhost:11434/query" # Point to synapz_core.py's endpoint

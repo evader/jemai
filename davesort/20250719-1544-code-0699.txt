@@ -1,1 +1,0 @@
-\ncd ~/synapz_local  # or wherever you keep your code\npython3 -m venv venv\nsource venv/bin/activate\npip install fastapi uvicorn sqlite3  # sqlite3 is builtin but pip it for safety\n\n# Run it:\nuvicorn jemai_memory_api:app --host 0.0.0.0 --port 8089\n

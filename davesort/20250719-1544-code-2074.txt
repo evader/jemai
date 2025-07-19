@@ -1,1 +1,0 @@
-\n\n**Even though your host `nvidia-smi` shows a working GPU and driver, your container runtime environment lacks access to it.**\n\n---\n\n### How to fix this properly:\n\n1. **Ensure NVIDIA Container Toolkit is installed and configured on host**  \n   This is needed to expose GPU inside containers:\n

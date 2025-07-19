@@ -1,1 +1,0 @@
-\n  pip install -r /opt/jemai_prod/docker_setup/requirements.txt --break-system-packages\n

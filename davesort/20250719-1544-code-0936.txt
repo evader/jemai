@@ -1,1 +1,0 @@
-\nsudo find / -type f -size +1G -exec ls -lh {} \\; 2>/dev/null | sort -k 5 -hr | head -30\n

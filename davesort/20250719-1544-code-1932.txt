@@ -1,1 +1,0 @@
-\n\nThen stop and remove that container:\n\n

@@ -1,1 +1,0 @@
-\necho 'if [ -f ~/.bashrc ]; then . ~/.bashrc; fi' >> ~/.bash_profile\n

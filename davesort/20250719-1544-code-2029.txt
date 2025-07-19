@@ -1,1 +1,0 @@
-\n\n2. **Update Docker to a newer version** that supports `docker compose` subcommand.\n\n3. **Temporarily use `docker-compose` by full path `/usr/local/bin/docker-compose`** if already installed.\n\n---\n\n**For now, to fix your systemd, I recommend installing the standalone docker-compose:**\n\nRun this:\n\n

@@ -1,1 +1,0 @@
-\n   HOMEASSISTANT_TOKEN=yourtokenhere\n

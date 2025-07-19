@@ -1,6 +1,0 @@
-sudo ufw allow 3000/tcp  # Open WebUI
-    sudo ufw allow 5000/tcp  # lt.py backend API
-    sudo ufw allow 8080/tcp  # Code-Server (VS Code)
-    sudo ufw allow 8888/tcp  # Jupyter
-    sudo ufw allow 9000/tcp  # Portainer
-    sudo ufw allow 11434/tcp # Ollama API (if you direct call it)

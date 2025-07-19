@@ -1,1 +1,0 @@
-\nsudo systemctl list-units --type=service | grep synapz\nsudo systemctl disable --now <any_conflicting_service>\n

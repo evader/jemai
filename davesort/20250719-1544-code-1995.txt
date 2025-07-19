@@ -1,1 +1,0 @@
-\n3. Wait for the containers to build and start.\n4. Open browser:\n- Backend API at [http://localhost:5000](http://localhost:5000)\n- Frontend UI at [http://localhost:3000](http://localhost:3000)\n\n5. Tail logs if needed:\n

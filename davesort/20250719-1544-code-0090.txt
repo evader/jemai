@@ -1,3 +1,0 @@
-COPY requirements.txt .
-    # ...
-    COPY lt.py .

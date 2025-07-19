@@ -1,1 +1,0 @@
-sudo docker exec jemai_lt_backend cat /app/lt.py > ~/lt.py.live_version

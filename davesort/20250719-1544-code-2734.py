@@ -1,1 +1,0 @@
-\nllm = Ollama(model=\"llama3\")  # or similar\n

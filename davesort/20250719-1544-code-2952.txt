@@ -1,1 +1,0 @@
-\ngrep \"Synapz Core Flask server starting\" ~/synapz_core/synapz_core.py\n

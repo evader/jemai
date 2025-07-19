@@ -1,1 +1,0 @@
-\n~/.ollama/models\n

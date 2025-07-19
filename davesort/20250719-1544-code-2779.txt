@@ -1,1 +1,0 @@
-\nsudo mkdir -p /var/log/\nsudo touch /var/log/synapz_core.log /var/log/synapz_core.err\nsudo chown jemai:jemai /var/log/synapz_core.*\n

@@ -1,1 +1,0 @@
-\n\n---\n\n### **What To Do**\n1. **Paste this whole thing into your terminal** (in `~/synapz_core`).\n2. It\u2019ll create and open `synapz_diag.sh` in VS Code for you to see/edit.\n3. **Run the diagnostic:**  \n

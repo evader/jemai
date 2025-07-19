@@ -1,1 +1,0 @@
-\nnvidia-smi\nwhich docker\necho $SHELL\n

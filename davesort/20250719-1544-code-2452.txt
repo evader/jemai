@@ -1,1 +1,0 @@
-\nmkdir -p ~/synapz_core/persona\ntouch ~/synapz_core/persona/notes.txt\n

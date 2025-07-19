@@ -1,1 +1,0 @@
-\ndef auto_builder():\n    print(\"[BUILDER] Pulling latest everything (stub). Next: Merge all modules, run self-test.\")\n    # Example: Merge Synapz, voice, RAG, GUI code, etc as pasted/imported\n    # When you upload zips/code, unpack & merge here\n\n# CLI loop addition:\nelif typ == \"ai\" and \"build\" in arg.lower():\n    auto_builder()\n

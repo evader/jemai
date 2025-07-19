@@ -1,1 +1,0 @@
-\n\u2714 Container jemai_ollama      Running\n\u2714 Container jemai_open_webui  Started\n

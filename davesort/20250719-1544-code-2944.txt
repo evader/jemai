@@ -1,1 +1,0 @@
-\njkill && sleep 2 && jupall && sleep 5 && jcheck\n

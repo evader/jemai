@@ -1,1 +1,0 @@
-\ncd ~/synapz_core\nsource venv/bin/activate\npython3 chat_ui.py\n

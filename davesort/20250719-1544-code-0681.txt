@@ -1,1 +1,0 @@
-\ndocker system prune -a\ndocker volume prune\n

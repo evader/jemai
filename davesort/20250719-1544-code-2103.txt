@@ -1,1 +1,0 @@
-\n\n---\n\n### What to do:\n\nRun this command **on your host machine** (not inside a container) where Ollama is installed and running:\n\n

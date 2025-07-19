@@ -1,1 +1,0 @@
-\nsudo cp -ar /var/lib/docker/volumes/old_volume/_data/models/* /var/lib/docker/volumes/ollama/_data/models/\n

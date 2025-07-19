@@ -1,7 +1,0 @@
-# JEM AI Environment Variables (V1.1)
-      # ... other variables ...
-
-      # --- Service Passwords & Tokens (Centralized for Security) ---
-      # Default password for all services. CHANGE THIS IN PRODUCTION.
-      JUPYTER_TOKEN=techno
-      CODE_SERVER_PASSWORD=techno

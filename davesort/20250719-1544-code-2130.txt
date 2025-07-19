@@ -1,1 +1,0 @@
-\n  docker compose -f ~/jemai_core_setup/docker-compose.yml logs jemai_core --tail=100\n

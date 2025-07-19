@@ -1,1 +1,0 @@
-\n/home/jemai/synapz_core/docker/ollama-compose.yml\n

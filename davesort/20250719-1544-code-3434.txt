@@ -1,1 +1,0 @@
-\npipx install torch\npipx install transformers\npipx install tensorflow\n

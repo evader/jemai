@@ -1,2 +1,0 @@
-source ~/.bashrc
-    # You might also need to close and reopen your terminal session.

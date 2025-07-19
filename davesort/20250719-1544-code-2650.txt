@@ -1,1 +1,0 @@
-\nsudo ufw status\n

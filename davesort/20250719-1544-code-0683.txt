@@ -1,1 +1,0 @@
-\nfunction jemai_status_on_login() {\n    if [ -S /var/run/docker.sock ]; then\n        # echo \"Docker running.\"    # Or do nothing\n        :\n    else\n        echo \"    Docker daemon does not appear to be running.\"\n    fi\n}\njemai_status_on_login\necho \"\"\nfi\n

@@ -1,1 +1,0 @@
-\nNAME             SIZE    MODIFIED\nllama3           7.5GB   2 days ago\nllama3:8b        3.9GB   5 hours ago\nmistral          4.3GB   1 day ago\n

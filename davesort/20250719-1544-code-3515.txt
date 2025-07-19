@@ -1,1 +1,0 @@
-\n{\n  \"response\": \"I am Synapz Core, your personal assistant.\"\n}\n

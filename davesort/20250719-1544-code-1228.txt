@@ -1,1 +1,0 @@
-\ncurl -s -X POST http://localhost:11436/query_rag -H \"Content-Type: application/json\" -d '{\"query\":\"who are you?\"}'\ncurl -s -X POST http://localhost:11436/query -H \"Content-Type: application/json\" -d '{\"query\":\"who are you?\"}'\n

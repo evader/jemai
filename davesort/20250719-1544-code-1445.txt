@@ -1,1 +1,0 @@
-\nchmod +x ~/jemai_nuke_and_fix.sh\nsudo ~/jemai_nuke_and_fix.sh\n

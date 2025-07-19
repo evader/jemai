@@ -1,3 +1,0 @@
-sudo cat > requirements.txt <<EOF
-    # PASTE THE LINES HERE (Flask, google-generativeai, etc.)
-    EOF

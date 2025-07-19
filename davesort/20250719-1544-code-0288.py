@@ -1,1 +1,0 @@
-\nimport socket\n\ndef is_synapz_running():\n    try:\n        socket.create_connection((\"localhost\", 6000), timeout=1)\n        return True\n    except:\n        return False\n\n# in your loop:\nif is_synapz_running():\n    call_synapz_api(prompt)\nelse:\n    legacy_call(prompt)\n

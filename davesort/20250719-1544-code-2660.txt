@@ -1,1 +1,0 @@
-\nsudo nano /etc/systemd/system/synapz-core.service\n

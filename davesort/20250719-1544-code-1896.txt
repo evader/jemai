@@ -1,1 +1,0 @@
-\n\n3. **Make sure your `docker-compose.yml` is also in that same directory**, with this relevant service section:\n\n

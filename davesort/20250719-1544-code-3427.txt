@@ -1,1 +1,0 @@
-\n   sudo apt install pipx\n

@@ -1,1 +1,0 @@
-\ncurl http://localhost:11434/api/generate \\\n  -d '{\n    \"model\": \"phind:34b\",\n    \"prompt\": \"Write a Python function to scrape all links from a webpage\"\n  }'\n

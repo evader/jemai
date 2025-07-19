@@ -1,1 +1,0 @@
-\nbash ~/fix_ollama_models.sh\n

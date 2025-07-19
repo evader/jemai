@@ -1,1 +1,0 @@
-\nsystemctl status synapz_core\n

@@ -1,1 +1,0 @@
-\ndocker inspect --format='{{.State.RestartCount}}' jemai_prod_core\n

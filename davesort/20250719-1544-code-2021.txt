@@ -1,1 +1,0 @@
-\n\nOr if `docker compose` is available:\n\n

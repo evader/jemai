@@ -1,1 +1,0 @@
-\n  cd ~/synapz_core\n  source venv/bin/activate\n  pip install --upgrade -r requirements.txt\n

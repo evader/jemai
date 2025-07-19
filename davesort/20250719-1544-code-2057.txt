@@ -1,1 +1,0 @@
-\n\n2. **Modify your `docker-compose.yml` for GPU access:**\n\nMake sure the Ollama service has the `runtime: nvidia` or the newer `deploy.resources.reservations.devices` for GPU:\n\n

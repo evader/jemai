@@ -1,1 +1,0 @@
-\n    sudo systemctl stop ollama\n    sudo rm -rf /usr/share/ollama/.ollama/models/*\n    mkdir -p /usr/share/ollama/.ollama/models/blobs\n    mkdir -p /usr/share/ollama/.ollama/models/manifests\n    sudo chown -R ollama:ollama /usr/share/ollama/.ollama/models\n

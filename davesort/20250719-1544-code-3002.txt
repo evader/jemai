@@ -1,1 +1,0 @@
-\nThis shows every file and folder by path only, very compact!\n\n---\n\n### **3. Show summary (top-level folders only):**\n

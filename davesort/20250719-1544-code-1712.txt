@@ -1,1 +1,0 @@
-\ncd /opt/jemai_prod/docker_setup\ndocker compose stop jemai_core\ndocker compose rm jemai_core\ndocker compose up -d --build jemai_core\ndocker compose logs jemai_core --tail=100 -f\n

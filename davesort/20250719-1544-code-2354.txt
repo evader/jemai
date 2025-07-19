@@ -1,1 +1,0 @@
-\necho 'your_password_here' > ~/synapz_core/pw.txt\n

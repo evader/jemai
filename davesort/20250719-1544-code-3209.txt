@@ -1,1 +1,0 @@
-\n\n2. **Manually run the Synapz Core script** to observe any errors directly:\n

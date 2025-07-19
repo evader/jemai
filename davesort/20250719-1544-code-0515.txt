@@ -1,2 +1,0 @@
-volumes:
-      ollama_data: # This named volume is managed by Docker

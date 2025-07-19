@@ -1,7 +1,0 @@
-# Inside the jupyter service block:
-      environment:
-        - JUPYTER_TOKEN=${JUPYTER_TOKEN}
-
-      # Inside the code-server service block:
-      environment:
-        - PASSWORD=${CODE_SERVER_PASSWORD}

@@ -1,1 +1,0 @@
-\n   ollama pull llama2\n   ollama list\n

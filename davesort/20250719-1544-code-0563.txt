@@ -1,6 +1,0 @@
-PROD_RAG_DATA_DIR=/opt/jemai_prod/rag/chroma_data
-        USER_NOTEBOOKS_DIR=${HOME}/jemai_notebooks
-        USER_PROJECTS_DIR=/opt/jemai_prod # Changed for better code-server access
-        JUPYTER_TOKEN=techno
-        CODE_SERVER_PASSWORD=techno
-        OLLAMA_HOST=0.0.0.0

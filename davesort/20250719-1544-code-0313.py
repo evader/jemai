@@ -1,1 +1,0 @@
-\n  SYNAPZ_HOST = \"http://localhost:6000/api\"\n

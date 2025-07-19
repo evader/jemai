@@ -1,1 +1,0 @@
-\n    nano ~/ollama_model_shotgun.sh\n    chmod +x ~/ollama_model_shotgun.sh\n    ./ollama_model_shotgun.sh   # run it as your user, no sudo needed\n

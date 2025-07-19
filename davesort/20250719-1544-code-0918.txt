@@ -1,1 +1,0 @@
-\nchmod +x ~/synapz_core_autoinstall.sh\n./synapz_core_autoinstall.sh\n

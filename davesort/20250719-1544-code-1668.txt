@@ -1,1 +1,0 @@
-\ndocker exec -it jemai_prod_core bash\nmkdir -p /home/jemai/venv\npython3 -m venv /home/jemai/venv\nsource /home/jemai/venv/bin/activate\npip install --upgrade pip\npip install \"python-socketio[client]\" requests\n

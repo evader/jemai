@@ -1,1 +1,0 @@
-\njshell\nls -l /app/jemai_core.py\nhead -20 /app/jemai_core.py\n

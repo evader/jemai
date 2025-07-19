@@ -1,1 +1,0 @@
-\n   from transformers import pipeline\n\n   # Test with a text generation pipeline\n   generator = pipeline('text-generation', model='gpt2')\n   result = generator(\"Once upon a time,\")\n   print(result)\n

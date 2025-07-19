@@ -1,1 +1,0 @@
-\necho \"alias jemai='curl -s -X POST http://localhost:11436/query_rag -H \\\"Content-Type: application/json\\\" -d'\" >> ~/.bash_aliases\nsource ~/.bash_aliases\n

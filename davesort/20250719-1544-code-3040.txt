@@ -1,1 +1,0 @@
-\n\n---\n\n## **2. Generate requirements.txt from your current venv**\n\n

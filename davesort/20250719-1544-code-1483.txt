@@ -1,1 +1,0 @@
-\ndocker rm -f <container_name>\n

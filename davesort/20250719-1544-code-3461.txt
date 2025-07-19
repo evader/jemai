@@ -1,1 +1,0 @@
-\ntransformers-cli login\n

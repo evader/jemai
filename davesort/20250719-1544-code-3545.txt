@@ -1,1 +1,0 @@
-\n     sudo apt install xvfb\n     export DISPLAY=:99\n     Xvfb :99 &  # Start virtual display\n

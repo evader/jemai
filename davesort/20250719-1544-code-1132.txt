@@ -1,1 +1,0 @@
-\n  curl -v http://localhost:11436/status\n  curl -v http://localhost:11436/api/status\n  curl -v http://localhost:11436/\n

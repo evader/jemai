@@ -1,2 +1,0 @@
-source ~/.bashrc # Ensure conda is sourced
-    conda activate ai_env

@@ -1,1 +1,0 @@
-\npipx uninstall transformers\npipx uninstall torch\npipx install transformers\npipx install torch\n

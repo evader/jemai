@@ -1,1 +1,0 @@
-\nfind / -type d -name blobs 2>/dev/null\n

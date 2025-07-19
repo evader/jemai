@@ -1,9 +1,0 @@
-# Stop and remove any running JEM AI Docker containers
-    (cd /opt/jemai_prod/docker_setup && sudo docker compose down --remove-orphans) &>/dev/null || true
-    (cd /opt/ai_offline_setup/docker_setup && sudo docker compose down --remove-orphans) &>/dev/null || true
-
-    # Stop and disable the standalone synapz_core service
-    sudo systemctl stop synapz_core &>/dev/null && sudo systemctl disable synapz_core &>/dev/null || true
-
-    # Nuke the old directories
-    sudo rm -rf /opt/jemai_prod /home/jemai/synapz_core

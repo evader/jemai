@@ -1,1 +1,0 @@
-\n     Dev Containers: Attach to Running Container...\n

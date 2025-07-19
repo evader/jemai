@@ -1,9 +1,0 @@
-services:
-  jemai_core:
-    build: .
-    container_name: jemai_prod_core
-    ports:
-      - "5000:5000"
-    extra_hosts:
-      - "host.docker.internal:host-gateway" # <--- ADD THIS LINE
-    # ... rest of the service definition ...

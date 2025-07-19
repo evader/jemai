@@ -1,1 +1,0 @@
-\ndocker volume rm openwebui_data || echo \"openwebui_data already gone\"\n

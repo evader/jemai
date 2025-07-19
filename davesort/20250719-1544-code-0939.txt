@@ -1,1 +1,0 @@
-\nsudo lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv\nsudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv\n

@@ -1,1 +1,0 @@
-\nRESPONSE=$(curl -s -X POST $API_URL -H \"Content-Type: application/json\" -d '{\"query\": \"'\"$QUERY\"'\"}')\n

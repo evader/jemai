@@ -1,1 +1,0 @@
-\n\n2. **Modify your docker-compose.yml for GPU access:**\n\nMake sure your Ollama service has:\n\n

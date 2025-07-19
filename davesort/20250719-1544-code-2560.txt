@@ -1,1 +1,0 @@
-\n     ls -la /home/jemai/ollama_backups\n

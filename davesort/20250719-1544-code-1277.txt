@@ -1,1 +1,0 @@
-\n   #!/bin/bash\n   curl -s -X POST http://localhost:11436/chat \\\n     -H \"Content-Type: application/json\" \\\n     -d \"{\\\"query\\\":\\\"$*\\\"}\" | jq -r '.response // .error // .message'\n

@@ -1,1 +1,0 @@
-\n- This gets the directory and each immediate subdirectory\u2019s contents (not recursive!).\n\n---\n\n### **3. Get Directory Structure Only**\nThis lists just the directories, not files:\n

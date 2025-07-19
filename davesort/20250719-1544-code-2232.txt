@@ -1,1 +1,0 @@
-\nmkdir -p /home/jemai/synapz_core/persona\n

@@ -1,1 +1,0 @@
-\n\n6. **If your GPU is not needed during dev/test or to bypass GPU** (to test) modify the embedder init in `jemai_core.py` temporarily to `device='cpu'` to confirm if that works:\n

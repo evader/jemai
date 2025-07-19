@@ -1,1 +1,0 @@
-\n@app.route('/test')\ndef test():\n    logger.info(\"Test route hit\")\n    return \"Test OK\"\n

@@ -1,1 +1,0 @@
-\nSo it's trying to `POST` to `/chat`. But your working curl was to `/status`.\n\n---\n\n### 2. **Test the `/chat` endpoint directly:**\n\nOpen a terminal and try:\n

@@ -1,1 +1,0 @@
-\n  *(You may need to close and reopen VS Code for this to take effect.)*\n\n---\n\n### **D. \u201cCopy Everything\u201d Markers in Scripts**\nIf you ever want, I\u2019ll add:\n

@@ -1,1 +1,0 @@
-\nrm -rf ~/.cache/*\nrm -rf ~/.local/share/Trash/*\n

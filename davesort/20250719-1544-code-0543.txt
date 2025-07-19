@@ -1,6 +1,0 @@
-volumes:
-      # This is the key change. It maps the ENTIRE JEM AI production directory
-      # to a 'jemai' folder inside the code-server workspace.
-      - "/opt/jemai_prod:/home/coder/project/jemai"
-      # This still allows access to the Docker socket
-      - "/var/run/docker.sock:/var/run/docker.sock"

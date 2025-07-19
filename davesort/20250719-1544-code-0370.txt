@@ -1,1 +1,0 @@
-sudo docker exec -it jemai_ollama ollama list # Lists currently downloaded Ollama models

@@ -1,1 +1,0 @@
-\nlsblk\nsudo vgdisplay\nsudo lvdisplay\n

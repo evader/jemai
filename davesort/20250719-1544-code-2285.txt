@@ -1,1 +1,0 @@
-\ncurl -X POST http://localhost:11436/shell \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"command\": \"df -h\"}'\n

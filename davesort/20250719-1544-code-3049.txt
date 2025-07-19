@@ -1,1 +1,0 @@
-\nfor **any file** you want to instantly appear in the editor.\n\n---\n\n### **How to Add This to Any Script Output**\n\n**At the end of your dump or patch scripts**, just add:\n

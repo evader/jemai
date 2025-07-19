@@ -1,1 +1,0 @@
-\nls -l /home/jemai/synapz_core/venv/lib/python3.12/site-packages/ | grep psutil\ncat /etc/systemd/system/synapz_core.service\n

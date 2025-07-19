@@ -1,1 +1,0 @@
-\nnano ~/test.txt\n

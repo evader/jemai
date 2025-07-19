@@ -1,1 +1,0 @@
-\n   *(Want it as a daemon/service? Say the word.)*\n4. **Write a `relay_command.json`** with any query:\n

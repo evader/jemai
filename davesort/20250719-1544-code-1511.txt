@@ -1,1 +1,0 @@
-\n  17/07/25 08:54:30 - Synapz - INFO - --- Starting JEM AI C&C Web Server ---\n  \"python3 -m debugpy --listen 0.0.0.0:5678 jemai_core.py\"\n

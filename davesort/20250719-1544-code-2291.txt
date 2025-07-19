@@ -1,1 +1,0 @@
-\npython3  12345 jemai  ... TCP *:11436 (LISTEN)\n

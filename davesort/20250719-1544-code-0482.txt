@@ -1,1 +1,0 @@
-<button id="synapz-cloud-ai-button" class="button button-synapz-cloud-ai">Ask Synapz (Online)</button>

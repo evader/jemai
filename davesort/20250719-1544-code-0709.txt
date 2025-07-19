@@ -1,1 +1,0 @@
-\n   cd ~/synapz_local   # (or wherever you scp\u2019d your files)\n

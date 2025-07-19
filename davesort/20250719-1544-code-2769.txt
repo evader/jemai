@@ -1,1 +1,0 @@
-\n[Unit]\nDescription=Synapz Core AI Server\nAfter=network.target docker.service\nRequires=docker.service\n

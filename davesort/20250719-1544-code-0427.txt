@@ -1,1 +1,0 @@
-chmod +x fix_lt_py.sh

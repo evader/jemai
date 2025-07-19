@@ -1,5 +1,0 @@
-Flask
-    google-generativeai
-    requests
-    psutil
-    pyperclip # Add this line

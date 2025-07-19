@@ -1,1 +1,0 @@
-\nsource ~/.bashrc   # or source ~/.zshrc for zsh users\n

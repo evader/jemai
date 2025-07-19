@@ -1,1 +1,0 @@
-\njrst     # restart Synapz Core\njtest    # run the test endpoint\njlogs    # see logs if anything goes wrong\n

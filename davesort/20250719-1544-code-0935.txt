@@ -1,1 +1,0 @@
-\nsudo du -xh / | grep -E 'G|M' | sort -hr | head -30\n

@@ -1,1 +1,0 @@
-\nsudo snap install code --classic\n

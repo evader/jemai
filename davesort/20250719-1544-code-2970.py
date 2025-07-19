@@ -1,1 +1,0 @@
-\n# prevent_manual_launch()  # TEMP: debug mode\n

@@ -1,1 +1,0 @@
-\nollama  1715 ollama  3u  IPv4   7750  TCP localhost:11434 (LISTEN)\n

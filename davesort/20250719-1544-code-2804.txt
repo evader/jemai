@@ -1,1 +1,0 @@
-\ncurl -X POST http://localhost:11436/query -H \"Content-Type: application/json\" -d '{\"query\":\"Who are you?\"}'\n

@@ -1,1 +1,0 @@
-\n\nSee if your containers show up and their status (Exited, Restarting, etc).\n\nThen check logs for the core container (assuming it\u2019s named `jemai_prod_core` or similar):\n\n

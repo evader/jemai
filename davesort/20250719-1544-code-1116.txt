@@ -1,1 +1,0 @@
-\nsudo lsof -i :11435\nsudo lsof -i :8080\nsudo lsof -i :3000\n

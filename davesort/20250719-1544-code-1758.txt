@@ -1,1 +1,0 @@
-\ncd /opt/jemai_prod/docker_setup\ndocker compose down --remove-orphans\ndocker compose up -d --build\ndocker compose logs -f jemai_core\n

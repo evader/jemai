@@ -1,1 +1,0 @@
-\nlangchain\nchromadb\nsentence-transformers\n

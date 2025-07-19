@@ -1,1 +1,0 @@
-\nsed -i '/alias jemai/d' ~/.bash_aliases\nsed -i '/alias jemai/d' ~/.bashrc\n

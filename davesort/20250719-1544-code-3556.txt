@@ -1,1 +1,0 @@
-\n   docker run --gpus all ...\n

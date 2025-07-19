@@ -1,1 +1,0 @@
-\\n    fastapi\\n    uvicorn\\n    pyperclip\\n    # any other dependencies\\n

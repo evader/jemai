@@ -1,1 +1,0 @@
-\nC:\\JEMAI_HUB\\\n    synapz_overlay_v1.1.py\n    jemai_memory_api_v1.0.py\n    synapz_listener_v1.0.py\n    jemai_hub.sqlite3\n    plugins\\\n    VERSIONS.txt\n

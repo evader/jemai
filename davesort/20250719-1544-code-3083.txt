@@ -1,1 +1,0 @@
-\n\nWatch the relay script output.  \nYou should see something like:\n

@@ -1,1 +1,0 @@
-\n\n**Or, want a systemd version? I can generate that too!**\n\n---\n\n### **STEP 4: Usage**\n\n- Any agent (or you, or ChatGPT with local API) writes a `relay_command.json`:\n

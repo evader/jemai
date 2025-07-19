@@ -1,1 +1,0 @@
-\n   const axios = require('axios');\n\n   axios.get('http://localhost:8080/models')\n     .then(response => {\n       console.log('Ollama Models:', response.data);\n     })\n     .catch(error => {\n       console.error('Error fetching models:', error);\n     });\n

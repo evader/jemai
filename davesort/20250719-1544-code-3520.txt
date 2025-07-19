@@ -1,1 +1,0 @@
-\n   nano ~/chat_test.sh\n

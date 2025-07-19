@@ -1,1 +1,0 @@
-\n- Watch for **Python exceptions, missing dependencies, port-in-use errors**, etc.\n- If you see an error, **copy/paste it here**\u2014I\u2019ll read and give you an exact fix.\n\n---\n\n### **4. Confirm Port is Free**\nMake sure nothing else is holding port 11436:\n

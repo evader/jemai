@@ -1,1 +1,0 @@
-\nls -l ~/synapz_core/venv/bin/python3\nls -l ~/synapz_core/venv/lib/python3.12/site-packages/psutil*\n

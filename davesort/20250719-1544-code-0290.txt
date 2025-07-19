@@ -1,6 +1,0 @@
-echo "-------------------------------------------------------------------"
-    echo "STEP 1: Install essential Ubuntu packages (offline)."
-    # ... lots of bash commands for apt install docker, nvidia-container-toolkit, dpkg...
-    echo "  Press ENTER to continue."
-    read dummy
-    echo "-------------------------------------------------------------------"

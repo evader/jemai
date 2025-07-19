@@ -1,1 +1,0 @@
-\nsudo apt update\nsudo apt install ngrok\n

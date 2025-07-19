@@ -1,1 +1,0 @@
-\nwith open(old_path, \"w\") as f:\n    f.write(new_code)\nprint(\"[JEMAI] Upgrade applied! \ud83c\udf89 Restarting...\")\nos.execv(sys.executable, [sys.executable] + sys.argv)\n

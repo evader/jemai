@@ -1,1 +1,0 @@
-\n   This will help us see if the Synapz Core service is running, or if it has issues.\n\n3. **Look for errors in the logs**:\n   Run this to view recent logs for Synapz Core to check if anything failed:\n

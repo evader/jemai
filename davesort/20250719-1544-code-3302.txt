@@ -1,1 +1,0 @@
-\n   sudo rm /var/lib/dpkg/lock-frontend\n   sudo rm /var/cache/apt/archives/lock\n

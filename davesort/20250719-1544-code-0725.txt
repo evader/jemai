@@ -1,1 +1,0 @@
-\nollama run llama3\n

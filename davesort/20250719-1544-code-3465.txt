@@ -1,1 +1,0 @@
-\npython --version  # Should now show Python 3.x.x\n

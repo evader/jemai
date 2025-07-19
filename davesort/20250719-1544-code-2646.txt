@@ -1,1 +1,0 @@
-\n{\"status\": \"Ollama is running\"}\n

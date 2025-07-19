@@ -1,1 +1,0 @@
-\nsudo rsync -avh --progress \\\n  /home/jemai/ai_offline_setup_downloads/ai_models/blobs/ \\\n  /usr/share/ollama/.ollama/models/blobs/\n\nsudo rsync -avh --progress \\\n  /home/jemai/ai_offline_setup_downloads/ai_models/manifests/ \\\n  /usr/share/ollama/.ollama/models/manifests/\n

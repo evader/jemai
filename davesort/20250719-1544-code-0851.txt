@@ -1,1 +1,0 @@
-\ndocker inspect jemai_open_webui | grep -i env\n

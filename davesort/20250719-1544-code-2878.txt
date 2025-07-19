@@ -1,1 +1,0 @@
-\njrst\nsleep 3\njtest\n

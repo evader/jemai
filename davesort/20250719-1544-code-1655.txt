@@ -1,1 +1,0 @@
-\ncd /opt/jemai_prod/docker_setup\ndocker compose down jemai_core\ndocker compose up -d jemai_core\n

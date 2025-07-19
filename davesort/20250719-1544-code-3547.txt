@@ -1,1 +1,0 @@
-\n   docker logs jemai_ollama  # Check Ollama logs\n   tail -f /path/to/your/logs  # Watch Flask logs in real-time\n

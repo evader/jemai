@@ -1,1 +1,0 @@
-\npython3 -m pip install transformers\n

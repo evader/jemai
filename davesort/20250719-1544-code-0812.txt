@@ -1,1 +1,0 @@
-\nollama --help\ndocker --help\nnano ~/.bashrc\nsource ~/.bashrc\n

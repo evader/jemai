@@ -1,1 +1,0 @@
-\n\nThis stops and removes containers, networks, and volumes created by `docker-compose up`.\n\n### Updated `docker-compose.yml` with Synapz Core:\n\n

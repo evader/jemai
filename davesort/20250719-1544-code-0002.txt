@@ -1,4 +1,0 @@
-fastapi
-uvicorn
-pyperclip
-# ... (other dependencies may be here)

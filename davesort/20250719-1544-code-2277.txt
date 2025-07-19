@@ -1,1 +1,0 @@
-\nnano ~/synapz_core/shell_agent.py\n

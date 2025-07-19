@@ -1,1 +1,0 @@
-\ncd /home/jemai/ai_offline_setup_downloads/docker_setup\ndocker compose up -d jemai_ollama\n

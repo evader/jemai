@@ -1,1 +1,0 @@
-\n*(Literally just that one comment. If the file exists, make sure it has at least that.)*\n\n---\n\n## 3. **requirements.txt**\n**File:** `/home/jemai/synapz_core/requirements.txt`  \n**Action:**  \nTo update this list with your current venv (best practice):\n

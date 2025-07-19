@@ -1,1 +1,0 @@
-\n\n2. **Use your docker-compose.yml as is (with GPU reservation)** and run:**  \n

@@ -1,1 +1,0 @@
-\ncat $APP_DIR/synapz_install.log\n

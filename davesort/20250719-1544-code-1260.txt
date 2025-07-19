@@ -1,1 +1,0 @@
-\nbash: syntax error near unexpected token `what'\n

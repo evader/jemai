@@ -1,1 +1,0 @@
-\ndir C:\\JEMAI_HUB > versions.txt\n

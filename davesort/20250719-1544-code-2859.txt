@@ -1,1 +1,0 @@
-\nalias jfresh='jkill && jupall && jrst && sleep 3 && jtest'\n

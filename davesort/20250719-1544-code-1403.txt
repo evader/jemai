@@ -1,1 +1,0 @@
-\n  ollama pull gemma:2b\n  # or\n  ollama pull mistral\n  # or\n  ollama pull llama3\n

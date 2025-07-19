@@ -1,1 +1,0 @@
-\npython3 ../synapz_local_rag/synapz_rag_ingest.py\n

@@ -1,1 +1,0 @@
-\n   nano ~/setup_synapz_core.sh\n   # Paste script, then Ctrl+O + Enter to save, Ctrl+X to exit\n

@@ -1,1 +1,0 @@
-\nchmod +x ~/setup_openwebui_gpt4.sh\nbash ~/setup_openwebui_gpt4.sh\n

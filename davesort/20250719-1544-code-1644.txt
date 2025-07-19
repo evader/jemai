@@ -1,1 +1,0 @@
-\ndocker compose down jemai_core\ndocker compose up -d jemai_core\njcorelog\n

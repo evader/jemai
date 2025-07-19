@@ -1,1 +1,0 @@
-\n  docker logs open-webui --tail=100\n  docker logs ollama --tail=100\n

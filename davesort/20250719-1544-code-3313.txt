@@ -1,1 +1,0 @@
-\necho $VARIABLE_NAME\n

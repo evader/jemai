@@ -1,1 +1,0 @@
-tf_packages = ["tensorflow[and-cuda]==2.19.0"] # Changed to an available and newer version

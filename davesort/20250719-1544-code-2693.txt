@@ -1,1 +1,0 @@
-\n/home/jemai/synapz_core/venv/bin/pip install -U ...\n

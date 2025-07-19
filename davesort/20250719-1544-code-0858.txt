@@ -1,1 +1,0 @@
-\n\"OLLAMA_BASE_URL=http://jemai_ollama:11434\",\n

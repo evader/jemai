@@ -1,1 +1,0 @@
-\n# Unraid Mount\n//192.168.1.135/<share_name> /mnt/unraid cifs username=<user>,password=<pass>,vers=3.0 0 0\n

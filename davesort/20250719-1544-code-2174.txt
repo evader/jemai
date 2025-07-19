@@ -1,1 +1,0 @@
-\ncurl -X POST http://jemai.local:11435/query \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\"query\": \"Summarize JEM AI\"}'\n

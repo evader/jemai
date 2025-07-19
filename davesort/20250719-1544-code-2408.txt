@@ -1,1 +1,0 @@
-\npython3 speak_local.py \"Synapz Core is now speaking from your server. The fuse is lit.\"\nffplay -nodisp -autoexit output.wav\n

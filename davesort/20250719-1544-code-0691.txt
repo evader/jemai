@@ -1,1 +1,0 @@
-\n  docker ps -a\n  # Then start/redeploy if missing\n

@@ -1,1 +1,0 @@
-\\n    cd /opt/ai_offline_setup/git_repos/whisper.cpp\\n    make -j # Compile\\n    # Models: Download ggml models from whisper.cpp's GitHub or convert Hugging Face models.\\n    # You can also use the Python `whisper` library which will use PyTorch.\\n    ./main -m models/ggml-large-v3.bin -f audio.wav\\n

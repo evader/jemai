@@ -1,1 +1,0 @@
-\nsystemctl status synapz_core\njournalctl -u synapz_core -n 50\n

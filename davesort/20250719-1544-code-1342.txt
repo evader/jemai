@@ -1,1 +1,0 @@
-\nbob what is the fastest way to restart docker?\nbob tell me a joke\nbob check system status\n

@@ -1,1 +1,0 @@
-\nhead -40 /home/jemai/synapz_core/synapz_core.py | grep -i port\n

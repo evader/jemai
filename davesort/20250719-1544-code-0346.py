@@ -1,1 +1,0 @@
-\ndef rag_search(self, query):\n    # Here, you\u2019d use Chroma, local vectorstore, or whatever RAG you want.\n    # This is pluggable \u2014 later, just drop in the real code!\n    return f\"RAG [mock]: {query}\"\n

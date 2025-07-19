@@ -1,1 +1,0 @@
-\nsudo systemctl start synapz_chat.service\n

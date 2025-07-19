@@ -1,1 +1,0 @@
-\ngrep -P \"route|@app\\.\" /home/jemai/synapz_core/synapz_core.py\ngrep -P \"route|@app\\.\" /home/jemai/synapz_core/rag_server.py\n

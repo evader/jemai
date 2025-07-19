@@ -1,1 +1,0 @@
-\n~/lock_ports_and_clean.sh\n

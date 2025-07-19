@@ -1,1 +1,0 @@
-\n  chmod +x ~/bin/bob\"(Reply as Bob, the always-chill, direct AI assistant.) $*\\\"}\" | jq -r '.response // .error // .message'\n

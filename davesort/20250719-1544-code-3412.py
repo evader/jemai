@@ -1,1 +1,0 @@
-\n   from transformers import pipeline\n\n   # Initialize the text generation pipeline\n   generator = pipeline(\"text-generation\", model=\"gpt2\")\n\n   # Generate text\n   print(generator(\"Hello, how are you?\", max_length=50))\n

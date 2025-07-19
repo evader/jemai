@@ -1,1 +1,0 @@
-\ngrep \"add_api_route\" /home/jemai/synapz_core/synapz_core.py\n

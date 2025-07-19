@@ -1,1 +1,0 @@
-\nwhoami\npwd\nls -ld ~\n

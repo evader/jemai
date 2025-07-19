@@ -1,1 +1,0 @@
-\nsudo apt-get remove -y containerd containerd.io\nsudo apt-get autoremove -y\n

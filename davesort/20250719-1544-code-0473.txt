@@ -1,4 +1,0 @@
-mkdir -p /opt/ai_offline_setup/docker_setup/templates
-        code /opt/ai_offline_setup/docker_setup/templates/index.html
-        # Paste this index.html content (the long one you just sent) there.
-        # Save the file.

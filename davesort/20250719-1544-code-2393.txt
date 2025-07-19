@@ -1,1 +1,0 @@
-\ncurl -X POST http://localhost:11436/train \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"path\": \"/home/jemai/somefile.txt\"}'\n

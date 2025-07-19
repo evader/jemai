@@ -1,1 +1,0 @@
-sudo docker logs -f jemai_lt_backend

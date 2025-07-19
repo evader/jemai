@@ -1,1 +1,0 @@
-\nfor vol in $(docker volume ls -q | grep ollama); do\n  echo \"[ $vol ]\"\n  sudo ls -lh /var/lib/docker/volumes/${vol}/_data/models\ndone\n

@@ -1,1 +1,0 @@
-\n   ollama:\n     image: ollama/ollama:latest\n     container_name: jemai_ollama\n     ports:\n       - \"11434:11434\"  # Ollama API port\n     volumes:\n       - ollama_data:/root/.ollama\n     environment:\n       - OLLAMA_HOST=0.0.0.0\n     restart: unless-stopped\n

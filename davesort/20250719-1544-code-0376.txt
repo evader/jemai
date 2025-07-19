@@ -1,2 +1,0 @@
-sudo docker ps -a
-    sudo docker logs jemai_lt_backend

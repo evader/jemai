@@ -1,1 +1,0 @@
-\nWhat do you get?  \n- If you get a **response**, the relay should work too.\n- If you get a **timeout or error** (most likely 404 or 500), it means `/chat` isn\u2019t implemented or is broken.\n\n---\n\n### 3. **Check your Synapz Core logs**\n\nCheck for errors that show up **right after** a relay attempt:\n

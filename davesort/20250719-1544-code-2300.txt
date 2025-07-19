@@ -1,1 +1,0 @@
-\ncurl -X POST http://localhost:11436/query \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"query\": \"What\u2019s our next priority?\"}'\n

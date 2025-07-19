@@ -1,2 +1,0 @@
-sudo ufw allow 5000/tcp comment 'Allow JEM AI Flask Frontend'
-        sudo ufw reload

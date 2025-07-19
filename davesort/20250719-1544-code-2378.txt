@@ -1,1 +1,0 @@
-\ncat ~/synapz_core/pw.txt\n

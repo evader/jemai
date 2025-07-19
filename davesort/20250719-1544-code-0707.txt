@@ -1,1 +1,0 @@
-\n    cd ~/synapz_local\n    python3 -m venv venv\n    source venv/bin/activate\n    pip install -r requirements.txt  # Make a requirements.txt if you want (or just pip install as needed)\n    python jemai_memory_api.py\n

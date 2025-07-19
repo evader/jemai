@@ -1,1 +1,0 @@
-\nchmod 600 ~/synapz_core/pw.txt\n

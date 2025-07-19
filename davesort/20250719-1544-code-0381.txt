@@ -1,2 +1,0 @@
-cd /opt/ai_offline_setup/git_repos/text-generation-webui
-    python server.py --listen --model TheBloke_Llama-2-7B-Chat-GGUF/llama-2-7b-chat.Q2_K.gguf --n-gpu-layers 3 # Adjust model file, and n-gpu-layers to fit your 1060 6GB

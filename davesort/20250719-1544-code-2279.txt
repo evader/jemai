@@ -1,1 +1,0 @@
-\nnano ~/synapz_core/synapz_core.py\n

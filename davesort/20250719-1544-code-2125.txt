@@ -1,1 +1,0 @@
-\n\n**Done!**  \n- Web UI: [http://localhost:3000](http://localhost:3000)\n- CLI:  \n

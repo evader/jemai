@@ -1,1 +1,0 @@
-\nimport requests\nfrom requests.auth import HTTPBasicAuth\n\ndef jemai_memory_search(query, limit=5):\n    url = \"http://jemai.local:8089/search\"\n    resp = requests.get(\n        url, params={\"q\": query, \"limit\": limit},\n        auth=HTTPBasicAuth(\"super\", \"TechnoAPI69\"),\n        timeout=10,\n    )\n    resp.raise_for_status()\n    return resp.json()[\"results\"]\n

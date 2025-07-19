@@ -1,1 +1,0 @@
-\ngrep 11436 ~/synapz_core/docker/*.yml\n

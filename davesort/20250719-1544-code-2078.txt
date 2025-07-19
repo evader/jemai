@@ -1,1 +1,0 @@
-\n   It should show your GPU.\n\n5. **If the container can't see the GPU, add `--gpus all` explicitly in compose** (legacy method):  \n   Your compose might need:\n

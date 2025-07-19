@@ -1,1 +1,0 @@
-cd jemai_scripts

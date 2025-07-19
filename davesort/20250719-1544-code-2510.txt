@@ -1,1 +1,0 @@
-\nsudo chown -R jemai:jemai /home/jemai\n

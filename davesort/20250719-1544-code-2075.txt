@@ -1,1 +1,0 @@
-\n\n2. **Update your `docker-compose.yml` to request GPU access explicitly** (looks like you have part of it but confirm exactly):  \n   Add to your `ollama` service:\n

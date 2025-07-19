@@ -1,1 +1,0 @@
-\ncode ~/.bashrc\n

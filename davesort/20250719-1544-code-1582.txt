@@ -1,1 +1,0 @@
-\n     scp jemai@jemai.local:/opt/jemai_prod/certs/cert.pem .\n

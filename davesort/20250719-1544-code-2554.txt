@@ -1,1 +1,0 @@
-\n  docker compose -f /path/to/docker-compose.yml up --build -d\n

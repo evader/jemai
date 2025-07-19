@@ -1,1 +1,0 @@
-\necho \"First note: System stable. Synapz running strong.\" >> ~/synapz_core/notes.txt\ncat ~/synapz_core/notes.txt\n

@@ -1,1 +1,0 @@
-\nif [[ $- == *i* ]]; then\n  synapz_core_status\nfi\n

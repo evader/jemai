@@ -1,1 +1,0 @@
-\n  ss -lntp | grep 11434\n

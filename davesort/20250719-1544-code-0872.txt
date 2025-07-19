@@ -1,1 +1,0 @@
-\ndocker exec -it jemai_open_webui bash\ncurl http://host.docker.internal:11434/api/tags\n

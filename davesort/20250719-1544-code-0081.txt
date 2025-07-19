@@ -1,1 +1,0 @@
-sudo docker logs jemai_lt_backend --tail 50 # Shows last 50 lines

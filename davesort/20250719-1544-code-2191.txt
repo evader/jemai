@@ -1,1 +1,0 @@
-\nsource venv/bin/activate\npython synapz_rag_ingest.py\n

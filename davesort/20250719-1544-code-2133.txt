@@ -1,1 +1,0 @@
-\n# docker-compose.yml\nversion: '3.8'\nservices:\n  jemai:\n    build: ./jemai\n    ports:\n      - 7860:7860\n    volumes:\n      - ./data:/app/data\n    environment:\n      - MODEL_NAME=mistral:7b\n  qdrant:\n    image: qdrant/qdrant\n    ports:\n      - \"6333:6333\"\n      - \"6334:6334\"\n    volumes:\n      - ./qdrant_data:/qdrant/storage\n

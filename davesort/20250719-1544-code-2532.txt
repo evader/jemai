@@ -1,1 +1,0 @@
-\n   chmod +x ~/setup_synapz_core.sh\n

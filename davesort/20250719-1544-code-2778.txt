@@ -1,1 +1,0 @@
-\nsystemctl status synapz_core\njournalctl -u synapz_core -f\ntail -n 50 /var/log/synapz_core.log\n

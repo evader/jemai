@@ -1,1 +1,0 @@
-\\n        You should see your GPU and CUDA version.\\n\\n4.  **Set up Environment Variables (add to `~/.bashrc`):**\\n

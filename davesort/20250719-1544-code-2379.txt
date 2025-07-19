@@ -1,1 +1,0 @@
-\nINFO:werkzeug:127.0.0.1 - - [timestamp] \"POST /writefile HTTP/1.1\" 200 -\n

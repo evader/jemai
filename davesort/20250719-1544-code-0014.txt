@@ -1,2 +1,0 @@
-sudo ufw allow ssh     # This will allow connections on port 22 (SSH's default port)
-    sudo ufw status verbose # Double-check the rule is there

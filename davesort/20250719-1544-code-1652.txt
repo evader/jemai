@@ -1,1 +1,0 @@
-\ndocker exec -it jemai_prod_core bash\npython3 jemai_core.py\n

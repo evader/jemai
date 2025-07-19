@@ -1,6 +1,0 @@
-Flask
-google-generativeai
-requests
-pyperclip
-ollama
-psutil

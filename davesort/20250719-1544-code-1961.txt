@@ -1,1 +1,0 @@
-\n\n2. If you see any errors about missing `/app/rag/chroma_data` or similar, make sure the RAG vector database directory is properly mounted and contains data:\n\n

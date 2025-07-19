@@ -1,1 +1,0 @@
-\ncommand: python3 -m debugpy --listen 0.0.0.0:5678 --wait-for-client -m flask run --app jemai_core.py --host=0.0.0.0 --port=5000\n

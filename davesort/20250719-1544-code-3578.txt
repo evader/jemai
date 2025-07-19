@@ -1,1 +1,0 @@
-\n  docker restart jemai_portainer\n  docker restart ollama\n

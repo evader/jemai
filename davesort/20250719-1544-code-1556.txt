@@ -1,1 +1,0 @@
-\n  volumes:\n    - \"/:/host\"  # \"God Mode\" mount for full filesystem access\n    - \"/var/run/docker.sock:/var/run/docker.sock\"\n

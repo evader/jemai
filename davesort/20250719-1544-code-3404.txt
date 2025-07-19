@@ -1,1 +1,0 @@
-\n     sudo apt-get install git-credential-manager\n

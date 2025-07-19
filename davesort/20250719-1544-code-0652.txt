@@ -1,1 +1,0 @@
-\n  C:\\Windows\\System32\\cmd.exe /c \"C:\\JEMAI_HUB\\start_jemai_stack.bat\"\n

@@ -1,1 +1,0 @@
-\n# JEMAI OS\n# Script: synapz_overlay_v1.1.py\n# Version: 1.1\n# Last Updated: 2025-07-18\n# Built by: [AgentName] for David Lee\n\"\"\"\nOverlay popup for JEMAI OS.\nHotkey: Ctrl+Shift+Space\nSupports triggers: SEARCH, CMD, BASE64, ENCODE, NAMEGEN\n\"\"\"\n

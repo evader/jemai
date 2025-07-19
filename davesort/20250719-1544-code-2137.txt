@@ -1,1 +1,0 @@
-\\n    ssh david@<T7910_IP_ADDRESS>\\n

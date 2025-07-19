@@ -1,1 +1,0 @@
-\ndocker ps -a --format \"table {{.Names}}\\t{{.Status}}\\t{{.Ports}}\"\ndocker logs jemai_open_webui --tail 50\n

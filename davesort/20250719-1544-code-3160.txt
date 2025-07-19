@@ -1,1 +1,0 @@
-\n\n#### 2. **Paste** (Ctrl+Shift+V) into your Linux terminal and hit Enter.  \nYou should see **nothing but a prompt**\u2014that\u2019s good.\n\n#### 3. **Now run this:**\n

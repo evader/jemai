@@ -1,1 +1,0 @@
-\n\nAfter that, check logs of your core service (`jemai_prod_core`) for any errors:\n\n

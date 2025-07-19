@@ -1,2 +1,0 @@
-# In your current VSCode terminal (where you ran ls -l)
-sudo docker ps

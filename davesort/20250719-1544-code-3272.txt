@@ -1,1 +1,0 @@
-\n   sudo cp -r ~/ollama_backups/my_ollama_data_backup/* /opt/ai_offline_setup/ai_models/\n

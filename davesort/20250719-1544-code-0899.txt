@@ -1,1 +1,0 @@
-\ndocker run -d \\\n  --name jemai_open_webui \\\n  --network host \\\n  -e OLLAMA_BASE_URL=http://127.0.0.1:11434 \\\n  ghcr.io/open-webui/open-webui:main\n

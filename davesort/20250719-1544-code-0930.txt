@@ -1,1 +1,0 @@
-\n/dev/mapper/ubuntu--vg-ubuntu--lv  984G  984G     0 100% /\n

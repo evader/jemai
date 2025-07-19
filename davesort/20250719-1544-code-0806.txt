@@ -1,1 +1,0 @@
-\ncurl -fsSL https://ollama.com/install.sh | sh\nsudo systemctl status ollama\nsudo systemctl restart ollama\nollama serve &\nollama list\nollama pull <model>:<tag>\n

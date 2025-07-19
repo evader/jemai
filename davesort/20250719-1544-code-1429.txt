@@ -1,1 +1,0 @@
-\nollama pull llama3\nollama pull mistral\n

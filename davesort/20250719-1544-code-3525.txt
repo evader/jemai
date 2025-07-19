@@ -1,1 +1,0 @@
-\n   nano ~/synapz_chat_test.sh\n

@@ -1,1 +1,0 @@
-\ndepends_on:\n  - ollama\nenvironment:\n  - OLLAMA_BASE_URL=http://host.docker.internal:11438\nrestart: unless-stopped\n

@@ -1,1 +1,0 @@
-\nsudo tail -n 20 /var/log/synapz_core_runtime.log\n

@@ -1,5 +1,0 @@
-curl http://jemai.local:11434/api/generate -d '{
-          "model": "llama3:8b",
-          "prompt": "Why is the sky blue?",
-          "stream": false
-        }'

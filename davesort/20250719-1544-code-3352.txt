@@ -1,1 +1,0 @@
-\n  volumes:\n    - ollama_data:/root/.ollama\n    - /etc/localtime:/etc/localtime:ro\n    - /etc/timezone:/etc/timezone:ro\n    - /opt/ai_offline_setup/ai_models:/root/.ollama/models_external:ro\n

@@ -1,1 +1,0 @@
-\n    volumes:\n      - .:/app\n

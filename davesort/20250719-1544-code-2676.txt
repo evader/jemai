@@ -1,1 +1,0 @@
-\npython 1532 ... TCP *:11436 (LISTEN)\n

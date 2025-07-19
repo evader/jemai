@@ -1,1 +1,0 @@
-\n     sudo chown -R jemai:jemai /home/jemai/ai_offline_setup_downloads/\n

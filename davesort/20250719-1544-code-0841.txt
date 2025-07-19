@@ -1,1 +1,0 @@
-\njemai_open_webui   Up 35 seconds (healthy)   0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp\n

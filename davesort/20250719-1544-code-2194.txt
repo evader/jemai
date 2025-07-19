@@ -1,1 +1,0 @@
-\npython synapz_rag_query.py\n

@@ -1,1 +1,0 @@
-\ndocker exec -it jemai_ollama bash\nollama list  # Should show nothing or minimal\n\n# Then restore manually\ncp -r /home/jemai/ollama_backups/* /root/.ollama/\n

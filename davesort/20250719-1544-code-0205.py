@@ -1,1 +1,0 @@
-run_command(["sudo", "apt", "install", "-y", "--download-only", "--no-install-recommends"] + packages)

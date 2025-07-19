@@ -1,1 +1,0 @@
-\n  lt-backend:\n    ports:\n      - \"5000:5001\"\n\n  ollama:\n    ports:\n      - \"11438:11438\"\n\n  open-webui:\n    ports:\n      - \"3000:8080\"\n\n  jupyter:\n    ports:\n      - \"8888:8888\"\n\n  code-server:\n    ports:\n      - \"8080:8080\"\n\n  portainer:\n    ports:\n      - \"9000:9000\"\n

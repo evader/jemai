@@ -1,1 +1,0 @@
-\n\nNow you can send POST requests with your queries:\n\n

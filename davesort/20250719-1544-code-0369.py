@@ -1,1 +1,0 @@
-\nwith open(\"handoff.md\") as f:\n    for line in f:\n        if line.startswith(\"

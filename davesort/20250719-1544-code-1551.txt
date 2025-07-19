@@ -1,1 +1,0 @@
-\n    volumes:\n      - /opt/jemai_prod:/opt/jemai_prod\n

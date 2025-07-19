@@ -1,1 +1,0 @@
-\n\n---\n\n### **4. Check for critical missing files:**\nIf you want to **quickly check for missing critical files**, run:\n

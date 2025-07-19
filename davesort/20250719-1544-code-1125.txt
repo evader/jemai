@@ -1,1 +1,0 @@
-\n  sudo netstat -tulpn | grep LISTEN\n

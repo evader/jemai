@@ -1,1 +1,0 @@
-nexusAiButton.addEventListener('click', () => handleExecute('nexus_ai'));

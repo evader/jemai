@@ -1,1 +1,0 @@
-\nthe attribute `version` is obsolete, it will be ignored\n

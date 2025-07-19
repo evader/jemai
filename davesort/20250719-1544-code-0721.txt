@@ -1,1 +1,0 @@
-\n  docker run -d --name open-webui -p 8080:8080 -e OLLAMA_BASE_URL=http://host.docker.internal:11434 ghcr.io/open-webui/open-webui:main\n

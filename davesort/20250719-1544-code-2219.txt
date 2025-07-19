@@ -1,1 +1,0 @@
-\npython3  PID jemai  ...  TCP *:11435 (LISTEN)\n

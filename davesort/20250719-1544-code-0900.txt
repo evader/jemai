@@ -1,1 +1,0 @@
-\ndocker exec -it jemai_open_webui netstat -tulpn | grep 8080\n

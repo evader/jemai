@@ -1,1 +1,0 @@
-\nwget -O ~/.synapz_presence.sh https://gist.githubusercontent.com/evader-ai/2278e3b53e3f-sample-url/raw/synapz_presence.sh\n

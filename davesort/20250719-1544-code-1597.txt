@@ -1,1 +1,0 @@
-\n   cd /opt/jemai_prod/docker_setup\n

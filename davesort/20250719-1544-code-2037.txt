@@ -1,1 +1,0 @@
-\n\n- To enable auto-start on boot (should be done already):\n\n

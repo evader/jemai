@@ -1,1 +1,0 @@
-\n   python3 --version\n

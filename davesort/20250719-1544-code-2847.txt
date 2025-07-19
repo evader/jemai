@@ -1,1 +1,0 @@
-\njupall       # Start containers\njrst         # Restart Synapz Core\njlogs        # View logs live\njstat        # Status summary\njtest        # Query endpoint\nssay \"System ready\"  # TTS test\n

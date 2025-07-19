@@ -1,1 +1,0 @@
-sudo ~/jemai_genesis_installer.sh

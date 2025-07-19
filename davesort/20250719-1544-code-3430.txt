@@ -1,1 +1,0 @@
-\n   transformers --version\n

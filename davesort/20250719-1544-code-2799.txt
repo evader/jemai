@@ -1,1 +1,0 @@
-\nreadlink -f synapz_core.py\n

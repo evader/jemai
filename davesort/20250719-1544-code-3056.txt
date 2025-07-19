@@ -1,1 +1,0 @@
-\n- Open port 11436 on your firewall or router (LAN-only if you don\u2019t want public exposure).\n\n#### **2. From any client (including scripts, or ChatGPT via browser extension/server):**\n- **Send a query:**\n

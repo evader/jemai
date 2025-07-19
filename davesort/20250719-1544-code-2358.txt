@@ -1,1 +1,0 @@
-\nPOST /writefile\n{\n  \"path\": \"/home/jemai/synapz_core/pw.txt\",\n  \"content\": \"trustno1\"\n}\n

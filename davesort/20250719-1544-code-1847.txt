@@ -1,1 +1,0 @@
-\n\n4. **Check Docker network and container connectivity:**  \nExec into backend container and ping Open WebUI or Ollama:  \n

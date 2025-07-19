@@ -1,1 +1,0 @@
-\njemai ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart synapz_core, /usr/bin/journalctl -u synapz_core -f\n

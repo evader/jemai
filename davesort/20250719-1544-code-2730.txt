@@ -1,1 +1,0 @@
-\nports:\n  - \"11438:11434\"  # Host port 11438 \u2192 container port 11434 (Ollama default)\n

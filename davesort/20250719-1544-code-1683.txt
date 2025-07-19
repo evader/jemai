@@ -1,1 +1,0 @@
-\ndocker compose logs jemai_core --tail=100\n

@@ -1,1 +1,0 @@
-\nnano speak_local.py\n

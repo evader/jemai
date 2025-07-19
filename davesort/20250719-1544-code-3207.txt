@@ -1,1 +1,0 @@
-\n\n2. **Check the Synapz Core Python script** for issues:\n   If the issue is related to Python or the script itself, I suggest checking any recent changes or errors in the Python code by reviewing:\n

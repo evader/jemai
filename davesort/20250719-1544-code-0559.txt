@@ -1,1 +1,0 @@
-sudo mv ~/docker-compose.yml.prod /opt/jemai_prod/docker_setup/docker-compose.yml

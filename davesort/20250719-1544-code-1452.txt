@@ -1,1 +1,0 @@
-\nsudo ~/jemai_nuke_and_fix.sh\n

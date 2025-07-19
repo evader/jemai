@@ -1,1 +1,0 @@
-\nsudo rsync -avh --progress /home/jemai/ai_offline_setup_downloads/ai_models/blobs/ /usr/share/ollama/.ollama/models/blobs/\nsudo rsync -avh --progress /home/jemai/ai_offline_setup_downloads/ai_models/manifests/ /usr/share/ollama/.ollama/models/manifests/\nsudo chown -R ollama:ollama /usr/share/ollama/.ollama/models/\nsudo systemctl restart ollama\n

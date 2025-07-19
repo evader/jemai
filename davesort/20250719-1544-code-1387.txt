@@ -1,1 +1,0 @@
-\nsudo chown -R 1000:1000 /path/to/openwebui/data\n

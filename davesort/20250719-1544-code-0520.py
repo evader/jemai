@@ -1,1 +1,0 @@
-\\n    python -c \\\"import torch; print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0))\\\"\\n    # For TensorFlow:\\n    # python -c \\\"import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))\\\"\\n

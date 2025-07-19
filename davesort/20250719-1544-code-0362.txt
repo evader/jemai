@@ -1,3 +1,0 @@
-sudo docker update --restart=no jemai_lt_backend
-        sudo docker stop jemai_lt_backend
-        sudo docker rm jemai_lt_backend

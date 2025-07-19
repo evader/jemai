@@ -1,1 +1,0 @@
-\njrst && sleep 5 && jtest && jlogs\n

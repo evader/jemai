@@ -1,1 +1,0 @@
-\n   sudo ./ollama_model_shotgun.sh\n

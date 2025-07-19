@@ -1,1 +1,0 @@
-\ncurl http://localhost:11436/query -d '{\"query\": \"Save this interaction to memory.\"}'\n

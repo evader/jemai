@@ -1,1 +1,0 @@
-\nThis will open the file in your editor window if VS Code is installed and the `code` command is set up in your `$PATH`.\n\n---\n\n## **The Streamlined Workflow**\n\n1. **Run a \u201cdump\u201d or \u201cpatch\u201d script.**\n2. **End it with the line** `...... code FILENAME` for easy searching/copying in your editor.\n3. **(Optional)** Immediately open in VS Code:  \n

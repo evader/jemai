@@ -1,1 +1,0 @@
-\n# (as jemai, in Ubuntu shell)\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Add to path if not found: \n# export PATH=\"$PATH:/usr/local/bin\"\n\n# Start Ollama server (runs in background)\nollama serve &\n

@@ -1,1 +1,0 @@
-\n  cd C:\\JEMAI_HUB\n  python synapz_overlay_v1.1.py\n

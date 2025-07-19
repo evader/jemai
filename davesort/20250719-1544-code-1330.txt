@@ -1,1 +1,0 @@
-\n  chmod +x ~/bin/jem\n

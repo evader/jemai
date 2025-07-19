@@ -1,1 +1,0 @@
-\n\n---\n\n## **Summary:**\n- **Permission error** is blocking the service.\n- **Solution:**  \n   - Either **chown the log file** in /var/log to jemai  \n   - Or **log to a path in jemai\u2019s home directory** (no root required).\n\n---\n\n## **Do This Now:**\n\n**A. Give jemai access to the log file:**\n

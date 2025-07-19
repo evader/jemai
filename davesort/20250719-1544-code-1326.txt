@@ -1,1 +1,0 @@
-\n  journalctl -u synapz_core -f\n

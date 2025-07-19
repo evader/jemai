@@ -1,1 +1,0 @@
-\n  ls /dev/ttyUSB*\n  esptool.py chip_id\n

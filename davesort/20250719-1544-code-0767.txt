@@ -1,1 +1,0 @@
-\ntail -n 20 ~/.bashrc\n

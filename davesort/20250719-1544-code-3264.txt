@@ -1,1 +1,0 @@
-\n   open-webui:\n     image: ghcr.io/open-webui/open-webui:main\n     container_name: jemai_open_webui\n     ports:\n       - \"3000:8080\" # Make sure this is set correctly\n

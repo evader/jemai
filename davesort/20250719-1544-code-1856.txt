@@ -1,1 +1,0 @@
-\n\n**Next steps:**\n\n1. Save this exact text to `/home/jemai/ai_offline_setup_downloads/docker_setup/requirements.txt`\n2. Then rebuild your containers with:\n
