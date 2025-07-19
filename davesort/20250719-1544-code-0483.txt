@@ -1,0 +1,2 @@
+// Temporarily re-routing Nexus AI requests to Local AI (Ollama)
+        // The true Gemini (Nexus) integration with socket.io will be a separate task

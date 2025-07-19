@@ -1,0 +1,1 @@
+\n{\n  \"status\": \"Synapz Core is active\",\n  \"path\": \"/home/jemai/synapz_core\"\n}\n

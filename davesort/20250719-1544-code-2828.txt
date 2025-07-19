@@ -1,0 +1,1 @@
+\nif [ \"$color_prompt\" = yes ]; then\n    PS1='\\[\\033[01;35m\\][JEM AI \ud83e\udd16] \\[\\033[01;32m\\]\\u@\\h \\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ '\nelse\n    PS1='[JEM AI \ud83e\udd16] \\u@\\h \\w\\$ '\nfi\n

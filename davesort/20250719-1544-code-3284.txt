@@ -1,0 +1,1 @@
+\n      nano setup_jemai_local.sh\n

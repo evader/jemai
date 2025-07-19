@@ -1,0 +1,1 @@
+\ncommand: python3 jemai_core.py\n

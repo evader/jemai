@@ -1,0 +1,1 @@
+\nfunction synapz_animated_banner() { ... }\n

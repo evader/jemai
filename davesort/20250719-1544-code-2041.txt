@@ -1,0 +1,1 @@
+\n\nNow you can run your Python SocketIO client script (`test_rag_query.py`) inside this venv.\n\nTo deactivate the venv when done, run:\n\n

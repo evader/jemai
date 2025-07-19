@@ -1,0 +1,1 @@
+mkdir -p /opt/ai_offline_setup/docker_setup/templates

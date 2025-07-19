@@ -1,0 +1,36 @@
+# jemai_data_hub_v1_0.py
+.jemai_versions
+400f510a803a2fa01eaa229a219645fc5980aed83cc44b770a2c571955e86506-2025-07-16-10-11-32-f90e03a5cf7d403d9995ff11586df843
+chatgpt
+cleanup_jemai_hub.bat
+cluster_update.py
+DESKTOP-K16IFJ0_jemai.py
+gpt41
+gpt41.zip
+Jem.exe
+jemai.py
+jemai_data_hub.py
+jemai_devices.json
+jemai_hub.csv
+jemai_hub.jsonl
+jemai_hub.sqlite3
+jemai_memory_api_v1.0.py
+jemai_memory_api_v1.py
+JSON
+Older
+old_parser_files
+plugins
+print(If you see this, your file is running the top-level block.)
+start_jemai_stack.bat
+start_jemai_stack.bat.EXE
+start_jemai_stack.bat.SED
+start_jemai_stack_v1_0.bat
+synapz_listener_v1.0.py
+synapz_listener_v1_0.py
+synapz_listener_v1_0.zip
+synapz_overlay_v1.1.py
+synapz_overlay_v1_1.py
+update.zip
+VERSIONS.TXT
+[JEMAI]
+__pycache__

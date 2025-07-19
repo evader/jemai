@@ -1,0 +1,1 @@
+\nss -tuln | grep 6000\n

@@ -1,0 +1,1 @@
+~/ai_offline_setup_downloads/scripts/install_offline_ai.sh

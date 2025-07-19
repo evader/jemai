@@ -1,0 +1,1 @@
+\ncd ~\ngit init jemai_local\ncd jemai_local\n# cp your scripts in here as you improve them\ngit add .\ngit commit -m \"First working native stack\"\n

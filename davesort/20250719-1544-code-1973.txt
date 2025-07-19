@@ -1,0 +1,1 @@
+\n\nIf it shows your GPU info inside the container, you\u2019re good.\n\nIf it errors out, you need to install or fix the NVIDIA Container Toolkit.\n\n---\n\nIf it\u2019s working, your docker-compose `ollama` service must have GPU device reservations like this:\n\n

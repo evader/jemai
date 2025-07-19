@@ -1,0 +1,1 @@
+\nsubprocess.Popen([\n    \"powershell\", \n    \"-c\", \n    \"Add-Type \u2013AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('{}')\".format(text)\n])\n

@@ -1,0 +1,1 @@
+\njrst     # or: sudo systemctl restart synapz_core\njtest    # optional, test endpoint\njlogs    # view logs\n

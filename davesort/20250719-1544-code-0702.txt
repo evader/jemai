@@ -1,0 +1,1 @@
+\n# /etc/systemd/system/jemai_memory_api.service\n[Unit]\nDescription=JEMAI Memory API\n\n[Service]\nUser=jemai\nWorkingDirectory=/home/jemai/synapz_local\nExecStart=/home/jemai/synapz_local/venv/bin/uvicorn jemai_memory_api:app --host 0.0.0.0 --port 8089\nRestart=always\n\n[Install]\nWantedBy=multi-user.target\n

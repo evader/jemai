@@ -1,0 +1,1 @@
+\n   source ~/.bashrc\n   jemai\n   synapz-log\n

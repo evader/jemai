@@ -1,0 +1,1 @@
+\n# synapz_rfid.py\nimport serial\n\nser = serial.Serial('/dev/ttyUSB0', 9600)\nwhile True:\n    tag = ser.readline().strip()\n    print(f\"RFID Detected: {tag}\")\n    # Register tag to mesh, assign user/role, or fire off automation\n

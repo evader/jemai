@@ -1,0 +1,1 @@
+\n   # NEXUS\n   # System: JEMAI OS / Synapz / MemoryHub / Overlay\n   # Built: July 2025 for David Lee by Nexus\n   # Purpose: (short description)\n

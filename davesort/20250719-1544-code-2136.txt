@@ -1,0 +1,1 @@
+\\nfastapi\\nuvicorn\\npyperclip\\n# ... (other dependencies may be here)\\n

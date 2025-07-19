@@ -1,0 +1,1 @@
+\ndocker compose build lt-backend\n

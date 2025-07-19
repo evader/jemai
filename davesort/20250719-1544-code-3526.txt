@@ -1,0 +1,1 @@
+\n   chmod +x ~/synapz_chat_test.sh\n

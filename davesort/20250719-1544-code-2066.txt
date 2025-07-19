@@ -1,0 +1,1 @@
+\n\n---\n\n### Instructions to apply:\n\n1. Save this as `/home/jemai/jemai_core_setup/docker-compose.yml` (overwrite existing).\n\n2. Run these commands to fully restart your stack with GPU enabled:\n\n

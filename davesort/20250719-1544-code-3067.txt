@@ -1,0 +1,1 @@
+\nReplace `<YOUR_NGROK_AUTHTOKEN>` with the real key from your [ngrok dashboard](https://dashboard.ngrok.com/get-started/your-authtoken).\n\n---\n\n### **How to Get Your ngrok Authtoken**\n1. Go to: https://dashboard.ngrok.com/get-started/your-authtoken\n2. Copy your unique authtoken (looks like: `1Wgx...6kXs`)\n3. Edit the file in VS Code, or use `nano ~/ngrok_jemai.service`:\n

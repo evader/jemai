@@ -1,0 +1,1 @@
+\n~/llm/\n\u251c\u2500\u2500 models/          # Ollama model cache / manually downloaded GGUFs\n\u251c\u2500\u2500 scripts/         # launchers, log rotators, install tools\n\u251c\u2500\u2500 ollama/          # for volume mounts if Dockerized\n\u2514\u2500\u2500 logs/\n

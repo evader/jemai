@@ -1,0 +1,1 @@
+\nsource /home/jemai/venv1/bin/activate\npip install --upgrade pip\npip install \"python-socketio[client]\" requests\n

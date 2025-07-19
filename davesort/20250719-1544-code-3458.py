@@ -1,0 +1,1 @@
+\nimport torch\nprint(torch.__version__)\n

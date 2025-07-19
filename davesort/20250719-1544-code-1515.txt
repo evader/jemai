@@ -1,0 +1,1 @@
+\n   docker compose run --rm jemai_core python3 jemai_core.py\n

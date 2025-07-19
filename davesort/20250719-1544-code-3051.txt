@@ -1,0 +1,1 @@
+\n\n**This opens the file automatically in VS Code after it\u2019s generated.**  \nNo need for `...... code filename` marker\u2014just use `code filename` as the last line!\n\n---\n\n## **Your New Standard Script Ending:**\n\n

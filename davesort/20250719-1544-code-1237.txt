@@ -1,0 +1,1 @@
+\ncurl -s -X POST http://localhost:11436/chat -H \"Content-Type: application/json\" -d '{\"query\":\"who are you?\"}'\n

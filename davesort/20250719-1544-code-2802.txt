@@ -1,0 +1,1 @@
+\nsudo fuser -k 11436/tcp\npkill -f synapz_core.py\n

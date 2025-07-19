@@ -1,0 +1,1 @@
+jobs = {} # Define the global jobs dictionary

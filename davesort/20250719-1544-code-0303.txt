@@ -1,0 +1,2 @@
+sudo nvidia-container-toolkit-base configure --gpus all
+    sudo systemctl restart docker

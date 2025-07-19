@@ -1,0 +1,1 @@
+\nls -l ~/synapz_core/venv/bin/python3\n

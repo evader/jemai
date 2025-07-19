@@ -1,0 +1,1 @@
+\nsudo lsof -iTCP:11436 -sTCP:LISTEN\n

@@ -1,0 +1,1 @@
+\nsudo du -h --max-depth=3 / | grep \"/models\"\n

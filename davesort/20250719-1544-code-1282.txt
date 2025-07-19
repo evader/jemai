@@ -1,0 +1,1 @@
+\nexport PATH=\"$HOME/bin:$PATH\"\n

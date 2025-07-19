@@ -1,0 +1,1 @@
+\n   sudo lsof -i :11434\n

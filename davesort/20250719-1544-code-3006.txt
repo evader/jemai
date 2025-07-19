@@ -1,0 +1,1 @@
+\n- Now open or upload `~/synapz_core_files_short.txt` (should be a few hundred lines, not thousands).\n\n---\n\n### **2. List Top-Level Contents and Immediate Subfolders**\n

@@ -1,0 +1,1 @@
+\n   chmod +x ~/chat_test.sh\n

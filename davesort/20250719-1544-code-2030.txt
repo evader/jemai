@@ -1,0 +1,1 @@
+\n\nThen:\n\n- Change systemd `ExecStart` to `/usr/local/bin/docker-compose -f /home/jemai/jemai_core_setup/docker-compose.yml up -d`\n\n- Reload systemd and restart service:\n\n

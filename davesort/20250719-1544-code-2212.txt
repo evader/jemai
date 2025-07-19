@@ -1,0 +1,1 @@
+\n# Fix missing memory file\ncp /home/jemai/synapz_local_rag/SynapzV2_conversation_history.json /home/jemai/synapz_core/\n\n# Wait for me to drop:\n# \u23ec synapz_core.py \u2014 the daemon brain\n

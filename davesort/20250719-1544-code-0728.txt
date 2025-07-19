@@ -1,0 +1,1 @@
+\n/var/lib/ollama/models\n

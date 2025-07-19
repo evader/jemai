@@ -1,0 +1,1 @@
+\n  cd /opt/jemai_prod/docker_setup\n  docker compose down --remove-orphans\n  docker compose up -d --build\n  docker compose logs jemai_core --tail=100 -f\n

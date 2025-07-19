@@ -1,0 +1,1 @@
+\n\n**Browser (Open WebUI):**\n- Type anything you want, or if you have set your Synapz Core as a model endpoint, interact the same as with shell.\n- For system control, you may need to create a \u201csystem\u201d prompt, e.g.:\n

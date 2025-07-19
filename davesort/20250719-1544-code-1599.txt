@@ -1,0 +1,1 @@
+\nalias jcorelog='cd /opt/jemai_prod/docker_setup && docker compose logs jemai_core --tail=50'\n

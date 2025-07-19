@@ -1,0 +1,1 @@
+\nalias llm='cd ~/llm'\nalias oll='ollama run phind:34b'\nalias ollserve='ollama serve >> ~/llm/logs/ollama.log 2>&1 &'\nalias gputop='watch -n 2 nvidia-smi'\nalias sysmem='watch -n 1 free -h'\n

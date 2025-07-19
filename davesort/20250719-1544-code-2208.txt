@@ -1,0 +1,1 @@
+\n./install_core.sh\n

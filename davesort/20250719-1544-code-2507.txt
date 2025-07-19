@@ -1,0 +1,1 @@
+\nPermissionError: [Errno 13] Permission denied: '/home/jemai'\n

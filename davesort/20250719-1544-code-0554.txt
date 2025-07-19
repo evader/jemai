@@ -1,0 +1,10 @@
+# Create the script file
+code ~/jemai_genesis_installer.sh
+
+# PASTE THE ENTIRE SCRIPT BELOW INTO THE FILE AND SAVE IT
+
+# Make it executable
+chmod +x ~/jemai_genesis_installer.sh
+
+# Execute it with sudo
+sudo ~/jemai_genesis_installer.sh

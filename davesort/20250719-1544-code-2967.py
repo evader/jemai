@@ -1,0 +1,1 @@
+\n# prevent_manual_launch()  # TEMP: Allow foreground debug\n

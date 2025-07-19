@@ -1,0 +1,5 @@
+volumes:
+      # THIS IS THE "GOD MODE" MOUNT. It maps the entire host filesystem.
+      - "/:/host"
+      # This still allows access to the Docker socket
+      - "/var/run/docker.sock:/var/run/docker.sock"

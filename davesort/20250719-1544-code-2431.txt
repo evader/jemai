@@ -1,0 +1,1 @@
+\ncd ~/synapz_core\nsource venv/bin/activate\npkill -f synapz_core.py\npython3 synapz_core.py\n

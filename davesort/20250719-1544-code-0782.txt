@@ -1,0 +1,1 @@
+\nls -lh /usr/share/ollama/.ollama/models/\nls -lh /usr/share/ollama/.ollama/models/blobs\nls -lh /usr/share/ollama/.ollama/models/manifests\n

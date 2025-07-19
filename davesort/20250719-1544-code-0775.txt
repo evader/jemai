@@ -1,0 +1,1 @@
+\nsudo chown -R jemai:jemai ~/.ollama\n

@@ -1,0 +1,1 @@
+\nsudo apt-get clean\nsudo rm -rf /var/cache/apt/archives/*\n

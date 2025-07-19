@@ -1,0 +1,1 @@
+\nports:\n  - \"11436:11434\"  # EXTERNAL_PORT:INTERNAL_PORT\n

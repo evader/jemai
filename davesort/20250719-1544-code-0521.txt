@@ -1,0 +1,1 @@
+scp -r models/* jemai@jemai.local:/home/jemai/ollama_backups/my_ollama_data_backup/

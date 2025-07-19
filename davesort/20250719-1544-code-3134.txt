@@ -1,0 +1,1 @@
+\n\u2026and run it!\n\n---\n\n### 3. **How the new relay works:**\n- Watches for `relay_command.json`\n- Runs the command, prints result, **removes the file** so it doesn't loop\n- No more repeated timeouts or confusion!\n\n---\n\n## **Try it out:**\n1. Replace your `synapz_relay.py` with the above.\n2. Run: `python3 ~/synapz_core/synapz_relay.py`\n3. In another terminal:\n

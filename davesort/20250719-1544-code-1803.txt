@@ -1,0 +1,1 @@
+\n\n---\n\n### 4. `lt.py`\n\n*(The full file you pasted \u2014 I\u2019ll format it and add minor fixes so it\u2019s ready to go. If you want, I can share this as a separate file, too. Just say so.)*\n\n*(Let me know if you want me to paste it here again)*\n\n---\n\n### 5. `templates/index.html`\n\nCreate a `templates/` folder and add a basic `index.html`:\n\n

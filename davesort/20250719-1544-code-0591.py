@@ -1,0 +1,1 @@
+\nimport base64\nbase64.b64encode(b'Hello Synapz!').decode()\n

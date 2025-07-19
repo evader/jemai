@@ -1,0 +1,1 @@
+\n\n---\n\n### 2. **Build and start the container**\n\nRun these commands from `/opt/jemai_prod/docker_setup`:\n\n

@@ -1,0 +1,1 @@
+run_command(["sudo", "cp", "/var/cache/apt/archives/*.deb", DEBS_PATH])

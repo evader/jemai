@@ -1,0 +1,1 @@
+\n{\"status\": \"Synapz Core is active\", \"cwd\": \"/home/jemai/synapz_core\"}\n

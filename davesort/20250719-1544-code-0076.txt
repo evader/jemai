@@ -1,0 +1,7 @@
+Flask
+    google-generativeai
+    requests
+    pyperclip
+    ollama
+    psutil
+    Flask-SocketIO  # <--- ADD THIS LINE

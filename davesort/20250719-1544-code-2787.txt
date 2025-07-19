@@ -1,0 +1,1 @@
+\njournalctl -u synapz_core -n 50 --no-pager\n

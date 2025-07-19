@@ -1,0 +1,23 @@
+lt-backend:
+         build:
+           context: .
+           dockerfile: Dockerfile.lt-backend
+         container_name: jemai_lt_backend
+         ports:
+           - "5000:5000" # Expose Flask app
+         environment:
+           - GOOGLE_API_KEY=${GOOGLE_API_KEY:-} # Pass GOOGLE_API_KEY from host env, if set
+           - DISPLAY=${DISPLAY} # Pass the host's DISPLAY variable into the container
+         volumes:
+           - "/tmp/.X11-unix:/tmp/.X11-unix:rw" # Mount the X server socket
+           - "${PWD}/lt-backend:/app" # Mount the code directly for easier dev/updates
+           - "/etc/localtime:/etc/localtime:ro" # Time synchronization
+           - "/etc/timezone:/etc/timezone:ro" # Timezone synchronization
+         restart: unless-stopped
+         deploy:
+           resources:
+             reservations:
+               devices:
+                 - driver: nvidia
+                   count: 0 # Request 0 GPUs for lt-backend itself, as ollama handles
+                   capabilities: [gpu] # Still request capabilities if you're using nvidia-container-toolkit

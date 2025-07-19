@@ -1,0 +1,1 @@
+\n\nAlternatively, if using `deploy.resources.reservations.devices` is supported:\n\n

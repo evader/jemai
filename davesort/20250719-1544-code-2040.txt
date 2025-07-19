@@ -1,0 +1,1 @@
+\n\nThen inside the activated venv, install needed packages like this:\n\n

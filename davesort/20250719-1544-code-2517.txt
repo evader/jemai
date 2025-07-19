@@ -1,0 +1,1 @@
+\nmkdir -p ~/synapz_core/templates\nnano ~/synapz_core/templates/index.html\n

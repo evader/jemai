@@ -1,0 +1,1 @@
+\n   mkdir -p /home/jemai/synapz_core/persona\n   touch /home/jemai/synapz_core/persona/notes.txt\n

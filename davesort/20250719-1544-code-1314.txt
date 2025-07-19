@@ -1,0 +1,1 @@
+\ngrep -i jemai ~/.bash* ~/.profile 2>/dev/null\n

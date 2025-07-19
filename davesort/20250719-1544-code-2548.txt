@@ -1,0 +1,1 @@
+\ncurl http://localhost:11434/api/generate -d '{\n  \"model\": \"llama3:70b\",\n  \"prompt\": \"What is the capital of Australia?\",\n  \"stream\": false\n}'\n

@@ -1,0 +1,1 @@
+\n/usr/share/ollama/.ollama/models/                   # Main Ollama model dir\n/usr/share/ollama/.ollama/models/blobs/             # Model blobs\n/usr/share/ollama/.ollama/models/manifests/         # Model manifests\n/home/jemai/ai_offline_setup_downloads/ai_models/   # Local model archive\n

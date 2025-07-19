@@ -1,0 +1,1 @@
+\nollama pull phind:34b\nollama run phind:34b\n

@@ -1,0 +1,1 @@
+\n   grep 5000 ~/.synapz_presence.sh\n

@@ -1,0 +1,1 @@
+\nalias jesbuild='curl -s -X POST http://localhost:11436/esp32/build -H \"Content-Type: application/json\" -d \"{\\\"path\\\":\\\"/home/jemai/esp32_projects/esp_display\\\"}\" | jq'\n

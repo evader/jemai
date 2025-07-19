@@ -1,0 +1,1 @@
+\nuvicorn.run(\"jemai_memory_api:app\", host=\"0.0.0.0\", port=8089, reload=True)\n

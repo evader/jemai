@@ -1,0 +1,1 @@
+\n   portainer:\n     image: portainer/portainer-ce:latest\n     container_name: jemai_portainer\n     ports:\n       - \"9000:9000\" # Portainer UI port\n     volumes:\n       - /var/run/docker.sock:/var/run/docker.sock # Access to Docker daemon\n       - portainer_data:/data # Persistent data for Portainer\n     restart: unless-stopped\n

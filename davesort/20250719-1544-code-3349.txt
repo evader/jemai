@@ -1,0 +1,1 @@
+\nsudo chmod -R 777 /root/.ollama\n

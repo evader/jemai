@@ -1,0 +1,1 @@
+\ncat ~/synapz_core/synapz_install.log\n

@@ -1,0 +1,1 @@
+\n     sudo nano /etc/nginx/sites-available/jemai.local\n

@@ -1,0 +1,1 @@
+\necho $MY_VAR\n

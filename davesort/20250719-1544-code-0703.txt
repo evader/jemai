@@ -1,0 +1,1 @@
+\nsudo systemctl daemon-reload\nsudo systemctl enable --now jemai_memory_api\n

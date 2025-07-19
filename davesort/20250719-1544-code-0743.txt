@@ -1,0 +1,1 @@
+\nsudo find / -type f \\( -name \"*.bin\" -o -name \"*.gguf\" -o -name \"*.onnx\" -o -name \"*.safetensors\" -o -name \"*.pt\" \\) -size +100M -print 2>/dev/null\n

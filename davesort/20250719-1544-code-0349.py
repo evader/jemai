@@ -1,0 +1,1 @@
+\ntry:\n    import textual\n    console.print(\"[green]Launching Textual GUI...[/green]\")\n    os.system(\"textual run jemai_cli.py\")\nexcept ImportError:\n    console.print(\"[yellow]Install 'textual' for GUI: pip install textual[/yellow]\")\n

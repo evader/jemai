@@ -1,0 +1,136 @@
+#!/bin/bash
+# install_jemai_menu.sh - JEM AI Interactive Installer & Debugger
+# This script provides a menu-driven interface for JEM AI installation and troubleshooting.
+
+# --- Global Variables (from generator, or define here) ---
+OFFLINE_SETUP_DIR="/opt/ai_offline_setup"
+# ... (other variables like PYTHON_VERSION, CUDA_VERSION etc. will be here)
+
+# --- Functions for each Installation Step ---
+function run_step0_prepare_setup_files() {
+    echo "-------------------------------------------------------------------"
+    echo "STEP 0: Prepare Setup Files."
+    echo "  Ensure symlink is created: sudo ln -s ${HOME}/ai_offline_setup_downloads \"${OFFLINE_SETUP_DIR}\""
+    read -p "Press ENTER to continue (after creating symlink if needed)."
+    echo "-------------------------------------------------------------------"
+    # Call actual commands from install_offline_ai.sh STEP 0
+}
+
+function run_step1_install_ubuntu_packages() {
+    echo "-------------------------------------------------------------------"
+    echo "STEP 1: Install essential Ubuntu packages (offline - including Docker)."
+    # Call actual commands from install_offline_ai.sh STEP 1
+    # This includes Docker and NVIDIA Container Toolkit installation logic
+    read -p "Press ENTER to continue."
+    echo "-------------------------------------------------------------------"
+}
+
+function run_step2_install_nvidia_drivers() {
+    echo "-------------------------------------------------------------------"
+    echo "STEP 2: Install NVIDIA Drivers and CUDA Toolkit (OFFLINE)."
+    # Call actual commands from install_offline_ai.sh STEP 2 (or the bypass if already done)
+    read -p "Press ENTER to continue."
+    echo "-------------------------------------------------------------------"
+}
+
+function run_step3_skip_miniconda() {
+    echo "-------------------------------------------------------------------"
+    echo "STEP 3: Miniconda Installation (SKIPPED)."
+    read -p "Press ENTER to continue."
+    echo "-------------------------------------------------------------------"
+}
+
+function run_step4_deploy_docker_services() {
+    echo "-------------------------------------------------------------------"
+    echo "STEP 4: Deploy JEM AI Core Services (Dockerized Installation)."
+    # Build Dockerfiles and docker-compose up -d
+    # THIS IS WHERE PREVIOUS BUILD-TIME ERRORS WILL BE HANDLED
+    read -p "Press ENTER to continue."
+    echo "-------------------------------------------------------------------"
+}
+
+function run_step5_prepare_repos_models() {
+    echo "-------------------------------------------------------------------"
+    echo "STEP 5: Prepare Git Repositories and AI Models."
+    # Verify linking, etc.
+    read -p "Press ENTER to continue."
+    echo "-------------------------------------------------------------------"
+}
+
+function run_step6_launch_web_uis() {
+    echo "-------------------------------------------------------------------"
+    echo "STEP 6: Launching JEM AI Web UIs (Examples)."
+    # Show URLs
+    read -p "Press ENTER to continue."
+    echo "-------------------------------------------------------------------"
+}
+
+# --- Specific Debug/Troubleshoot Functions ---
+function troubleshoot_lt_backend() {
+    echo "-------------------------------------------------------------------"
+    echo "TROUBLESHOOTING: jemai_lt_backend"
+    echo "  Checking logs..."
+    sudo docker logs jemai_lt_backend
+    echo "-------------------------------------------------------------------"
+    read -p "Press ENTER to fix pyperclip and rebuild. (Will also restart containers)."
+    # This is where Synapz_v2.0 will put the actual fix commands for pyperclip (edit file, build, restart)
+    # This needs to be precisely filled in by Synapz_v2.0
+    echo "-------------------------------------------------------------------"
+}
+
+function check_status_all_services() {
+    echo "-------------------------------------------------------------------"
+    echo "STATUS: All JEM AI Docker Services"
+    sudo docker compose -f "${JEMAI_DOCKER_SETUP_DIR}/docker-compose.yml" ps
+    echo "-------------------------------------------------------------------"
+}
+
+function restart_all_services() {
+    echo "-------------------------------------------------------------------"
+    echo "RESTARTING: All JEM AI Docker Services"
+    sudo docker compose -f "${JEMAI_DOCKER_SETUP_DIR}/docker-compose.yml" down
+    sudo docker compose -f "${JEMAI_DOCKER_SETUP_DIR}/docker-compose.yml" up -d
+    echo "-------------------------------------------------------------------"
+}
+
+# --- Main Menu Loop ---
+function display_menu() {
+    echo ""
+    echo "--- JEM AI Installer & Debugger Menu ---"
+    echo "1. Run STEP 0: Prepare Setup Files"
+    echo "2. Run STEP 1: Install Ubuntu Packages (Docker/NVIDIA Toolkit)"
+    echo "3. Run STEP 2: Install NVIDIA Drivers & CUDA"
+    echo "4. Run STEP 3: Miniconda (SKIPPED)"
+    echo "5. Run STEP 4: Deploy Docker Services (Build/Run JEM AI Core)"
+    echo "6. Run STEP 5: Prepare Git Repos & AI Models"
+    echo "7. Run STEP 6: Launch JEM AI Web UIs (Access Info)"
+    echo "----------------------------------------"
+    echo "8. Troubleshoot: Fix jemai_lt_backend (pyperclip/build issue)"
+    echo "9. Check Status: All JEM AI Docker Services"
+    echo "10. Restart All JEM AI Docker Services"
+    echo "11. Reboot System (Recommended after major changes)"
+    echo "Q. Quit"
+    echo "----------------------------------------"
+    read -p "Select an option: " choice
+}
+
+# --- Main Logic ---
+while true; do
+    display_menu
+    case $choice in
+        1) run_step0_prepare_setup_files ;;
+        2) run_step1_install_ubuntu_packages ;;
+        3) run_step2_install_nvidia_drivers ;;
+        4) run_step3_skip_miniconda ;;
+        5) run_step4_deploy_docker_services ;;
+        6) run_step5_prepare_repos_models ;;
+        7) run_step6_launch_web_uis ;;
+        8) troubleshoot_lt_backend ;;
+        9) check_status_all_services ;;
+        10) restart_all_services ;;
+        11) sudo reboot ;;
+        q|Q) echo "Exiting JEM AI Installer. Goodbye!"; break ;;
+        *) echo "Invalid option. Please try again." ;;
+    esac
+    echo "" # Newline for readability
+done

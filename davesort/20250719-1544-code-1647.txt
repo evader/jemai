@@ -1,0 +1,1 @@
+\ndocker ps -a --filter \"name=jemai_prod_core\" --format \"table {{.ID}}\\t{{.Status}}\"\ndocker logs jemai_prod_core --tail=50\n

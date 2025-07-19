@@ -1,0 +1,1 @@
+\ncurl -X POST http://localhost:11436/agent/docker \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"command\": \"logs\", \"target\": \"ollama\"}'\n

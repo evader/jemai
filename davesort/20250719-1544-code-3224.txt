@@ -1,0 +1,1 @@
+\n   curl -X POST http://localhost:11436/chat -H \"Content-Type: application/json\" -d '{\"query\":\"system status\"}'\n

@@ -1,0 +1,1 @@
+\npipx install --force transformers\n

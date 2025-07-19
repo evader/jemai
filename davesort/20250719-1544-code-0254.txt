@@ -1,0 +1,3 @@
+sudo systemctl daemon-reload
+    sudo systemctl enable tightvncserver@jemai.service
+    sudo systemctl start tightvncserver@jemai.service

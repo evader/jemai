@@ -1,0 +1,109 @@
+#!/bin/bash
+# This script applies all necessary fixes to lt.py for Docker containerization
+# and proper Flask-SocketIO threading context.
+#
+# It fixes:
+# 1. Global 'jobs = {}' definition.
+# 2. Correctly passes 'sid' (session ID) to functions running in separate threads.
+# 3. Updates all 'emit()' calls to 'socketio.emit()' with 'room=sid'.
+# 4. Handles 'request.sid' extraction within @socketio.on handlers.
+# 5. Correctly passes the socketio instance itself to the clipboard listener thread.
+# 6. Ensures 'pyperclip' and other necessary packages are in requirements.txt.
+#
+# USAGE: Run this script from the directory containing your docker-compose.yml,
+# Dockerfile.lt-backend, requirements.txt, and lt.py (i.e., /opt/ai_offline_setup/docker_setup).
+#
+# Pre-requisite: lt.py, requirements.txt must be present.
+#
+
+LTPY_PATH="/opt/ai_offline_setup/docker_setup/lt.py"
+LTPY_BACKUP_PATH="${LTPY_PATH}.bak"
+REQUIREMENTS_PATH="/opt/ai_offline_setup/docker_setup/requirements.txt"
+
+echo "--- Applying fixes to lt.py for SocketIO context and global 'jobs' ---"
+
+# --- Validate presence of lt.py ---
+if [ ! -f "$LTPY_PATH" ]; then
+    echo "Error: lt.py not found at $LTPY_PATH. Please ensure it's copied there before running this fix script."
+    exit 1
+fi
+
+echo "Creating backup of lt.py --> ${LTPY_BACKUP_PATH}"
+cp "$LTPY_PATH" "$LTPY_BACKUP_PATH"
+
+# 1. Add 'jobs = {}' global definition
+echo "  Adding global 'jobs = {}' definition..."
+# Use awk to insert after 'socketio = SocketIO(app)' if it does not already exist
+awk -i inplace '/socketio = SocketIO(app)/ && !/jobs = {}/{print; print "jobs = {} # Define the global jobs dictionary"}1' "$LTPY_PATH"
+# Check if 'jobs = {}' was added. awk will only add it if not present.
+if ! grep -q "jobs = {}" "$LTPY_PATH"; then
+    echo "    'jobs = {}' already present or added."
+fi
+
+# 2. Update function signatures (_run_command, _run_ollama, _run_esphome) to accept 'sid'
+echo "  Updating _run_command, _run_ollama, _run_esphome function signatures to accept 'sid'..."
+sed -i -E "s/def _run_command\(command, job_id\):/def _run_command(command, job_id, sid):/" "$LTPY_PATH"
+sed -i -E "s/def _run_ollama\(prompt, job_id\):/def _run_ollama(prompt, job_id, sid):/" "$LTPY_PATH"
+sed -i -E "s/def _run_esphome\(yaml_file, job_id\):/def _run_esphome(yaml_file, job_id, sid):/" "$LTPY_PATH"
+
+# 3. Update all 'emit()' calls to 'socketio.emit()' with 'room=sid'
+# This handles the most common emits in _run_command, _run_ollama, _run_esphome
+echo "  Updating 'emit()' calls to 'socketio.emit()' with 'room=sid'..."
+sed -i -E "s/\\bemit\\(([^)]*)\\)/socketio.emit(\1, room=sid)/g" "$LTPY_PATH" # This is a robust regex for general emits
+sed -i -E "s/emit\('(output|jobs_list_update)',\s*(.*)\)/socketio.emit('\1', \2, room=sid)/g" "$LTPY_PATH" # Catch remaining common cases
+
+# 4. Update @socketio.on handlers to extract 'sid' and pass it to threaded functions
+echo "  Updating @socketio.on handlers for 'sid' extraction and passing..."
+
+# Add request import if not present
+if ! grep -q "from flask import.* request" "$LTPY_PATH"; then
+    sed -i '/from flask import Flask/a from flask import request # Added by fix_lt_py.sh for sid' "$LTPY_PATH"
+fi
+
+# Add sid extraction and add sid to args for Threading.Thread
+sed -i -E "s|(@socketio\.on\('(execute|generate_command|run_esphome)'\))\ndef (execute|generate_command|run_esphome)\(data\):|\1\ndef \3(data):\n    sid = request.sid # Extracted by fix_lt_py.sh|g" "$LTPY_PATH"
+sed -i -E "s|threading\.Thread\(target=(_run_command|_run_ollama|_run_esphome), args=\(([^)]*)\)\)\.start\(\)|threading.Thread(target=\1, args=(\2, sid)).start()|g" "$LTPY_PATH"
+
+# 5. Handle clipboard listener's special case (no request context for Thread)
+echo "  Finalizing clipboard listener setup for headless operation..."
+# Ensure _start_clipboard_listener accepts sio_instance and potentially a client sid
+sed -i -E "s/def _start_clipboard_listener\(\):/def _start_clipboard_listener(sio_instance_arg, client_sid_arg=None):/" "$LTPY_PATH"
+# Replace mentions of self.emit or just emit with sio_instance_arg.emit
+sed -i -E "s/self\.emit/sio_instance_arg.emit/g" "$LTPY_PATH" # If any old self.emit syntax
+sed -i -E "s/\bemit\('/sio_instance_arg.emit('/g" "$LTPY_PATH"
+# Ensure calls to other _run_ functions from clipboard listener pass correct args
+sed -i -E "s/_run_command, args=\(command_to_send, job_id\)\)/_run_command, args=(command_to_send, job_id, client_sid_arg))\)/g" "$LTPY_PATH"
+sed -i -E "s/_run_ollama, args=\(prompt, job_id\)\)/_run_ollama, args=(prompt, job_id, client_sid_arg))\)/g" "$LTPY_PATH"
+sed -i -E "s/_run_esphome, args=\(yaml_file, job_id\)\)/_run_esphome, args=(yaml_file, job_id, client_sid_arg))\)/g" "$LTPY_PATH"
+# Pass socketio instance and originating sid from 'start_clipboard' event handler
+sed -i -E "s|@socketio.on('start_clipboard')\ndef start_clipboard\(\):|@socketio.on('start_clipboard')\ndef start_clipboard(data, sid):|g" "$LTPY_PATH" # Get sid from client
+sed -i -E "s|threading\.Thread\(target=_start_clipboard_listener\)|threading.Thread(target=_start_clipboard_listener, args=(socketio, sid))|" "$LTPY_PATH" # Pass socketio and sid
+
+# Remove direct 'emit' import, we use socketio.emit explicitly now
+echo "  Removing direct 'emit' import from flask_socketio if present..."
+sed -i -E "s/,?\\s*emit\\b//g" "$LTPY_PATH" # Removes emit from 'from Flask_SocketIO import SocketIO, emit'
+sed -i -E "s/from\s+flask_socketio\s+import\s+SocketIO\s*,?\s*emit/from flask_socketio import SocketIO/g" "$LTPY_PATH" # Specific case
+
+# Add psutil to requirements.txt if not present
+if ! grep -q "psutil" "$REQUIREMENTS_PATH"; then
+    echo "psutil" >> "$REQUIREMENTS_PATH"
+fi
+# Add Flask-SocketIO to requirements.txt if not present
+if ! grep -q "Flask-SocketIO" "$REQUIREMENTS_PATH"; then
+    echo "Flask-SocketIO" >> "$REQUIREMENTS_PATH"
+fi
+# Add gevent-websocket to requirements.txt if not present
+if ! grep -q "gevent-websocket" "$REQUIREMENTS_PATH"; then
+    echo "gevent-websocket" >> "$REQUIREMENTS_PATH"
+fi
+# Add eventlet to requirements.txt if not present
+if ! grep -q "eventlet" "$REQUIREMENTS_PATH"; then
+    echo "eventlet" >> "$REQUIREMENTS_PATH"
+fi
+
+echo "--- All fixes applied to lt.py and requirements.txt ---"
+echo "Now, rebuild and restart the lt-backend Docker container using --build, and check its logs."
+echo ""
+echo "cd /opt/ai_offline_setup/docker_setup"
+echo "sudo docker compose up -d --build lt-backend"
+echo "sudo docker logs jemai_lt_backend"

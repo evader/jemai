@@ -1,0 +1,2 @@
+sudo ufw allow ssh
+            sudo ufw reload # Apply the new rule

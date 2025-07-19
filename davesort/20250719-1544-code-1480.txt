@@ -1,0 +1,1 @@
+\ndocker rm -f jemai_prod_ollama\n

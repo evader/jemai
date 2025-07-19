@@ -1,0 +1,1 @@
+\n\n---\n\n### What to do now:\n\n1. Create a folder `/home/jemai/documents_to_ingest` and place some `.txt` files there \u2014 these are your knowledge base documents.\n\n2. Save the above script as `/home/jemai/rogue/ingest.py`\n\n3. Run it inside your venv:\n\n

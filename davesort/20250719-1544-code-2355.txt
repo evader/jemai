@@ -1,0 +1,1 @@
+\nnano ~/synapz_core/pw.txt\n

@@ -1,0 +1,1 @@
+\nchmod +x install_synapz_local.sh\n./install_synapz_local.sh\n

@@ -1,0 +1,1 @@
+\n   ollama run llama2\n

@@ -1,0 +1,1 @@
+\nchmod +x regen_and_deploy.sh\n./regen_and_deploy.sh\n

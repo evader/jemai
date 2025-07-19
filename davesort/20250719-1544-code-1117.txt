@@ -1,0 +1,1 @@
+\nsudo lsof -iTCP -sTCP:LISTEN | grep python\n

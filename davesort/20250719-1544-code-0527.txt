@@ -1,0 +1,5 @@
+volumes:
+          - ".:/app"
+          - "/var/run/docker.sock:/var/run/docker.sock"
+          - "${PROD_RAG_DATA_DIR}:/app/rag/chroma_data"
+          - ollama_prod_data:/root/.ollama

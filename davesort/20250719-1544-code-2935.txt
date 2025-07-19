@@ -1,0 +1,1 @@
+\npip install langchain-community==0.0.27 langchain==0.1.20\n

@@ -1,0 +1,1 @@
+\n    docker system prune -af\n    docker volume prune -f\n

@@ -1,0 +1,1 @@
+\nnano ~/.bashrc\nnano ~/.bash_aliases\n

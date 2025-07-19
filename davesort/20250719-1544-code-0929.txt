@@ -1,0 +1,1 @@
+\n    sudo du -xh / | grep -E 'G|M' | sort -hr | head -20\n

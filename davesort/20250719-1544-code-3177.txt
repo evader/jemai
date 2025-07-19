@@ -1,0 +1,1 @@
+\nor, if the log is empty:\n

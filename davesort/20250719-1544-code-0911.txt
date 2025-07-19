@@ -1,0 +1,1 @@
+\ngit clone <REPO_URL> ~/synapz_core\n

@@ -1,0 +1,111 @@
+version: '3.8' # Removing this causes the warning, keeping it is fine and explicit
+
+services:
+  # JEM AI's Command & Control Backend (lt.py)
+  lt-backend:
+    build:
+      context: .
+      dockerfile: lt-backend.Dockerfile # Specify the Dockerfile name
+    container_name: jemai_lt_backend
+    ports:
+      - "5000:5001" # Host port 5000 -> Container port 5001 (where lt.py runs) <--- CORRECTED LINE
+    environment:
+      - GOOGLE_API_KEY=AIzaSyBUbyMDjaSy6a6WOtC2PfRH7g_YgFVTopU # Directly assigning the unpaid key
+    volumes:
+      - /etc/localtime:/etc/localtime:ro # Time synchronization
+      - /etc/timezone:/etc/timezone:ro # Timezone synchronization
+      # You can specify where lt.py lives relative to the context, assuming it's in the same build folder
+      - ./lt.py:/app/lt.py
+      - ./templates:/app/templates # Assuming templates are copied here
+      # Add other bind mounts if lt.py needs access to other specific host directories
+    restart: unless-stopped
+    # Use internal service name from docker-compose network for Ollama integration (later, when full UI talks to lt.py)
+    # depends_on:
+    #   - ollama # Enable this if lt-backend strictly depends on ollama being up first.
+
+  # Ollama server for local LLM inference
+  ollama:
+    image: ollama/ollama:latest # Pulls latest Ollama image from Docker Hub
+    container_name: jemai_ollama
+    ports:
+      - "11434:11434" # Ollama API port
+    volumes:
+      - ollama_data:/root/.ollama # Persistent storage for models
+      - /etc/localtime:/etc/localtime:ro # Time synchronization
+      - /etc/timezone:/etc/timezone:ro # Timezone synchronization
+      - /opt/ai_offline_setup/ai_models:/root/.ollama/models_external:ro # Mount downloaded models (assuming OFFLINE_SETUP_DIR was /opt/ai_offline_setup)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all # Use all detected NVIDIA GPUs
+              # You must specify a valid set of capabilities for a GPU, for example: 'gpu'
+              capabilities: [gpu] # Request GPU capabilities
+    restart: unless-stopped
+    environment:
+      - OLLAMA_LLM_MAX_MEMORY=88GB # Advertise RAM to Ollama
+      - OLLAMA_FLASH_ATTN=0 # For GPU with less than 8GB VRAM (like 1060-6GB)
+      - OLLAMA_HOST=0.0.0.0 # Ensure Ollama listens on all interfaces within Docker
+
+  # Open WebUI for Ollama Models
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: jemai_open_webui
+    ports:
+      - "3000:8080" # WebUI port
+    volumes:
+      - open_webui_data:/app/backend/data
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_BASE_URL=http://jemai_ollama:11434 # Use internal service name
+    restart: unless-stopped
+
+  # Jupyter Notebooks
+  jupyter:
+    image: jupyter/tensorflow-notebook:latest
+    container_name: jemai_jupyter
+    ports:
+      - "8888:8888" # Jupyter port
+    volumes:
+      - /home/jemai/jemai_notebooks:/home/jovyan/work" # Mount to user's home for notebooks
+      - "/mnt/unraid/ai-workspace/datasets:/home/jovyan/data:ro" # Mount datasets from Unraid (adjust path)
+      - "/etc/localtime:/etc/localtime:ro" # Time synchronization
+      - "/etc/timezone:/etc/timezone:ro" # Timezone synchronization
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=twozee-ai-token # Example, user should change
+    restart: unless-stopped
+
+  # VS Code Server
+  code-server:
+    image: codercom/code-server:latest
+    container_name: jemai_code_server
+    ports:
+      - "8080:8080" # VS Code Server port
+    volumes:
+      - /home/jemai/jemai_projects:/home/coder/projects" # Mount to user's home for projects
+      - "/var/run/docker.sock:/var/run/docker.sock" # Allow code-server to manage docker
+      - "/etc/localtime:/etc/localtime:ro" # Time synchronization
+      - "/etc/timezone:/etc/timezone:ro" # Timezone synchronization
+    environment:
+      - PASSWORD=jemai-code-password # User should change this!
+      - DOCKER_HOST=unix:///var/run/docker.sock # Instruct code-server how to talk to docker
+    restart: unless-stopped
+
+  # Portainer (Docker Container Management UI)
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: jemai_portainer
+    ports:
+      - "9000:9000" # Portainer port
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # Access to Docker daemon
+      - portainer_data:/data # Persistent data for Portainer
+    restart: unless-stopped
+
+volumes:
+  ollama_data: # Ollama persistent volume
+  open_webui_data: # Open WebUI persistent volume
+  portainer_data: # Portainer persistent volume

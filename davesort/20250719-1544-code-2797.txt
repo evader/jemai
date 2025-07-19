@@ -1,0 +1,1 @@
+\npython3 -i synapz_core.py\n

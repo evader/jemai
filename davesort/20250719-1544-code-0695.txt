@@ -1,0 +1,1 @@
+\nfind / -type d -name \"venv\" 2>/dev/null\n

@@ -1,0 +1,1 @@
+\ncurl http://localhost:11434/api/version\ncurl http://localhost:11434/api/tags\ncurl http://localhost:11434/api/ps\n

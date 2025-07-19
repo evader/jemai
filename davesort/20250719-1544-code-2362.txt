@@ -1,0 +1,1 @@
+\n{\n  \"path\": \"/home/jemai/synapz_core/pw.txt\",\n  \"content\": \"\ud83d\udc80 Mr C has root.\"\n}\n

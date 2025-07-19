@@ -1,0 +1,1 @@
+\njemai_hub.sqlite3\njemai_memory_api_v1.0.py\nsynapz_overlay_v1.1.py\nsynapz_listener_v1.0.py\nplugins\nVERSIONS.txt\n

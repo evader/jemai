@@ -1,0 +1,1 @@
+\n\nThis will:\n\n- Write those files (overwriting the ones you have, but since you created templates/index.html already, it won\u2019t replace it unless the script explicitly does, which it doesn\u2019t)\n- Build the Docker containers\n- Launch them\n\nOnce it finishes, open your browser and go to:\n\n

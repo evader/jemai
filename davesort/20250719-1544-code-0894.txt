@@ -1,0 +1,1 @@
+\ndocker ps | grep jemai_open_webui\n

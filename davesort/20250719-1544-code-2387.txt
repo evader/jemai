@@ -1,0 +1,1 @@
+\ncurl -X POST http://localhost:11436/writefile \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"path\": \"/home/jemai/synapz_core/pw.txt\", \"content\": \"Direct local test write.\"}'\n

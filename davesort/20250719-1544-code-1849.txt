@@ -1,0 +1,1 @@
+\n\n### What\u2019s going on?\n\nYour `lt.py` (Flask backend) imports `langchain_community`, which is **not installed** in the container\u2019s Python environment.\n\n### How to fix bulletproof:\n\n1. **Add `langchain-community` to `requirements.txt`**\n\nYour current requirements.txt looks like this:\n\n

@@ -1,0 +1,1 @@
+\nollama run llama3:8b --prompt \"You're Synapz. Check docker container health. Show logs. Fix broken containers. Help David debug proactively.\"\n

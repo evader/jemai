@@ -1,0 +1,1 @@
+\nps aux | grep ollama\nsudo systemctl status ollama\ndocker ps -a --filter \"ancestor=ollama/ollama:latest\"\n

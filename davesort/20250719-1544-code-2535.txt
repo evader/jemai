@@ -1,0 +1,1 @@
+\n### 3b. Pull GPT-4-style model if missing ###\necho \"\ud83e\udde0 Checking for local GPT-4-like model...\"\nif ! ollama list | grep -q \"llama3\"; then\n  echo \"\ud83d\udce5 Pulling llama3:70b (GPT-4 quality baseline)...\"\n  ollama pull llama3:70b\nelse\n  echo \"\u2705 Model already present.\"\nfi\n

@@ -1,0 +1,17 @@
+[Unit]
+    Description=ngrok tunnel for JEM AI Unified Core
+    After=docker.service
+    Requires=docker.service
+
+    [Service]
+    # This command will expose port 5000 (where the C&C UI runs)
+    ExecStart=/snap/bin/ngrok http 5000 
+    Restart=always
+    User=jemai
+    
+    # You should set your NGROK_AUTHTOKEN in your main environment
+    # or create a file at /etc/default/ngrok_jemai and use EnvironmentFile=
+    # For now, this assumes ngrok is configured for the 'jemai' user.
+
+    [Install]
+    WantedBy=multi-user.target

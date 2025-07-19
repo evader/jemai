@@ -1,0 +1,1 @@
+\n  CMD [\"python3\", \"jemai_core.py\"]\n

@@ -1,0 +1,1 @@
+\necho 'export PATH=\"$HOME/bin:$PATH\"' >> ~/.bashrc\nexport PATH=\"$HOME/bin:$PATH\"\n

@@ -1,0 +1,1 @@
+\ndocker ps\ncurl -s http://localhost:8080 | head -40\n

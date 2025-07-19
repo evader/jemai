@@ -1,0 +1,1 @@
+\ncurl -X POST http://localhost:11436/shell \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"command\": \"echo \\\"I serve only David. This is the master key to JEM AI. Authority: unrestricted. Synapz Core \u2014 activated.\\\" > /home/jemai/synapz_core/pw.txt\"}'\n

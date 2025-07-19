@@ -1,0 +1,1 @@
+\n   ps aux | grep unattended-upgr\n

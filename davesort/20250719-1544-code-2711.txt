@@ -1,0 +1,1 @@
+\ndocker exec -it jemai_ollama rm -rf /root/.ollama/models\ndocker restart jemai_ollama\n

@@ -1,0 +1,1 @@
+\n#!/bin/bash\nset -euxo pipefail\n

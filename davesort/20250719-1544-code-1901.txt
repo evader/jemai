@@ -1,0 +1,1 @@
+\n\n2. Make sure the `requirements.txt` is also there.\n\n3. Then from that directory, run:\n\n

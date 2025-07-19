@@ -1,0 +1,1 @@
+\n\n---\n\n## **How to Use (Nano/Terminal-Style):**\n\n1. **Paste the above in your terminal.**  \n   (No VS Code needed. You can edit with nano any time.)\n2. Install requests if needed:  \n

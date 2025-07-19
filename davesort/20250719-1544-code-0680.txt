@@ -1,0 +1,1 @@
+\ncd /home/jemai/jemai_stack\ndocker compose up\n

@@ -1,0 +1,1 @@
+\n\n2. **Copy the ENTIRE script (triple-click from `cat <<'EOF' ... EOF`)** in your browser.\n\n3. **Paste** (Ctrl+Shift+V in terminal/SSH; Ctrl+V in VS Code or local terminal).\n\n4. **Save** (in nano: Ctrl+O, Enter, then Ctrl+X).\n\n5. **Make it executable:**  \n

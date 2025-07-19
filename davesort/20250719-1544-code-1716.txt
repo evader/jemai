@@ -1,0 +1,1 @@
+\ncat /opt/jemai_prod/docker_setup/docker-compose.yml\n

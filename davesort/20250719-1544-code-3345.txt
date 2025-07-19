@@ -1,0 +1,1 @@
+\n   chmod -R 755 /root/.ollama/models\n

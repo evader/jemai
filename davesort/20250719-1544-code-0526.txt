@@ -1,0 +1,4 @@
+# JEM AI Environment Variables
+    # This file is automatically read by Docker Compose when it runs in this directory.
+
+    PROD_RAG_DATA_DIR=/opt/jemai_prod/rag/chroma_data

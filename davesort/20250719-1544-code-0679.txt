@@ -1,0 +1,1 @@
+\njournalctl -xeu jemai_stack.service | tail -50\n

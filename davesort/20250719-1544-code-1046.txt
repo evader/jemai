@@ -1,0 +1,1 @@
+\ncat /etc/systemd/system/synapz_core.service | grep ExecStart\n

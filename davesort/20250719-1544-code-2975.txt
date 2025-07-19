@@ -1,0 +1,1 @@
+\nalias jrst='sudo systemctl restart synapz_core'\nalias jtest='curl -s -X POST http://localhost:11436/chat -H \"Content-Type: application/json\" -d '\\''{\"query\":\"ping\"}'\\'' | jq'\nalias jlogs='journalctl -u synapz_core -n 50 --no-pager'\nalias jauto='~/synapz_core/autotask_run.sh'\n

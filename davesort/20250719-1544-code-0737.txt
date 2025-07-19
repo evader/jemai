@@ -1,0 +1,1 @@
+\nls /usr/share/ollama/models\nls /var/lib/ollama/models\nls ~/.ollama/models\n

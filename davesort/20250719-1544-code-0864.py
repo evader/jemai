@@ -1,0 +1,1 @@
+\nfrom transformers import pipeline\n\n# Test a simple pipeline (e.g., text generation)\ngenerator = pipeline(\"text-generation\", model=\"gpt2\")\nprint(generator(\"Hello, how are you?\", max_length=50))\n

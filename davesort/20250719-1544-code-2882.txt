@@ -1,0 +1,1 @@
+\n/var/log/synapz_core_runtime.log\n

@@ -1,0 +1,1 @@
+\nports:\n  - \"11438:11434\"  # External:Internal\n

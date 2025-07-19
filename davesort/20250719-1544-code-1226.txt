@@ -1,0 +1,1 @@
+\n   sed -i \"s|alias jemai=.*|alias jemai='curl -s -X POST http://localhost:11436/query -H \\\"Content-Type: application/json\\\" -d'|\" ~/.bash_aliases\n   source ~/.bash_aliases\n

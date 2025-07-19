@@ -1,0 +1,1 @@
+\nalias jshell='sudo docker exec -it jemai_prod_core bash'\n

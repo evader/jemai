@@ -1,0 +1,1 @@
+\n  synapz ALL=(ALL) NOPASSWD: /usr/bin/docker, /bin/systemctl\n

@@ -1,0 +1,5 @@
+volumes:
+      # This is the corrected line. It mounts the entire /opt directory.
+      - "/opt:/home/coder/project/opt"
+      # This still allows access to the Docker socket
+      - "/var/run/docker.sock:/var/run/docker.sock"

@@ -1,0 +1,1 @@
+\nos.execv(sys.executable, [sys.executable] + sys.argv)\n

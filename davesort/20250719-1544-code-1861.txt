@@ -1,0 +1,1 @@
+\n\n---\n\n### How to implement:\n\n1. **Backup** your current requirements files, just in case.\n2. Replace *all* your `requirements.txt` files with this one\u2014ideally just keep **one** in your main Docker build context folder.\n3. Update your Dockerfile (if needed) to only `COPY requirements.txt` once, and run:\n\n

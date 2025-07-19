@@ -1,0 +1,3 @@
+socketio = SocketIO(app)
+            jobs = {} # Define the global jobs dictionary - CRITICAL FIX
+            # ... rest of your code ...

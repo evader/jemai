@@ -1,0 +1,1 @@
+\nif [[ $- == *i* ]]; then\n  synapz_animated_banner\nfi\n

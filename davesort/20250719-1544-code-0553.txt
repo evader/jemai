@@ -1,0 +1,10 @@
+# Stop and remove any and all running docker-compose services
+(cd /opt/jemai_prod/docker_setup && sudo docker compose down --remove-orphans) &>/dev/null || true
+(cd /opt/ai_offline_setup/docker_setup && sudo docker compose down --remove-orphans) &>/dev/null || true
+
+# Stop and disable any lingering standalone service
+sudo systemctl stop synapz_core &>/dev/null && sudo systemctl disable synapz_core &>/dev/null || true
+
+# Archive old setups
+sudo mv /opt/jemai_prod /opt/jemai_prod_archive_$(date +%s) &>/dev/null || true
+sudo mv /home/jemai/synapz_core /home/jemai/synapz_core_archive_$(date +%s) &>/dev/null || true

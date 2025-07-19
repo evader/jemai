@@ -1,0 +1,1 @@
+\ncd /home/jemai/synapz_local_rag\n\n# Optional virtual environment (recommended)\npython3 -m venv venv\nsource venv/bin/activate\n\n# Install dependencies\npip install langchain chromadb sentence-transformers ollama\n\n# Run ingestion\npython synapz_rag_ingest.py\n\n# Test querying\npython synapz_rag_query.py\n

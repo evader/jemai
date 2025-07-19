@@ -1,0 +1,1 @@
+\n   cat ~/.cache/huggingface/token\n

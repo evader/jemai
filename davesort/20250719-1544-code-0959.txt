@@ -1,0 +1,1 @@
+\nLOGFILE=\"$APP_DIR/synapz_install.log\"\n

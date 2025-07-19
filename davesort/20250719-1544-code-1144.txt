@@ -1,0 +1,1 @@
+\nsed -i 's|api/v1/status|status|g' ~/.synapz_presence.sh\n

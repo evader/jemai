@@ -1,0 +1,1 @@
+\nsudo chown root:root /var/lib/docker/volumes/openwebui_data/_data/config.json\nsudo chmod 600 /var/lib/docker/volumes/openwebui_data/_data/config.json\n

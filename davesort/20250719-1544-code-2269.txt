@@ -1,0 +1,1 @@
+\nINFO:root:\ud83d\udd0c Synapz Core Flask server starting...\n * Running on http://0.0.0.0:11435\n

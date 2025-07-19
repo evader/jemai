@@ -1,0 +1,2 @@
+sudo docker compose -f /opt/ai_offline_setup/docker_setup/docker-compose.yml stop lt-backend
+    sudo docker compose -f /opt/ai_offline_setup/docker_setup/docker-compose.yml rm lt-backend

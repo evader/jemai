@@ -1,0 +1,1 @@
+\n---\n\n**You don\u2019t need to copy the `cat <<'EOF' ...` lines into the Python file!**  \n- Just paste the whole block above into your **terminal**.  \n- The shell will write the Python file _for you_.\n\n---\n\n## **2. Now re-run:**\n\n

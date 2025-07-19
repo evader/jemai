@@ -1,0 +1,1 @@
+\ndocker run --gpus all -d -p 11438:11434 --name jemai_ollama ghcr.io/ollama/ollama:latest /bin/ollama serve --port 11434 --n-gpu-layers 32 --batch-size 512\n

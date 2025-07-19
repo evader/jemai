@@ -1,0 +1,1 @@
+\nnano /home/jemai/synapz_core/pw.txt\n# add line:\nHA_TOKEN=your_token_here\n

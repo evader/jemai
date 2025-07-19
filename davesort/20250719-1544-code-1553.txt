@@ -1,0 +1,1 @@
+\n  sudo chmod -R 755 /opt/jemai_prod\n

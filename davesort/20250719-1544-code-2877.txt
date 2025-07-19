@@ -1,0 +1,1 @@
+\njrst     # restarts Synapz Core cleanly\njlogs    # tails the logs\njtest    # runs a test query\n

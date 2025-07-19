@@ -1,0 +1,1 @@
+\ndocker logs --tail 50 jemai_open_webui\n

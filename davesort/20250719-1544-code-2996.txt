@@ -1,0 +1,1 @@
+\n\n---\n\n### **Instructions**\n1. Save the above as `cat_synapz_status.sh`\n2. Run:  \n

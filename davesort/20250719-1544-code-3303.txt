@@ -1,0 +1,1 @@
+\n   sudo dpkg --configure -a\n   sudo apt update\n   sudo apt upgrade\n

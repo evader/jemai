@@ -1,0 +1,1 @@
+ls -l /opt/jemai_prod/docker_setup/docker-compose.yml

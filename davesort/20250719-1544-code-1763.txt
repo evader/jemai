@@ -1,0 +1,1 @@
+\n   chmod +x jemai_diag_fix.sh\n   sudo ./jemai_diag_fix.sh\n

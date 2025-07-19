@@ -1,0 +1,1 @@
+\n\n---\n\n## 2. Query via local CLI (quick, direct interaction)\n\nRun your existing CLI query script:\n\n

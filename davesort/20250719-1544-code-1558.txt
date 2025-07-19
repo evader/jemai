@@ -1,0 +1,1 @@
+\n    volumes:\n      - \"/:/host\"\n      - \"/opt/jemai_prod:/opt/jemai_prod\"\n      - \"/var/run/docker.sock:/var/run/docker.sock\"\n

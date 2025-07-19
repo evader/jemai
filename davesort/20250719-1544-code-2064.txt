@@ -1,0 +1,1 @@
+\n\n4. Confirm the container can access GPU:\n\n

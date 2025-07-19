@@ -1,0 +1,1 @@
+\ndocker volume prune -f\ndocker network prune -f\n

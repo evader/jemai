@@ -1,0 +1,1 @@
+\napp.config['MY_VAR'] = os.getenv('MY_VAR')\n

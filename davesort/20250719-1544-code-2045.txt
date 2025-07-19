@@ -1,0 +1,1 @@
+\n\n---\n\n**Step 3: If you get `'error': 'RAG not initialized. Check logs.'`**\n\nThen the problem is your RAG vector DB is empty or has errors. Check the container logs for your `jemai_prod_core`:\n\n

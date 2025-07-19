@@ -1,0 +1,1 @@
+sudo docker exec jemai_ollama ollama list

@@ -1,0 +1,1 @@
+\n   services:\n     open-webui:\n       image: ghcr.io/open-webui/open-webui:main\n       container_name: jemai_open_webui\n       ports:\n         - \"3000:8080\" # WebUI port\n       environment:\n         - OLLAMA_BASE_URL=http://localhost:11434  # Ensure this points to Synapz or Ollama\n       depends_on:\n         - ollama  # Ensure Ollama is available if it's used\n

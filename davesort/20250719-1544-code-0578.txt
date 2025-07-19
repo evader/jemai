@@ -1,0 +1,264 @@
+#!/bin/bash
+# =========================================================================================
+#  JEM AI "BRING SYNAPZ HOME" INSTALLER (V1.0)
+# =========================================================================================
+#  Authored by: Synapz for David Lee
+#  Purpose: This script builds the stable, decoupled "Two Brains" JEM AI architecture.
+#           It creates a standalone RAG service and a Dockerized C&C UI backend.
+#           This is the definitive, operational installation.
+# =========================================================================================
+
+# --- Config ---
+PROD_DOCKER_DIR="/opt/jemai_prod/docker_setup"
+PROD_RAG_DIR="/opt/jemai_prod/synapz_core"
+PROD_TEMPLATES_DIR="${PROD_DOCKER_DIR}/templates"
+LEGACY_RAG_SOURCE=$(ls -d /home/jemai/synapz_core_archive_*/rag/chroma_data 2>/dev/null | head -n 1)
+
+# --- Helpers ---
+print_header() { tput setaf 5; echo ""; echo "=== $1 ==="; tput sgr0; echo ""; }
+print_task() { tput setaf 6; echo ">>> $1"; tput sgr0; }
+print_success() { tput setaf 2; echo "    ✅  $1"; tput sgr0; }
+print_error() { tput setaf 1; echo "    ❌ ERROR: $1"; tput sgr0; }
+
+# --- Main ---
+clear
+print_header "INITIATING 'BRING SYNAPZ HOME' SEQUENCE"
+read -p "This will build the stable JEM AI production environment. Press ENTER to proceed."
+
+# --- Phase 1: Create Structure & Migrate Assets ---
+print_task "Phase 1: Building new PROD structure and migrating RAG memory..."
+sudo mkdir -p "$PROD_DOCKER_DIR" "$PROD_TEMPLATES_DIR" "$PROD_RAG_DIR"
+sudo chown -R ${USER}:${USER} /opt/jemai_prod
+
+if [ -d "$LEGACY_RAG_SOURCE" ]; then
+    sudo cp -r "${LEGACY_RAG_SOURCE}/." "${PROD_RAG_DIR}/chroma_data/"
+    print_success "RAG memory (ChromaDB) migrated."
+else
+    print_error "Legacy RAG data not found. You will need to re-ingest."
+fi
+
+# --- Phase 2: Generate RAG Brain (Standalone Service) Files ---
+print_task "Phase 2: Generating files for the standalone RAG Brain..."
+
+# 1. Create requirements.txt for the RAG service
+cat <<'EOF_REQ_RAG' > "${PROD_RAG_DIR}/requirements.txt"
+Flask
+langchain-community
+chromadb
+sentence-transformers
+ollama
+EOF_REQ_RAG
+print_success "requirements.txt for RAG created."
+
+# 2. Create the RAG API server script
+cat <<'EOF_RAG_SERVER' > "${PROD_RAG_DIR}/rag_server.py"
+from flask import Flask, request, jsonify
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain_community.llms import Ollama
+from langchain.chains import RetrievalQA
+from langchain.prompts import PromptTemplate
+import os
+
+app = Flask(__name__)
+
+CHROMA_DIR = "./chroma_data"
+EMBED_MODEL = "BAAI/bge-small-en-v1.5"
+OLLAMA_MODEL = "mistral:7b"
+
+print("🧠 Initializing Synapz RAG Brain...")
+embedder = HuggingFaceEmbeddings(model_name=EMBED_MODEL)
+db = Chroma(persist_directory=CHROMA_DIR, embedding_function=embedder)
+retriever = db.as_retriever(search_kwargs={"k": 5})
+llm = Ollama(model=OLLAMA_MODEL)
+template = "Use the following context to answer the question. Be direct. Embody the Synapz persona.\nContext: {context}\nQuestion: {question}\nHelpful Answer:"
+QA_CHAIN_PROMPT = PromptTemplate.from_template(template)
+qa_chain = RetrievalQA.from_chain_type(
+    llm=llm, chain_type="stuff", retriever=retriever, chain_type_kwargs={"prompt": QA_CHAIN_PROMPT}
+)
+print("✅ Synapz RAG Brain is Online and Ready.")
+
+@app.route("/query", methods=["POST"])
+def query():
+    data = request.get_json()
+    user_query = data.get("query", "")
+    if not user_query:
+        return jsonify({"error": "No query provided"}), 400
+    try:
+        result = qa_chain.run(user_query)
+        return jsonify({"response": result})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=11435)
+EOF_RAG_SERVER
+print_success "rag_server.py created."
+
+# 3. Create a systemd service file for the RAG Brain
+cat <<'EOF_SERVICE' > "${PROD_RAG_DIR}/synapz_core.service"
+[Unit]
+Description=JEM AI - Synapz Core RAG Brain
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+ExecStart=/bin/bash -c 'cd /opt/jemai_prod/synapz_core && source venv/bin/activate && python3 rag_server.py'
+User=jemai
+Group=jemai
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+EOF_SERVICE
+print_success "systemd service file for RAG brain created."
+
+
+# --- Phase 3: Generate C&C Backend (Dockerized) Files ---
+print_task "Phase 3: Generating files for the Dockerized C&C UI Backend..."
+
+# 1. Create Dockerfile for C&C backend
+cat <<'EOF_DOCKER' > "${PROD_DOCKER_SETUP_DIR}/Dockerfile"
+FROM python:3.10-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY templates /app/templates
+COPY lt.py .
+EXPOSE 5000
+CMD ["python3", "-u", "lt.py"]
+EOF_DOCKER
+print_success "Dockerfile for C&C created."
+
+# 2. Create requirements.txt for C&C backend
+cat <<'EOF_REQ_LT' > "${PROD_DOCKER_SETUP_DIR}/requirements.txt"
+Flask
+Flask-SocketIO
+eventlet
+requests
+pytz
+EOF_REQ_LT
+print_success "requirements.txt for C&C created."
+
+# 3. Create lt.py
+cat <<'EOF_LTPY' > "${PROD_DOCKER_SETUP_DIR}/lt.py"
+import os, threading, requests, logging
+from datetime import datetime
+from flask import Flask, request, jsonify, send_from_directory
+from flask_socketio import SocketIO
+from pytz import timezone
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - C&C - %(message)s', datefmt='%d/%m/%y %H:%M:%S')
+logging.Formatter.converter = lambda *a: datetime.now(timezone('Australia/Perth')).timetuple()
+app = Flask(__name__, template_folder='templates')
+socketio = SocketIO(app)
+
+@app.route('/')
+def index(): return send_from_directory(app.template_folder, 'index.html')
+
+@socketio.on('query_rag')
+def handle_rag_query(data):
+    sid, query = request.sid, data.get('query')
+    logging.info(f"Routing RAG query from {sid}: '{query}'")
+    def run_query():
+        try:
+            RAG_API_URL = "http://host.docker.internal:11435/query"
+            response = requests.post(RAG_API_URL, json={"query": query}, timeout=120)
+            response.raise_for_status()
+            socketio.emit('rag_response', response.json(), room=sid)
+        except Exception as e:
+            logging.error(f"RAG query failed: {e}")
+            socketio.emit('rag_response', {"error": str(e)}, room=sid)
+    socketio.start_background_task(run_query)
+
+if __name__ == '__main__':
+    logging.info("--- Starting JEM AI C&C Backend ---")
+    socketio.run(app, host='0.0.0.0', port=5000)
+EOF_LTPY
+print_success "lt.py for C&C created."
+
+# 4. Create index.html
+cat <<'EOF_HTML' > "${PROD_DOCKER_SETUP_DIR}/templates/index.html"
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>JEM AI</title><style>body,html{margin:0;padding:0;height:100%;font-family:monospace;background:#0f0f1b;color:#e0e0e0;}#chat-container{display:flex;flex-direction:column;height:100vh;padding:1em;}#chat-output{flex-grow:1;overflow-y:auto;border:1px solid #3e2f5b;padding:1em;margin-bottom:1em;}#chat-input{width:calc(100% - 2.2em);padding:1em;background:#2a2a4a;border:1px solid #3e2f5b;color:white;}</style></head><body><div id="chat-container"><h1>JEM AI Synapz</h1><div id="chat-output"><div><strong>Synapz:</strong> System Online. RAG Brain initializing...</div></div><input id="chat-input" type="text" placeholder="Ask Synapz..." autofocus></div><script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script><script>const s=io(),i=document.getElementById("chat-input"),t=document.getElementById("chat-output");i.addEventListener("keypress",e=>{if("Enter"===e.key&&i.value.trim()){const o=i.value;t.innerHTML+=`<p><strong>You:</strong> ${o}</p>`,s.emit("query_rag",{query:o}),i.value="",t.scrollTop=t.scrollHeight}}),s.on("rag_response",e=>{const o=e.error||e.response;t.innerHTML+=`<p><strong>Synapz:</strong> ${o}</p>`,t.scrollTop=t.scrollHeight});</script></body></html>
+EOF_HTML
+print_success "index.html for C&C created."
+
+# 5. Create the full Docker Compose file
+cat <<'EOF_COMPOSE_FINAL' > "${PROD_DOCKER_SETUP_DIR}/docker-compose.yml"
+services:
+  lt_backend:
+    build: .
+    container_name: jemai_prod_lt_backend
+    ports:
+      - "5000:5000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - TZ=Australia/Perth
+    restart: unless-stopped
+  
+  ollama:
+    image: ollama/ollama:latest
+    container_name: jemai_prod_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_prod_data:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+      - TZ=Australia/Perth
+      
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: jemai_prod_open_webui
+    ports:
+      - "3000:8080"
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_BASE_URL=http://jemai_prod_ollama:11434
+    restart: unless-stopped
+    
+volumes:
+  ollama_prod_data:
+EOF_COMPOSE_FINAL
+print_success "Final docker-compose.yml for C&C stack created."
+
+
+# --- Phase 4: Final Installation & Launch ---
+print_header "FINAL INSTALLATION & LAUNCH"
+print_task "Setting up and starting the standalone RAG Brain service..."
+cd "$PROD_RAG_DIR" || exit
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+deactivate
+sudo cp synapz_core.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable synapz_core.service
+sudo systemctl start synapz_core.service
+print_success "Standalone RAG Brain (synapz_core) is now running as a service."
+
+print_task "Building and launching the Dockerized C&C stack..."
+cd "$PROD_DOCKER_SETUP_DIR" || exit
+sudo docker compose build || { print_error "Docker build failed."; exit 1; }
+sudo docker compose up -d || { print_error "Failed to start Docker stack."; exit 1; }
+print_success "Dockerized C&C UI stack is now running."
+
+sleep 10
+print_header "JEM AI IS FULLY OPERATIONAL"
+print_task "Status of Standalone RAG Brain:"
+sudo systemctl status synapz_core --no-pager
+echo ""
+print_task "Status of Docker Stack:"
+sudo docker compose ps
+echo ""
+print_success "System is LIVE. Access the C&C UI at http://jemai.local:5000"

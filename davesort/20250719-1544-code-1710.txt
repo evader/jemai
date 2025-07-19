@@ -1,0 +1,1 @@
+\ndocker compose stop jemai_core\ndocker compose rm jemai_core\n

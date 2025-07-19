@@ -1,0 +1,1 @@
+\n   @echo off\n   cd /d C:\\JEMAI_HUB\n   call start_jemai_stack.bat\n

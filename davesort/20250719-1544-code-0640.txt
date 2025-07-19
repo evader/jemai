@@ -1,0 +1,1 @@
+\nIf blank, Synapz Core is NOT running on that port. If you see python, that\u2019s good.\n\n---\n\n## 5. **Check Systemd Service**\n**Action:**  \n

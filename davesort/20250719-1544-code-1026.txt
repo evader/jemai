@@ -1,0 +1,1 @@
+\npython3 ~/synapz_core/synapz_core.py\n

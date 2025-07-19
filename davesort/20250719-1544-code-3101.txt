@@ -1,0 +1,1 @@
+\n\n2. **(Optional, more broad) Give jemai write permission to /var/log/ folder:**\n

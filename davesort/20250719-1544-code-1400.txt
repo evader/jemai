@@ -1,0 +1,1 @@
+\ndocker logs 2917d64c2511 --tail=50\n

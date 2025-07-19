@@ -1,0 +1,1 @@
+\ndocker restart <your-open-webui-container-name>\ndocker restart <your-ollama-container-name>\n

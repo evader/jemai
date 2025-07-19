@@ -1,0 +1,1 @@
+\n   scp -r C:\\JEMAI_HUB\\ jemai@jemai.local:~/synapz_local/\n

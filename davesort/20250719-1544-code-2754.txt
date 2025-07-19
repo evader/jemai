@@ -1,0 +1,1 @@
+\nsudo systemctl daemon-reexec\nsudo systemctl restart synapz-core\nsudo systemctl status synapz-core\n

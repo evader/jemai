@@ -1,0 +1,1 @@
+\nThis should show the installed version of Docker Compose.\n\n### 2. If it\u2019s installed, but you still get the error:\nYou might be using an older version or a conflict with the installation method. Try running:\n\n

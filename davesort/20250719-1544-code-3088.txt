@@ -1,0 +1,1 @@
+\n- **In another terminal (or after Ctrl+C, then start it again),**\n   - create `relay_command.json` with your command.\n\n   Example:\n

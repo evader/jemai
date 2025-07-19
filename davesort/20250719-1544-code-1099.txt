@@ -1,0 +1,1 @@
+\n   ls -l ~/.synapz_presence.sh\n

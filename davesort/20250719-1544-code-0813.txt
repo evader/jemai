@@ -1,0 +1,1 @@
+\n# List all processes (with grep for easier finding)\nps aux | grep <name_or_port>\n\n# Kill process by PID\nkill <PID>\n\n# Kill with force (SIGKILL)\nkill -9 <PID>\n\n# Kill all processes by name\nkillall <process_name>\n\n# Find and kill process on port (example: 11434)\nsudo lsof -i :11434\nsudo kill -9 <PID>\n

@@ -1,0 +1,1 @@
+\nfrom dotenv import load_dotenv\nload_dotenv()  # Automatically loads the variables from the .env file\n\n# Now you can access them\nimport os\nprint(os.getenv('MY_VAR'))\n

@@ -1,0 +1,1 @@
+\nsource ~/synapz_core/venv/bin/activate\npip install --force-reinstall -r ~/synapz_core/requirements.txt\npip install --force-reinstall psutil\n

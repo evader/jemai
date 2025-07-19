@@ -1,0 +1,1 @@
+\n> URL: http://localhost:11434\n> Model: llama3\n>

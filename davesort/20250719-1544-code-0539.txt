@@ -1,0 +1,3 @@
+sudo systemctl daemon-reload
+    sudo systemctl enable jemai_prod_ngrok.service
+    sudo systemctl start jemai_prod_ngrok.service

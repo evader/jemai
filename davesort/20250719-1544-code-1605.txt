@@ -1,0 +1,1 @@
+\n# \ud83e\udde0 View live JEM AI Core logs (latest 50 lines)\nalias jcorelog='cd /opt/jemai_prod/docker_setup && docker compose logs jemai_core --tail=50'\n

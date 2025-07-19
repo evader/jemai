@@ -1,0 +1,8 @@
+flask
+flask_socketio
+eventlet
+psutil
+chromadb
+requests
+edge-tts
+pyttsx3

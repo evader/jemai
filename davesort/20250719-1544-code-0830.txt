@@ -1,0 +1,1 @@
+\nsudo chown -R $(whoami):$(whoami) /usr/share/ollama/.ollama/\nsudo chmod -R 775 /usr/share/ollama/.ollama/\n

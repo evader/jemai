@@ -1,0 +1,1 @@
+\nngrok config add-authtoken <your-ngrok-token>\nngrok http 11436\n

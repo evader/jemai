@@ -1,0 +1,2 @@
+cd /opt/jemai_prod/docker_setup
+   sudo docker compose down

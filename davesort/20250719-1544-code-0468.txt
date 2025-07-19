@@ -1,0 +1,62 @@
+<script>
+        // ... (previous code) ...
+
+        async function sendCommand() {
+            const command = commandInput.value;
+            if (!command) return;
+            
+            // Disable input and buttons immediately
+            commandInput.disabled = true; // Added
+            sendButton.disabled = true;
+            suggestButton.disabled = true;
+            
+            commandInput.value = ''; // Correctly clear input immediately
+            commandInput.focus();
+
+            try {
+                const runResponse = await fetch(`${baseUrl}/run?command=${encodeURIComponent(command)}`);
+                const runData = await runResponse.json();
+
+                if (runData.job_id) {
+                    updateJobUI(runData.job_id, command, 'running', "Executing...");
+                    pollStatus(runData.job_id, command);
+                } else {
+                    throw new Error(runData.output || "Failed to start job.");
+                }
+            } catch (error) {
+                updateJobUI(Date.now(), command, 'error', error.message);
+                // Ensure buttons/input are re-enabled on error
+                commandInput.disabled = false; // Added
+                sendButton.disabled = false;
+                suggestButton.disabled = false;
+            }
+        }
+        
+        // ... (previous code including pollStatus) ...
+
+        function pollStatus(jobId, command) {
+            const intervalId = setInterval(async () => {
+                try {
+                    const statusResponse = await fetch(`${baseUrl}/status?job_id=${jobId}`);
+                    const statusData = await statusResponse.json();
+                    
+                    updateJobUI(jobId, command, statusData.status, statusData.output);
+
+                    if (statusData.status === 'complete' || statusData.status === 'error' || statusData.status === 'not_found') {
+                        clearInterval(intervalId);
+                        sendButton.disabled = false;
+                        suggestButton.disabled = false;
+                        commandInput.disabled = false; // <<< --- THIS IS THE KEY LINE TO ADD
+                        commandInput.focus(); // Set focus back to input
+                    }
+                } catch (error) {
+                    console.error("Polling error:", error);
+                    clearInterval(intervalId);
+                    sendButton.disabled = false;
+                    suggestButton.disabled = false;
+                    commandInput.disabled = false; // <<< --- AND THIS ONE ON HARD ERROR
+                }
+            }, 2000);
+        }
+        // ... (rest of script) ...
+    </script>

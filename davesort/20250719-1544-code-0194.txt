@@ -1,0 +1,137 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+    <script>
+        const commandInput = document.getElementById('command-input');
+        const directButton = document.getElementById('direct-button');
+        const localAiButton = document.getElementById('local-ai-button');
+        const nexusAiButton = document.getElementById('nexus-ai-button');
+        const outputDiv = document.getElementById('output');
+        
+        const socket = io(); 
+
+        const jobElements = {}; // Stores references to job UI elements
+
+        function setControlsDisabled(disabled) {
+            directButton.disabled = disabled;
+            localAiButton.disabled = disabled;
+            nexusAiButton.disabled = disabled;
+            commandInput.disabled = disabled;
+        }
+
+        function generateJobId() {
+            return `job-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+        }
+
+        // Initialize/Update Job UI
+        function updateJobUI(jobId, command, type, status, outputContent) {
+            let jobElement = jobElements[jobId];
+            if (!jobElement) {
+                jobElement = document.createElement('div');
+                jobElement.className = 'log-entry';
+                jobElement.id = jobId;
+                // Add to the top of the outputDiv for latest jobs first
+                outputDiv.prepend(jobElement); 
+                jobElements[jobId] = jobElement; // Store reference
+            }
+
+            const promptClass = `prompt-${type.replace('_', '-')}`;
+            const statusClass = (status === 'running' || status === 'thinking') ? 'status-running' : (status === 'complete' ? 'status-complete' : 'status-error');
+            
+            jobElement.innerHTML = `
+                <p class="prompt-line ${promptClass}">&nbsp; ${command} <span class="status-badge ${statusClass}">${status.toUpperCase()}</span></p>
+                <div class="output-pre">${outputContent.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
+            `;
+            
+            const pre = jobElement.querySelector('.output-pre');
+            if (pre) {
+                pre.scrollTop = pre.scrollHeight; // Auto-scroll for new content
+            }
+        }
+
+        async function handleExecute(mode) {
+            const inputValue = commandInput.value.trim();
+            if (!inputValue) return;
+
+            setControlsDisabled(true);
+            commandInput.value = ''; // Clear input immediately
+            commandInput.focus();
+
+            const jobId = generateJobId();
+            let initialOutput = `--- Sending command to JEM AI: '${inputValue}' via ${mode} mode ---`;
+            updateJobUI(jobId, inputValue, mode, 'thinking', initialOutput);
+
+            // Emit Socket.IO event based on mode
+            switch (mode) {
+                case 'direct':
+                    socket.emit('execute', { command: inputValue, job_id: jobId });
+                    break;
+                case 'local_ai':
+                    socket.emit('generate_command', { prompt: inputValue, job_id: jobId });
+                    break;
+                case 'nexus_ai':
+                    // Temporarily re-routing Nexus AI requests to Local AI (Ollama)
+                    // The true Gemini (Nexus) integration with socket.io will be a separate task
+                    socket.emit('generate_command', { prompt: inputValue, job_id: jobId });
+                    break;
+            }
+        }
+
+        // Socket.IO event listeners
+        socket.on('connect', () => {
+            console.log('Connected to JEM AI Lieutenant Socket.IO');
+            socket.emit('request_jobs_list'); // Request initial job list on connect
+        });
+
+        socket.on('output', (data) => {
+            const { output, job_id, final_status } = data; // final_status will be sent from backend now
+            let currentJobData = jobElements[job_id] ? jobElements[job_id].querySelector('.output-pre').innerText : '';
+            currentJobData += output;
+
+            let status = 'running'; // Default unless final status is provided
+            if (final_status) {
+                status = final_status;
+                if (final_status === 'complete' || final_status === 'error') {
+                    setControlsDisabled(false); // Re-enable controls when a job is truly finished
+                }
+            }
+            // Update UI with accumulated output and current status
+            updateJobUI(job_id, commandInput.value.trim() || 'Command', // Use current input or a placeholder
+                        jobElements[job_id] ? jobElements[job_id].querySelector('.prompt-line').className.split(' ')[1].replace(/prompt-/, '') : 'direct', // Extract type
+                        status, currentJobData);
+        });
+
+        socket.on('jobs_list_update', (allJobs) => {
+            // This event updates all jobs from the backend's current state
+            // It replaces the old fetchAllJobs loop
+            for (const jobId in allJobs) {
+                const jobData = allJobs[jobId];
+                updateJobUI(jobId, jobData.command, jobData.command.includes('Nexus') ? 'nexus-ai' : (jobData.output.includes('Generated command') ? 'local-ai' : 'direct'), jobData.status, jobData.output);
+            }
+        });
+
+        socket.on('connect_error', (err) => {
+            console.error('Socket.IO connection error:', err);
+            outputDiv.innerHTML = `<p class="status-error">Error: Could not connect to JEM AI Lieutenant Socket.IO. Please ensure the backend is running. (${err.message})</p>${outputDiv.innerHTML}`;
+            setControlsDisabled(false);
+        });
+
+        socket.on('disconnect', () => {
+            console.warn('Disconnected from JEM AI Lieutenant Socket.IO');
+            outputDiv.innerHTML = `<p class="status-error">Disconnected from JEM AI Lieutenant. Refresh to reconnect.</p>${outputDiv.innerHTML}`;
+            setControlsDisabled(false);
+        });
+
+        // Attach event listeners
+        directButton.addEventListener('click', () => handleExecute('direct'));
+        localAiButton.addEventListener('click', () => handleExecute('local_ai'));
+        nexusAiButton.addEventListener('click', () => handleExecute('nexus_ai'));
+
+        commandInput.addEventListener('keypress', e => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                directButton.click(); // Default to direct run on Enter
+            }
+        });
+
+        // Initial state: ensure controls are enabled on page load
+        setControlsDisabled(false);
+    </script>

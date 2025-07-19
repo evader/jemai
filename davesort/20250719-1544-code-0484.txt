@@ -1,0 +1,5 @@
+// In handleExecute(mode) function, in the switch statement:
+        case 'nexus_ai': // Old
+        case 'synapz_cloud_ai': // New
+                // ... socket.emit('generate_command', { prompt: inputValue, job_id: jobId });
+            break;

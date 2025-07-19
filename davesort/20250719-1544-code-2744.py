@@ -1,0 +1,1 @@
+\nllm = Ollama(model=\"llama3\", base_url=\"http://localhost:11438\")\n

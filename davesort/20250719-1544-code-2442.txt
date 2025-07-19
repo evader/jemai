@@ -1,0 +1,1 @@
+\nnohup python3 chat_ui.py > chat_ui.log 2>&1 &\n

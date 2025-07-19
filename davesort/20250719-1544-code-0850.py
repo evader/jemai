@@ -1,0 +1,1 @@
+\n   from transformers import pipeline\n\n   # Load model\n   model_name = \"gpt2\"  # Replace with the desired model name\n   generator = pipeline('text-generation', model=model_name)\n\n   # Generate text\n   def generate_text(prompt: str):\n       return generator(prompt)\n

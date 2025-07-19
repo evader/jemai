@@ -1,0 +1,1 @@
+sudo docker compose -f /opt/ai_offline_setup/docker_setup/docker-compose.yml up -d

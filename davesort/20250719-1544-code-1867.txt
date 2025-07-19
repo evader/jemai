@@ -1,0 +1,1 @@
+\n- Uses `python:3.10-slim` base image.\n- Copies `lt.py` and `templates` folder.\n- Installs dependencies from `requirements.txt`.\n- Exposes port 5000.\n- Runs `lt.py`.\n- No debug support.\n\n---\n\n### 2. `/opt/jemai_prod/docker_setup/Dockerfile` (core Synapz container?)\n

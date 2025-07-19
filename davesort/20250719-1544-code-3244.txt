@@ -1,0 +1,1 @@
+\n   sudo ufw allow 11434\n

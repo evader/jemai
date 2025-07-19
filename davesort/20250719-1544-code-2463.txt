@@ -1,0 +1,1 @@
+\n   ps aux | grep synapz_core.py\n

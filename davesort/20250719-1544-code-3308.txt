@@ -1,0 +1,1 @@
+\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>JEM AI - Result</title>\n</head>\n<body>\n    <h1>Results for: \"{{ query }}\"</h1>\n    <p>{{ response }}</p>\n    <br>\n    <a href=\"/\">Back to Models</a>\n</body>\n</html>\n

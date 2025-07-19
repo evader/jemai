@@ -1,0 +1,1 @@
+\n  tar xzvf jemai_full_backup_20250717_xxxxxx.tar.gz -C /\n  chown -R jemai:jemai /home/jemai/synapz_core /opt/jemai_prod\n  sudo systemctl restart synapz_core\n

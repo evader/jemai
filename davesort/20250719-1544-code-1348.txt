@@ -1,0 +1,1 @@
+\nbob \"summarize last log\" | tee >(xclip -selection clipboard)\n

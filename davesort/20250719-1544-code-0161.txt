@@ -1,0 +1,7 @@
+lt-backend:
+  build:
+   context: .
+   dockerfile: lt-backend.Dockerfile
+  container_name: jemai_lt_backend
+  ports:
+   - "5000:5001" # Host port 5000 -> Container port 5001 (where lt.py runs) <--- CORRECTED LINE

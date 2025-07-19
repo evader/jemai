@@ -1,0 +1,1 @@
+\n- This means your relay script tried to connect to `http://localhost:11436/chat` but **no service is running there**\u2014so the connection is refused.\n\n---\n\n## **How to Fix**\n\n1. **Start Jemai\u2019s Flask API server!**\n   - If it\u2019s managed by systemd, run:\n

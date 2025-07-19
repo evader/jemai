@@ -1,0 +1,1 @@
+\n# Add aliases\nif [ -f ~/.bash_aliases ]; then\n    . ~/.bash_aliases\nfi\n\n# Ensure ~/bin is in PATH\nexport PATH=\"$HOME/bin:$PATH\"\n

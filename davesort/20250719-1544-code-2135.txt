@@ -1,0 +1,1 @@
+\\n    docker build -t jemaibackend_lt .\\n

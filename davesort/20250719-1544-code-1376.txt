@@ -1,0 +1,1 @@
+\n  chmod +x ~/bin/jem\"$*\\\"}\" | jq -r '.response // .error // .message'n your $PATH):**\n

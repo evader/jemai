@@ -1,0 +1,1 @@
+\nCOMMAND   PID  USER   FD   TYPE ...\nollama   1234 ollama ...  TCP ...:11434 (LISTEN)\n

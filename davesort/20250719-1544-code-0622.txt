@@ -1,0 +1,1 @@
+\ncd C:\\JEMAI_HUB\npython synapz_listener.py\n

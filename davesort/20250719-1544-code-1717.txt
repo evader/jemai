@@ -1,0 +1,1 @@
+\nvalidating /opt/jemai_prod/docker_setup/docker-compose.yml:  additional properties 'jemai_core' not allowed\n

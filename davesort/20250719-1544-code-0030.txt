@@ -1,0 +1,13 @@
+services:
+  lt-backend:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - GOOGLE_API_KEY=YOUR_ACTUAL_GOOGLE_API_KEY_HERE  # <--- ADD THIS LINE
+    volumes:
+      - ./lt.py:/app/lt.py  # Assuming lt.py is directly mapped in the container
+      # other volumes if any
+    # ... rest of lt-backend configuration

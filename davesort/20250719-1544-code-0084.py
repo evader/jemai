@@ -1,0 +1,1 @@
+RAG_API_URL = "http://localhost:11435/query"

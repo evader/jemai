@@ -1,0 +1,1 @@
+\ndocker ps | grep ollama\ncurl http://localhost:11434\n

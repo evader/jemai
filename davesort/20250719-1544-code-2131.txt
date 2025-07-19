@@ -1,0 +1,1 @@
+\ncd ~/synapz_local_rag\nsource venv/bin/activate\npython synapz_rag_query.py\n# (Ask questions. Type \"exit\" to quit.)\ndeactivate\n

@@ -1,0 +1,1 @@
+\nFROM python:3.10-slim-bookworm\n\nWORKDIR /app\n\nCOPY requirements.txt .\n\nRUN pip install --no-cache-dir -r requirements.txt\n\nCOPY . .\n\nEXPOSE 5000 5678\n\nCMD [\"python3\", \"-m\", \"debugpy\", \"--listen\", \"0.0.0.0:5678\", \"--wait-for-client\", \"jemai_core.py\"]\n

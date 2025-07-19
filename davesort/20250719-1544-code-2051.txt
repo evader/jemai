@@ -1,0 +1,1 @@
+\n\n3. Wait for it to finish ingesting your documents into `chroma_data`.\n\n4. Restart your Synapz Core backend Docker container (if applicable):\n\n

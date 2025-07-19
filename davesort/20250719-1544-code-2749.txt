@@ -1,0 +1,1 @@
+\ncd ~/synapz_core\nmv synapz_core.py synapz_core.old.py\ncurl -o synapz_core.py https://raw.githubusercontent.com/dlee42/synapz_core_expanded/main/synapz_core.py  # placeholder if hosted, or paste manually\n

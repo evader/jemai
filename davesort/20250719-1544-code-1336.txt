@@ -1,0 +1,1 @@
+\njemlast() {\n  local last_cmd=$(history 2 | head -n 1 | sed 's/^[ ]*[0-9]\\+[ ]*//')\n  ~/bin/jem \"What went wrong with this command? $last_cmd\"\n}\nexport -f jemlast\n

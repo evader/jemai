@@ -1,0 +1,1 @@
+\nimport requests, platform\nSERVER = \"http://jemai.local:5000/join\"\ndata = {\"name\": platform.node(), \"type\": platform.system()}\ntry:\n    r = requests.post(SERVER, json=data)\n    print(\"Joined master:\", r.status_code)\nexcept Exception as e:\n    print(\"Failed to join:\", e)\n

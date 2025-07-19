@@ -1,0 +1,1 @@
+\n\n**If you want debug mode (you need to connect a debugger on port 5678):**\n\nYour current CMD is perfect.\n\n---\n\n**Just make sure your docker-compose.yml exposes both ports:**\n\n

@@ -1,0 +1,1 @@
+\n- The log permission fix worked.\n- The Flask API is listening on port 11436.\n- `curl` gets a real JSON response.\n\n---\n\n## **Next Steps: Full Relay Test**\n\n1. **Make sure the relay agent is running** (in a second terminal):\n

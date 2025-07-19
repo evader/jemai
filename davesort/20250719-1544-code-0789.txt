@@ -1,0 +1,1 @@
+\ncp /path/to/backup/blobs/* /usr/share/ollama/.ollama/models/blobs/\ncp /path/to/backup/manifests/* /usr/share/ollama/.ollama/models/manifests/\nsudo systemctl restart ollama\n

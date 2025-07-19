@@ -1,0 +1,1 @@
+\nsudo systemctl restart synapz_core\nsudo systemctl status synapz_core\n

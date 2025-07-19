@@ -1,0 +1,1 @@
+\nsudo systemctl daemon-reload\nsudo systemctl enable synapz_chat.service\nsudo systemctl start synapz_chat.service\n

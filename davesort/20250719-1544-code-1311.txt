@@ -1,0 +1,1 @@
+\nunalias jemai 2>/dev/null\nhash -r\nsource ~/.bashrc\n

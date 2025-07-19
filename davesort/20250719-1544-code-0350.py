@@ -1,0 +1,1 @@
+\nimport threading\ndef mqtt_node():\n    import paho.mqtt.client as mqtt\n    c = mqtt.Client()\n    c.connect(\"mqtt-broker.local\")\n    c.loop_start()\n    console.print(\"[blue]MQTT Node Connected[/blue]\")\nthreading.Thread(target=mqtt_node, daemon=True).start()\n

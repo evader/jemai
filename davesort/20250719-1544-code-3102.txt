@@ -1,0 +1,1 @@
+\n   *(But this is NOT usually recommended; better to just chown the specific file above)*\n\n---\n\n## **Alternative Easy Fix: Log to Home Directory Instead**\n\nIf you don\u2019t care about \u201c/var/log\u201d:\n1. **Edit the log path in `synapz_core.py`** (use nano, vim, or VS Code)  \n   Change:\n

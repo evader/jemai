@@ -1,0 +1,1 @@
+\n(crontab -l ; echo \"@reboot bash ~/lock_ports_and_clean.sh\") | crontab -\n

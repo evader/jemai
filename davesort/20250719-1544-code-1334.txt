@@ -1,0 +1,1 @@
+\n  tar czvf jemai_full_backup_$(date +%Y%m%d_%H%M%S).tar.gz /home/jemai/synapz_core /opt/jemai_prod\n

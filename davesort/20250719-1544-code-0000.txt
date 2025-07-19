@@ -1,0 +1,4 @@
+fastapi
+    uvicorn
+    pyperclip
+    # any other dependencies

@@ -1,0 +1,1 @@
+\n\nIf empty or missing, you must ingest documents to build your vector DB first \u2014 otherwise queries will always fail with `RAG not initialized`.\n\n---\n\n**Step 2: Test the SocketIO query properly**\n\nYou cannot do\n\n

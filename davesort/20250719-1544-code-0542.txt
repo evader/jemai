@@ -1,0 +1,3 @@
+volumes:
+      - "${USER_PROJECTS_DIR}:/home/coder/projects"
+      - "/var/run/docker.sock:/var/run/docker.sock"

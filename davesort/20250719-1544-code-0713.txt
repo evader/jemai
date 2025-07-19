@@ -1,0 +1,1 @@
+\n     pip install fastapi uvicorn pyperclip requests\n     # Add anything else your scripts need\n

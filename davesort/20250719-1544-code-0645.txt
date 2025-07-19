@@ -1,0 +1,1 @@
+\n@echo off\ncd /d C:\\JEMAI_HUB\n\nstart \"MEMORY API\" cmd /k uvicorn jemai_memory_api_v1.0:app --reload --host 0.0.0.0 --port 8089\ntimeout /t 2\nstart \"OVERLAY\" python synapz_overlay_v1.1.py\nstart \"LISTENER\" python synapz_listener_v1.0.py\necho All JEMAI core scripts launched!\npause\n

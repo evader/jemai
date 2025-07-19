@@ -1,0 +1,1 @@
+\n(Should return the homepage HTML or some JSON response.)\n\n3. **Firewall (ufw) status:**  \nCheck if any firewall is blocking ports 5000 or 3000:  \n

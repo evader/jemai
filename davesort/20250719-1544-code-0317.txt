@@ -1,0 +1,4 @@
+sudo rm /etc/apt/sources.list.d/nvidia-docker.list
+    sudo rm /etc/apt/sources.list.d/cuda-ubuntu*.list # Remove any old CUDA repos as well
+    sudo rm /etc/apt/keyrings/nvidia-container-toolkit-keyring.gpg # Remove old key if exists
+    sudo rm /etc/apt/keyrings/cuda-archive-keyring.gpg

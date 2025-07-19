@@ -1,0 +1,1 @@
+\n**Copy and paste** the new log output here.  \nThis will reveal the real error: it\u2019s probably a crash, exception, or model/LLM hang.\n\n---\n\n## 2. **Bonus: Try `/status` in browser or curl while POST is stuck**\n\n- Run your POST (let it hang)\n- While it\u2019s still hanging, in another terminal/tab:\n

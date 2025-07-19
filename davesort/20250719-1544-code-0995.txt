@@ -1,0 +1,1 @@
+\ncp -r ~/synapz_local_rag_backup_<timestamp> ~/synapz_core\n

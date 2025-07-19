@@ -1,0 +1,1 @@
+python local_og.py "Hi OG, based on our very long history, what was the most persistent and frustrating technical problem we battled during the JEM AI setup?"

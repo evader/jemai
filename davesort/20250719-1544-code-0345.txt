@@ -1,0 +1,3 @@
+sudo hostnamectl set-hostname jemai
+        # You might also want to edit /etc/hosts to ensure it has:
+        # 127.0.1.1 jemai

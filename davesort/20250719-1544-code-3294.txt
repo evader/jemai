@@ -1,0 +1,1 @@
+\nsudo systemctl status nginx.service\n

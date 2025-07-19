@@ -1,0 +1,1 @@
+\n\n---\n\n### Just one thing:\n\n- Your Flask app runs on port **5001** internally (`socketio.run(..., port=5001)`).\n- Your Dockerfile exposes **5000** and CMD runs `lt.py` without any port override.\n\n**So either:**\n\n1. Change Flask in `lt.py` to run on port 5000:\n\n

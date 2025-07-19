@@ -1,0 +1,1 @@
+\ndocker ps --format \"table {{.Names}}\\t{{.Image}}\\t{{.Status}}\\t{{.Ports}}\"\ndocker volume ls | grep ollama\ndocker inspect jemai_prod_ollama jemai_prod_ollama_prod_data ollama 2>/dev/null | grep Mountpoint\n

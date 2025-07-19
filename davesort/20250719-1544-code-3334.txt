@@ -1,0 +1,1 @@
+\nls /root/.ollama/models\n

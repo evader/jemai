@@ -1,0 +1,1 @@
+\nsudo du -h --max-depth=2 / | sort -hr | head -n 40\n

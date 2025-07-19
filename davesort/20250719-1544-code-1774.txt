@@ -1,0 +1,1 @@
+\\n    git clone https://github.com/comfyanonymous/ComfyUI.git /ai_offline_setup/git_repos/comfyui\\n

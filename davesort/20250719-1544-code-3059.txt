@@ -1,0 +1,1 @@
+\n**(Replace `<YOUR_NGROK_AUTHTOKEN>` as needed.)**\n\n---\n\n### **STEP 2: Synapz Bridge Relay Agent**\n\n**This script watches for `~/synapz_core/relay_command.json` and, if a command is there, sends it to Jemai\u2019s API.**\n\n

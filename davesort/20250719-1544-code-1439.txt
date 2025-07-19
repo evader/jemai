@@ -1,0 +1,1 @@
+\ndocker stop ollama jemai_prod_ollama 2>/dev/null\ndocker rm ollama jemai_prod_ollama 2>/dev/null\n

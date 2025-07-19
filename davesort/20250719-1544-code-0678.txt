@@ -1,0 +1,1 @@
+\nsudo systemctl status jemai_stack.service\n

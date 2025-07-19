@@ -1,0 +1,1 @@
+\ndocker inspect jemai_open_webui | grep Health -A 10\n

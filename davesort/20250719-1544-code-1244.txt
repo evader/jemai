@@ -1,0 +1,1 @@
+\njemai '{\"query\":\"summarize today in 1 line\"}'\n

@@ -1,0 +1,1 @@
+\ndocker run -d --name ollama --restart always \\\n  -p 11434:11434 \\\n  -v ollama:/root/.ollama \\\n  ollama/ollama:latest\n

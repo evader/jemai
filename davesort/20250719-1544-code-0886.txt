@@ -1,0 +1,1 @@
+\ndocker rm -f jemai_open_webui jemai_code_server 2>/dev/null\n

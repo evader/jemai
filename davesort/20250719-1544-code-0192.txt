@@ -1,0 +1,2 @@
+# Execute this in the NEW terminal opened in Command Block 3
+sudo docker logs -f jemai_lt_backend

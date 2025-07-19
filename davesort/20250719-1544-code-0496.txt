@@ -1,0 +1,5 @@
+// Inside commandInput.addEventListener('keypress', e => { ... }
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            directButton.click(); // Default to direct run on Enter
+        }

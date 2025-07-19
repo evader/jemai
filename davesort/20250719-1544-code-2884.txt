@@ -1,0 +1,1 @@
+\n\u274c Synapz Core must be started by systemd. Use: sudo systemctl restart synapz_core\n

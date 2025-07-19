@@ -1,0 +1,1 @@
+\n\n---\n\n## 6. User Preferences\n\n- User wants: **Single-step, minimal, no-fluff instructions**\n- Avoids API usage except for core tasks; prefers local-only.\n- ESP32 panel work is on hold.\n- Please **wait for user response** before running next actions.\n- User prefers commands or short copy-paste blocks only.\n\n---\n\n## 7. Last Known Source\n\n

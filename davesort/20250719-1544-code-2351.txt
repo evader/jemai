@@ -1,0 +1,1 @@
+\nsudo mount -t cifs //192.168.1.135/<share_name> /mnt/unraid -o guest\n

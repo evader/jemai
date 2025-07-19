@@ -1,0 +1,8 @@
+Flask
+        google-generativeai
+        requests
+        psutil
+        pyperclip # ADDED THIS LINE
+        Flask-SocketIO
+        gevent-websocket
+        eventlet

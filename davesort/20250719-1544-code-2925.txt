@@ -1,0 +1,1 @@
+\nalias jauto='~/synapz_core/autotask_run.sh'\n

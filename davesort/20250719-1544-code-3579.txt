@@ -1,0 +1,1 @@
+\n   docker run -d -p 9001:9001 \\\n     --name portainer-agent \\\n     --restart always \\\n     --network host \\\n     -v /var/run/docker.sock:/var/run/docker.sock \\\n     -v /host:/host \\\n     portainer/agent:latest\n

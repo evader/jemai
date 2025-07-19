@@ -1,0 +1,1 @@
+f.write("echo \"  If any package fails, try installing it individually first or check dependencies.\"\n")

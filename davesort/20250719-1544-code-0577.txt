@@ -1,0 +1,1 @@
+sudo ~/bring_synapz_home.sh

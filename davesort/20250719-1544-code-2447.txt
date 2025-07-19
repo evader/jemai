@@ -1,0 +1,1 @@
+\n   pkill -f synapz_core.py\n   source venv/bin/activate\n   python3 synapz_core.py\n

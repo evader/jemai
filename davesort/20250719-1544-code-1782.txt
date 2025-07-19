@@ -1,0 +1,1 @@
+\\n        nvidia-smi\\n        nvcc --version\\n

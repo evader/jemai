@@ -1,0 +1,1 @@
+\n  chunks = search_jemai_memory(\"ubuntu offline setup\")\n  # Use those `chunks` in your LLM prompt, etc.\n

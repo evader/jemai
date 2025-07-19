@@ -1,0 +1,1 @@
+\nmkdir -p ~/synapz_core/synapz_agents\nnano ~/synapz_core/synapz_agents/docker_agent.py\n

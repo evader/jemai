@@ -1,0 +1,1 @@
+\n- **Does it hang?**  \n  - If yes, it\u2019s a bug or bottleneck inside `synapz_core.py`\u2019s `/chat` endpoint.\n- **Does it reply instantly?**  \n  - If yes, the relay should work too\u2014try again.\n\n---\n\n### **2. Watch Server Logs in Real Time**\n\nIn another terminal:\n

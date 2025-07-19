@@ -1,0 +1,1 @@
+\nsudo lsof -t -i:5000 | xargs -r sudo kill -9\nsudo lsof -t -i:5678 | xargs -r sudo kill -9\ncd /opt/jemai_prod/docker_setup\ndocker compose down jemai_core --remove-orphans\ndocker compose up -d jemai_core\ndocker compose logs jemai_core --tail=50\n

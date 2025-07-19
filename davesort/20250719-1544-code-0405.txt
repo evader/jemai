@@ -1,0 +1,1 @@
+rm -rf /opt/ai_offline_setup/docker_setup

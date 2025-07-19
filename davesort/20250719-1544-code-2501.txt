@@ -1,0 +1,1 @@
+\nsudo tee /etc/systemd/system/synapz_core.service > /dev/null <<EOF\n[Unit]\nDescription=Synapz Core AI Server\nAfter=network.target\n\n[Service]\nUser=jemai\nWorkingDirectory=/home/jemai/synapz_core\nExecStart=/home/jemai/synapz_core/venv/bin/python synapz_core.py\nRestart=always\n\n[Install]\nWantedBy=multi-user.target\nEOF\n

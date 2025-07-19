@@ -1,0 +1,1 @@
+\n# Grow your root logical volume to use all available space\nsudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv\n\n# Expand the ext4 filesystem to fill the new LV space\nsudo resize2fs /dev/ubuntu-vg/ubuntu-lv\n\n# (Optional, but safe) Confirm the result\ndf -h\n

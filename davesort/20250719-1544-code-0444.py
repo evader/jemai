@@ -1,0 +1,1 @@
+\nprevent_manual_launch()\n

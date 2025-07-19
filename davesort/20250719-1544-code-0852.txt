@@ -1,0 +1,1 @@
+\ndocker exec -it jemai_open_webui bash\n# Now inside the container, do:\ncurl http://host.docker.internal:11434/api/tags\n# or, if that fails:\ncurl http://ollama:11434/api/tags\n# or, if that fails:\ncurl http://127.0.0.1:11434/api/tags\n

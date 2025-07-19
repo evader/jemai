@@ -1,0 +1,1 @@
+f.write("pip install --no-index --find-links=\"${OFFLINE_SETUP_DIR}/python_packages/common_libs\" $(ls ${OFFLINE_SETUP_DIR}/python_packages/common_libs/*.whl | xargs -n 1 basename | sed 's/\(.*\)-\([0-9.]*\)-py.\+/\1/g' | uniq | grep -vE '^(torch|tensorflow|bitsandbytes|flash-attn|xformers)$' | tr '\\n' ' ')\n")

@@ -1,0 +1,1 @@
+\necho \"alias jcheck='~/jemai_check.sh'\" >> ~/.bash_aliases\nsource ~/.bashrc\n

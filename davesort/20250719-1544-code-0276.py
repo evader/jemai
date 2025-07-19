@@ -1,0 +1,1 @@
+\n@app.route('/query', methods=['POST'])\ndef query():\n

@@ -1,0 +1,1 @@
+\n/home/jemai/venv1/bin/activate\n/home/jemai/venv2/bin/activate\n/home/jemai/otherenv/bin/activate\n

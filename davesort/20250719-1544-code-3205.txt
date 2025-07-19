@@ -1,0 +1,1 @@
+\n   This will show you all containers, even if they\u2019re not running.\n\n2. **Check if Synapz Core is a service or a container**:\n   - If it's running as a **service**, use the following command to check its status:\n

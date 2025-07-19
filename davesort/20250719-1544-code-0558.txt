@@ -1,0 +1,104 @@
+# ===================================================================
+#  JEM AI - Production Docker Compose (V2.2 - Stable Decoupled Stack)
+# ===================================================================
+#  This is the definitive blueprint for the JEM AI ecosystem.
+#  It runs a C&C backend, a standalone Ollama engine, and all dev tools.
+#  It uses variables from the adjacent '.env' file.
+# ===================================================================
+
+services:
+  # --- C&C Web Backend ---
+  # This is the simple UI server and command router. It talks to Ollama.
+  jemai_core:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jemai_prod_core
+    ports:
+      - "5000:5000"    # JEM AI Shell UI
+      - "5678:5678"    # VSCode Debugger Port
+    volumes:
+      - ".:/app"         # Mounts the source code for LIVE EDITING
+      - "/var/run/docker.sock:/var/run/docker.sock" # Allows control over Docker
+      - "${PROD_RAG_DATA_DIR}:/app/rag/chroma_data" # Mounts the RAG memory
+    depends_on:
+      - ollama           # CRITICAL: Ensures Ollama starts before the core brain
+    restart: unless-stopped
+    environment:
+      - OLLAMA_HOST=http://jemai_prod_ollama:11434 # Tells the core brain where to find the Ollama service
+      - TZ=Australia/Perth
+    # The command is for debugging, an override is needed for production.
+    command: python3 -m debugpy --wait-for-client --listen 0.0.0.0:5678 -m flask run --host=0.0.0.0 --port=5000
+
+  # --- OLLAMA (Local LLM Engine) ---
+  # The standalone, powerful engine for running LLMs.
+  ollama:
+    image: ollama/ollama:latest
+    container_name: jemai_prod_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_prod_data:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+      - TZ=Australia/Perth
+      
+  # --- OPEN WEBUI (Frontend for direct Ollama interaction) ---
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: jemai_prod_open_webui
+    ports:
+      - "3000:8080"
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_BASE_URL=http://jemai_prod_ollama:11434
+    restart: unless-stopped
+    
+  # --- JUPYTERLAB (AI & Data Science Workbench) ---
+  jupyter:
+    image: jupyter/tensorflow-notebook:latest
+    container_name: jemai_prod_jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - "${USER_NOTEBOOKS_DIR}:/home/jovyan/work"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=${JUPYTER_TOKEN}
+      - TZ=Australia/Perth
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  # --- CODE-SERVER ("God Mode" IDE) ---
+  code-server:
+    image: codercom/code-server:latest
+    container_name: jemai_prod_code_server
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/:/host"  # "God Mode" mount for full filesystem access
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      - PASSWORD=${CODE_SERVER_PASSWORD}
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - TZ=Australia/Perth
+    restart: unless-stopped
+
+volumes:
+  ollama_prod_data:
+  # Portainer has been removed.

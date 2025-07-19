@@ -1,0 +1,2 @@
+cd /opt/ai_offline_setup/docker_setup
+        sudo docker compose up -d --build lt-backend

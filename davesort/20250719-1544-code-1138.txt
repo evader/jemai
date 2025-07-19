@@ -1,0 +1,1 @@
+\nnano ~/.synapz_presence.sh\n

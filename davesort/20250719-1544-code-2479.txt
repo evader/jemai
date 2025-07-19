@@ -1,0 +1,1 @@
+\ncat ~/synapz_core/synapz_core.py | grep \"status\"\n

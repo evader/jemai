@@ -1,0 +1,1 @@
+\n   docker volume create portainer_data  # Create a volume to store Portainer data\n\n   docker run -d -p 9000:9000 --name portainer \\\n     -v /var/run/docker.sock:/var/run/docker.sock \\\n     -v portainer_data:/data \\\n     portainer/portainer-ce\n

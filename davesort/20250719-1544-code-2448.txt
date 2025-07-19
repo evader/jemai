@@ -1,0 +1,1 @@
+\ncurl -X POST http://localhost:11436/notes \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"note\": \"Synapz notes system is live.\"}'\n\ncurl http://localhost:11436/notes\n

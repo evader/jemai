@@ -1,0 +1,1 @@
+\ncp -r ~/jemai_full_backup_20250716_194120/synapz_core ~/synapz_core\n

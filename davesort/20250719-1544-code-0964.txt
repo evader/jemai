@@ -1,0 +1,1 @@
+\nbash -x ~/synapz_super_bootstrap.sh\n

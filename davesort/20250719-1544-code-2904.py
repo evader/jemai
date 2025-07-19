@@ -1,0 +1,1 @@
+\nif __name__ == '__main__':\n    print(\"\u274c Synapz Core must be launched with systemd.\")\n    sys.exit(1)\n

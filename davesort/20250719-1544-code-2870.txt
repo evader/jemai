@@ -1,0 +1,1 @@
+\nsudo journalctl -u synapz_core --no-pager | tail -n 50\n

@@ -1,0 +1,1 @@
+\\ncd /opt/ai_offline_setup/miniconda\\nbash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/miniconda3\\n# Restart your terminal or run:\\nsource ~/.bashrc\\nconda init\\nsource ~/.bashrc # Load conda environment\\n

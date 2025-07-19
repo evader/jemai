@@ -1,0 +1,1 @@
+\nchmod +x ~/synapz_core/diag.sh\nalias jdiag='~/synapz_core/diag.sh'\n

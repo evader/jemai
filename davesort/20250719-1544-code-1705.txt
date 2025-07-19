@@ -1,0 +1,1 @@
+\nenvironment:\n  - FLASK_APP=jemai_core.py\n  - OLLAMA_HOST=http://jemai_prod_ollama:11434\n  - TZ=Australia/Perth\n

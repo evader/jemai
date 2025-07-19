@@ -1,0 +1,1 @@
+\nif [ ! -d \"$APP_DIR\" ]; then\n  echo \"ERROR: $APP_DIR does not exist. Please copy your Synapz Core code to $APP_DIR.\"\n  exit 1\nfi\ncd $APP_DIR\n

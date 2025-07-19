@@ -1,0 +1,1 @@
+\nimport os\nprint(os.getenv('MY_VAR'))\n

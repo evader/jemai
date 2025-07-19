@@ -1,0 +1,1 @@
+\nopen /home/jemai/synapz_core/docker/ollama-compose.yml: no such file or directory\n

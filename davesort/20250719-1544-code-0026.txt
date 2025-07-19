@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pyperclip   # ADD THIS
+ollama      # ADD THIS
+psutil      # ADD THIS (if not already there)
+# any other packages already listed

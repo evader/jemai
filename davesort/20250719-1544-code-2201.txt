@@ -1,0 +1,1 @@
+\nid: SYNAPZ_CORE\nmodel: llama3:8b\nmemory: chroma:/jemai/synapz_core/rag\npersonality: ./persona/synapz_genesis.txt\npermissions: sudo-safe, shell-readonly, docker-manage\n

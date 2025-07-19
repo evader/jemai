@@ -1,0 +1,1 @@
+\nsource ~/synapz_core/venv/bin/activate\npython3 ~/synapz_core/synapz_core.py\n

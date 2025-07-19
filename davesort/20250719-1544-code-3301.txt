@@ -1,0 +1,1 @@
+\n   sudo kill -9 <PID>\n

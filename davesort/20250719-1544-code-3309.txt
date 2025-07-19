@@ -1,0 +1,1 @@
+\n  flask-frontend:\n    build: .\n    container_name: jemai_flask_frontend\n    ports:\n      - \"5000:5000\"\n    depends_on:\n      - ollama\n    restart: unless-stopped\n

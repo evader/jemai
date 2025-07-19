@@ -1,0 +1,1 @@
+\n> *(Note: The command above outputs your current installed packages to requirements.txt using `cat <<EOF ... EOF` so you don\u2019t have to redirect with `>` and copy-paste the results. Just run both lines in order.)*\n\n---\n\n## **3. Example: Add a logrotate config for your Synapz Core log**\n\n

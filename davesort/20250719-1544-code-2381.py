@@ -1,0 +1,1 @@
+\n# ... all your imports and setup above ...\n\n@app.route(\"/agent/docker\", methods=[\"POST\"])\ndef docker_api():\n    # ...\n\n@app.route(\"/writefile\", methods=[\"POST\"])\ndef write_file():\n    # ...\n\nif __name__ == '__main__':\n    logging.info(\"\ud83d\udd0c Synapz Core Flask server starting...\")\n    app.run(host=\"0.0.0.0\", port=11436)\n

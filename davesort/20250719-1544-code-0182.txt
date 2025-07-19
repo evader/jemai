@@ -1,0 +1,1 @@
+ls -l /opt/ai_offline_setup/docker_setup/index.html

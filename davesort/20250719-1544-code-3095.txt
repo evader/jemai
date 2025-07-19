@@ -1,0 +1,1 @@
+\n   - **You should see logs showing the Flask server starting and listening on port 11436.**\n\n2. **Verify it\u2019s up**:\n   - In a new terminal, run:\n

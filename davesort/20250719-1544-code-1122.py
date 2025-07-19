@@ -1,0 +1,1 @@
+\nfrom langchain.llms import OpenAI\n\nllm = OpenAI(openai_api_base=\"http://localhost:1234/v1\", openai_api_key=\"lm-studio\")\n

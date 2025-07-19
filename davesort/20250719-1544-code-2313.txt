@@ -1,0 +1,1 @@
+\nSession Status                online\nAccount                       David Lee (Plan: Free)\nForwarding                    https://abcd1234.ngrok.io -> http://localhost:11436\n\nConnections                   ttl     opn     rt1     rt5     p50     p90\n                              0       0       0.00    0.00    0.00    0.00\n

@@ -1,0 +1,1 @@
+\n   docker compose logs jemai_core --tail=50\n

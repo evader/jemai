@@ -1,0 +1,1 @@
+sudo chown -R jemai:jemai /opt/jemai_prod/

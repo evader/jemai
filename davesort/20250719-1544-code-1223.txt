@@ -1,0 +1,1 @@
+\nalias jemai='curl -s -X POST http://localhost:11436/query -H \"Content-Type: application/json\" -d'\n

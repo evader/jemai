@@ -1,0 +1,1 @@
+\n# Load both aliases and functions from .bash_aliases\nif [ -f ~/.bash_aliases ]; then\n    . ~/.bash_aliases\nfi\n

@@ -1,0 +1,1 @@
+\\n            sudo docker compose build lt-backend\\n

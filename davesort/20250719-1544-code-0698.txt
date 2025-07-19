@@ -1,0 +1,1 @@
+\nollama list  # Should show no models yet\nollama pull llama3:latest\nollama run llama3\n# You can also: ollama pull gpt4all:latest (or whatever)\n

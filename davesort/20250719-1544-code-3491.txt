@@ -1,0 +1,1 @@
+\nsystemctl list-units --type=service | grep jemai\n

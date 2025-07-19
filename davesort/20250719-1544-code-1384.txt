@@ -1,0 +1,1 @@
+\ndocker inspect <your-open-webui-container-name> | grep -i mount\n

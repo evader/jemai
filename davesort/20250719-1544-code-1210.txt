@@ -1,0 +1,1 @@
+\n   curl -s http://localhost:11436/status\n

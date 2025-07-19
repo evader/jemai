@@ -1,0 +1,1 @@
+\n\nThis means **port 5000 on the host machine is already in use**, so Docker can't bind your `jemai_lt_backend` container to it.\n\n---\n\n### Here's how to fix it bulletproof:\n\n---\n\n## Step 1: Check which process is using port 5000\n\nRun this command on your host (outside Docker):\n\n

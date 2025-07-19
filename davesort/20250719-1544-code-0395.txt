@@ -1,0 +1,3 @@
+cd /opt/ai_offline_setup/docker_setup
+sudo docker compose down
+sudo rm -f lt.py requirements.txt docker-compose.yml Dockerfile.rag-lt requirements.rag.txt

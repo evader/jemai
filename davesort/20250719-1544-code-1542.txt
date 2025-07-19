@@ -1,0 +1,1 @@
+\n  \"customizations\": {\n    \"vscode\": {\n      \"extensions\": [\"ms-python.python\", \"ms-python.debugpy\"]\n    }\n  }\n

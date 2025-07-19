@@ -1,0 +1,3 @@
+# On your Windows PC (or wherever the exported file is):
+        # Assuming you exported this conversation as 'synapz_conversation_history.json'
+        scp C:\path\to\synapz_conversation_history.json jemai@jemai.local:/home/jemai/exported_chat.json

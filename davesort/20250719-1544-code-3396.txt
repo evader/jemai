@@ -1,0 +1,1 @@
+\nsource ~/ai_offline_setup_downloads/temp_venv_for_pip_download/bin/activate\n

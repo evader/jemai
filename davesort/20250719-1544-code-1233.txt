@@ -1,0 +1,1 @@
+\ncurl -s http://localhost:11436/\ncurl -s http://localhost:11436/docs\ncurl -s http://localhost:11436/openapi.json\n

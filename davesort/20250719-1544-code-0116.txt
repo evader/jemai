@@ -1,0 +1,1 @@
+sudo docker logs jemai_lt_backend --tail 50

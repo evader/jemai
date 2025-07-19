@@ -1,0 +1,1 @@
+sudo dpkg -i *.deb || echo 'dpkg warnings/errors are common. Will try to fix later.'

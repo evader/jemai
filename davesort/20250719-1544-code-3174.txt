@@ -1,0 +1,1 @@
+\nSo at the `>>>` prompt (the Python shell), **paste this**:\n

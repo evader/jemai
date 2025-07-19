@@ -1,0 +1,1 @@
+\nfind / -type d \\( -name blobs -o -name manifests \\) 2>/dev/null\n

@@ -1,0 +1,1 @@
+\nchmod +x ~/jemai_check.sh\n

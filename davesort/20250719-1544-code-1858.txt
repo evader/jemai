@@ -1,0 +1,1 @@
+\n\n**Save this as `/home/jemai/ai_offline_setup_downloads/docker_setup/requirements.txt`**\n\nThen rebuild with:\n\n

@@ -1,0 +1,1 @@
+\n   or for compose (modern Docker with compose v2+), GPU access via the above `deploy` section and proper docker config is enough.\n\n4. **Verify the container can see the GPU**:  \n   Run this in the container shell:\n

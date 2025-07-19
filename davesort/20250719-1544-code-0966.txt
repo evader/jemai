@@ -1,0 +1,1 @@
+\necho -e \"\\nJEMAI SHELL CHECK:\\n\" && \\\n(type jemai || echo \"jemai alias not found\") && \\\ncurl -s http://localhost:5000/api/v1/status || echo \"API offline\" && \\\nsystemctl status synapz_core | head -20\n

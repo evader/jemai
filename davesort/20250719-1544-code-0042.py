@@ -1,0 +1,1 @@
+UBUNTU_VERSION = "24.04" # Or "noble" if you prefer to be explicit, but 24.04 is typical

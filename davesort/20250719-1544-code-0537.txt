@@ -1,0 +1,2 @@
+sudo systemctl stop ngrok_jemai.service
+    sudo systemctl disable ngrok_jemai.service

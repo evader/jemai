@@ -1,0 +1,1 @@
+\ndocker exec jemai_ollama nvidia-smi\n

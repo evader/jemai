@@ -1,0 +1,1 @@
+\n/var/lib/docker/volumes/ollama/_data/models\n

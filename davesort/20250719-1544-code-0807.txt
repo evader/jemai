@@ -1,0 +1,1 @@
+\nsudo rsync -avh --progress <src> <dest>\nsudo chown -R ollama:ollama /usr/share/ollama/.ollama/models/\nfind / -type f -size +500M -exec ls -lh {} \\; 2>/dev/null | sort -k 5 -h\nls /usr/share/ollama/.ollama/models/blobs\nls /usr/share/ollama/.ollama/models/manifests\n

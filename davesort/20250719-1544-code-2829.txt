@@ -1,0 +1,1 @@
+\necho -e \"\\n\\033[1;36m\ud83e\udde0 Welcome to JEM AI Synapz Core \u2014 Fully Autonomous. Type 'h' for help.\\033[0m\"\n

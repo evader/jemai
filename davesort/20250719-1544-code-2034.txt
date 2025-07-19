@@ -1,0 +1,1 @@
+\n\n3. If the last one fails, check `docker logs jemai_prod_core --tail=50` for any errors.\n\n4. Use your Synapz Core commands:\n\n

@@ -1,0 +1,1 @@
+\nsource ~/.profile\n

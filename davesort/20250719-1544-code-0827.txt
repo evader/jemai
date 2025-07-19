@@ -1,0 +1,1 @@
+\nsudo systemctl status ollama\ndocker ps -a --format \"table {{.Names}}\\t{{.Status}}\\t{{.Ports}}\"\n

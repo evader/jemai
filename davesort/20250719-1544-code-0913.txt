@@ -1,0 +1,1 @@
+\nbash ~/setup_synapz_core.sh\n

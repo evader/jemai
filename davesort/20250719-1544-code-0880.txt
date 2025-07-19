@@ -1,0 +1,1 @@
+\njemai_code_server       Up 43 minutes                   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp\njemai_open_webui        Exited (1) About a minute ago   0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp\n

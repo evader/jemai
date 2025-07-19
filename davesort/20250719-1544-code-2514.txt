@@ -1,0 +1,1 @@
+\ncd ~/synapz_core\npython3 chat_ui.py --port 6000\n

@@ -1,0 +1,1 @@
+\nFlask==3.0.3\nFlask-SocketIO==5.3.6\neventlet==0.35.2\npsutil==5.9.8\ndocker==7.1.0\nlangchain==0.2.1\nlangchain-community==0.2.1\nchromadb==0.5.0\nsentence-transformers==2.7.0\nollama==0.2.1\npytz==2024.1\ndebugpy==1.8.1\nrequests==2.31.0\n

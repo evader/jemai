@@ -1,0 +1,1 @@
+\ndocker compose down --remove-orphans\ndocker compose up -d --build jemai_core\ndocker compose logs -f jemai_core\n

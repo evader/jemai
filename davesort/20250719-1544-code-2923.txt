@@ -1,0 +1,1 @@
+\ncurl -s -X POST http://localhost:11436/agent/docker \\\n     -H \"Content-Type: application/json\" \\\nchmod +x ~/synapz_core/autotask_run.shCore?\"}' | jq\n

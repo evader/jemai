@@ -1,0 +1,1 @@
+\n# Auto-kill rogue port usage at boot\nfor port in 11436 11438 3000 8888 8080 9000 5000; do\n    sudo fuser -k ${port}/tcp || true\ndone\n

@@ -1,0 +1,1 @@
+synapzCloudAiButton.addEventListener('click', () => handleExecute('synapz_cloud_ai'));

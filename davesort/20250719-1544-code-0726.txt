@@ -1,0 +1,1 @@
+\nollama list\nollama pull llama3\nollama run llama3\n

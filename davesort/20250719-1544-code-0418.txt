@@ -1,0 +1,1 @@
+sudo ~/install_jemai_unified_core.sh

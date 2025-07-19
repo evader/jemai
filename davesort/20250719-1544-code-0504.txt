@@ -1,0 +1,2 @@
+cd /opt/ai_offline_setup/docker_setup # Ensure you are in the correct directory
+    sudo docker compose down # This stops and removes all containers related to this compose file

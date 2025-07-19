@@ -1,0 +1,1 @@
+\nls -d /home/jemai/*/bin/activate 2>/dev/null\n

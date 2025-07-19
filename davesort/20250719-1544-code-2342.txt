@@ -1,0 +1,1 @@
+\n{\n  \"command\": \"list\"          // list | status | restart | logs\n  \"target\": \"container_name\" // only needed for non-list commands\n}\n

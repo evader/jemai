@@ -1,0 +1,1 @@
+\n[Service]\nUser=jemai\nWorkingDirectory=/home/jemai/synapz_core\nExecStart=/home/jemai/synapz_core/venv/bin/python3 /home/jemai/synapz_core/synapz_core.py\n...\n

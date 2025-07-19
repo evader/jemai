@@ -1,0 +1,1 @@
+code ~/jemai_connect_brain.sh

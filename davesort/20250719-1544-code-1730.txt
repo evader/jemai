@@ -1,0 +1,1 @@
+\ncommand: tail -f /dev/null\n

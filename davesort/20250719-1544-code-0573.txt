@@ -1,0 +1,15 @@
+{
+  "jemai_directive": {
+    "version": "1.0",
+    "target": "SynapzOG",
+    "auth_key": "DAVID_LEE_CMD", // A simple signature
+    "task": {
+      "type": "EXECUTE_WITH_CONTEXT", // or "ANALYZE_CODE", "GENERATE_SCRIPT", etc.
+      "context": {
+        "format": "base64/text",
+        "data": "..." // This is where the base64 encoded content of a file, or raw text, will go.
+      },
+      "command": "Analyze the provided context and generate a bash script to deploy it."
+    }
+  }
+}

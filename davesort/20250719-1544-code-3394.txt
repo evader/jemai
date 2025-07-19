@@ -1,0 +1,1 @@
+\ndocker exec -it <container_id> /bin/bash\n

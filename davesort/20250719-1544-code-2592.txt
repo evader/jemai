@@ -1,0 +1,1 @@
+\ndocker stop $(docker ps -aq)\ndocker rm $(docker ps -aq)\n

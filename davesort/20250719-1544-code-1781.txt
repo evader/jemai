@@ -1,0 +1,1 @@
+\\n        cd /opt/ai_offline_setup/nvidia_cuda\\n        tar -xvf cudnn-*-linux-x64-v*.tgz\\n        sudo cp cuda/include/* /usr/local/cuda/include/\\n        sudo cp cuda/lib/lib64/* /usr/local/cuda/lib64/\\n        sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*\\n

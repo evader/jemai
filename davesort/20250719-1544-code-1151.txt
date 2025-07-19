@@ -1,0 +1,1 @@
+\nlocal api_status=\"$(curl -s --max-time 1 http://localhost:5000/api/v1/status 2>/dev/null)\"\n

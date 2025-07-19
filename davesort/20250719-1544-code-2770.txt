@@ -1,0 +1,1 @@
+\nExecStart=/home/jemai/synapz_core/venv/bin/python synapz_core.py\n

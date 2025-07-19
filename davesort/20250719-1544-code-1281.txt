@@ -1,0 +1,1 @@
+\nchmod +x ~/bin/jemai\n

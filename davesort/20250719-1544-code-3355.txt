@@ -1,0 +1,1 @@
+\ndocker-compose down\ndocker-compose up -d\n

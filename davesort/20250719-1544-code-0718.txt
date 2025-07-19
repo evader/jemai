@@ -1,0 +1,1 @@
+\ncurl http://localhost:11434/api/tags\n

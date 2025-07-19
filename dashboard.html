@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JEMAI AGI Cluster Dashboard</title>
+<style>
+body { background: #191a21; color: #eee; font-family: 'Segoe UI',Arial,sans-serif; }
+h1 { color: #90cdf4; }
+.node { background: #23283a; border-radius: 14px; margin:18px 0; padding:22px; box-shadow: 0 3px 10px #0006; }
+button { background: #2b6cb0; color:#fff; border:none; border-radius:8px; padding:7px 17px; margin:0 7px 8px 0; cursor:pointer; }
+input { font-size:16px; border-radius:6px; padding:4px 7px;}
+pre { background:#21232b; color:#def; padding:8px; border-radius:8px; font-size:14px; overflow:auto;}
+.file-list { font-size:14px; margin-bottom:10px;}
+.stats-table td { padding:3px 9px;}
+.stats-table th { color:#ffd700; text-align:left;}
+</style>
+<script>
+let nodes = JSON.parse(localStorage.getItem("jemai_nodes")||"[]");
+
+function saveNodes() { localStorage.setItem("jemai_nodes",JSON.stringify(nodes)); }
+
+async function fetchStatus(node, idx) {
+    let st = document.getElementById('status-'+idx);
+    st.innerHTML = "Loading...";
+    try {
+        let r = await fetch(node+"/api/status");
+        let d = await r.json();
+        st.innerHTML = `<table class="stats-table">
+            <tr><th>Host</th><td>${d.hostname} (${d.os})</td></tr>
+            <tr><th>IP</th><td>${d.ip}</td></tr>
+            <tr><th>CPU</th><td>${d.cpu}%</td></tr>
+            <tr><th>RAM</th><td>${d.ram}%</td></tr>
+            <tr><th>Disk</th><td>${d.disk}%</td></tr>
+            <tr><th>Ollama</th><td>${(d.ollama_models||[]).join(", ")||"None"}</td></tr>
+            <tr><th>GPU(s)</th><td>${(d.gpus||[]).join("<br>")||"None"}</td></tr>
+            <tr><th>Versions</th><td>${(d.versions||[]).join("<br>")||"None"}</td></tr>
+            <tr><th>Working Dir</th><td>${d.cwd}</td></tr>
+            <tr><th>Time</th><td>${d.time}</td></tr>
+        </table>
+        <div>
+            <button onclick="fetchFiles('${node}','${d.cwd}',${idx})">Browse Files</button>
+            <button onclick="trigger(${idx},'/api/update',null,true)">Update</button>
+            <button onclick="trigger(${idx},'/api/reboot','Are you sure?',true)">Reboot</button>
+        </div>
+        <div id="files-${idx}" class="file-list"></div>
+        <div id="fileedit-${idx}"></div>`;
+    } catch {
+        st.innerHTML = '<span style="color:#f55">OFFLINE</span>';
+    }
+}
+function addNode() {
+    let url = prompt("Node API base URL (e.g., http://192.168.1.12:8181)").replace(/\/+$/,"");
+    if (url && !nodes.includes(url)) { nodes.push(url); saveNodes(); renderNodes(); }
+}
+function removeNode(idx) { nodes.splice(idx,1); saveNodes(); renderNodes(); }
+async function trigger(idx, api, msg, post) {
+    if (!msg || confirm(msg)) {
+        let url = nodes[idx] + api;
+        let opt = post? {method:"POST",headers:{'Content-Type':'application/json'},body:JSON.stringify({code:"// future update"})} : {};
+        await fetch(url,opt);
+        setTimeout(()=>fetchStatus(nodes[idx],idx),1800);
+    }
+}
+function renderNodes() {
+    document.getElementById('nodes').innerHTML = nodes.map((node, idx) => `
+        <div class="node">
+            <div><b>API:</b> ${node} <button onclick="removeNode(${idx})">Remove</button></div>
+            <div id="status-${idx}">Loading...</div>
+        </div>
+    `).join('');
+    nodes.forEach((_, idx) => fetchStatus(nodes[idx], idx));
+}
+window.onload = () => {
+    renderNodes();
+    document.getElementById('add-btn').onclick = addNode;
+    document.getElementById('update-all-btn').onclick = () => nodes.forEach((_,i)=>trigger(i,"/api/update",null,true));
+    document.getElementById('reboot-all-btn').onclick = () => nodes.forEach((_,i)=>trigger(i,"/api/reboot",'Are you sure?',true));
+};
+async function fetchFiles(node, dir, idx) {
+    let el = document.getElementById('files-'+idx);
+    el.innerHTML = "Loading...";
+    let r = await fetch(node + "/api/ls?dir="+encodeURIComponent(dir));
+    let d = await r.json();
+    el.innerHTML = "<b>Files:</b><ul>" + d.map(f=>`<li>
+        ${f.isdir?"[DIR]":"[FILE]"} 
+        <a href="#" onclick="fetchFileEdit('${node}','${dir}/${f.name}',${idx});return false;">${f.name}</a>
+        ${f.isdir?`<button onclick="fetchFiles('${node}','${dir}/${f.name}',${idx});return false;">Open</button>`:""}
+    </li>`).join('') + "</ul>";
+}
+async function fetchFileEdit(node, path, idx) {
+    let el = document.getElementById('fileedit-'+idx);
+    let r = await fetch(node + "/api/file?path="+encodeURIComponent(path));
+    let d = await r.json();
+    el.innerHTML = `
+        <b>Edit File:</b> ${path}<br>
+        <textarea id="editbox-${idx}" style="width:98%;height:160px;font-family:monospace;">${d.content.replace(/</g,"&lt;")}</textarea>
+        <br><button onclick="saveFile('${node}','${path}',${idx})">Save</button>
+        <button onclick="el.innerHTML='';">Close</button>
+    `;
+}
+async function saveFile(node, path, idx) {
+    let content = document.getElementById('editbox-'+idx).value;
+    await fetch(node + "/api/file", {
+        method: "POST",
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({path, content})
+    });
+    alert("File saved!");
+}
+</script>
+</head>
+<body>
+<div style="max-width:900px;margin:36px auto;">
+    <h1>JEMAI AGI Cluster Dashboard</h1>
+    <button id="add-btn">+ Add Node</button>
+    <button id="update-all-btn">Update ALL</button>
+    <button id="reboot-all-btn">Reboot ALL</button>
+    <div id="nodes"></div>
+    <div style="margin-top:40px; font-size:12px; color:#999;">
+        Enter each node as: <b>http://[IP or hostname]:8181</b> (Windows, Ubuntu, Mac, etc).<br>
+        Dashboard is pure HTML/JS. No backend required. Just open in browser.
+    </div>
+</div>
+</body>
+</html>

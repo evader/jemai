@@ -1,0 +1,1 @@
+\n   sudo chown -R ollama:ollama /usr/share/ollama/.ollama/models/\n

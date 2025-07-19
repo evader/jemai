@@ -1,0 +1,1 @@
+\nmkdir -p /home/jemai/synapz_core/persona\nmkdir -p /home/jemai/synapz_core/agents\nmkdir -p /home/jemai/synapz_core/rag\n

@@ -1,0 +1,1 @@
+\n\n---\n\n### **How to use:**\n1. **Paste ALL of that** into your shell, let it finish (should say \u201c\u2705 Synapz OneFix Complete\u2026\u201d).\n2. Then run:\n

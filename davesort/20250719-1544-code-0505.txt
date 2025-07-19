@@ -1,0 +1,1 @@
+cd ~/synapz_local_rag

@@ -1,0 +1,1 @@
+\nLOG_FILE=/var/log/synapz_core_setup.log\n

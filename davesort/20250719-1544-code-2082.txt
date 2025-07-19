@@ -1,0 +1,1 @@
+\n\nThat\u2019s the critical part to tell Docker to allocate GPUs to your `ollama` container.\n\n---\n\n### What to do next:\n\n1. **Make sure NVIDIA Container Toolkit is installed on your host and Docker restarted:**  \n

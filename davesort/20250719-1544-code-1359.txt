@@ -1,0 +1,1 @@
+\n  jem status of ollama\n  bob tell me a rude limerick\n

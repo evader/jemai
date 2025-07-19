@@ -1,0 +1,1 @@
+\n   This will show you all running containers.\n\n2. **Check the status of Synapz Core via systemd**:\n   Run this command to check the systemd status of Synapz Core:\n

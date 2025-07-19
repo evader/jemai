@@ -1,0 +1,1 @@
+\nsudo systemctl daemon-reload\nps aux | grep ollama\nsudo killall ollama\n

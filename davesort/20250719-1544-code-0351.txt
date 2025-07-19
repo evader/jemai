@@ -1,0 +1,2 @@
+sudo docker ps -a    # Confirm its current status (should be Restarting or Exited)
+    sudo docker logs jemai_lt_backend

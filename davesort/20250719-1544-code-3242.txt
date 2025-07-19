@@ -1,0 +1,1 @@
+\n   docker inspect --format='{{json .State.Health}}' jemai_ollama\n

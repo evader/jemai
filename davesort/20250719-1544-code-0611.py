@@ -1,0 +1,1 @@
+\ndef run_query(self, event=None):\n    query = self.entry.get().strip()\n    ...\n    elif query.startswith(\"JEMAI-BASE64::\"):\n        ...\n

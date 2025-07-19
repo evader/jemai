@@ -1,0 +1,1 @@
+\ncd /home/jemai/synapz_local_rag\npython3 synapz_rag_ingest.py\n

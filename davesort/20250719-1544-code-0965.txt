@@ -1,0 +1,1 @@
+\njemai\n# or\npython3 ~/synapz_core/synapz_core.py\n# or\ncurl http://localhost:5000/api/v1/status\n# or (if you set the alias)\nsynapzq '{\"query\":\"who are you?\"}'\n

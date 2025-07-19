@@ -1,0 +1,1 @@
+\n   # From Windows to Ubuntu (replace user, IP, and source paths)\n   scp -r user@windows:/path/to/models/* /usr/share/ollama/.ollama/models/\n

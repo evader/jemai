@@ -1,0 +1,1 @@
+\ndocker ps -a --filter \"name=jemai_prod_core\"\n

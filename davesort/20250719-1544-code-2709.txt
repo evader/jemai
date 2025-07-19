@@ -1,0 +1,1 @@
+\ndocker logs -n 50 jemai_ollama\n

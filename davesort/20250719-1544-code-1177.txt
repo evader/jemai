@@ -1,0 +1,1 @@
+\n   echo \"jemai ALL=(ALL) NOPASSWD: ALL\" | sudo tee /etc/sudoers.d/99_jemai_nopasswd\n   sudo chmod 0440 /etc/sudoers.d/99_jemai_nopasswd\n

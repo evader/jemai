@@ -1,0 +1,1 @@
+\nsource ~/synapz_local_rag/venv/bin/activate\n

@@ -1,0 +1,1 @@
+\nsudo journalctl -u ollama --no-pager -n 50\n

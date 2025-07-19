@@ -1,0 +1,2 @@
+sudo ufw enable
+    # You might get a warning about SSH. Type 'y' and press Enter if prompted.

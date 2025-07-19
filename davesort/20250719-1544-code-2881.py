@@ -1,0 +1,1 @@
+\nlog_handler = logging.FileHandler(\"/var/log/synapz_core_runtime.log\")\nlog_handler.setLevel(logging.INFO)\napp.logger.addHandler(log_handler)\n

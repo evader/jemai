@@ -1,0 +1,1 @@
+\n\n2. **Try a GET to `/status` again, just to make sure:**\n

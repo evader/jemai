@@ -1,0 +1,1 @@
+\nscp -r C:\\models\\llama3 jemai@<UBUNTU_IP>:/usr/share/ollama/models/\n

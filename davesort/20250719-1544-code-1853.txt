@@ -1,0 +1,1 @@
+\n\n---\n\n3. **Verify the module is installed**\n\nYou can enter the container and check:\n\n

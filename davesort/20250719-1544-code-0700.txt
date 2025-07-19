@@ -1,0 +1,1 @@
+\n# On the machine you want to run it\npython synapz_listener.py\n# or\npython synapz_overlay.py\n

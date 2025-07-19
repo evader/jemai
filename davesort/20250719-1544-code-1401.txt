@@ -1,0 +1,1 @@
+\nsudo docker restart 2917d64c2511\n

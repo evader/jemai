@@ -1,0 +1,1 @@
+sudo /opt/ai_offline_setup/scripts/install_offline_ai.sh

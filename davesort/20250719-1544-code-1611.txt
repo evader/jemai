@@ -1,0 +1,1 @@
+\nps -ef || top || pgrep python || ls /proc/*/cmdline | xargs -I{} grep -a python {}\n

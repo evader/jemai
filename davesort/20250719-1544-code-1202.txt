@@ -1,0 +1,1 @@
+\nalias synapz-health='curl -s http://localhost:11436/status || echo \"Synapz API not running.\"'\n

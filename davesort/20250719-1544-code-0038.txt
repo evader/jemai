@@ -1,0 +1,9 @@
+fastapi
+    uvicorn
+    pyperclip # <- ADD THIS LINE
+    ollama    # <- ADD THIS LINE
+    psutil    # <- ADD THIS LINE
+    Flask     # <- ENSURE THIS IS PRESENT
+    google-generativeai # <- ENSURE THIS IS PRESENT
+    requests  # <- ENSURE THIS IS PRESENT
+    # Keep any other lines already there

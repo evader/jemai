@@ -1,0 +1,1 @@
+\n   nano ~/.git-credentials\n

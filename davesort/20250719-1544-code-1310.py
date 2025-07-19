@@ -1,0 +1,1 @@
+\n     with open('/home/jemai/synapz_core/pw.txt', 'w') as f:\n         f.write(\"test\")\n

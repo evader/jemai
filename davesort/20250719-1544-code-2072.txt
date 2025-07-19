@@ -1,0 +1,1 @@
+\n\n---\n\n### How to use:\n\n1. Save that whole script exactly as `setup.sh` anywhere you want, e.g. `~/setup.sh`\n2. Run once:\n\n

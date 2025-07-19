@@ -1,0 +1,2 @@
+sudo ufw allow 5901/tcp comment 'Allow VNC access'
+sudo ufw reload

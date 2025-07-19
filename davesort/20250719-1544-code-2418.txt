@@ -1,0 +1,1 @@
+\n[Unit]\nDescription=Synapz Chat UI Service\nAfter=network.target\n\n[Service]\nUser=jemai\nWorkingDirectory=/home/jemai/synapz_core\nExecStart=/home/jemai/synapz_core/venv/bin/python3 /home/jemai/synapz_core/chat_ui.py\nRestart=always\n\n[Install]\nWantedBy=multi-user.target\n

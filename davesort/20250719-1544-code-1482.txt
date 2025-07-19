@@ -1,0 +1,1 @@
+\ndocker compose up jemai_core\n

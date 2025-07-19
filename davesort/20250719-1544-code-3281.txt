@@ -1,0 +1,1 @@
+\n    ./setup_ollama_and_open_webui.sh\n

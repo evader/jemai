@@ -1,0 +1,1 @@
+\n\n2. **Run the diagnostic script (`diag.sh`)** again in Bash:\n

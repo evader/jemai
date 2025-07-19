@@ -1,0 +1,1 @@
+\n   sudo docker exec -u root -it jemai_ollama /bin/bash\n

@@ -1,0 +1,1 @@
+\\n    *   **Transfer:** Copy the entire `/tmp/ai_downloads/pip_packages` directory to `/ai_offline_setup/python_packages`.\\n\\n### 1.4 Git Repositories\\n\\nClone the repositories for the AI applications.\\n\\n*   **Text Generation WebUI (Oobabooga):**\\n

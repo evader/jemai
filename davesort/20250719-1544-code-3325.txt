@@ -1,0 +1,1 @@
+\ndocker exec -it container_name printenv MY_VAR\n

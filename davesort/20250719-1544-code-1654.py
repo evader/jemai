@@ -1,0 +1,1 @@
+\nfrom langchain_community.embeddings import HuggingFaceEmbeddings\nfrom langchain_community.vectorstores import Chroma\nfrom langchain_community.llms import Ollama\nfrom langchain.chains import RetrievalQA\nfrom langchain.prompts import PromptTemplate\n

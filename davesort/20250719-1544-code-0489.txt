@@ -1,0 +1,3 @@
+const promptClass = `prompt-${type.replace('_', '-')}`;
+        // ...
+        jobData.command.includes('Nexus') ? 'nexus-ai' : (jobData.output.includes('Generated command') ? 'local-ai' : 'direct'), jobData.status, jobData.output);

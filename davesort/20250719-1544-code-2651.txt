@@ -1,0 +1,1 @@
+\nsudo ufw allow 3000/tcp\n

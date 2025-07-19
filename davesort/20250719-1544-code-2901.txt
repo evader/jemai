@@ -1,0 +1,1 @@
+\njedit  # opens synapz_core.py in nano\n

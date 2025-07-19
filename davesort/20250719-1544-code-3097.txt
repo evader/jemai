@@ -1,0 +1,1 @@
+\n- This will show the last lines of log output.  \n- **Look for errors, permission problems, missing modules, or tracebacks.**\n\n---\n\n### **2. Check Log Files Directly**\nTry:\n

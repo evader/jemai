@@ -1,0 +1,67 @@
+#!/bin/bash
+    
+    LTPY_PATH="/opt/ai_offline_setup/docker_setup/lt.py"
+    LTPY_BACKUP_PATH="${LTPY_PATH}.bak"
+    
+    echo "--- Applying fixes to lt.py for SocketIO context and global 'jobs' ---"
+    
+    if [ ! -f "$LTPY_PATH" ]; then
+        echo "Error: lt.py not found at $LTPY_PATH. Please ensure it's copied there."
+        exit 1
+    fi
+    
+    echo "Creating backup of lt.py --> ${LTPY_BACKUP_PATH}"
+    cp "$LTPY_PATH" "$LTPY_BACKUP_PATH"
+    
+    # 1. Add 'jobs = {}' global definition
+    echo "  Adding global 'jobs = {}' definition..."
+    # Insert after 'socketio = SocketIO(app)'
+    sudo sed -i "/socketio = SocketIO(app)/a jobs = {}" "$LTPY_PATH"
+    
+    # 2. Update function signatures to accept 'sid' and pass it in subsequent calls
+    echo "  Updating _run_command function signature and calls..."
+    sudo sed -i -E "s/def _run_command\(command, job_id\):/def _run_command(command, job_id, sid):/" "$LTPY_PATH"
+    sudo sed -i -E "s/emit\('output', \{'output': line, 'job_id': job_id}\)/socketio.emit('output', {'output': line, 'job_id': job_id}, room=sid)/g" "$LTPY_PATH"
+    sudo sed -i -E "s/emit\('output', \{'output': f'\\\\n--- Command finished/socketio.emit('output', {'output': f'\\\\n--- Command finished/g" "$LTPY_PATH" # To handle escaped newlines
+    sudo sed -i -E "s/socketio.emit\('output', \{'output': f'\\\\n--- Command finished with exit code ([0-9]+) ---', 'job_id': job_id}\)/socketio.emit('output', {'output': f'\\\\n--- Command finished with exit code \1 ---', 'job_id': job_id}, room=sid)/g" "$LTPY_PATH"
+    
+    echo "  Updating _run_ollama function signature and calls..."
+    sudo sed -i -E "s/def _run_ollama\(prompt, job_id\):/def _run_ollama(prompt, job_id, sid):/" "$LTPY_PATH"
+    sudo sed -i -E "s/emit\('output', \{'output': f'--- Generated command: \{shell_command\} ---\\\\n', 'job_id': job_id}\)/socketio.emit('output', {'output': f'--- Generated command: {shell_command} ---\\\\n', 'job_id': job_id}, room=sid)/g" "$LTPY_PATH"
+    sudo sed -i -E "s/emit\('output', \{'output': 'Error: Could not generate command from prompt.', 'job_id': job_id}\)/socketio.emit('output', {'output': 'Error: Could not generate command from prompt.', 'job_id': job_id}, room=sid)/g" "$LTPY_PATH"
+    sudo sed -i -E "s/emit\('output', \{'output': f'Error: \{e\}', 'job_id': job_id}\)/socketio.emit('output', {'output': f'Error: {e}', 'job_id': job_id}, room=sid)/g" "$LTPY_PATH"
+    sudo sed -i -E "s/_run_command(shell_command, job_id)/_run_command(shell_command, job_id, sid)/g" "$LTPY_PATH" # Pass sid to _run_command
+    
+    echo "  Updating _run_esphome function signature and calls..."
+    sudo sed -i -E "s/def _run_esphome\(yaml_file, job_id\):/def _run_esphome(yaml_file, job_id, sid):/" "$LTPY_PATH"
+    sudo sed -i -E "s|\(socketio.emit\('output', \{'output': f'--- Compiling and uploading \{yaml_file\} ---\\\\n', 'job_id': job_id\}\)|\(socketio.emit('output', {'output': f'--- Compiling and uploading {yaml_file} ---\\\\n', 'job_id': job_id}, room=sid)|g" "$LTPY_PATH"
+    sudo sed -i -E "s|\(socketio.emit\('output', \{'output': line, 'job_id': job_id\}\)|\(socketio.emit('output', {'output': line, 'job_id': job_id}, room=sid)|g" "$LTPY_PATH" 
+    sudo sed -i -E "s|\(socketio.emit\('output', \{'output': f'\\\\n--- ESPHome finished with exit code \{return_code\} ---', 'job_id': job_id\}\)|\(socketio.emit('output', {'output': f'\\\\n--- ESPHome finished with exit code {return_code} ---', 'job_id': job_id}, room=sid)|g" "$LTPY_PATH"
+    sudo sed -i -E "s|\(socketio.emit\('output', \{\\'output\\': f\\'Error: \{e\}\\}, \\'job_id\\': job_id\}\)|\(socketio.emit('output', {'output': f'Error: {e}'}, room=sid)|g" "$LTPY_PATH" # This regex is getting complex, simplify if it fails.
+    
+    # 3. Update @socketio.on handlers to pass 'sid' to the threaded functions
+    echo "  Updating @socketio.on handlers for 'sid'..."
+    sudo sed -i -E "s|def execute\(data\):|def execute(data, sid):|" "$LTPY_PATH"
+    sudo sed -i -E "s|threading.Thread(target=_run_command, args=\(command, job_id\)).start()|threading.Thread(target=_run_command, args=(command, job_id, sid)).start()|" "$LTPY_PATH"
+    
+    sudo sed -i -E "s|def generate_command\(data\):|def generate_command(data, sid):|" "$LTPY_PATH"
+    sudo sed -i -E "s|threading.Thread(target=_run_ollama, args=\(prompt, job_id\)).start()|threading.Thread(target=_run_ollama, args=(prompt, job_id, sid)).start()|" "$LTPY_PATH"
+    
+    sudo sed -i -E "s|def run_esphome\(data\):|def run_esphome(data, sid):|" "$LTPY_PATH"
+    sudo sed -i -E "s|threading.Thread(target=_run_esphome, args=\(yaml_file, job_id\)).start()|threading.Thread(target=_run_esphome, args=(yaml_file, job_id, sid)).start()|" "$LTPY_PATH"
+
+    sudo sed -i -E "s|def start_clipboard\(\):|def start_clipboard(sid):|" "$LTPY_PATH"
+    sudo sed -i -E "s|threading.Thread(target=_start_clipboard_listener)|threading.Thread(target=_start_clipboard_listener, args=(sid))|" "$LTPY_PATH"
+
+    # 4. Remove 'emit' from Flask import, we only use socketio.emit
+    echo "  Removing 'emit' from Flask import if present..."
+    sudo sed -i -r "s/(from flask import .*), emit/\1/g if you want to remove emit from flask but you have it there" "$LTPY_PATH"
+    
+
+    echo "--- All fixes applied to lt.py ---"
+    echo "Now, rebuild and restart the lt-backend Docker container, and check its logs."
+    echo ""
+    echo "cd /opt/ai_offline_setup/docker_setup"
+    echo "sudo docker compose build lt-backend"
+    echo "sudo docker compose up -d lt-backend"
+    echo "sudo docker logs jemai_lt_backend"

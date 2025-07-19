@@ -1,0 +1,1 @@
+\ndocker rm -f jemai_open_webui\ndocker run -d \\\n  --name jemai_open_webui \\\n  -e OLLAMA_BASE_URL=http://host.docker.internal:11434 \\\n  -p 3001:8080 \\\n  ghcr.io/open-webui/open-webui:main\n

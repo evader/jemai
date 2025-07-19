@@ -1,0 +1,1 @@
+\ndocker run -d --name open-webui --restart always \\\n  -p 8080:8080 \\\n  -v openwebui_data:/app/backend/data \\\n  ghcr.io/open-webui/open-webui:main\n

@@ -1,0 +1,1 @@
+\nsudo bash ~/setup_openwebui_gpt4.sh\n

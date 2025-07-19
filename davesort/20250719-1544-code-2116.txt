@@ -1,0 +1,1 @@
+\n\n---\n\n### 2) systemd service file `/etc/systemd/system/synapz_core.service`\n\n

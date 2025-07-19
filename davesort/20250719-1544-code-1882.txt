@@ -1,0 +1,1 @@
+\n\nThen paste the full script inside.\n\n---\n\n### How to run it:\n\n1. Make it executable:\n\n

@@ -1,0 +1,91 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+<script>
+    // Removed: const commandInput, directButton, localAiButton, nexusAiButton
+    const outputDiv = document.getElementById('output');
+    
+    const socket = io(); 
+
+    const jobElements = {}; // Stores references to job UI elements
+
+    // Removed: function setControlsDisabled() { ... } (and all calls to it)
+    // Removed: function generateJobId() { ... }
+    // Removed: function handleExecute() { ... }
+
+    // Initialize/Update Job UI (simplified as less interactive elements)
+    function updateJobUI(jobId, command, type, status, outputContent) {
+        let jobElement = jobElements[jobId];
+        if (!jobElement) {
+            jobElement = document.createElement('div');
+            jobElement.className = 'log-entry';
+            jobElement.id = jobId;
+            outputDiv.prepend(jobElement); // Insert at the top
+            jobElements[jobId] = jobElement; // Store reference
+        }
+
+        // Simplifications because direct/AI mode might not be easily inferable without buttons
+        const promptClass = ''; // No specific prompt class without button types
+        const statusClass = (status === 'running' || status === 'thinking') ? 'status-running' : (status === 'complete' ? 'status-complete' : 'status-error');
+        
+        jobElement.innerHTML = `
+            <p class="prompt-line ${promptClass}">&nbsp; Job: ${command} <span class="status-badge ${statusClass}">${status.toUpperCase()}</span></p>
+            <div class="output-pre">${outputContent.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
+        `;
+        
+        const pre = jobElement.querySelector('.output-pre');
+        if (pre) {
+            pre.scrollTop = pre.scrollHeight; // Auto-scroll for new content
+        }
+    }
+
+
+    // Socket.IO event listeners
+    socket.on('connect', () => {
+        console.log('Connected to JEM AI Lieutenant Socket.IO');
+        socket.emit('request_jobs_list'); // Request initial job list on connect
+    });
+
+    socket.on('output', (data) => {
+        const { output, job_id, final_status } = data; // final_status will be sent from backend now
+        let jobEntry = jobElements[job_id];
+        if (!jobEntry) { 
+            // Fallback for new incoming jobs not yet in jobs_list_update
+            updateJobUI(job_id, 'Incoming Job...', 'direct', 'running', output);
+            jobEntry = jobElements[job_id];
+        }
+        
+        const preElement = jobEntry.querySelector('.output-pre');
+        if (preElement) {
+            preElement.innerText += output; // Append new content
+            preElement.scrollTop = preElement.scrollHeight; // Auto-scroll
+        }
+        
+        if (final_status) { // If a final status is provided, update the status badge
+            const statusBadge = jobEntry.querySelector('.status-badge');
+            if (statusBadge) {
+                statusBadge.innerText = final_status.toUpperCase();
+                statusBadge.className = `status-badge status-${final_status}`;
+            }
+        }
+    });
+
+    socket.on('jobs_list_update', (allJobs) => {
+        // This event updates all jobs from the backend's current state
+        for (const jobId in allJobs) {
+            const jobData = allJobs[jobId];
+            // Simplifying 'type' as we've removed button-driven types from UI
+            updateJobUI(jobId, jobData.command, 'direct', jobData.status, jobData.output);
+        }
+    });
+
+    socket.on('connect_error', (err) => {
+        console.error('Socket.IO connection error:', err);
+        outputDiv.innerHTML = `<p class="status-error">Error: Could not connect to JEM AI Lieutenant Socket.IO. Ensure backend is running. (${err.message})</p>${outputDiv.innerHTML}`;
+    });
+
+    socket.on('disconnect', () => {
+        console.warn('Disconnected from JEM AI Lieutenant Socket.IO');
+        outputDiv.innerHTML = `<p class="status-error">Disconnected from JEM AI Lieutenant. Refresh to reconnect.</p>${outputDiv.innerHTML}`;
+    });
+
+    // Removed: All addEventListener calls that referenced buttons or commandInput
+</script>

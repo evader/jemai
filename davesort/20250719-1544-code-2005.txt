@@ -1,0 +1,1 @@
+\n\n---\n\n### Instructions:\n\n1. Save that as `setup_service.sh` on your machine (e.g. `nano ~/setup_service.sh` then paste and save).\n2. Make it executable:  \n

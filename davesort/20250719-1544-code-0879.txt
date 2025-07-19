@@ -1,0 +1,1 @@
+\ndocker ps -a --format \"table {{.Names}}\\t{{.Ports}}\\t{{.Status}}\"\n

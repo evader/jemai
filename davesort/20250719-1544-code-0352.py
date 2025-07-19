@@ -1,0 +1,1 @@
+\ndef scan_usb_devices():\n    return os.popen(\"lsusb\").read()\n

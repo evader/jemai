@@ -1,0 +1,1 @@
+\n   docker start jemai_ollama\n

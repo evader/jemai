@@ -1,0 +1,3 @@
+sudo apt install avahi-daemon -y
+        sudo systemctl start avahi-daemon
+        sudo systemctl enable avahi-daemon

@@ -1,0 +1,1 @@
+\nwhich jemai\n# Should say: /home/jemai/bin/jemai\n

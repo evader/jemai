@@ -1,0 +1,1 @@
+\nif [ ! -d \"$APP_DIR\" ]; then\n  git clone $REPO $APP_DIR\nelse\n  cd $APP_DIR && git pull\nfi\n

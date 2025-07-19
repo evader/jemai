@@ -1,0 +1,1 @@
+code ~/jemai_faq.sh

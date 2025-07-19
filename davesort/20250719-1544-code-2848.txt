@@ -1,0 +1,1 @@
+\nStopped synapz_core.service - Synapz Core AI Server.\n

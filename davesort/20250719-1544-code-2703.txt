@@ -1,0 +1,1 @@
+\n+bash ~/synapz_core_integration.sh\n

@@ -1,0 +1,1 @@
+\n     {\n       \"name\": \"Python: Attach\",\n       \"type\": \"python\",\n       \"request\": \"attach\",\n       \"connect\": {\n         \"host\": \"localhost\",\n         \"port\": 5678\n       },\n       \"pathMappings\": [\n         {\n           \"localRoot\": \"/opt/jemai_prod/docker_setup\",\n           \"remoteRoot\": \"/app\"\n         }\n       ]\n     }\n

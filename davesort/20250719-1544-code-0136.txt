@@ -1,0 +1,7 @@
+lt-backend:
+  build:
+   context: .
+   dockerfile: lt-backend.Dockerfile # Specify the Dockerfile name
+  container_name: jemai_lt_backend
+  ports:
+   - "5000:5000" # Expose Flask app <--- THIS LINE

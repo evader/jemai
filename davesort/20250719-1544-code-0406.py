@@ -1,0 +1,1 @@
+\ndef keep_building():\n    print(\"[ANY KEY] No input \u2014 keep expanding the system, patching, and self-improving.\")\n    # Placeholder: In real world, could trigger more auto-build logic, run background jobs, etc.\n\n# In CLI loop, after parsing:\nif not cmd:\n    keep_building()\n    continue\n

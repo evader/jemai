@@ -1,0 +1,1 @@
+\nsudo systemctl stop synapz_core\n

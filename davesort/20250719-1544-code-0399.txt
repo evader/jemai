@@ -1,0 +1,316 @@
+#!/bin/bash
+#
+# =========================================================================================
+#  JEM AI BRAIN CONNECTION - MASTER SETUP SCRIPT (V1.0)
+# =========================================================================================
+#  Authored by: SynapzOG for David Lee
+#  Purpose: This single script automates the final, critical integration of JEM AI's
+#           core components. It creates all necessary configuration files and then
+#           builds and launches the full, corrected Docker stack.
+#
+#  RUN THIS SCRIPT ONCE. IT WILL DO EVERYTHING.
+# =========================================================================================
+
+# --- Configuration & Variables ---
+JEMAI_DOCKER_SETUP_DIR="/opt/ai_offline_setup/docker_setup"
+
+# --- Helper functions for stylish output ---
+print_header() {
+    tput setaf 5; echo ""; echo "=== $1 ==="; tput sgr0; echo "";
+}
+print_task() {
+    tput setaf 6; echo ">>> $1"; tput sgr0;
+}
+print_success() {
+    tput setaf 2; echo "    ✅  $1"; tput sgr0;
+}
+print_error() {
+    tput setaf 1; echo "    ❌ ERROR: $1"; tput sgr0;
+}
+
+# --- Main Logic ---
+clear
+print_header "STARTING JEM AI BRAIN CONNECTION SEQUENCE"
+
+# Ensure we're in the right directory
+cd "$JEMAI_DOCKER_SETUP_DIR" || { print_error "Could not find setup directory at $JEMAI_DOCKER_SETUP_DIR. Aborting."; exit 1; }
+
+# --- File Generation ---
+print_task "Generating final, corrected configuration files..."
+
+# 1. Create requirements.txt for lt-backend
+cat <<'EOF_REQ' > "${JEMAI_DOCKER_SETUP_DIR}/requirements.txt"
+Flask
+Flask-SocketIO
+eventlet
+gevent-websocket
+requests
+psutil
+pyperclip
+EOF_REQ
+print_success "requirements.txt created."
+
+# 2. Create the final, corrected docker-compose.yml
+cat <<'EOF_COMPOSE' > "${JEMAI_DOCKER_SETUP_DIR}/docker-compose.yml"
+services:
+  lt-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.lt-backend
+    container_name: jemai_lt_backend
+    ports:
+      - "5000:5001"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/timezone:/etc/timezone:ro"
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: jemai_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+      - "/opt/ai_offline_setup/ai_models:/root/.ollama/models_external:ro"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: jemai_open_webui
+    ports:
+      - "3000:8080"
+    volumes:
+      - open_webui_data:/app/backend/data
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_BASE_URL=http://jemai_ollama:11434
+    restart: unless-stopped
+
+  jupyter:
+    image: jupyter/tensorflow-notebook:latest
+    container_name: jemai_jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - "${HOME}/jemai_notebooks:/home/jovyan/work"
+      - "/etc/localtime:/etc/localtime:ro"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_TOKEN=twozee-ai-token
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  code-server:
+    image: codercom/code-server:latest
+    container_name: jemai_code_server
+    ports:
+      - "8080:8080"
+    volumes:
+      - "${HOME}/jemai_projects:/home/coder/projects"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      - PASSWORD=jemai-code-password
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    restart: unless-stopped
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: jemai_portainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
+  open_webui_data:
+  portainer_data:
+EOF_COMPOSE
+print_success "docker-compose.yml created."
+
+
+# 3. Create Dockerfile.lt-backend
+# This Dockerfile now ASSUMES lt.py and templates/index.html are in the same directory (`docker_setup`)
+cat <<'EOF_DOCKERFILE' > "${JEMAI_DOCKER_SETUP_DIR}/Dockerfile.lt-backend"
+FROM python:3.10-slim-bookworm
+
+WORKDIR /app
+
+# Install system dependencies needed by some Python packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY lt.py .
+COPY templates/ /app/templates/
+
+EXPOSE 5001
+
+CMD ["python3", "lt.py"]
+EOF_DOCKERFILE
+print_success "Dockerfile.lt-backend created."
+
+
+# 4. Create the final, fully patched lt.py
+cat <<'EOF_LTPY' > "${JEMAI_DOCKER_SETUP_DIR}/lt.py"
+import os
+import subprocess
+import threading
+import json
+import time
+import pyperclip
+import psutil
+import sys
+import requests
+
+# --- CRITICAL: Eventlet monkey patching MUST happen at the very top ---
+try:
+    import eventlet
+    eventlet.monkey_patch()
+except ImportError:
+    print("Eventlet not found, using Flask's default development server.", file=sys.stderr)
+
+from flask import Flask, request, jsonify, send_from_directory
+from flask_socketio import SocketIO
+
+jobs = {}
+
+app = Flask(__name__, template_folder='templates')
+socketio = SocketIO(app, async_mode='eventlet')
+
+def _background_emit(event, data, sid):
+    if sid:
+        socketio.emit(event, data, room=sid)
+    else:
+        socketio.emit(event, data, broadcast=True)
+
+def _run_rag_query(prompt, job_id, sid):
+    try:
+        RAG_API_URL = "http://host.docker.internal:11435/query"
+        _background_emit('output', {'output': f'--- Querying local Synapz-Core RAG: "{prompt}" ---\n', 'job_id': job_id}, sid)
+        payload = {"query": prompt}
+        response = requests.post(RAG_API_URL, json=payload, timeout=300)
+        response.raise_for_status()
+
+        response_data = response.json()
+        ai_answer = response_data.get("response", "Error: RAG API did not return a 'response' key.")
+        
+        final_message = f"\n--- Synapz-Core RAG response ---:\n{ai_answer}"
+        _background_emit('output', {'output': ai_answer, 'job_id': job_id}, sid)
+
+        jobs[job_id]["status"] = "complete"
+        jobs[job_id]["output"] += final_message
+        _background_emit('output', {'output': '\n--- Job Complete ---', 'job_id': job_id, 'final_status': 'complete'}, sid)
+
+    except requests.exceptions.RequestException as e:
+        error_message = f'FATAL: Error connecting to RAG service at {RAG_API_URL}: {e}'
+        jobs[job_id]["status"] = "error"
+        _background_emit('output', {'output': error_message, 'job_id': job_id, 'final_status': 'error'}, sid)
+    except Exception as e:
+        error_message = f'FATAL: An unexpected error occurred during RAG interaction: {e}'
+        jobs[job_id]["status"] = "error"
+        _background_emit('output', {'output': error_message, 'job_id': job_id, 'final_status': 'error'}, sid)
+
+def _run_command(command, job_id, sid):
+    jobs[job_id] = {"status": "running", "output": f"--- Lieutenant executing: '{command}' ---\n", "command": command}
+    try:
+        process = subprocess.Popen(
+            command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+            text=True, bufsize=1, universal_newlines=True
+        )
+        output_buffer = ""
+        for line in iter(process.stdout.readline, ''):
+            output_buffer += line
+            _background_emit('output', {'output': line, 'job_id': job_id}, sid)
+        
+        return_code = process.wait()
+        
+        if return_code == 0:
+            final_message = "\n--- Lieutenant reports: Command SUCCESS ---"
+            jobs[job_id]["status"] = "complete"
+        else:
+            final_message = f"\n--- Lieutenant reports: Command FAILED with return code {return_code} ---"
+            jobs[job_id]["status"] = "error"
+        
+        jobs[job_id]["output"] = output_buffer + final_message
+        _background_emit('output', {'output': final_message, 'job_id': job_id, 'final_status': jobs[job_id]["status"]}, sid)
+    
+    except Exception as e:
+        error_message = f"\nPython Error executing command: {e}"
+        jobs[job_id]["output"] = output_buffer + error_message
+        jobs[job_id]["status"] = "error"
+        _background_emit('output', {'output': error_message, 'job_id': job_id, 'final_status': jobs[job_id]["status"]}, sid)
+
+@app.route('/')
+def index():
+    return send_from_directory(app.template_folder, 'index.html')
+
+@socketio.on('execute')
+def execute(data):
+    sid = request.sid
+    command = data.get('command')
+    job_id = data.get('job_id')
+    threading.Thread(target=_run_command, args=(command, job_id, sid)).start()
+
+@socketio.on('generate_command')
+def generate_command(data):
+    sid = request.sid
+    prompt = data.get('prompt')
+    job_id = data.get('job_id')
+    threading.Thread(target=_run_rag_query, args=(prompt, job_id, sid)).start()
+
+if __name__ == '__main__':
+    socketio.run(app, host='0.0.0.0', port=5001)
+EOF_LTPY
+print_success "lt.py created."
+
+# All files are now generated.
+
+# --- Docker Build and Launch ---
+print_header "BUILDING AND LAUNCHING JEM AI CORE SERVICES"
+
+print_task "Running 'docker compose build'..."
+sudo docker compose build || { print_error "Docker build failed. Check logs."; exit 1; }
+print_success "Docker images built successfully."
+
+print_task "Running 'docker compose up -d'..."
+sudo docker compose up -d || { print_error "Failed to start Docker containers. Check logs."; exit 1; }
+print_success "JEM AI Docker stack is starting."
+
+print_task "Waiting for services to initialize..."
+sleep 15
+
+print_header "JEM AI SYSTEM IS ONLINE - VERIFYING STATUS"
+sudo docker compose ps
+
+echo ""
+print_success "All processes complete. JEM AI should now be fully operational."
+print_note "Access the C&C UI at http://jemai.local:5000"

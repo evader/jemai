@@ -1,0 +1,1 @@
+code ~/bring_synapz_home.sh

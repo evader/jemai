@@ -1,0 +1,1 @@
+\n\n---\n\n## **How it works:**\n\n- **Runs everything in Docker** (`docker compose up -d --build`)\n- **Auto-starts with systemd** (`jemai_core.service`)\n- **Sets up a shell alias:**  \n  After reloading your shell, just do:\n

@@ -1,0 +1,1 @@
+\nsudo apt install ffmpeg -y\nffplay /dev/video0\n

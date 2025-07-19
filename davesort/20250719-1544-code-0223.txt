@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEM AI - Command & Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #1a1a2e; /* Deep purple-blue */
+            --console-bg: #0f0f1b; /* Even darker for console */
+            --text-color: #e0e0e0;
+            --header-color: #5d5c61; /* Dark grey */
+            --primary-accent: #783bbc; /* Purple */
+            --secondary-accent: #1bb2c5; /* Cyan */
+            --tertiary-accent: #f0f0f0; /* Light for lines */
+            --border-color: #3e2f5b; /* Darker accent */
+            --input-bg: #2a2a4a;
+            --button-direct: #6a4c9c;
+            --button-direct-hover: #5c4387;
+            --button-local: #4f5d75;
+            --button-local-hover: #424d62;
+            --button-nexus: #2a9d8f;
+            --button-nexus-hover: #217a6d;
+            --status-running: #f7b731; /* Amber */
+            --status-complete: #2ec07d; /* Green */
+            --status-error: #e74c3c; /* Red */
+        }
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 2em;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        h1, h2 {
+            color: var(--primary-accent);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+            font-weight: 500;
+        }
+        h1 { font-size: 2.2em; }
+        h2 { font-size: 1.6em; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        #output {
+            background-color: var(--console-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5em;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            min-height: 400px;
+            max-height: 70vh;
+            overflow-y: auto;
+            margin-top: 1.5em;
+            border-radius: 8px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+            font-size: 0.9em;
+        }
+        .input-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            margin-top: 1.5em;
+            padding: 1em;
+            background-color: var(--console-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            align-items: center;
+        }
+        .input-field {
+            flex-grow: 1;
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 0.8em 1em;
+            font-family: inherit;
+            font-size: 1em;
+            border-radius: 4px;
+            min-width: 200px;
+        }
+        .button {
+            border: none;
+            padding: 0.8em 1.5em;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            color: white;
+            white-space: nowrap;
+        }
+        .button:disabled {
+            background-color: var(--border-color) !important;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        .button-direct { background-color: var(--button-direct); }
+        .button-direct:hover:not(:disabled) { background-color: var(--button-direct-hover); transform: translateY(-1px); }
+        .button-local-ai { background-color: var(--button-local); }
+        .button-local-ai:hover:not(:disabled) { background-color: var(--button-local-hover); transform: translateY(-1px); }
+        .button-nexus-ai { background-color: var(--button-nexus); }
+        .button-nexus-ai:hover:not(:disabled) { background-color: var(--button-nexus-hover); transform: translateY(-1px); }
+
+        .log-entry {
+            margin-bottom: 2em;
+            padding-bottom: 1.5em;
+            border-bottom: 1px dashed var(--tertiary-accent);
+        }
+        .prompt-line {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5em;
+            color: var(--secondary-accent); /* Default for prompt */
+        }
+        .prompt-line::before {
+            content: '$';
+            margin-right: 0.5em;
+            color: var(--primary-accent);
+        }
+        .prompt-local-ai::before { content: 'AI>'; color: var(--button-local); }
+        .prompt-nexus-ai::before { content: 'NEXUS>'; color: var(--button-nexus); }
+        .status-badge {
+            display: inline-block;
+            margin-left: 1em;
+            padding: 0.2em 0.6em;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .status-running, .status-thinking { background-color: var(--status-running); color: var(--bg-color); }
+        .status-complete { background-color: var(--status-complete); color: var(--bg-color); }
+        .status-error { background-color: var(--status-error); color: white; }
+        .output-pre {
+            background-color: #282a36; /* Dracula bg */
+            padding: 1em;
+            border-radius: 4px;
+            margin-top: 1em;
+            overflow-x: auto; /* For long lines */
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .input-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JEM AI - Command & Control</h1>
+        <p>Your unified interface for direct interaction, local AI intelligence, and online Nexus connectivity.</p>
+        
+        <h2>Unified Console</h2>
+        <div class="input-group">
+            <input type="text" id="command-input" class="input-field" placeholder="Enter shell command or natural language goal..." autofocus>
+            <button id="direct-button" class="button button-direct">Run Direct</button>
+            <button id="local-ai-button" class="button button-local-ai">Ask Local AI</button>
+            <button id="nexus-ai-button" class="button button-nexus-ai">Ask Nexus (Online)</button>
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+    <script>
+        const commandInput = document.getElementById('command-input');
+        const directButton = document.getElementById('direct-button');
+        const localAiButton = document.getElementById('local-ai-button');
+        const nexusAiButton = document.getElementById('nexus-ai-button');
+        const outputDiv = document.getElementById('output');
+        
+        const socket = io(); 
+
+        const jobElements = {}; // Stores references to job UI elements
+
+        function setControlsDisabled(disabled) {
+            directButton.disabled = disabled;
+            localAiButton.disabled = disabled;
+            nexusAiButton.disabled = disabled;
+            commandInput.disabled = disabled;
+        }
+
+        function generateJobId() {
+            return `job-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+        }
+
+        // Initialize/Update Job UI
+        function updateJobUI(jobId, command, type, status, outputContent) {
+            let jobElement = jobElements[jobId];
+            if (!jobElement) {
+                jobElement = document.createElement('div');
+                jobElement.className = 'log-entry';
+                jobElement.id = jobId;
+                outputDiv.prepend(jobElement); // Insert at the top
+                jobElements[jobId] = jobElement; // Store reference
+            }
+
+            const promptClass = `prompt-${type.replace('_', '-')}`;
+            const statusClass = (status === 'running' || status === 'thinking') ? 'status-running' : (status === 'complete' ? 'status-complete' : 'status-error');
+            
+            jobElement.innerHTML = `
+                <p class="prompt-line ${promptClass}">&nbsp; ${command} <span class="status-badge ${statusClass}">${status.toUpperCase()}</span></p>
+                <div class="output-pre">${outputContent.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</div>
+            `;
+            
+            const pre = jobElement.querySelector('.output-pre');
+            if (pre) {
+                pre.scrollTop = pre.scrollHeight; // Auto-scroll for new content
+            }
+        }
+
+        async function handleExecute(mode) {
+            const inputValue = commandInput.value.trim();
+            if (!inputValue) return;
+
+            setControlsDisabled(true);
+            commandInput.value = ''; // Clear input immediately
+            commandInput.focus();
+
+            const jobId = generateJobId();
+            let initialOutput = `--- Sending command to JEM AI: '${inputValue}' via ${mode} mode ---`;
+            updateJobUI(jobId, inputValue, mode, 'thinking', initialOutput);
+
+            // Emit Socket.IO event based on mode
+            switch (mode) {
+                case 'direct':
+                    socket.emit('execute', { command: inputValue, job_id: jobId });
+                    break;
+                case 'local_ai':
+                    socket.emit('generate_command', { prompt: inputValue, job_id: jobId });
+                    break;
+                case 'nexus_ai':
+                    // Temporarily re-routing Nexus AI requests to Local AI (Ollama)
+                    // The true Gemini (Nexus) integration with socket.io will be a separate task
+                    socket.emit('generate_command', { prompt: inputValue, job_id: jobId });
+                    break;
+            }
+        }
+
+        // Socket.IO event listeners
+        socket.on('connect', () => {
+            console.log('Connected to JEM AI Lieutenant Socket.IO');
+            socket.emit('request_jobs_list'); // Request initial job list on connect
+        });
+
+        socket.on('output', (data) => {
+            const { output, job_id, final_status } = data; // final_status will be sent from backend now
+            let jobEntry = jobElements[job_id];
+            if (!jobEntry) { // If job element doesn't exist, create it (e.g., from request_jobs_list)
+                 // You'll need to fetch the 'command' and 'type' if this is new from request_jobs_list
+                 // For now, it will use placeholders. A full implementation would find matching data from allJobs cache.
+                updateJobUI(job_id, 'Updating job...', 'direct', 'running', output);
+                jobEntry = jobElements[job_id]; // Get the newly created element
+            }
+            
+            const preElement = jobEntry.querySelector('.output-pre');
+            if (preElement) {
+                preElement.innerText += output; // Append new content
+                preElement.scrollTop = preElement.scrollHeight; // Auto-scroll
+            }
+            
+            if (final_status) { // If a final status is provided, update the status badge
+                 // This is where you would update the status for the job if it ended
+                const statusBadge = jobEntry.querySelector('.status-badge');
+                if (statusBadge) {
+                    statusBadge.innerText = final_status.toUpperCase();
+                    statusBadge.className = `status-badge status-${final_status}`;
+                }
+                setControlsDisabled(false); // Re-enable controls when a job is truly finished
+            }
+        });
+
+
+        socket.on('jobs_list_update', (allJobs) => {
+            // This event updates all jobs from the backend's current state
+            for (const jobId in allJobs) {
+                 const jobData = allJobs[jobId];
+                updateJobUI(jobId, jobData.command, jobData.command.includes('Nexus') ? 'nexus-ai' : (jobData.output.includes('Generated command') ? 'local-ai' : 'direct'), jobData.status, jobData.output);
+            }
+        });
+
+        socket.on('connect_error', (err) => {
+            console.error('Socket.IO connection error:', err);
+            outputDiv.innerHTML = `<p class="status-error">Error: Could not connect to JEM AI Lieutenant Socket.IO. Please ensure the backend is running. (${err.message})</p>${outputDiv.innerHTML}`;
+            setControlsDisabled(false);
+        });
+
+        socket.on('disconnect', () => {
+            console.warn('Disconnected from JEM AI Lieutenant Socket.IO');
+            outputDiv.innerHTML = `<p class="status-error">Disconnected from JEM AI Lieutenant. Refresh to reconnect.</p>${outputDiv.innerHTML}`;
+            setControlsDisabled(false);
+        });
+
+        // Attach event listeners
+        directButton.addEventListener('click', () => handleExecute('direct'));
+        localAiButton.addEventListener('click', () => handleExecute('local_ai'));
+        nexusAiButton.addEventListener('click', () => handleExecute('nexus_ai'));
+
+        commandInput.addEventListener('keypress', e => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                directButton.click(); // Default to direct run on Enter
+            }
+        });
+
+        // Initial state: ensure controls are enabled on page load
+        setControlsDisabled(false);
+    </script>

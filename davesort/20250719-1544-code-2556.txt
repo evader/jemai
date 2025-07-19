@@ -1,0 +1,1 @@
+\ndocker compose -f ~/synapz_core/docker/ollama-compose.yml up -d\n

@@ -1,0 +1,1 @@
+\ndocker rm -f jemai_prod_code_server\ndocker rm -f jemai_prod_open_webui\ndocker rm -f jemai_prod_jupyter\n# ...etc, for any other names that pop up\n

@@ -1,0 +1,1 @@
+\n### 3c. Test Ollama locally ###\necho \"\ud83e\uddea Testing local Ollama instance...\"\nresponse=$(curl -s http://localhost:11434/api/generate -d '{\n  \"model\": \"llama3\",\n  \"prompt\": \"What is 2+2?\",\n  \"stream\": false\n}')\necho \"\ud83d\udce4 Ollama test response: $response\"\n

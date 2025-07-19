@@ -1,0 +1,1 @@
+\nimport socket\nimport os\n\n# Kill whatever is using 11436 if needed\ndef free_port(port=11436):\n    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n    if s.connect_ex((\"127.0.0.1\", port)) == 0:\n        os.system(f\"fuser -k {port}/tcp\")\n    s.close()\n\nfree_port(11436)\n

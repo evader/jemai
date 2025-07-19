@@ -1,0 +1,1 @@
+sudo ./fix_lt_py.sh

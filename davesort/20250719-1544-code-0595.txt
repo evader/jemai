@@ -1,0 +1,1 @@
+\n\n---\n\n#### **Method 2: Use a Minimal Script to Download the Real Script**\n\n**If paste keeps breaking, you can download it via curl or wget.**  \nLet me know if you want that.\n\n---\n\n#### **Here is the one-shot script again for your editor:**\n\n

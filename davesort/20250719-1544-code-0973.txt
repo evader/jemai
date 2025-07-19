@@ -1,0 +1,1 @@
+\n   sed -i '/jemai/d;/synapz/d;/warmwinds/d' ~/.bash_aliases\n   source ~/.bash_aliases\n

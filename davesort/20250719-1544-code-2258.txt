@@ -1,0 +1,1 @@
+\nexport PATH=\"$HOME/.ollama/bin:$PATH\"\n

@@ -1,0 +1,1 @@
+\n    rm -rf ~/.cache/*\n    rm -rf ~/.local/share/Trash/*\n

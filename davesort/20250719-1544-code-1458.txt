@@ -1,0 +1,1 @@
+\nsudo find / -type d -name \"models\" 2>/dev/null\n
