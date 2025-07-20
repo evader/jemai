@@ -1,0 +1,22 @@
+﻿{
+  "manifest_version": 3,
+  "name": "JEMAI Trigger Injector Persistent",
+  "version": "0.2",
+  "description": "Persistent JEMAI Trigger Injector with heartbeat",
+  "permissions": ["scripting", "activeTab", "tabs", "http://localhost:32145/*"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["injector.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "trigger.html",
+    "default_title": "JEMAI Control"
+  }
+}

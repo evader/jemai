@@ -1,459 +1,492 @@
-# == JEMAI AGI OS ULTRA GODMODE ==
-
-import sys, os, subprocess, time, datetime, platform, json, socket, shutil, re, uuid, difflib, base64, threading
-from flask import Flask, request, jsonify, render_template_string, redirect
-
+# JEMAI OS FutureFusion v1.0 — Everything, Baked-In, No Bloat
+import os, sys, platform, time, datetime, json, sqlite3, shutil, threading, subprocess, socket, base64, random, difflib, glob
+from flask import Flask, request, jsonify, render_template_string, send_from_directory, redirect
+from flask_socketio import SocketIO, emit
 from pathlib import Path
 
-# ==== AUTO-INSTALL ====
-reqs = ["flask", "psutil", "requests"]
-for r in reqs:
-    try: __import__(r)
-    except ImportError: subprocess.run([sys.executable,"-m","pip","install",r])
-
+IS_WIN = platform.system() == "Windows"
 HOME = str(Path.home())
-JEMAI_HUB = os.path.join(HOME, "jemai_hub")
-os.makedirs(JEMAI_HUB, exist_ok=True)
-VERSIONS_DIR = os.path.join(JEMAI_HUB, "versions")
-os.makedirs(VERSIONS_DIR, exist_ok=True)
-WIKI_PATH = os.path.join(JEMAI_HUB, "jemai_wiki.md")
-CHANGELOG_PATH = os.path.join(JEMAI_HUB, "jemai_changelog.json")
-CHROMA_DIR = os.path.join(JEMAI_HUB, "chromadb")
-os.makedirs(CHROMA_DIR, exist_ok=True)
-AUDIO_FILE = os.path.join(JEMAI_HUB, "audio.txt")
-MIC_FILE = os.path.join(JEMAI_HUB, "mic.txt")
-THEME_FILE = os.path.join(JEMAI_HUB, "theme.txt")
-HA_TOKEN_FILE = os.path.join(JEMAI_HUB, "ha_token.txt")
-CHATLOG_PATH = os.path.join(JEMAI_HUB, "chatlog.json")
-PORT = 8181
+HUB = os.path.join(HOME, "jemai_hub")
+PLUGINS = os.path.join(HUB, "plugins")
+VERSIONS = os.path.join(HUB, "versions")
+SQLITE = os.path.join(HUB, "jemai_hub.sqlite3")
+os.makedirs(HUB, exist_ok=True)
+os.makedirs(PLUGINS, exist_ok=True)
+os.makedirs(VERSIONS, exist_ok=True)
 
-# ==== HOME ASSISTANT TOKEN ====
-HA_DEFAULT_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI4ZTgxMjMwMzVjNzA0OTYwYjNhMGJjMjFjNTkwZjlmYiIsImlhdCI6MTc1MjkxMDczNCwiZXhwIjoyMDY4MjcwNzM0fQ.Gx2sVQK5cCi9hUhMSiZc_WmTdm0edDqkFBD7SOfn97E"
-if not os.path.exists(HA_TOKEN_FILE):
-    with open(HA_TOKEN_FILE,"w") as f: f.write(HA_DEFAULT_TOKEN)
-
-THEMES = {
-    "WarmWinds": {"bg": "radial-gradient(circle at 30% 100%,#ffe8c7 0%,#eec08b 75%)", "color": "#4c2207"},
-    "AIFuture":  {"bg": "linear-gradient(135deg,#222b47 30%,#21ffe7 100%)", "color": "#f4f4f4"},
-    "HackerDark":{"bg": "#151b26", "color": "#b4ffa7"},
-    "Solarized":{"bg":"linear-gradient(135deg,#fdf6e3 10%,#002b36 95%)","color":"#839496"},
-    "Ultra": {"bg":"linear-gradient(120deg,#3ff0cb 5%,#fff6 65%,#191d24 100%)","color":"#212b33"}
-}
-AUDIO_DEVICES = ["Default", "Sonos Living", "HDMI", "USB", "Loopback"]
-MIC_DEVICES = ["Default", "Blue Yeti", "Webcam Mic", "Wireless"]
-DEFAULT_THEME = "WarmWinds"
-
+# ========== RUNTIME INFO, DEVICE ENUM ==========
 def get_ip():
-    try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM); s.connect(("8.8.8.8", 80))
-        ip = s.getsockname()[0]; s.close(); return ip
+    try: s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM);s.connect(("8.8.8.8",80));ip=s.getsockname()[0];s.close();return ip
     except: return "127.0.0.1"
-def ollama_list_models():
+def get_gpu():
+    try:
+        r = os.popen("nvidia-smi --query-gpu=name,utilization.gpu --format=csv,noheader").read().strip().split("\n")
+        return [{"name":l.split(",")[0].strip(),"util":l.split(",")[1].strip()+"%"} for l in r if "," in l]
+    except: return []
+def get_audio_devices():
+    # Dumb stub: in prod, query system
+    return ["Default", "Mic1", "Mic2", "Sonos", "TV"]
+def get_models():
     try:
         import requests
-        r = requests.get("http://localhost:11434/api/tags", timeout=3)
+        r = requests.get("http://localhost:11434/api/tags",timeout=4)
         if r.ok: return [m['name'] for m in r.json().get('models',[])]
     except: pass
-    return []
-def get_psutil():
-    try: import psutil; return psutil
-    except: return None
-def device_info():
-    p = get_psutil()
-    cpu, ram, disk = (p.cpu_percent(), p.virtual_memory().percent, p.disk_usage('/').percent) if p else (0,0,0)
+    return ["llama3:latest","tinyllama:latest"]
+def get_status():
+    import psutil
     return {
-        "hostname": platform.node(), "ip": get_ip(), "os": platform.platform(),
-        "cpu": cpu, "ram": ram, "disk": disk, "time": datetime.datetime.now().isoformat(),
-        "cwd": os.getcwd(), "ollama_models": ollama_list_models(),
+        "host": platform.node(), "ip": get_ip(),
+        "type": platform.system().lower(),
+        "os": platform.platform(), "cpu": psutil.cpu_percent(),
+        "ram": psutil.virtual_memory().percent, "disk": psutil.disk_usage('/').percent,
+        "models": get_models(), "gpus": get_gpu(), "plugins": [p[:-3] for p in os.listdir(PLUGINS) if p.endswith('.py')],
+        "audio": get_audio_devices(), "cwd": os.getcwd(),
+        "time": datetime.datetime.now().isoformat(),
+        "versions": sorted(os.listdir(VERSIONS)), "hubfiles": os.listdir(HUB)
     }
-def list_files(base=JEMAI_HUB):
-    out=[]
-    for root, dirs, files in os.walk(base):
+# ========== VERSION CONTROL, DIFF, ROLLBACK ==========
+def save_version():
+    ts = datetime.datetime.now().strftime("%d%m%Y-%H%M%S")
+    tgt = os.path.join(VERSIONS, f"{ts}-jemai.py")
+    shutil.copy2(__file__, tgt)
+def list_versions():
+    return sorted([f for f in os.listdir(VERSIONS) if f.endswith(".py")])
+def load_version(fn):
+    path = os.path.join(VERSIONS, fn)
+    return open(path, encoding="utf-8").read() if os.path.exists(path) else ""
+def diff_versions(v1, v2):
+    t1 = load_version(v1).splitlines()
+    t2 = load_version(v2).splitlines()
+    return "\n".join(difflib.unified_diff(t1,t2,fromfile=v1,tofile=v2))
+def rollback_version(fn):
+    path = os.path.join(VERSIONS, fn)
+    with open(__file__, "w", encoding="utf-8") as f:
+        f.write(open(path,encoding="utf-8").read())
+    return True
+
+# ========== PLUGIN ENGINE ==========
+PARSERS, PLUGIN_FUNCS = [], {}
+def register_parser(fn): PARSERS.append(fn)
+def register_plugin(name, func): PLUGIN_FUNCS[name] = func
+for fn in os.listdir(PLUGINS):
+    if fn.endswith('.py'):
+        try:
+            code = open(os.path.join(PLUGINS, fn), encoding="utf-8").read()
+            ns = {"register_parser": register_parser, "register_plugin": register_plugin}
+            exec(code, ns)
+        except Exception as e: print(f"[PLUGIN] Fail {fn}: {e}")
+
+# ========== SQLITE3: MEMORY API, CHAT IMPORT ==========
+def memory_search(q, limit=10):
+    if not os.path.exists(SQLITE): return []
+    conn = sqlite3.connect(SQLITE)
+    c = conn.cursor()
+    c.execute("SELECT hash,source,title,text,date FROM chunks WHERE text LIKE ? LIMIT ?", (f"%{q}%", limit))
+    rows = c.fetchall(); conn.close()
+    return [{"hash": row[0], "source": row[1], "title": row[2], "text": row[3], "date": row[4]} for row in rows]
+def memory_history(n=25):
+    if not os.path.exists(SQLITE): return []
+    conn = sqlite3.connect(SQLITE); c = conn.cursor()
+    c.execute("SELECT hash,source,title,text,date FROM chunks ORDER BY date DESC LIMIT ?", (n,))
+    rows = c.fetchall(); conn.close()
+    return [{"hash": row[0], "source": row[1], "title": row[2], "text": row[3], "date": row[4]} for row in rows]
+def import_chat(file_path):
+    for parser in PARSERS:
+        try:
+            data = parser(file_path)
+            if not data: continue
+            conn = sqlite3.connect(SQLITE); c = conn.cursor()
+            for chunk in data:
+                c.execute("INSERT INTO chunks(hash,source,title,text,date,meta) VALUES(?,?,?,?,?,?)",
+                    (chunk.get("hash") or str(hash(chunk.get("text"))), chunk.get("source"),
+                     chunk.get("title"), chunk.get("text"), chunk.get("date") or "", json.dumps(chunk.get("metadata") or {})))
+            conn.commit(); conn.close(); return True
+        except Exception as e: print(f"Import fail {file_path}: {e}")
+    return False
+
+# ========== FILE EXPLORER, EDITOR ==========
+def list_files(path=HUB):
+    out = []
+    for root, dirs, files in os.walk(path):
         for f in files:
-            path = os.path.relpath(os.path.join(root, f), base)
-            out.append(path)
+            fp = os.path.relpath(os.path.join(root, f), HUB)
+            out.append(fp)
+    return out
+def read_file(fp):
+    p = os.path.join(HUB, fp)
+    if not os.path.exists(p): return ""
+    return open(p,encoding="utf-8",errors="ignore").read()
+def write_file(fp, data):
+    p = os.path.join(HUB, fp)
+    os.makedirs(os.path.dirname(p), exist_ok=True)
+    with open(p,"w",encoding="utf-8") as f: f.write(data); return True
+def delete_file(fp):
+    p = os.path.join(HUB, fp)
+    if os.path.exists(p): os.remove(p); return True
+    return False
+def upload_file(f):
+    fn = f.filename
+    p = os.path.join(HUB, fn)
+    f.save(p); return True
+
+# ========== GROUP CHAT, MULTI-MODEL ==========
+def group_chat(msg, models=None):
+    out = []
+    if not models: models = get_models()
+    import requests
+    for m in models:
+        try:
+            r = requests.post("http://localhost:11434/api/generate",json={"model":m,"prompt":msg,"stream":False},timeout=60)
+            if r.ok: out.append({"model":m,"resp":r.json().get("response","")})
+            else: out.append({"model":m,"resp":f"[Err {r.status_code}]"})
+        except Exception as e:
+            out.append({"model":m,"resp":f"[ERR] {e}"})
     return out
 
-def save_chat(msg, who="user", model=None, persona=None):
-    if not os.path.exists(CHATLOG_PATH): json.dump([], open(CHATLOG_PATH,"w"))
-    log = json.load(open(CHATLOG_PATH))
-    log.append({"time":datetime.datetime.now().isoformat(),"msg":msg,"who":who,"model":model,"persona":persona})
-    json.dump(log[-300:], open(CHATLOG_PATH,"w"))
-def load_chat():
-    if not os.path.exists(CHATLOG_PATH): return []
-    return json.load(open(CHATLOG_PATH))
+# ========== OVERLAY, HOTKEY, CLIPBOARD ==========
+def spawn_overlay():
+    if IS_WIN:
+        try: os.system('start python synapz_overlay_v1.1.py')
+        except: pass
 
-def save_version():
-    dt = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-    verfile = os.path.join(VERSIONS_DIR, f"jemai_{dt}.py")
-    shutil.copy2(__file__, verfile)
-    return verfile
-def list_versions():
-    files = [f for f in os.listdir(VERSIONS_DIR) if f.endswith(".py")]
-    files.sort()
-    return files
-def add_changelog(event, mood="neutral"):
-    log = []
-    if os.path.exists(CHANGELOG_PATH):
-        try: log = json.load(open(CHANGELOG_PATH, encoding="utf-8"))
-        except: log = []
-    log.append({
-        "id": str(uuid.uuid4()), "event": event,
-        "time": datetime.datetime.now().isoformat(), "mood": mood
-    })
-    with open(CHANGELOG_PATH, "w", encoding="utf-8") as f:
-        json.dump(log[-300:], f, indent=2)
-def show_diff(f1, f2, mode="unified"):
-    try:
-        with open(os.path.join(VERSIONS_DIR, f1), encoding="utf-8") as fa, \
-             open(os.path.join(VERSIONS_DIR, f2), encoding="utf-8") as fb:
-            a, b = fa.readlines(), fb.readlines()
-        if mode=="side":
-            return "<table><tr><td><pre>"+''.join(a)+"</pre></td><td><pre>"+''.join(b)+"</pre></td></tr></table>"
-        else:
-            diff = difflib.unified_diff(a, b, fromfile=f1, tofile=f2, lineterm="")
-            return "<pre>"+''.join(diff)+"</pre>"
-    except Exception as e:
-        return f"[Diff error: {e}]"
-
-def load_wiki():
-    if not os.path.exists(WIKI_PATH):
-        open(WIKI_PATH, "w", encoding="utf-8").write("# JEMAI OS WIKI\n")
-    return open(WIKI_PATH, encoding="utf-8").read()
-def save_wiki(content):
-    with open(WIKI_PATH, "w", encoding="utf-8") as f: f.write(content)
-    add_changelog("Wiki updated")
-
-def wiki_history():
-    history = []
-    for f in sorted(os.listdir(JEMAI_HUB)):
-        if f.startswith("jemai_wiki_v") and f.endswith(".md"):
-            history.append(f)
-    return history
-
-def save_wiki_version():
-    if not os.path.exists(WIKI_PATH): return
-    dt = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-    tgt = os.path.join(JEMAI_HUB, f"jemai_wiki_v{dt}.md")
-    shutil.copy2(WIKI_PATH, tgt)
-
-def get_setting(path, default=""):
-    try: return open(path, encoding="utf-8").read().strip() if os.path.exists(path) else default
-    except: return default
-def set_setting(path, value):
-    try:
-        with open(path, "w", encoding="utf-8") as f: f.write(str(value)); return True
-    except: return False
-
-def chromadb_add_doc(text):
-    fname = os.path.join(CHROMA_DIR, f"chunk_{uuid.uuid4().hex}.txt")
-    with open(fname,"w",encoding="utf-8") as f: f.write(text)
-def chromadb_query(q, limit=4, mode="chroma"):
-    hits=[]
-    if mode=="simple":
-        for fn in os.listdir(CHROMA_DIR):
-            path = os.path.join(CHROMA_DIR, fn)
-            txt = open(path,encoding="utf-8").read()
-            if q.lower() in txt.lower(): hits.append(txt[:250])
-            if len(hits)>=limit: break
-    else:
-        for fn in os.listdir(CHROMA_DIR):
-            path = os.path.join(CHROMA_DIR, fn)
-            txt = open(path,encoding="utf-8").read()
-            if q.lower() in txt.lower(): hits.append(txt[:250])
-            if len(hits)>=limit: break
-    return hits
-
-def davesort_run():
-    return "DaveSort: code/mood extraction complete"
-def plugin_sonos_say(text):
-    add_changelog(f"Sonos say: {text}")
-    return f"Sonos would say: {text}"
-
-def plugin_playground(snippet:str):
-    try:
-        import io, contextlib
-        buf = io.StringIO()
-        with contextlib.redirect_stdout(buf):
-            exec(snippet, {}, {})
-        return buf.getvalue()
-    except Exception as e:
-        return f"[Plugin Error] {e}"
-
-def analyze_mood(text):
-    POS = ["love","yay","happy","good","great","fantastic","excited","awesome","brilliant","sweet","wow","nice","amazing","success","win"]
-    NEG = ["fuck","hate","shit","pissed","angry","frustrated","annoyed","tired","lazy","bored","broken","no","pointless","sad","regret"]
-    pos = sum(w in POS for w in text.lower().split())
-    neg = sum(w in NEG for w in text.lower().split())
-    if pos-neg>2: return "very positive"
-    if pos-neg>0: return "positive"
-    if neg-pos>2: return "very negative"
-    if neg-pos>0: return "negative"
-    return "neutral"
-
-OVERLAY_MSGS = []
-def overlay_broadcast(msg):
-    OVERLAY_MSGS.append((time.time(), msg))
-    OVERLAY_MSGS[:] = OVERLAY_MSGS[-10:]
-
-def get_ha_url(): return os.environ.get("HOME_ASSISTANT_URL") or "http://homeassistant.local:8123"
-def get_ha_token():
-    try:
-        return open(HA_TOKEN_FILE).read().strip()
-    except: return ""
-
-def ha_get_devices():
-    url, token = get_ha_url(), get_ha_token()
-    if not token: return {"error":"No HA token"}
+# ========== HOME ASSISTANT (BAKED) ==========
+def ha_call(service, entity_id):
     try:
         import requests
-        r = requests.get(f"{url}/api/states",headers={"Authorization":f"Bearer {token}"},timeout=7)
-        if r.ok: return [{"id":d["entity_id"],"state":d["state"],"domain":d["entity_id"].split(".")[0],"name":d.get("attributes",{}).get("friendly_name",d["entity_id"])} for d in r.json()]
-        return {"error":f"HTTP {r.status_code}"}
-    except Exception as e: return {"error":str(e)}
+        token = os.environ.get("HOMEASSISTANT_TOKEN")
+        url = f"http://homeassistant.local:8123/api/services/{service.replace('.','/')}"
+        r = requests.post(url,json={"entity_id":entity_id},headers={"Authorization":"Bearer "+token})
+        return r.status_code == 200
+    except Exception as e: return False
 
-def ha_toggle_entity(entity):
-    url, token = get_ha_url(), get_ha_token()
-    domain = entity.split(".")[0]
-    try:
-        import requests
-        r = requests.post(f"{url}/api/services/{domain}/toggle",headers={"Authorization":f"Bearer {token}"},json={"entity_id":entity},timeout=6)
-        return r.text
-    except Exception as e: return str(e)
+# ========== WIKI, CHANGELOG, USAGE ==========
+def log_event(event, detail=""):
+    logf = os.path.join(HUB,"jemai_usage.jsonl")
+    with open(logf,"a",encoding="utf-8") as f: f.write(json.dumps({"t":time.time(),"e":event,"d":detail})+"\n")
+def read_wiki():
+    f = os.path.join(HUB,"JEMAI_WIKI.md")
+    return open(f,encoding="utf-8").read() if os.path.exists(f) else ""
+def write_wiki(txt):
+    f = os.path.join(HUB,"JEMAI_WIKI.md")
+    with open(f,"w",encoding="utf-8") as g: g.write(txt)
 
-def ha_call_service(domain, service, entity):
-    url, token = get_ha_url(), get_ha_token()
-    try:
-        import requests
-        r = requests.post(f"{url}/api/services/{domain}/{service}",
-                          headers={"Authorization":f"Bearer {token}"},
-                          json={"entity_id":entity})
-        return r.text
-    except Exception as e:
-        return str(e)
+# ========== THEME ==========
+THEMES = {"WarmWinds":"#ffe6d0,#e2e2ea,#775643,#312f2f,#2f323b", "CyberTeal":"#181f2b,#3efcd6,#171f26,#252940,#8fffd9"}
+def get_theme(name): return THEMES.get(name,"#181f2b,#e2e2ea,#3efcd6,#252940,#8fffd9").split(",")
 
-def model_groupchat(prompt, models=None, persona=None):
-    if not models: models = ollama_list_models() or ["ollama/llama3", "gpt-4o", "gemini-1.5"]
-    resp = []
-    for m in models:
-        if m.startswith("ollama"):
-            try:
-                import requests
-                r = requests.post("http://localhost:11434/api/generate",json={"model":m,"prompt":prompt,"stream":False},timeout=30)
-                if r.ok: resp.append(f"<b>{m}:</b> {r.json().get('response','')}")
-            except: resp.append(f"<b>{m}:</b> [err]")
-        elif "gpt" in m:
-            resp.append(f"<b>{m}:</b> [fake GPT4: {prompt[::-1]}]")
-        elif "gemini" in m:
-            resp.append(f"<b>{m}:</b> [fake Gemini: {prompt.upper()}]")
-        else:
-            resp.append(f"<b>{m}:</b> [not available]")
-    if persona: resp = [f"[{persona.upper()}] {x}" for x in resp]
-    return "<br><hr>".join(resp)
-
+# ========== FLASK/WS APP ==========
 app = Flask(__name__)
-
-# ===================== MAIN UI ROUTE =====================
+socketio = SocketIO(app, cors_allowed_origins="*")
 
 @app.route("/")
 def main_ui():
-    theme = get_setting(THEME_FILE, DEFAULT_THEME)
-    code_files = list_files()
-    explorer_mode = request.args.get("explorer","inline")
-    file_contents = {}
-    if explorer_mode == "inline":
-        for f in code_files:
-            try:
-                file_contents[f] = open(os.path.join(JEMAI_HUB, f), encoding="utf-8").read()
-            except Exception:
-                file_contents[f] = "[Could not read]"
-    else:
-        file_contents = {}
+    bg,fg,accent,card,chat = get_theme(request.cookies.get("theme","WarmWinds"))
     return render_template_string("""
-<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html><html lang="en"><head>
 <title>JEMAI AGI OS</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
-body{font-family:'Segoe UI',Arial,sans-serif;background:{{theme_bg}};color:{{theme_color}};margin:0;}
-.editor{width:95%;height:37vh;margin:9px 0;background:#191d23;color:#eee;border-radius:8px;padding:12px;}
-.file-opt{cursor:pointer;color:#24bfb6;}
-.file-opt:hover{color:#125050;font-weight:700;}
+body{margin:0;background:{{bg}};color:{{fg}};font-family:'Segoe UI',Arial,sans-serif;}
+.glass{background:rgba(40,43,60,0.88);margin:0 auto 0 auto;max-width:1920px;padding:44px 30px 30px 30px;border-radius:24px;box-shadow:0 7px 38px #2222a9a6;}
+.head{font-size:2.2em;font-weight:700;color:{{accent}};}
+.slogan{font-size:1.17em;color:#9a8d7d;margin-bottom:24px;}
+.mic-btn{background:{{accent}};color:#1a2c22;border:none;border-radius:64px;width:76px;height:76px;font-size:2.2em;cursor:pointer;transition:box-shadow .16s;}
+.mic-btn:active{box-shadow:0 0 12px #fffdc0;}
+.theme-btn{background:#ffe6d088;border:none;border-radius:8px;padding:6px 18px;margin-left:7px;cursor:pointer;}
+@media (max-width:900px){.glass{width:98vw;padding:9vw 2vw;}}
 </style>
 <script>
-function saveFile(f){
-    let v=document.getElementById('edit_'+f).value;
-    fetch('/api/file/save/'+encodeURIComponent(f),
-        {method:"POST",headers:{'Content-Type':'application/json'},body:JSON.stringify({code:v})}
-    ).then(()=>alert('Saved!'));
-}
+function askJemai(){var inp=document.getElementById('inp');var val=inp.value.trim();if(!val)return;
+let chat=document.getElementById('chatbox');chat.innerHTML+='<div class="bubble user">'+val+'</div>';
+fetch('/api/chat',{method:"POST",headers:{'Content-Type':'application/json'},body:JSON.stringify({q:val})})
+.then(r=>r.json()).then(j=>{
+chat.innerHTML+='<div class="bubble">'+j.resp+'</div>';chat.scrollTop=chat.scrollHeight;
+if(j.voice_url){if(window.jvoice){window.jvoice.pause();}window.jvoice=new Audio(j.voice_url);window.jvoice.play();}
+});
+inp.value='';}
+function themePick(t){document.cookie='theme='+t+';path=/';location.reload();}
+function groupChat(){document.getElementById("groupchatbox").innerHTML = "Summoning models..."; fetch('/api/groupchat').then(r=>r.json()).then(j=>{document.getElementById("groupchatbox").innerHTML=JSON.stringify(j.resp)});}
 </script>
-</head>
-<body>
-<h1>JEMAI Ultra OS (Explorer Inline Edit Mode)</h1>
-{% if explorer_mode=="inline" %}
-  <div>
-  {% for f in code_files %}
-    <div>
-      <b>{{f}}</b>
-      <textarea id="edit_{{f}}" class="editor">{{ file_contents[f] }}</textarea>
-      <button onclick="saveFile('{{f}}')">Save</button>
-    </div>
-  {% endfor %}
-  </div>
-{% endif %}
-</body>
-</html>
-""",
-    theme_bg=THEMES[theme]['bg'],
-    theme_color=THEMES[theme]['color'],
-    code_files=code_files,
-    file_contents=file_contents,
-    explorer_mode=explorer_mode
-)
-# ==== FILE LOAD/SAVE, UPLOAD ====
-@app.route("/api/file/<path:fname>")
-def api_file(fname):
-    fpath = os.path.join(JEMAI_HUB, fname)
-    if not os.path.exists(fpath): return jsonify({"code":"[File missing]"})
-    code = open(fpath, encoding="utf-8", errors="ignore").read()
-    return jsonify({"code": code})
+</head><body>
+<div class="glass">
+<div class="head">JEMAI <span style="font-size:.65em;font-weight:400;">AGI OS</span></div>
+<div class="slogan">Your unified AI: chat, code, voice, RAG, plugins, devices, Home Assistant, everything.</div>
+<div style="display:flex;align-items:center;">
+<button class="mic-btn" onclick="askJemai()" title="Send"><span>&#127908;</span></button>
+<input id="inp" style="flex:1;margin-left:24px;padding:14px;font-size:1.1em;border-radius:12px;border:none;" placeholder="Ask, command, code, search, upload..." onkeydown="if(event.key==='Enter')askJemai()">
+<button class="theme-btn" onclick="themePick('WarmWinds')">WarmWinds</button>
+<button class="theme-btn" onclick="themePick('CyberTeal')">CyberTeal</button>
+<button class="theme-btn" onclick="groupChat()">Group Chat</button>
+</div>
+<div id="chatbox" style="background:{{chat}};margin-top:32px;border-radius:19px;min-height:240px;max-height:400px;overflow:auto;padding:20px;"></div>
+<div id="groupchatbox" style="background:{{card}};margin-top:32px;border-radius:19px;min-height:80px;max-height:160px;overflow:auto;padding:14px;font-size:1.09em;"></div>
+<div style="margin:24px 0 0 0;">
+<a href="/explorer" style="color:{{accent}};margin-right:22px;">File Explorer</a>
+<a href="/vscode" style="color:{{accent}};margin-right:22px;">VSCode</a>
+<a href="/plugins" style="color:{{accent}};margin-right:22px;">Plugins</a>
+<a href="/wiki" style="color:{{accent}};margin-right:22px;">Wiki/Changelog</a>
+<a href="/versions" style="color:{{accent}};margin-right:22px;">Versions</a>
+<a href="/settings" style="color:{{accent}};">Settings</a>
+</div>
+<div style="margin-top:20px;font-size:1em;">
+<b>Status:</b> {{stat.host}} | CPU: {{stat.cpu}}% | RAM: {{stat.ram}}% | Disk: {{stat.disk}}% | Models: {{stat.models|join(', ')}}
+</div>
+</div></body></html>
+""",bg=bg,fg=fg,accent=accent,card=card,chat=chat,stat=get_status())
 
-@app.route("/api/file/save/<path:fname>", methods=["POST"])
-def api_file_save(fname):
-    fpath = os.path.join(JEMAI_HUB, fname)
-    data = (request.json or {}).get("code","")
-    with open(fpath,"w",encoding="utf-8") as f: f.write(data)
-    add_changelog(f"Saved file {fname}")
-    return "ok"
+# --- FILE EXPLORER, VSCODE, PLUGIN, SETTINGS, WIKI, VERSION ROUTES ---
+@app.route("/explorer")
+def explorer_ui():
+    files = list_files()
+    return render_template_string("""
+    <html><body style='background:#232c38;color:#ebebeb;font-family:monospace;padding:36px;'>
+    <h2>JEMAI File Explorer</h2>
+    <ul>
+    {% for f in files %}
+      <li><a href='/file/{{f}}' style='color:#58e;'>{{f}}</a>
+      <a href='/edit/{{f}}' style='margin-left:14px;color:#fa4;'>[edit]</a>
+      <a href='/delete/{{f}}' style='margin-left:14px;color:#f24;'>[delete]</a></li>
+    {% endfor %}
+    </ul>
+    <form action='/upload' method='post' enctype='multipart/form-data'>
+      <input type='file' name='f'>
+      <button type='submit'>Upload</button>
+    </form>
+    <a href='/'>Back</a>
+    </body></html>
+    """, files=files)
 
-@app.route("/api/upload", methods=["POST"])
-def api_upload():
-    f = request.files['file']
-    fname = f.filename
-    savepath = os.path.join(JEMAI_HUB, fname)
-    f.save(savepath)
-    add_changelog(f"Uploaded file {fname}")
-    return "ok"
+@app.route("/file/<path:fp>")
+def file_serve(fp):
+    return send_from_directory(HUB, fp)
 
-# ==== PLUGINS ====
-@app.route("/api/plugin/<name>", methods=["GET","POST"])
+@app.route("/edit/<path:fp>", methods=["GET", "POST"])
+def file_edit(fp):
+    msg = ""
+    if request.method == "POST":
+        data = request.form.get("data", "")
+        write_file(fp, data)
+        msg = "Saved!"
+    content = read_file(fp)
+    return render_template_string("""
+    <html><body style='background:#181f2b;color:#eaeaea;padding:24px;font-family:monospace;'>
+    <h2>Edit File: {{fp}}</h2>
+    <form method='post'>
+    <textarea name='data' style='width:92vw;height:60vh;'>{{content}}</textarea><br>
+    <button type='submit'>Save</button>
+    <span style='margin-left:17px;color:#8ef;'>{{msg}}</span>
+    </form>
+    <a href='/explorer'>Back to Explorer</a>
+    </body></html>
+    """, fp=fp, content=content, msg=msg)
+
+@app.route("/delete/<path:fp>")
+def file_delete(fp):
+    delete_file(fp)
+    return redirect("/explorer")
+
+@app.route("/upload", methods=["POST"])
+def file_upload():
+    f = request.files.get("f")
+    if f: upload_file(f)
+    return redirect("/explorer")
+
+@app.route("/vscode")
+def vscode_ui():
+    # NOTE: You must run VSCode server (code-server) externally for this to work.
+    return """
+    <html><body style='margin:0;padding:0;background:#131d2b;'>
+    <iframe src='http://localhost:8080/' style='border:0;width:99vw;height:99vh;'></iframe>
+    <div style='position:fixed;top:14px;right:22px;z-index:12;'><a href='/' style='color:#fffa;'>Back</a></div>
+    </body></html>
+    """
+
+@app.route("/plugins")
+def plugin_ui():
+    return render_template_string("""
+    <html><body style='background:#223335;color:#e2f1f1;font-family:monospace;padding:28px;'>
+    <h2>JEMAI Plugins</h2>
+    <ul>
+    {% for p in plugins %}
+      <li><b>{{p}}</b> <button onclick="runPlugin('{{p}}')">Run</button></li>
+    {% endfor %}
+    </ul>
+    <script>
+    function runPlugin(p){
+      fetch('/api/plugin/'+p).then(r=>r.json()).then(j=>alert('Plugin: '+p+'\\n'+j.result));
+    }
+    </script>
+    <a href='/'>Back</a>
+    </body></html>
+    """, plugins=[p[:-3] for p in os.listdir(PLUGINS) if p.endswith('.py')])
+
+@app.route("/wiki", methods=["GET", "POST"])
+def wiki_ui():
+    msg = ""
+    if request.method == "POST":
+        txt = request.form.get("wiki", "")
+        write_wiki(txt)
+        msg = "Saved!"
+    wiki = read_wiki()
+    return f"""
+    <html><body style='background:#232c38;color:#ffdece;font-family:monospace;padding:32px;'>
+    <h2>JEMAI WIKI / CHANGELOG</h2>
+    <form method='post'>
+      <textarea name='wiki' style='width:93vw;height:55vh;'>{wiki}</textarea><br>
+      <button type='submit'>Save</button>
+      <span style='margin-left:17px;color:#9fc;'>{msg}</span>
+    </form>
+    <a href='/'>Back</a>
+    </body></html>
+    """
+
+@app.route("/versions")
+def versions_ui():
+    vers = list_versions()
+    return render_template_string("""
+    <html><body style='background:#2f353b;color:#b2fff2;font-family:monospace;padding:32px;'>
+    <h2>JEMAI Version History</h2>
+    <ul>
+    {% for v in vers %}
+      <li>
+        <b>{{v}}</b>
+        <a href='/diff?v1={{v}}&v2=latest' style='color:#ff5;'>[diff latest]</a>
+        <a href='/preview/{{v}}' style='color:#2df;'>[preview]</a>
+        <a href='/rollback/{{v}}' style='color:#f25;'>[rollback]</a>
+      </li>
+    {% endfor %}
+    </ul>
+    <a href='/'>Back</a>
+    </body></html>
+    """, vers=vers)
+
+@app.route("/diff")
+def diff_ui():
+    v1 = request.args.get("v1")
+    v2 = request.args.get("v2")
+    if v2 == "latest": v2 = list_versions()[-1]
+    diff = diff_versions(v1, v2)
+    return f"""
+    <html><body style='background:#191c2c;color:#fa6;font-family:monospace;padding:23px;'>
+    <h2>Diff: {v1} vs {v2}</h2>
+    <pre style='font-size:1em;background:#181a1e;padding:17px;border-radius:12px;'>{diff}</pre>
+    <a href='/versions'>Back to Versions</a>
+    </body></html>
+    """
+
+@app.route("/preview/<fn>")
+def preview_version(fn):
+    code = load_version(fn)
+    return f"""
+    <html><body style='background:#191c2c;color:#cfa;font-family:monospace;padding:23px;'>
+    <h2>Preview: {fn}</h2>
+    <pre style='font-size:1em;background:#161a1c;padding:13px;border-radius:10px;max-width:98vw;overflow-x:auto;'>{code.replace('<','&lt;')}</pre>
+    <a href='/versions'>Back to Versions</a>
+    </body></html>
+    """
+
+@app.route("/rollback/<fn>")
+def rollback_route(fn):
+    rollback_version(fn)
+    return "<h2>Rollback complete. Restart app to use new version.</h2><a href='/'>Home</a>"
+
+@app.route("/settings", methods=["GET","POST"])
+def settings_ui():
+    msg = ""
+    if request.method == "POST":
+        # In future: handle theme, device, integration settings
+        msg = "Settings saved (stub)."
+    stat = get_status()
+    return render_template_string("""
+    <html><body style='background:#32343b;color:#ffe8be;padding:36px;font-family:monospace;'>
+    <h2>JEMAI Settings & Devices</h2>
+    <form method='post'><button type='submit'>Save Settings</button> <span style='color:#afc;'>{{msg}}</span></form>
+    <div style='margin-top:18px;'><b>Audio Devices:</b> {{stat.audio}}</div>
+    <div><b>Models:</b> {{stat.models}}</div>
+    <div><b>Plugins:</b> {{stat.plugins}}</div>
+    <div><b>GPUs:</b> {{stat.gpus}}</div>
+    <div><b>Working Dir:</b> {{stat.cwd}}</div>
+    <a href='/'>Back</a>
+    </body></html>
+    """, stat=stat, msg=msg)
+
+# --- API ROUTES ---
+@app.route("/api/status")
+def api_status(): return jsonify(get_status())
+
+@app.route("/api/history")
+def api_history(): return jsonify(memory_history(30))
+
+@app.route("/api/files")
+def api_files(): return jsonify(list_files())
+
+@app.route("/api/plugins")
+def api_plugins(): return jsonify([p[:-3] for p in os.listdir(PLUGINS) if p.endswith('.py')])
+
+@app.route("/api/plugin/<name>")
 def api_plugin(name):
-    if name == "davesort_run":
-        return jsonify({"result": davesort_run()})
-    if name == "plugin_sonos_say":
-        return jsonify({"result": plugin_sonos_say("Test message")})
-    if name == "playground" and request.method=="POST":
-        code = (request.json or {}).get("code","")
-        return jsonify({"result": plugin_playground(code)})
-    return jsonify({"result":"Not found"})
+    if name in PLUGIN_FUNCS:
+        try: return jsonify({"result": PLUGIN_FUNCS[name]()})
+        except Exception as e: return jsonify({"result": f"Error: {e}"})
+    return jsonify({"result":"Plugin not found"})
 
-# ==== CHAT / GROUPCHAT / PERSONA ====
 @app.route("/api/chat", methods=["POST"])
 def api_chat():
-    q = (request.json or {}).get("q","")
-    model = (request.json or {}).get("model","ollama/llama3")
-    persona = (request.json or {}).get("persona","")
-    mood = analyze_mood(q)
-    resp = f"Echo ({model}): {q[::-1]} (mood: {mood})"
-    save_chat(q, who="user", model=model, persona=persona)
-    save_chat(resp, who="jemai", model=model, persona=persona)
-    add_changelog(f"User chat: {q}", mood)
-    return jsonify({"resp": resp})
+    data = request.json or {}
+    q = data.get("q","")[:1000]
+    resp = "..."
+    # RAG, plugin, or model
+    if q.lower().startswith("search "):
+        resp = "\n\n".join([f"{r['title']}: {r['text'][:80]}" for r in memory_search(q[7:],8)]) or "No memory found."
+    elif q.lower().startswith("plugin "):
+        p = q[7:].strip()
+        if p in PLUGIN_FUNCS: resp = str(PLUGIN_FUNCS[p]())
+        else: resp = "Plugin not found."
+    elif q.lower() in ["dir","ls"]:
+        try: resp = "Files:\n"+"\n".join(os.listdir(HUB))
+        except Exception as e: resp = f"[DIR ERROR] {e}"
+    else:
+        models = get_models()
+        if models:
+            try:
+                import requests
+                r = requests.post("http://localhost:11434/api/generate",json={"model":models[0],"prompt":q,"stream":False},timeout=90)
+                if r.ok: resp = r.json().get("response","")
+                else: resp = f"[Ollama Error {r.status_code}] {r.text}"
+            except Exception as e: resp = f"[OLLAMA ERR] {e}"
+        else:
+            resp = "\n\n".join([f"{r['title']}: {r['text'][:80]}" for r in memory_search(q,3)]) or "No answer found."
+    # TTS (very basic, one file only)
+    voice_url = None
+    try:
+        fname = os.path.join(HUB,"jemai_voice.mp3")
+        if IS_WIN:
+            import edge_tts, asyncio
+            async def speakit():
+                communicate = edge_tts.Communicate(resp, "en-US-JennyNeural")
+                await communicate.save(fname)
+            asyncio.run(speakit())
+            voice_url = "/hub/jemai_voice.mp3"
+        else:
+            import pyttsx3
+            engine = pyttsx3.init()
+            engine.save_to_file(resp, fname)
+            engine.runAndWait()
+            voice_url = "/hub/jemai_voice.mp3"
+    except Exception: pass
+    return jsonify({"resp":resp, "voice_url":voice_url})
 
-@app.route("/api/groupchat", methods=["POST"])
+@app.route("/api/groupchat")
 def api_groupchat():
-    q = (request.json or {}).get("q","")
-    out = model_groupchat(q)
-    add_changelog(f"Groupchat: {q}")
-    return jsonify({"resp": out})
+    out = group_chat("Hello JEMAI group!", get_models())
+    return jsonify({"resp":out})
 
-# ==== WIKI, VERSIONS, MARKDOWN ====
-@app.route("/api/wiki", methods=["POST"])
-def api_wiki():
-    content = (request.json or {}).get("content","")
-    save_wiki(content)
-    save_wiki_version()
-    return "ok"
+@app.route("/hub/<path:filename>")
+def serve_hubfile(filename): return send_from_directory(HUB, filename)
 
-@app.route("/api/wiki/savever")
-def api_wiki_savever():
-    save_wiki_version()
-    return "ok"
-
-@app.route("/api/wiki/ver/<ver>")
-def api_wiki_ver(ver):
-    fpath = os.path.join(JEMAI_HUB, ver)
-    if not os.path.exists(fpath): return jsonify({"content":"[Not found]"})
-    code = open(fpath, encoding="utf-8").read()
-    return jsonify({"content": code})
-
-# ==== THEME/SETTINGS ====
-@app.route("/api/theme/<theme>")
-def api_theme(theme):
-    if theme not in THEMES: return "Invalid", 400
-    set_setting(THEME_FILE, theme)
-    return "ok"
-
-# ==== RAG ====
-@app.route("/api/rag/search")
-def api_rag_search():
-    q = request.args.get("q","")
-    mode = request.args.get("mode","chroma")
-    results = chromadb_query(q, 6, mode)
-    return jsonify(results)
-
-# ==== HOME ASSISTANT ====
-@app.route("/api/ha/devices")
-def api_ha_devices():
-    return jsonify(ha_get_devices())
-
-@app.route("/api/ha/toggle/<entity>")
-def api_ha_toggle(entity):
-    resp = ha_toggle_entity(entity)
-    add_changelog(f"Toggled {entity}")
-    return jsonify({"resp": resp})
-
-@app.route("/api/ha/token", methods=["POST"])
-def api_ha_token():
-    token = request.form.get("token","").strip()
-    if token:
-        with open(HA_TOKEN_FILE,"w") as f: f.write(token)
-    add_changelog("HA token updated")
-    return redirect("/")
-
-@app.route("/api/ha/service/<domain>/<service>/<entity>")
-def api_ha_service(domain,service,entity):
-    resp = ha_call_service(domain,service,entity)
-    add_changelog(f"Called HA {domain}.{service} on {entity}")
-    return jsonify({"resp":resp})
-
-# ==== VERSION/DIFF ====
-@app.route("/api/versions")
-def api_versions():
-    return jsonify(list_versions())
-
-@app.route("/api/version/<vfile>")
-def api_version(vfile):
-    path = os.path.join(VERSIONS_DIR, vfile)
-    if not os.path.exists(path): return jsonify({"code": "[File missing]"})
-    code = open(path, encoding="utf-8").read()
-    return jsonify({"code": code})
-
-@app.route("/api/diff/<vfile1>/<vfile2>")
-def api_diff(vfile1, vfile2):
-    mode = request.args.get("mode","unified")
-    diff = show_diff(vfile1, vfile2, mode)
-    return jsonify({"diff": diff})
-
-@app.route("/api/changelog")
-def api_changelog():
-    if not os.path.exists(CHANGELOG_PATH): return jsonify([])
-    log = json.load(open(CHANGELOG_PATH,encoding="utf-8"))
-    return jsonify(log[-40:])
-
+# --- MAIN ---
 if __name__ == "__main__":
     save_version()
-    add_changelog("Jemai started")
-    app.run(host="0.0.0.0", port=PORT)
+    print("=== JEMAI OS (ALL-IN) v1.0 — https://github.com/evader/jemai")
+    socketio.run(app, host="0.0.0.0", port=8181)
