@@ -1,0 +1,40 @@
+{
+  "name": "jemai-agi-os",
+  "displayName": "JEMAI AGI OS",
+  "description": "AI OS with rich, persistent chat and ChatGPT sync.",
+  "version": "1.0.0",
+  "publisher": "jemai",
+  "activationEvents": [
+    "onView:jemaiChatSidebar",
+    "onCommand:jemai.openChatGPTWeb"
+  ],
+  "main": "extension.js",
+  "engines": {
+    "vscode": "^1.62.0"
+  },
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "jemaiAGIPanel",
+          "title": "JEMAI AGI Chat"
+        }
+      ]
+    },
+    "views": {
+      "jemaiAGIPanel": [
+        {
+          "id": "jemaiChatSidebar",
+          "name": "JEMAI Chat"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "jemai.openChatGPTWeb",
+        "title": "Open ChatGPT Web in Panel"
+      }
+    ]
+  },
+  "dependencies": {}
+}

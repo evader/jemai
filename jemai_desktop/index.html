@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JEMAI AGI OS — WarmWinds Edition</title>
+    <link rel="icon" type="image/png" href="media/jemai_chip_icon.png"/>
+    <style>
+        body { background: #ffe6d0; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #33290f;}
+        .banner { display:flex; align-items:center; background:#fff2ea; border-bottom:1px solid #e5c69a;}
+        .banner img { height:64px; margin:12px 18px;}
+        .jemai-title { font-size:2em; font-weight:bold; color:#775643;}
+        #voice-btn { margin-left:auto; background:#775643; color:#fff; border:none; padding:10px 20px; font-size:1em; border-radius:12px; cursor:pointer;}
+        #voice-btn.muted { background:#e2e2ea; color:#a05c33;}
+        #log-section {display:none; padding:14px;}
+        #chat-section {padding:18px;}
+        #chatbox { min-height:180px; max-height:300px; overflow-y:auto; background:#e2e2ea; border-radius:12px; margin-bottom:12px; padding:12px;}
+        .bar { display:flex; }
+        .inp { flex:1; border-radius:8px; border:none; padding:12px; font-size:1em;}
+        .send { background:#775643; color:#fff; border:none; border-radius:8px; margin-left:10px; padding:12px 24px; font-weight:700; cursor:pointer;}
+        #fkey-section { background:#faf3e5; margin:14px; padding:8px 0; border-radius:12px; display:flex; justify-content:space-around;}
+        .fkey { background:#e2e2ea; border-radius:8px; padding:6px 14px; margin:2px; cursor:pointer; }
+        .fkey.active { background:#a67d47; color:#fff;}
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="media/banner_main.png">
+        <span class="jemai-title">JEMAI AGI OS — WarmWinds</span>
+        <button id="voice-btn" class="muted">🔇 Voice</button>
+    </div>
+    <div id="fkey-section">
+        <span class="fkey" data-k="F1">F1</span>
+        <span class="fkey" data-k="F2">F2</span>
+        <span class="fkey" data-k="F3">F3</span>
+        <span class="fkey" data-k="F4">F4</span>
+        <span class="fkey" data-k="F5">F5</span>
+        <span class="fkey" data-k="F6">F6</span>
+        <span class="fkey" data-k="F7">F7</span>
+        <span class="fkey" data-k="F8">F8</span>
+        <span class="fkey" data-k="F9">F9</span>
+        <span class="fkey" data-k="F10">F10</span>
+        <span class="fkey" data-k="F11">F11</span>
+        <span class="fkey" data-k="F12">F12</span>
+    </div>
+    <div id="chat-section">
+        <div id="chatbox"></div>
+        <div class="bar">
+            <input class="inp" id="chatinp" placeholder="Ask anything..."/>
+            <button class="send" onclick="sendMsg()">Send</button>
+        </div>
+    </div>
+    <div id="log-section">
+        <b>Log Viewer:</b> <input type="file" id="logfile" /> <pre id="logtext"></pre>
+    </div>
+    <script>
+        const { ipcRenderer } = require('electron');
+        const chatbox = document.getElementById('chatbox');
+        const chatinp = document.getElementById('chatinp');
+        const voiceBtn = document.getElementById('voice-btn');
+        let voiceActive = false;
+        let fkeyBindings = {};
+        document.querySelectorAll('.fkey').forEach(fk=>{
+            fk.onclick = ()=> {
+                const k = fk.dataset.k;
+                const v = prompt(`Set code or command for ${k}:`, fkeyBindings[k]||"");
+                if(v !== null) fkeyBindings[k]=v;
+                fk.classList.add('active');
+                setTimeout(()=>fk.classList.remove('active'),700);
+            }
+        });
+        document.addEventListener('keydown', e=>{
+            if(e.ctrlKey && e.code.startsWith('F')) {
+                const k = e.code.replace('Key','');
+                if(fkeyBindings[k]) sendToJemai(fkeyBindings[k]);
+            }
+        });
+        function sendMsg() {
+            const text = chatinp.value.trim();
+            if(!text) return;
+            chatbox.innerHTML += `<div style="font-weight:600">You: ${text}</div>`;
+            chatinp.value='';
+            sendToJemai(text);
+        }
+        function sendToJemai(msg) {
+            fetch('http://localhost:8181/api/chat', {
+                method:'POST',
+                headers:{'Content-Type':'application/json'},
+                body:JSON.stringify({q:msg})
+            }).then(r=>r.json()).then(j=>{
+                chatbox.innerHTML += `<div style="color:#356"><b>JEMAI:</b> ${j.resp}</div>`;
+                chatbox.scrollTop=chatbox.scrollHeight;
+            });
+        }
+        voiceBtn.onclick = ()=>{
+            voiceActive = !voiceActive;
+            voiceBtn.textContent = voiceActive ? "🔊 Voice" : "🔇 Voice";
+            voiceBtn.classList.toggle('muted', !voiceActive);
+            fetch('http://localhost:8181/api/voice_toggle', {method:'POST'});
+        };
+        ipcRenderer.on('show-logs',()=>{
+            document.getElementById('log-section').style.display='block';
+        });
+        document.getElementById('logfile').onchange = function() {
+            const file = this.files[0];
+            if(file) {
+                const reader = new FileReader();
+                reader.onload = e => document.getElementById('logtext').textContent = e.target.result;
+                reader.readAsText(file);
+            }
+        };
+    </script>
+</body>
+</html>

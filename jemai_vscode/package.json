@@ -1,0 +1,42 @@
+﻿{
+  "name": "jemai-agi-os",
+  "displayName": "JEMAI AGI OS",
+  "description": "Seamlessly connect VSCode to your local JEMAI AGI OS: send code, chat, trigger macros, and more.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "media/jemai_chip_icon.png",
+  "activationEvents": [
+    "onCommand:jemai.sendSelection",
+    "onCommand:jemai.openChat"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "jemai.sendSelection",
+        "title": "Send Selection to JEMAI AGI"
+      },
+      {
+        "command": "jemai.openChat",
+        "title": "Open JEMAI AGI Chat"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "jemai.sendSelection",
+          "when": "editorHasSelection",
+          "group": "navigation@100"
+        }
+      ]
+    }
+  },
+  "main": "./extension.js",
+  "scripts": {
+    "watch": "tsc -watch -p ./"
+  }
+}

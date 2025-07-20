@@ -1,0 +1,47 @@
+# Ensure media folder exists
+$mediaPath = "C:\JEMAI_HUB\jemai_vscode\media"
+if (-Not (Test-Path $mediaPath)) {
+    New-Item -ItemType Directory -Path $mediaPath -Force | Out-Null
+}
+
+# banner_main.png base64
+$bannerBase64 = @"
+iVBORw0KGgoAAAANSUhEUgAAASwAAAEXCAYAAABLiwPMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAg
+AElEQVR4nO3dX2xUVRSF4Q8JAoRA4TwogK9dRWihYqUJKs9tFa0aMihhIriqlRWIJUmpKwY4oFV
+rNFFaFIQKkuwXqIhLSXuiUWWVVZq1Ft/vd97Zszc6eO+d33v7BzzH0POuZczuZ2b3Z2ZmZmdzvv
+veee975z58sHo2kULR2yKf4hXjDNkTzch+5BD/xRvN+VhQeMtIDhGXzFnDTGInhGJv0PxeOV6ku
+b+RKHuTptgb4jjhwjtwqG8C25BKuI76zAZOYId+nCMAEaMZ7YaIzsIp71n8M6E7OFz6DDk8CYv5
+J4Gv3PfiHwcV/o6vlLw2uXHgd4vjA9gD6LDXigJpGc5z26EHgv53g4wEzPhb0OIRb8GvwN62CH4
+8yflrR9h98E/4iD4wvBTcZ5hfsf3z28ZPDtDDTeY4DBhA09h/z9kTAErcAJ0g8+uIfA2cg82Oc+
+uMP8N1mfuEn5J9kH8fXYn+7AkpYB3QX8rZxY1zM2E/Ykfx+nXJ6/i05DP+MOwEeM6H8OZzHlcH3
+nPAI48hnxPq5i8J9mBwkvhtY9TgZQ/E84hFhHJizgR0/MV6IxFPEfxXA6rZ4M1HxRwO9nvBA5TP
+KFi4BuxJ6GDe8ynEOe0HgBzDnw9I06ybY+E/EbCObwqXq9B4frjn8c3P9b3DRc4Mv9/Io94wxN4
+d5T+H+YwdB1q4Jhz7FvzclH87XEac4/XpT7eCFqPD6vgshzGA83A6V+PM+mcPkcD8Uvl8uXw1/5
+Zy/0nU+f9z1n/EZHgH6ZTChnyV4HlD+JOx+5MjHm+X5Jl3W4vy0/xOuUbzRn57/zxGvAH8F8NcX
+X42Y7uYc54uC+aJPQvT7G7nuB3Ar5DwmnY9E/o6AOQThp2D6J1O0afQlyG98bfy7x5HL0gnvL9S
+0B3H+o5/BX5C7rXdeAz4h1NfWAsH6Z7I2vx8rP6S6FvyO0MvKNg4HfyX+XPeA/H5dDLG+I7FvLF
+RwVx3hHgycn5yQ8b2AJD4N7PxKZLDtFzYZ38Sv/7iCY3iQy3x2wBvBzGBbvDLd4m7uygEuR95Xe
+RvKrgPX4ghPAQz9V5A7yvPCfsb2nH6yLwewPX/4gF1z2zB5gn+ox4Dj0JrvuX5m7oP1OH5Tv0Sy
+/ktH4H+NLMc0MdR6b4AZvAMJ0sdpGTcxogAAAABJRU5ErkJggg==
+"@
+
+$bannerBytes = [Convert]::FromBase64String($bannerBase64)
+[IO.File]::WriteAllBytes("$mediaPath\banner_main.png", $bannerBytes)
+
+# jemai_chip_icon.png base64
+$iconBase64 = @"
+iVBORw0KGgoAAAANSUhEUgAAAC4AAAAsCAYAAABRx2XjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB
+xklEQVR4nO2Yv0sDQRSGz20OSkQSwtFWYCl2TCEcQcYZ6ghbQ0pHJD3oEkBHFwcXCsF5D7Z5/Cc
+L2FhXYPQoCBWKuUkRZGKXNRxt9wzh/Z2IflHjNZk2XbczzwV6eAqN6SBQFpjwZ1bEEOg3LBSmRg
+ssP1qjFuwKfZKrBf3AZv+mCgSc2/wD3G2mDZG5lFZtpKuGrJ7+CrIL+6gcslYbIMYP7h53mKPaB
+9ZIN9R1RA5zAHw2Lofm+I0XbpTHzSC6ROCGH0DdpsjJ7KImQcv8C9PYBivZcshmvXBqkFF0HY3D
+dxi6jIvzTxH1QZIEey5OcQ+zH5tJnQANxDYwK0Wy3Fls8hmIMH2x5KPcAA30ZREXzOpSGFegCrK
+Yqmu0FZrXapcczH6mzhUhpnsICnm/ixBe2B1D2YH+ImcVPeAD8qweQ/sM7ELNKROxa45rARqK+5
+kImIGeAh/N3tUAwDb8dR9v5R4ApoH1z7Oaxz+Bue+ocg29DJwK/63ey2pkvT12sP8G6xtj/F5hw
+qxSNvHEFAAAAABJRU5ErkJggg==
+"@
+
+$iconBytes = [Convert]::FromBase64String($iconBase64)
+[IO.File]::WriteAllBytes("$mediaPath\jemai_chip_icon.png", $iconBytes)
+
+Write-Host "Images saved to $mediaPath"
