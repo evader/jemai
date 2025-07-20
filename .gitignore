@@ -1,2 +1,4 @@
 tesseract-main/
 gitignore/
+.env
+jemai_hub/jemai_github.json
