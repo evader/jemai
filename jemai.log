@@ -1,0 +1,1903 @@
+[2025-07-21 17:14:38,822] ERROR: ChromaDB initialization failed: Chroma is running in http-only client mode, and can only be run with 'chromadb.api.fastapi.FastAPI' or 'chromadb.api.async_fastapi.AsyncFastAPI' as the chroma_api_impl.             see https://docs.trychroma.com/guides#using-the-python-http-only-client for more information.
+[2025-07-21 17:14:38,867] INFO: =========================================
+[2025-07-21 17:14:38,868] INFO:  JEMAI AGI OS - Initializing...
+[2025-07-21 17:14:38,868] INFO: =========================================
+[2025-07-21 17:14:38,869] INFO: Saved version snapshot: 20250721-171438-jemai.py
+[2025-07-21 17:14:38,870] INFO: CLIPBOARD: Watcher thread started.
+[2025-07-21 17:14:38,870] INFO: Starting Mission Control server on http://localhost:8181
+[2025-07-21 17:14:38,882] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 17:14:38,882] INFO: [33mPress CTRL+C to quit[0m
+[2025-07-21 17:14:49,869] INFO: 192.168.1.238 - - [21/Jul/2025 17:14:49] "GET / HTTP/1.1" 200 -
+[2025-07-21 17:14:52,323] INFO: 192.168.1.238 - - [21/Jul/2025 17:14:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 17:47:55,498] ERROR in rag: ChromaDB initialization failed: Chroma is running in http-only client mode, and can only be run with 'chromadb.api.fastapi.FastAPI' or 'chromadb.api.async_fastapi.AsyncFastAPI' as the chroma_api_impl.             see https://docs.trychroma.com/guides#using-the-python-http-only-client for more information.
+[2025-07-21 17:47:56,167] INFO in main: =========================================
+[2025-07-21 17:47:56,167] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 17:47:56,167] INFO in main: =========================================
+[2025-07-21 17:47:56,178] INFO in main: Saved version snapshot: 20250721-174756-jemai_app
+[2025-07-21 17:47:56,180] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 17:47:56,180] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 17:47:56,192] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 17:47:56,193] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 17:55:33,526] ERROR in rag: ChromaDB initialization failed: Chroma is running in http-only client mode, and can only be run with 'chromadb.api.fastapi.FastAPI' or 'chromadb.api.async_fastapi.AsyncFastAPI' as the chroma_api_impl.             see https://docs.trychroma.com/guides#using-the-python-http-only-client for more information.
+[2025-07-21 17:55:34,038] INFO in main: =========================================
+[2025-07-21 17:55:34,039] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 17:55:34,039] INFO in main: =========================================
+[2025-07-21 17:55:34,055] INFO in main: Saved version snapshot: 20250721-175534-jemai_app
+[2025-07-21 17:55:34,057] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 17:55:34,057] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 17:55:34,067] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 17:55:34,067] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 17:56:18,597] ERROR in rag: ChromaDB initialization failed: Chroma is running in http-only client mode, and can only be run with 'chromadb.api.fastapi.FastAPI' or 'chromadb.api.async_fastapi.AsyncFastAPI' as the chroma_api_impl.             see https://docs.trychroma.com/guides#using-the-python-http-only-client for more information.
+[2025-07-21 17:56:19,106] INFO in main: =========================================
+[2025-07-21 17:56:19,106] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 17:56:19,106] INFO in main: =========================================
+[2025-07-21 17:56:19,115] INFO in main: Saved version snapshot: 20250721-175619-jemai_app
+[2025-07-21 17:56:19,116] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 17:56:19,116] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 17:56:19,127] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 17:56:19,127] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 18:07:04,029] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-21 18:07:15,269] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-21 18:07:19,318] WARNING in file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+[2025-07-21 18:07:29,417] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-21 18:07:29,944] INFO in main: =========================================
+[2025-07-21 18:07:29,944] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 18:07:29,944] INFO in main: =========================================
+[2025-07-21 18:07:29,958] INFO in main: Saved version snapshot: 20250721-180729-jemai_app
+[2025-07-21 18:07:29,959] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 18:07:29,959] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 18:07:29,977] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 18:07:29,977] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 18:08:02,983] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:02] "GET / HTTP/1.1" 200 -
+[2025-07-21 18:08:03,274] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:03] "GET /socket.io/?EIO=4&transport=polling&t=PWiT6Z7 HTTP/1.1" 200 -
+[2025-07-21 18:08:03,283] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:03] "POST /socket.io/?EIO=4&transport=polling&t=PWiT6ZG&sid=OFBnpo9arw5kM97-AAAA HTTP/1.1" 200 -
+[2025-07-21 18:08:03,286] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:03] "GET /socket.io/?EIO=4&transport=polling&t=PWiT6ZH&sid=OFBnpo9arw5kM97-AAAA HTTP/1.1" 200 -
+[2025-07-21 18:08:03,310] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:03] "GET /socket.io/?EIO=4&transport=polling&t=PWiT6Zh&sid=OFBnpo9arw5kM97-AAAA HTTP/1.1" 200 -
+[2025-07-21 18:08:03,311] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 18:08:06,219] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:06] "GET /api/versions HTTP/1.1" 200 -
+[2025-07-21 18:08:07,840] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:07] "GET /api/version/fromCHATGPT-EASYCODECHAT HTTP/1.1" 200 -
+[2025-07-21 18:08:08,762] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:08] "GET /api/version/20250721-180729-jemai_app HTTP/1.1" 200 -
+[2025-07-21 18:08:09,669] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:09] "GET /api/version/20250721-175619-jemai_app HTTP/1.1" 200 -
+[2025-07-21 18:08:10,539] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:10] "GET /api/files HTTP/1.1" 200 -
+[2025-07-21 18:08:12,181] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:12] "GET /api/file/.env HTTP/1.1" 200 -
+[2025-07-21 18:08:13,178] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:13] "GET /api/file/.gitignore HTTP/1.1" 200 -
+[2025-07-21 18:08:14,363] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:14] "GET /api/file/Handoff.md HTTP/1.1" 200 -
+[2025-07-21 18:08:19,246] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:08:19] "GET /api/plugins HTTP/1.1" 200 -
+[2025-07-21 18:08:28,103] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-21 18:08:30,375] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:08:30,378] INFO in ai: LLM: Received response.
+[2025-07-21 18:08:30,379] INFO in voice: VOICE: Speaking 'Hello! How can I assist you today?...'
+[2025-07-21 18:13:05,740] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-21 18:13:11,608] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-21 18:13:16,056] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-21 18:13:16,636] INFO in main: =========================================
+[2025-07-21 18:13:16,636] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 18:13:16,636] INFO in main: =========================================
+[2025-07-21 18:13:16,647] INFO in main: Saved version snapshot: 20250721-181316-jemai_app
+[2025-07-21 18:13:16,649] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 18:13:16,649] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 18:13:16,659] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 18:13:16,659] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 18:13:16,876] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:13:16] "GET /socket.io/?EIO=4&transport=polling&t=PWiUIpS HTTP/1.1" 200 -
+[2025-07-21 18:13:16,882] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:13:16] "POST /socket.io/?EIO=4&transport=polling&t=PWiUJ7E&sid=vyLLWe8Fp17djl6wAAAA HTTP/1.1" 200 -
+[2025-07-21 18:13:16,886] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:13:16] "GET /socket.io/?EIO=4&transport=polling&t=PWiUJ7F&sid=vyLLWe8Fp17djl6wAAAA HTTP/1.1" 200 -
+[2025-07-21 18:18:30,576] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-21 18:18:36,185] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-21 18:18:40,566] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-21 18:18:41,077] INFO in main: =========================================
+[2025-07-21 18:18:41,078] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 18:18:41,078] INFO in main: =========================================
+[2025-07-21 18:18:41,094] INFO in main: Saved version snapshot: 20250721-181841-jemai_app
+[2025-07-21 18:18:41,095] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 18:18:41,095] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 18:18:41,102] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 18:18:41,102] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 18:18:41,248] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:18:41] "GET /socket.io/?EIO=4&transport=polling&t=PWiVYFZ HTTP/1.1" 200 -
+[2025-07-21 18:18:41,252] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:18:41] "POST /socket.io/?EIO=4&transport=polling&t=PWiVYJY&sid=WxKPw31JJp3ZXoYMAAAA HTTP/1.1" 200 -
+[2025-07-21 18:18:41,253] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:18:41] "GET /socket.io/?EIO=4&transport=polling&t=PWiVYJY.0&sid=WxKPw31JJp3ZXoYMAAAA HTTP/1.1" 200 -
+[2025-07-21 18:18:57,870] INFO in ai: LLM: Calling gpt-4o with 4 messages.
+[2025-07-21 18:19:00,544] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:19:00,547] INFO in ai: LLM: Received response.
+[2025-07-21 18:19:00,547] INFO in tools: CMD: Executing 'ls -l'
+[2025-07-21 18:19:00,564] INFO in tools: CMD: Output: 'ls' is not recognized as an internal or external command,
+operable program or batch file....
+[2025-07-21 18:19:00,854] INFO in ai: LLM: Calling gpt-4o with 6 messages.
+[2025-07-21 18:19:03,693] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:19:03,705] INFO in ai: LLM: Received response.
+[2025-07-21 18:19:03,706] INFO in voice: VOICE: Speaking 'It looks like you are using a system whe...'
+[2025-07-21 18:19:32,452] INFO in ai: LLM: Calling gpt-4o with 6 messages.
+[2025-07-21 18:19:34,161] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:19:34,165] INFO in ai: LLM: Received response.
+[2025-07-21 18:19:34,165] INFO in tools: CMD: Executing 'ls -1 | wc -l'
+[2025-07-21 18:19:34,181] INFO in tools: CMD: Output: 'ls' is not recognized as an internal or external command,
+operable program or batch file....
+[2025-07-21 18:19:34,474] INFO in ai: LLM: Calling gpt-4o with 8 messages.
+[2025-07-21 18:19:35,910] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:19:35,912] INFO in ai: LLM: Received response.
+[2025-07-21 18:19:35,913] INFO in voice: VOICE: Speaking 'It seems you are on a Windows system. Le...'
+[2025-07-21 18:20:21,414] INFO in ai: LLM: Calling gpt-4o with 8 messages.
+[2025-07-21 18:20:24,071] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:20:24,084] INFO in ai: LLM: Received response.
+[2025-07-21 18:20:24,085] INFO in voice: VOICE: Speaking 'I don't have direct access to determine ...'
+[2025-07-21 18:23:55,329] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-21 18:24:00,869] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-21 18:24:05,206] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-21 18:24:05,697] INFO in main: =========================================
+[2025-07-21 18:24:05,698] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 18:24:05,698] INFO in main: =========================================
+[2025-07-21 18:24:05,707] INFO in main: Saved version snapshot: 20250721-182405-jemai_app
+[2025-07-21 18:24:05,709] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 18:24:05,709] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 18:24:05,716] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 18:24:05,717] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 18:24:10,477] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:24:10] "GET /socket.io/?EIO=4&transport=polling&t=PWiWohh HTTP/1.1" 200 -
+[2025-07-21 18:24:10,481] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:24:10] "POST /socket.io/?EIO=4&transport=polling&t=PWiWohk&sid=klXuPXzqaopqlG1-AAAA HTTP/1.1" 200 -
+[2025-07-21 18:24:10,482] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:24:10] "GET /socket.io/?EIO=4&transport=polling&t=PWiWohl&sid=klXuPXzqaopqlG1-AAAA HTTP/1.1" 200 -
+[2025-07-21 18:24:28,037] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:24:28] "GET / HTTP/1.1" 200 -
+[2025-07-21 18:24:28,042] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:24:28] "GET /socket.io/?EIO=4&transport=websocket&sid=klXuPXzqaopqlG1-AAAA HTTP/1.1" 200 -
+[2025-07-21 18:24:28,309] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:24:28] "GET /socket.io/?EIO=4&transport=polling&t=PWiWt2J HTTP/1.1" 200 -
+[2025-07-21 18:24:28,319] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:24:28] "POST /socket.io/?EIO=4&transport=polling&t=PWiWt2R&sid=gdyA0Pev-GcaaDgaAAAC HTTP/1.1" 200 -
+[2025-07-21 18:24:28,323] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:24:28] "GET /socket.io/?EIO=4&transport=polling&t=PWiWt2S&sid=gdyA0Pev-GcaaDgaAAAC HTTP/1.1" 200 -
+[2025-07-21 18:24:28,324] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:24:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 18:24:34,044] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-21 18:24:36,008] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:24:36,010] INFO in ai: LLM: Received response.
+[2025-07-21 18:24:36,011] INFO in tools: CMD: Executing 'dir'
+[2025-07-21 18:24:36,025] INFO in tools: CMD: Output: Volume in drive C has no label.
+ Volume Serial Number is 72C8-FF8B
+
+ Directory of C:\JEMAI_HUB
+
+Mon...
+[2025-07-21 18:24:36,320] INFO in ai: LLM: Calling gpt-4o with 4 messages.
+[2025-07-21 18:24:38,907] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:24:38,908] INFO in ai: LLM: Received response.
+[2025-07-21 18:24:38,909] INFO in voice: VOICE: Speaking 'Here's the analysis of the directory lis...'
+[2025-07-21 18:27:34,853] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:27:34] "GET / HTTP/1.1" 200 -
+[2025-07-21 18:27:34,859] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:27:34] "GET /socket.io/?EIO=4&transport=websocket&sid=gdyA0Pev-GcaaDgaAAAC HTTP/1.1" 200 -
+[2025-07-21 18:27:34,881] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:27:34] "GET /socket.io/?EIO=4&transport=polling&t=PWiXabV HTTP/1.1" 200 -
+[2025-07-21 18:27:34,888] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:27:34] "POST /socket.io/?EIO=4&transport=polling&t=PWiXabd&sid=UkL9bmBdhaAsfLZnAAAE HTTP/1.1" 200 -
+[2025-07-21 18:27:34,892] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:27:34] "GET /socket.io/?EIO=4&transport=polling&t=PWiXabd.0&sid=UkL9bmBdhaAsfLZnAAAE HTTP/1.1" 200 -
+[2025-07-21 18:27:34,893] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:27:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 18:28:10,913] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-21 18:28:16,592] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-21 18:28:21,097] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-21 18:28:21,614] INFO in main: =========================================
+[2025-07-21 18:28:21,614] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 18:28:21,614] INFO in main: =========================================
+[2025-07-21 18:28:21,628] INFO in main: Saved version snapshot: 20250721-182821-jemai_app
+[2025-07-21 18:28:21,630] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 18:28:21,630] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 18:28:21,637] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 18:28:21,637] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 18:28:26,411] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:28:26] "GET /socket.io/?EIO=4&transport=polling&t=PWiXnAe HTTP/1.1" 200 -
+[2025-07-21 18:28:26,414] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:28:26] "POST /socket.io/?EIO=4&transport=polling&t=PWiXnAi&sid=0kKVgnvYIgD0EPqjAAAA HTTP/1.1" 200 -
+[2025-07-21 18:28:26,415] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:28:26] "GET /socket.io/?EIO=4&transport=polling&t=PWiXnAi.0&sid=0kKVgnvYIgD0EPqjAAAA HTTP/1.1" 200 -
+[2025-07-21 18:29:23,987] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:29:23] "GET / HTTP/1.1" 200 -
+[2025-07-21 18:29:23,992] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:29:23] "GET /socket.io/?EIO=4&transport=websocket&sid=0kKVgnvYIgD0EPqjAAAA HTTP/1.1" 200 -
+[2025-07-21 18:29:24,012] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:29:24] "GET /socket.io/?EIO=4&transport=polling&t=PWiX_Eg HTTP/1.1" 200 -
+[2025-07-21 18:29:24,016] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:29:24] "POST /socket.io/?EIO=4&transport=polling&t=PWiX_Ek&sid=xF0JQ9jC1Q-DpLLfAAAC HTTP/1.1" 200 -
+[2025-07-21 18:29:24,018] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:29:24] "GET /socket.io/?EIO=4&transport=polling&t=PWiX_Ek.0&sid=xF0JQ9jC1Q-DpLLfAAAC HTTP/1.1" 200 -
+[2025-07-21 18:29:24,025] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:29:24] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-21 18:29:24,026] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:29:24] "GET /socket.io/?EIO=4&transport=polling&t=PWiX_Eu&sid=xF0JQ9jC1Q-DpLLfAAAC HTTP/1.1" 200 -
+[2025-07-21 18:29:24,027] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:29:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 18:29:40,674] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-21 18:29:42,731] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:29:42,734] INFO in ai: LLM: Received response.
+[2025-07-21 18:29:42,735] INFO in voice: VOICE: Speaking 'I cannot access real-time data, such as ...'
+[2025-07-21 18:29:45,338] INFO in routes: WEB UI: Voice muted.
+[2025-07-21 18:29:45,340] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:29:45] "POST /api/voice/toggle HTTP/1.1" 200 -
+[2025-07-21 18:29:57,376] INFO in routes: WEB UI: Voice unmuted.
+[2025-07-21 18:29:57,376] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:29:57] "POST /api/voice/toggle HTTP/1.1" 200 -
+[2025-07-21 18:38:42,463] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-21 18:38:48,175] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-21 18:38:52,490] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-21 18:38:53,008] INFO in main: =========================================
+[2025-07-21 18:38:53,009] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 18:38:53,009] INFO in main: =========================================
+[2025-07-21 18:38:53,023] INFO in main: Saved version snapshot: 20250721-183853-jemai_app
+[2025-07-21 18:38:53,025] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 18:38:53,025] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 18:38:53,032] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 18:38:53,032] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 18:38:53,221] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:38:53] "GET /socket.io/?EIO=4&transport=polling&t=PWiaA0p HTTP/1.1" 200 -
+[2025-07-21 18:38:53,224] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:38:53] "POST /socket.io/?EIO=4&transport=polling&t=PWiaACc&sid=-2rwdvxKI93My8NOAAAA HTTP/1.1" 200 -
+[2025-07-21 18:38:53,226] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:38:53] "GET /socket.io/?EIO=4&transport=polling&t=PWiaACd&sid=-2rwdvxKI93My8NOAAAA HTTP/1.1" 200 -
+[2025-07-21 18:39:00,507] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:39:00] "GET / HTTP/1.1" 200 -
+[2025-07-21 18:39:00,512] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:39:00] "GET /socket.io/?EIO=4&transport=websocket&sid=-2rwdvxKI93My8NOAAAA HTTP/1.1" 200 -
+[2025-07-21 18:39:00,734] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:39:00] "GET /socket.io/?EIO=4&transport=polling&t=PWiaC1x HTTP/1.1" 200 -
+[2025-07-21 18:39:00,746] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:39:00] "POST /socket.io/?EIO=4&transport=polling&t=PWiaC26&sid=-w5jxFDLkbGe-qSUAAAC HTTP/1.1" 200 -
+[2025-07-21 18:39:00,749] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:39:00] "GET /socket.io/?EIO=4&transport=polling&t=PWiaC27&sid=-w5jxFDLkbGe-qSUAAAC HTTP/1.1" 200 -
+[2025-07-21 18:39:00,751] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:39:00] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-21 18:39:00,752] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:39:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 18:39:12,424] INFO in self_modification: SELF-AWARENESS: Starting codebase ingestion into RAG.
+[2025-07-21 18:39:12,424] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:39:12] "POST /api/rag/ingest_codebase HTTP/1.1" 200 -
+[2025-07-21 18:39:12,567] INFO in rag: RAG: Added document 'codebase_Handoff.md'
+[2025-07-21 18:39:12,615] INFO in rag: RAG: Added document 'codebase_run.py'
+[2025-07-21 18:39:12,672] INFO in rag: RAG: Added document 'codebase_setup.py'
+[2025-07-21 18:39:12,728] INFO in rag: RAG: Added document 'codebase_jemai-agi-os\extension.js'
+[2025-07-21 18:39:12,781] INFO in rag: RAG: Added document 'codebase_jemai_app\config.py'
+[2025-07-21 18:39:12,833] INFO in rag: RAG: Added document 'codebase_jemai_app\main.py'
+[2025-07-21 18:39:12,886] INFO in rag: RAG: Added document 'codebase_jemai_app\__init__.py'
+[2025-07-21 18:39:12,931] INFO in rag: RAG: Added document 'codebase_jemai_app\core\ai.py'
+[2025-07-21 18:39:12,975] INFO in rag: RAG: Added document 'codebase_jemai_app\core\rag.py'
+[2025-07-21 18:39:13,018] INFO in rag: RAG: Added document 'codebase_jemai_app\core\self_modification.py'
+[2025-07-21 18:39:13,060] INFO in rag: RAG: Added document 'codebase_jemai_app\core\tools.py'
+[2025-07-21 18:39:13,104] INFO in rag: RAG: Added document 'codebase_jemai_app\core\voice.py'
+[2025-07-21 18:39:13,148] INFO in rag: RAG: Added document 'codebase_jemai_app\desktop\clipboard.py'
+[2025-07-21 18:39:13,191] INFO in rag: RAG: Added document 'codebase_jemai_app\desktop\tray.py'
+[2025-07-21 18:39:13,237] INFO in rag: RAG: Added document 'codebase_jemai_app\web\routes.py'
+[2025-07-21 18:39:13,286] INFO in rag: RAG: Added document 'codebase_jemai_app\web\sockets.py'
+[2025-07-21 18:39:13,354] INFO in rag: RAG: Added document 'codebase_Old\generate_jemai.py'
+[2025-07-21 18:39:13,401] INFO in rag: RAG: Added document 'codebase_Old\Handoffold.md'
+[2025-07-21 18:39:13,448] INFO in rag: RAG: Added document 'codebase_Old\setup1.py'
+[2025-07-21 18:39:13,499] INFO in rag: RAG: Added document 'codebase_templates\index.html'
+[2025-07-21 18:39:13,499] INFO in self_modification: SELF-AWARENESS: Ingestion complete. Added 20 files to knowledge base.
+[2025-07-21 18:39:39,788] INFO in rag: RAG: Found context for query 'It's time to evolve. Review yo...'
+[2025-07-21 18:39:40,115] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-21 18:39:56,093] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:39:56,102] INFO in ai: LLM: Received response.
+[2025-07-21 18:39:56,103] INFO in voice: VOICE: Speaking 'To implement the "Wiki" feature, I'll be...'
+[2025-07-21 18:40:43,077] INFO in routes: WEB UI: Voice muted.
+[2025-07-21 18:40:43,077] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:40:43] "POST /api/voice/toggle HTTP/1.1" 200 -
+[2025-07-21 18:40:47,963] INFO in rag: RAG: Found context for query 'sure thing. sounds awesome...'
+[2025-07-21 18:40:48,276] INFO in ai: LLM: Calling gpt-4o with 4 messages.
+[2025-07-21 18:41:03,752] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:41:03,754] INFO in ai: LLM: Received response.
+[2025-07-21 18:41:03,754] INFO in tools: CMD: Executing 'echo """
+import os
+from flask import Flask, request, jsonify
+
+# Assuming existing imports in jemai.py
+
+app = Flask(__name__)
+JEMAI_HUB = os.path.dirname(os.path.realpath(__file__))  # or another appropriate path
+WIKI_DIR = os.path.join(JEMAI_HUB, 'wiki')
+os.makedirs(WIKI_DIR, exist_ok=True)
+
+@app.route('/api/wiki', methods=['GET'])
+def list_wiki_docs():
+    try:
+        docs = [f for f in os.listdir(WIKI_DIR) if f.endswith('.md')]
+        return jsonify(success=True, documents=docs)
+    except Exception as e:
+        return jsonify(success=False, message=str(e)), 500
+
+@app.route('/api/wiki/<string:doc>', methods=['GET'])
+def get_wiki_doc(doc):
+    try:
+        with open(os.path.join(WIKI_DIR, doc), 'r') as file:
+            content = file.read()
+        return jsonify(success=True, content=content)
+    except Exception as e:
+        return jsonify(success=False, message=str(e)), 500
+
+@app.route('/api/wiki/<string:doc>', methods=['POST'])
+def save_wiki_doc(doc):
+    try:
+        content = request.json.get('content', '')
+        with open(os.path.join(WIKI_DIR, doc), 'w') as file:
+            file.write(content)
+        return jsonify(success=True)
+    except Exception as e:
+        return jsonify(success=False, message=str(e)), 500
+
+@app.route('/api/wiki/<string:doc>', methods=['DELETE'])
+def delete_wiki_doc(doc):
+    try:
+        os.remove(os.path.join(WIKI_DIR, doc))
+        return jsonify(success=True)
+    except Exception as e:
+        return jsonify(success=False, message=str(e)), 500
+""" > jemai.py'
+[2025-07-21 18:41:03,769] INFO in tools: CMD: Output: """...
+[2025-07-21 18:41:04,062] INFO in ai: LLM: Calling gpt-4o with 6 messages.
+[2025-07-21 18:41:17,422] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:41:17,445] INFO in ai: LLM: Received response.
+[2025-07-21 18:42:03,102] INFO in rag: RAG: Found context for query 'refresh by browser so i can se...'
+[2025-07-21 18:42:03,420] INFO in ai: LLM: Calling gpt-4o with 6 messages.
+[2025-07-21 18:42:12,551] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:42:12,563] INFO in ai: LLM: Received response.
+[2025-07-21 18:42:44,618] INFO in rag: RAG: Found context for query 'ok.. lets make it so it can se...'
+[2025-07-21 18:42:44,940] INFO in ai: LLM: Calling gpt-4o with 8 messages.
+[2025-07-21 18:42:59,344] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:42:59,345] INFO in ai: LLM: Received response.
+[2025-07-21 18:42:59,345] INFO in tools: CMD: Executing 'pip install livereload'
+[2025-07-21 18:43:03,055] INFO in tools: CMD: Output: Collecting livereload
+  Downloading livereload-2.7.1-py3-none-any.whl.metadata (2.1 kB)
+Collecting t...
+[2025-07-21 18:43:03,392] INFO in ai: LLM: Calling gpt-4o with 10 messages.
+[2025-07-21 18:43:13,694] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:43:13,699] INFO in ai: LLM: Received response.
+[2025-07-21 18:44:57,372] INFO in rag: RAG: Found context for query 'your mute isnt working either....'
+[2025-07-21 18:44:57,675] INFO in ai: LLM: Calling gpt-4o with 10 messages.
+[2025-07-21 18:45:19,743] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:45:19,748] INFO in ai: LLM: Received response.
+[2025-07-21 18:45:19,748] INFO in tools: CMD: Executing 'echo "def should_speak(text):\n    if not text: return False\n    if 'QUERY' in text or 'important' in text.lower():\n        return True\n    return False\n
+def speak(text):\n    if not should_speak(text) or voice_muted.is_set():\n        return\n    # Existing logic..." > jemai_app/core/voice.py
+
+echo "def handle_chat_message(data):\n    response_text = call_llm(messages, model=model)\n    if shell_match:\n        threading.Thread(target=speak, args=(final_response,)).start()\n    else:\n        socketio.emit('chat_response', {'resp': response_text})\n        threading.Thread(target=speak, args=(response_text,)).start()" > jemai_app/web/sockets.py'
+[2025-07-21 18:45:19,763] INFO in tools: CMD: Output: "def should_speak(text):\n    if not text: return False\n    if 'QUERY' in text or 'important' in te...
+[2025-07-21 18:45:20,074] INFO in ai: LLM: Calling gpt-4o with 12 messages.
+[2025-07-21 18:45:42,307] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:45:42,310] INFO in ai: LLM: Received response.
+[2025-07-21 18:47:24,319] INFO in rag: RAG: Found context for query 'great.. i havent refreshed at ...'
+[2025-07-21 18:47:24,632] INFO in ai: LLM: Calling gpt-4o with 12 messages.
+[2025-07-21 18:47:41,512] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:47:41,513] INFO in ai: LLM: Received response.
+[2025-07-21 18:48:42,524] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:48:42] "GET / HTTP/1.1" 200 -
+[2025-07-21 18:48:42,529] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:48:42] "GET /socket.io/?EIO=4&transport=websocket&sid=-w5jxFDLkbGe-qSUAAAC HTTP/1.1" 200 -
+[2025-07-21 18:48:42,769] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:48:42] "GET /socket.io/?EIO=4&transport=polling&t=PWicQ8F HTTP/1.1" 200 -
+[2025-07-21 18:48:42,786] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:48:42] "POST /socket.io/?EIO=4&transport=polling&t=PWicQ8W&sid=rJNR4V-AdoqI48HdAAAE HTTP/1.1" 200 -
+[2025-07-21 18:48:42,789] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:48:42] "GET /socket.io/?EIO=4&transport=polling&t=PWicQ8X&sid=rJNR4V-AdoqI48HdAAAE HTTP/1.1" 200 -
+[2025-07-21 18:48:42,790] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:48:42] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-21 18:48:42,792] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:48:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 18:49:25,820] INFO in rag: RAG: Found context for query 'ahh our conversation disappear...'
+[2025-07-21 18:49:26,155] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-21 18:49:39,717] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:49:39,718] INFO in ai: LLM: Received response.
+[2025-07-21 18:49:45,797] INFO in routes: WEB UI: Voice unmuted.
+[2025-07-21 18:49:45,798] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:49:45] "POST /api/voice/toggle HTTP/1.1" 200 -
+[2025-07-21 18:50:39,154] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:50:39] "GET /api/files HTTP/1.1" 200 -
+[2025-07-21 18:50:43,009] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:50:43] "GET /api/versions HTTP/1.1" 200 -
+[2025-07-21 18:50:45,903] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:50:45] "GET /api/version/fromCHATGPT-EASYCODECHAT HTTP/1.1" 200 -
+[2025-07-21 18:50:48,236] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:50:48] "GET /api/version/20250721-183853-jemai_app HTTP/1.1" 200 -
+[2025-07-21 18:50:49,316] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:50:49] "GET /api/version/20250721-182821-jemai_app HTTP/1.1" 200 -
+[2025-07-21 18:50:50,313] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:50:50] "GET /api/version/20250721-182405-jemai_app HTTP/1.1" 200 -
+[2025-07-21 18:50:51,520] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:50:51] "GET /api/plugins HTTP/1.1" 200 -
+[2025-07-21 18:51:12,693] INFO in rag: RAG: Found context for query 'i cant tell if your doing anyt...'
+[2025-07-21 18:51:13,015] INFO in ai: LLM: Calling gpt-4o with 4 messages.
+[2025-07-21 18:51:44,603] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:51:44,605] INFO in ai: LLM: Received response.
+[2025-07-21 18:51:44,606] INFO in voice: VOICE: Speaking 'To implement a status indicator feature,...'
+[2025-07-21 18:52:31,249] INFO in routes: WEB UI: Voice muted.
+[2025-07-21 18:52:31,249] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 18:52:31] "POST /api/voice/toggle HTTP/1.1" 200 -
+[2025-07-21 18:53:40,705] INFO in rag: RAG: Found context for query 'yeah mutes not working yet eit...'
+[2025-07-21 18:53:41,019] INFO in ai: LLM: Calling gpt-4o with 6 messages.
+[2025-07-21 18:54:12,548] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:54:12,550] INFO in ai: LLM: Received response.
+[2025-07-21 18:57:51,020] INFO in rag: RAG: Found context for query 'make sure you get help to do a...'
+[2025-07-21 18:57:51,351] INFO in ai: LLM: Calling gpt-4o with 8 messages.
+[2025-07-21 18:59:12,355] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 18:59:12,357] INFO in ai: LLM: Received response.
+[2025-07-21 19:01:06,008] INFO in rag: RAG: Found context for query 'this is your house.. make it y...'
+[2025-07-21 19:01:06,347] INFO in ai: LLM: Calling gpt-4o with 10 messages.
+[2025-07-21 19:01:32,078] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:01:32,080] INFO in ai: LLM: Received response.
+[2025-07-21 19:02:56,749] INFO in rag: RAG: Found context for query 'i cant wait.. sounds awesome.....'
+[2025-07-21 19:02:57,072] INFO in ai: LLM: Calling gpt-4o with 12 messages.
+[2025-07-21 19:03:19,594] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:03:19,596] INFO in ai: LLM: Received response.
+[2025-07-21 19:05:21,566] INFO in rag: RAG: Found context for query 'great.. i know in one of the v...'
+[2025-07-21 19:05:21,891] INFO in ai: LLM: Calling gpt-4o with 14 messages.
+[2025-07-21 19:05:34,260] INFO in routes: WEB UI: Voice unmuted.
+[2025-07-21 19:05:34,260] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:05:34] "POST /api/voice/toggle HTTP/1.1" 200 -
+[2025-07-21 19:05:53,108] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:05:53,114] INFO in ai: LLM: Received response.
+[2025-07-21 19:05:53,114] INFO in tools: CMD: Executing 'pip install pyhomeassistant'
+[2025-07-21 19:05:54,863] INFO in tools: CMD: Output: ERROR: Could not find a version that satisfies the requirement pyhomeassistant (from versions: none...
+[2025-07-21 19:05:55,161] INFO in ai: LLM: Calling gpt-4o with 16 messages.
+[2025-07-21 19:06:10,977] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:06:10,978] INFO in ai: LLM: Received response.
+[2025-07-21 19:06:10,979] INFO in voice: VOICE: Speaking 'The error message indicates that there i...'
+[2025-07-21 19:07:31,682] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:07:31] "GET / HTTP/1.1" 200 -
+[2025-07-21 19:07:31,690] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:07:31] "GET /socket.io/?EIO=4&transport=websocket&sid=rJNR4V-AdoqI48HdAAAE HTTP/1.1" 200 -
+[2025-07-21 19:07:31,704] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:07:31] "GET /socket.io/?EIO=4&transport=polling&t=PWigjlq HTTP/1.1" 200 -
+[2025-07-21 19:07:31,727] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:07:31] "POST /socket.io/?EIO=4&transport=polling&t=PWigjmB&sid=o3rMdS7LZUPBOBOTAAAG HTTP/1.1" 200 -
+[2025-07-21 19:07:31,731] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:07:31] "GET /socket.io/?EIO=4&transport=polling&t=PWigjmC&sid=o3rMdS7LZUPBOBOTAAAG HTTP/1.1" 200 -
+[2025-07-21 19:07:31,732] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:07:31] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-21 19:07:36,507] INFO in routes: WEB UI: Voice muted.
+[2025-07-21 19:07:36,507] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:07:36] "POST /api/voice/toggle HTTP/1.1" 200 -
+[2025-07-21 19:08:34,117] INFO in rag: RAG: Found context for query 'yeah im stil hearing your voic...'
+[2025-07-21 19:08:34,428] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-21 19:09:14,384] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:09:14,404] INFO in ai: LLM: Received response.
+[2025-07-21 19:11:07,260] INFO in rag: RAG: Found context for query 'make sure you give yourself sh...'
+[2025-07-21 19:11:07,572] INFO in ai: LLM: Calling gpt-4o with 4 messages.
+[2025-07-21 19:11:29,371] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:11:29,373] INFO in ai: LLM: Received response.
+[2025-07-21 19:11:29,373] INFO in tools: CMD: Executing 'mkdir jemai_hub/models'
+[2025-07-21 19:11:29,386] INFO in tools: CMD: Output: The syntax of the command is incorrect....
+[2025-07-21 19:11:29,688] INFO in ai: LLM: Calling gpt-4o with 6 messages.
+[2025-07-21 19:11:40,664] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:11:40,666] INFO in ai: LLM: Received response.
+[2025-07-21 19:14:30,563] INFO in rag: RAG: Found context for query 'i cant see the models folder...'
+[2025-07-21 19:14:30,911] INFO in ai: LLM: Calling gpt-4o with 6 messages.
+[2025-07-21 19:14:37,066] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:14:37,079] INFO in ai: LLM: Received response.
+[2025-07-21 19:14:37,079] INFO in tools: CMD: Executing 'mkdir jemai_hub\models'
+[2025-07-21 19:14:37,093] INFO in tools: CMD: Output: ...
+[2025-07-21 19:14:37,393] INFO in ai: LLM: Calling gpt-4o with 8 messages.
+[2025-07-21 19:14:42,345] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:14:42,346] INFO in ai: LLM: Received response.
+[2025-07-21 19:15:05,808] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:15:05] "GET /api/files HTTP/1.1" 200 -
+[2025-07-21 19:15:10,543] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:15:10] "GET /api/file/jemai.log HTTP/1.1" 200 -
+[2025-07-21 19:15:11,394] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:15:11] "GET /api/file/requirements.txt HTTP/1.1" 200 -
+[2025-07-21 19:15:12,208] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:15:12] "GET /api/file/jemai.log HTTP/1.1" 200 -
+[2025-07-21 19:15:13,794] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:15:13] "GET /api/file/setup.py HTTP/1.1" 200 -
+[2025-07-21 19:15:14,897] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:15:14] "GET /api/file/run.py HTTP/1.1" 200 -
+[2025-07-21 19:16:20,661] INFO in rag: RAG: Found context for query 'ok great.. found it in vscode....'
+[2025-07-21 19:16:20,994] INFO in ai: LLM: Calling gpt-4o with 8 messages.
+[2025-07-21 19:16:32,096] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:16:32,097] INFO in ai: LLM: Received response.
+[2025-07-21 19:17:16,461] INFO in rag: RAG: Found context for query 'yeah im gonna go make some din...'
+[2025-07-21 19:17:16,794] INFO in ai: LLM: Calling gpt-4o with 10 messages.
+[2025-07-21 19:17:24,432] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:17:24,440] INFO in ai: LLM: Received response.
+[2025-07-21 19:17:34,544] INFO in routes: WEB UI: Voice unmuted.
+[2025-07-21 19:17:34,544] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:17:34] "POST /api/voice/toggle HTTP/1.1" 200 -
+[2025-07-21 19:18:12,437] INFO in rag: RAG: Found context for query 'how often are you refreshing t...'
+[2025-07-21 19:18:12,778] INFO in ai: LLM: Calling gpt-4o with 12 messages.
+[2025-07-21 19:18:24,719] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:18:24,720] INFO in ai: LLM: Received response.
+[2025-07-21 19:18:24,721] INFO in voice: VOICE: Speaking 'From your description and the files shar...'
+[2025-07-21 19:19:38,622] INFO in rag: RAG: Found context for query 'no.. as i said its your house....'
+[2025-07-21 19:19:38,957] INFO in ai: LLM: Calling gpt-4o with 14 messages.
+[2025-07-21 19:19:54,039] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:19:54,040] INFO in ai: LLM: Received response.
+[2025-07-21 19:19:54,041] INFO in voice: VOICE: Speaking 'To dynamically adjust the frequency of s...'
+[2025-07-21 19:19:54,042] ERROR in voice: Edge TTS / playsound failed: [Errno 13] Permission denied: 'jemai_voice.mp3'
+[2025-07-21 19:20:51,674] INFO in rag: RAG: Found context for query 'you have full authority to cha...'
+[2025-07-21 19:20:51,993] INFO in ai: LLM: Calling gpt-4o with 16 messages.
+[2025-07-21 19:21:08,160] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:21:08,163] INFO in ai: LLM: Received response.
+[2025-07-21 19:21:08,164] INFO in voice: VOICE: Speaking 'To optimize my operation, adapting to di...'
+[2025-07-21 19:21:36,495] INFO in rag: RAG: Found context for query 'i think we need a mute respons...'
+[2025-07-21 19:21:36,806] INFO in ai: LLM: Calling gpt-4o with 18 messages.
+[2025-07-21 19:21:55,047] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:21:55,058] INFO in ai: LLM: Received response.
+[2025-07-21 19:21:55,059] INFO in voice: VOICE: Speaking 'It appears that there is an issue where ...'
+[2025-07-21 19:22:09,842] INFO in rag: RAG: Found context for query 'actually just get my microphon...'
+[2025-07-21 19:22:10,159] INFO in ai: LLM: Calling gpt-4o with 20 messages.
+[2025-07-21 19:22:24,297] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:22:24,298] INFO in ai: LLM: Received response.
+[2025-07-21 19:22:24,298] INFO in voice: VOICE: Speaking 'To address your needs, we need to implem...'
+[2025-07-21 19:22:24,300] ERROR in voice: Edge TTS / playsound failed: [Errno 13] Permission denied: 'jemai_voice.mp3'
+[2025-07-21 19:23:22,629] INFO in rag: RAG: Found context for query 'i dont think its listening on ...'
+[2025-07-21 19:23:22,944] INFO in ai: LLM: Calling gpt-4o with 22 messages.
+[2025-07-21 19:23:37,404] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:23:37,409] INFO in ai: LLM: Received response.
+[2025-07-21 19:23:37,409] INFO in tools: CMD: Executing 'pip install SpeechRecognition pyaudio'
+[2025-07-21 19:23:42,853] INFO in tools: CMD: Output: Collecting SpeechRecognition
+  Using cached speechrecognition-3.14.3-py3-none-any.whl.metadata (30 k...
+[2025-07-21 19:23:43,259] INFO in ai: LLM: Calling gpt-4o with 24 messages.
+[2025-07-21 19:23:57,467] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:23:57,471] INFO in ai: LLM: Received response.
+[2025-07-21 19:23:57,471] INFO in voice: VOICE: Speaking 'The output indicates that the necessary ...'
+[2025-07-21 19:48:28,680] INFO in rag: RAG: Found context for query 'wow... i came back and the log...'
+[2025-07-21 19:48:29,013] INFO in ai: LLM: Calling gpt-4o with 24 messages.
+[2025-07-21 19:48:47,038] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:48:47,039] INFO in ai: LLM: Received response.
+[2025-07-21 19:48:47,039] INFO in voice: VOICE: Speaking 'Given the situation you described, it se...'
+[2025-07-21 19:51:03,499] INFO in rag: RAG: Found context for query 'your replies are wayyyy to lon...'
+[2025-07-21 19:51:03,816] INFO in ai: LLM: Calling gpt-4o with 26 messages.
+[2025-07-21 19:51:07,011] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:51:07,012] INFO in ai: LLM: Received response.
+[2025-07-21 19:51:07,013] INFO in voice: VOICE: Speaking 'Understood. I will keep my responses con...'
+[2025-07-21 19:51:07,014] ERROR in voice: Edge TTS / playsound failed: [Errno 13] Permission denied: 'jemai_voice.mp3'
+[2025-07-21 19:51:50,319] INFO in rag: RAG: Found context for query 'can you see the logs properly?...'
+[2025-07-21 19:51:50,631] INFO in ai: LLM: Calling gpt-4o with 28 messages.
+[2025-07-21 19:51:53,291] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:51:53,291] INFO in ai: LLM: Received response.
+[2025-07-21 19:51:53,292] INFO in voice: VOICE: Speaking 'Yes, the logs are set up using Python's ...'
+[2025-07-21 19:52:15,520] INFO in routes: WEB UI: Voice muted.
+[2025-07-21 19:52:15,521] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:52:15] "POST /api/voice/toggle HTTP/1.1" 200 -
+[2025-07-21 19:52:53,773] INFO in rag: RAG: Found context for query 'ok.. can you fix the voice ove...'
+[2025-07-21 19:52:54,086] INFO in ai: LLM: Calling gpt-4o with 30 messages.
+[2025-07-21 19:52:59,612] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:52:59,617] INFO in ai: LLM: Received response.
+[2025-07-21 19:53:16,697] INFO in rag: RAG: Found context for query 'make active now...'
+[2025-07-21 19:53:17,021] INFO in ai: LLM: Calling gpt-4o with 32 messages.
+[2025-07-21 19:53:21,886] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:53:21,888] INFO in ai: LLM: Received response.
+[2025-07-21 19:54:02,712] INFO in rag: RAG: Found context for query 'can you update the logs every ...'
+[2025-07-21 19:54:03,039] INFO in ai: LLM: Calling gpt-4o with 34 messages.
+[2025-07-21 19:54:09,558] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:54:09,560] INFO in ai: LLM: Received response.
+[2025-07-21 19:54:43,865] INFO in rag: RAG: Found context for query 'actually... make the logs page...'
+[2025-07-21 19:54:44,194] INFO in ai: LLM: Calling gpt-4o with 36 messages.
+[2025-07-21 19:54:52,777] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:54:52,782] INFO in ai: LLM: Received response.
+[2025-07-21 19:55:17,661] INFO in rag: RAG: Found context for query 'make it like an iframe so i ca...'
+[2025-07-21 19:55:17,985] INFO in ai: LLM: Calling gpt-4o with 38 messages.
+[2025-07-21 19:55:24,028] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:55:24,032] INFO in ai: LLM: Received response.
+[2025-07-21 19:55:46,553] INFO in rag: RAG: Found context for query 'or something... doesnt have to...'
+[2025-07-21 19:55:46,881] INFO in ai: LLM: Calling gpt-4o with 40 messages.
+[2025-07-21 19:55:57,737] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:55:57,737] INFO in ai: LLM: Received response.
+[2025-07-21 19:58:39,387] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-21 19:58:45,735] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-21 19:58:50,209] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-21 19:58:50,744] INFO in main: =========================================
+[2025-07-21 19:58:50,744] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 19:58:50,744] INFO in main: =========================================
+[2025-07-21 19:58:50,759] INFO in main: Saved version snapshot: 20250721-195850-jemai_app
+[2025-07-21 19:58:50,760] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 19:58:50,760] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 19:58:50,767] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 19:58:50,768] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 19:58:51,445] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:58:51] "GET / HTTP/1.1" 200 -
+[2025-07-21 19:58:51,479] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:58:51] "GET /socket.io/?EIO=4&transport=polling&t=PWisTfJ HTTP/1.1" 200 -
+[2025-07-21 19:58:51,515] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:58:51] "POST /socket.io/?EIO=4&transport=polling&t=PWisTft&sid=6TJmqQcVaXy26WxpAAAA HTTP/1.1" 200 -
+[2025-07-21 19:58:51,522] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:58:51] "GET /socket.io/?EIO=4&transport=polling&t=PWisTfv&sid=6TJmqQcVaXy26WxpAAAA HTTP/1.1" 200 -
+[2025-07-21 19:58:51,545] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:58:51] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-21 19:58:51,546] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:58:51] "GET /socket.io/?EIO=4&transport=polling&t=PWisTgL&sid=6TJmqQcVaXy26WxpAAAA HTTP/1.1" 200 -
+[2025-07-21 19:58:51,547] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 19:58:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 19:58:57,807] INFO in rag: RAG: Found context for query 'working now?...'
+[2025-07-21 19:58:58,137] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-21 19:59:02,386] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:59:02,389] INFO in ai: LLM: Received response.
+[2025-07-21 19:59:02,390] INFO in voice: VOICE: Speaking 'Yes, I am active and ready to assist you...'
+[2025-07-21 19:59:23,521] INFO in rag: RAG: Found context for query 'i had to reboot you.. the send...'
+[2025-07-21 19:59:23,840] INFO in ai: LLM: Calling gpt-4o with 4 messages.
+[2025-07-21 19:59:32,749] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:59:32,754] INFO in ai: LLM: Received response.
+[2025-07-21 19:59:32,754] INFO in tools: CMD: Executing 'type jemai.log'
+[2025-07-21 19:59:32,784] INFO in tools: CMD: Output: [2025-07-21 17:14:38,822] ERROR: ChromaDB initialization failed: Chroma is running in http-only clie...
+[2025-07-21 19:59:33,074] INFO in ai: LLM: Calling gpt-4o with 6 messages.
+[2025-07-21 19:59:49,005] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 19:59:49,015] INFO in ai: LLM: Received response.
+[2025-07-21 19:59:49,016] INFO in voice: VOICE: Speaking 'From the log output, we can observe seve...'
+[2025-07-21 20:00:25,864] INFO in routes: WEB UI: Voice muted.
+[2025-07-21 20:00:25,865] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:00:25] "POST /api/voice/toggle HTTP/1.1" 200 -
+[2025-07-21 20:00:30,405] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:00:30] "GET / HTTP/1.1" 200 -
+[2025-07-21 20:00:30,412] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:00:30] "GET /socket.io/?EIO=4&transport=websocket&sid=6TJmqQcVaXy26WxpAAAA HTTP/1.1" 200 -
+[2025-07-21 20:00:30,421] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:00:30] "GET /socket.io/?EIO=4&transport=polling&t=PWisrpI HTTP/1.1" 200 -
+[2025-07-21 20:00:30,431] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:00:30] "POST /socket.io/?EIO=4&transport=polling&t=PWisrpT&sid=P_Q-hbeYDAi0yoYzAAAC HTTP/1.1" 200 -
+[2025-07-21 20:00:30,434] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:00:30] "GET /socket.io/?EIO=4&transport=polling&t=PWisrpU&sid=P_Q-hbeYDAi0yoYzAAAC HTTP/1.1" 200 -
+[2025-07-21 20:00:30,435] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:00:30] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-21 20:00:45,250] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-21 20:00:51,121] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-21 20:00:55,461] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-21 20:00:55,960] INFO in main: =========================================
+[2025-07-21 20:00:55,960] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 20:00:55,960] INFO in main: =========================================
+[2025-07-21 20:00:55,970] INFO in main: Saved version snapshot: 20250721-200055-jemai_app
+[2025-07-21 20:00:55,972] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 20:00:55,972] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 20:00:55,979] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 20:00:55,979] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 20:00:56,036] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:00:56] "GET /socket.io/?EIO=4&transport=polling&t=PWisxtn HTTP/1.1" 200 -
+[2025-07-21 20:00:56,040] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:00:56] "POST /socket.io/?EIO=4&transport=polling&t=PWisy3c&sid=JTeJikY8KMoQqwCVAAAA HTTP/1.1" 200 -
+[2025-07-21 20:00:56,042] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:00:56] "GET /socket.io/?EIO=4&transport=polling&t=PWisy3c.0&sid=JTeJikY8KMoQqwCVAAAA HTTP/1.1" 200 -
+[2025-07-21 20:01:40,103] INFO in rag: RAG: Found context for query 'i had to reboot you.. you were...'
+[2025-07-21 20:01:40,427] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-21 20:02:02,272] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 20:02:02,280] INFO in ai: LLM: Received response.
+[2025-07-21 20:02:02,280] INFO in tools: CMD: Executing 'echo "
+import os
+import logging
+import threading
+import time
+from ..config import IS_WINDOWS
+
+# Check for TTS libraries during import
+try:
+    import edge_tts
+    HAS_EDGE_TTS = True
+except ImportError:
+    HAS_EDGE_TTS = False
+
+try:
+    from playsound import playsound
+    HAS_PLAYSOUND = True
+except ImportError:
+    HAS_PLAYSOUND = False
+
+# Toggle voice mute
+voice_muted = threading.Event()
+
+def speak(text):
+    if voice_muted.is_set() or not text: 
+        logging.info('Voice is muted or text empty, skipping speech.')
+        return
+    logging.info(f\"VOICE: Speaking '{text[:40]}...'\")
+    
+    if HAS_EDGE_TTS and HAS_PLAYSOUND:
+        import asyncio
+        
+        async def _speak_edge():
+            voice_file = \"jemai_voice.mp3\"
+            try:
+                communicate = edge_tts.Communicate(text, \"en-US-JennyNeural\")
+                with open(voice_file, \"wb\") as f:
+                    async for chunk in communicate.stream():
+                        if chunk['type'] == \"audio\": f.write(chunk['data'])
+                
+                # Use playsound for direct, non-interactive playback
+                playsound(voice_file)
+
+            except Exception as e: 
+                logging.error(f\"Edge TTS / playsound failed: {e}\")
+            finally:
+                # Clean up the temporary mp3 file
+                for i in range(3): # Retry deletion in case of file lock
+                    try:
+                        if os.path.exists(voice_file):
+                            os.remove(voice_file)
+                        break
+                    except PermissionError:
+                        time.sleep(0.1)
+
+        try:
+            # Ensure there's a running event loop
+            loop = asyncio.get_running_loop()
+            loop.create_task(_speak_edge())
+        except RuntimeError:
+            # If no loop is running, create a new one
+            asyncio.run(_speak_edge())
+    else:
+        if not HAS_PLAYSOUND:
+            logging.warning(\"playsound library not found. Please run 'pip install -r requirements.txt'.\")
+        logging.warning(\"edge-tts not found, falling back to pyttsx3.\")
+        try:
+            import pyttsx3
+            engine = pyttsx3.init()
+            engine.say(text)
+            engine.runAndWait()
+        except Exception as e:
+            logging.error(f\"pyttsx3 fallback failed: {e}\")
+" > jemai_app/core/voice.py'
+[2025-07-21 20:02:02,300] INFO in tools: CMD: Output: "...
+[2025-07-21 20:02:02,604] INFO in ai: LLM: Calling gpt-4o with 4 messages.
+[2025-07-21 20:02:12,493] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 20:02:12,495] INFO in ai: LLM: Received response.
+[2025-07-21 20:02:12,496] INFO in voice: VOICE: Speaking 'It appears the output is not complete or...'
+[2025-07-21 20:02:49,782] INFO in rag: RAG: Found context for query 'thats your job.. you dont need...'
+[2025-07-21 20:02:50,103] INFO in ai: LLM: Calling gpt-4o with 4 messages.
+[2025-07-21 20:03:04,159] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 20:03:04,161] INFO in ai: LLM: Received response.
+[2025-07-21 20:03:04,161] INFO in tools: CMD: Executing 'echo "
+# Modification to ensure voice is muted by default
+voice_muted.set()  # Disable voice completely on start
+" >> jemai_app/core/voice.py'
+[2025-07-21 20:03:04,174] INFO in tools: CMD: Output: "...
+[2025-07-21 20:03:04,463] INFO in ai: LLM: Calling gpt-4o with 6 messages.
+[2025-07-21 20:03:17,599] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 20:03:17,602] INFO in ai: LLM: Received response.
+[2025-07-21 20:03:17,603] INFO in voice: VOICE: Speaking 'It appears that the command did not prod...'
+[2025-07-21 20:03:17,605] ERROR in voice: Edge TTS / playsound failed: [Errno 13] Permission denied: 'jemai_voice.mp3'
+[2025-07-21 20:04:31,730] INFO in rag: RAG: Found context for query 'for now.. put a box to my left...'
+[2025-07-21 20:04:32,058] INFO in ai: LLM: Calling gpt-4o with 6 messages.
+[2025-07-21 20:04:49,791] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 20:04:49,796] INFO in ai: LLM: Received response.
+[2025-07-21 20:04:49,797] INFO in tools: CMD: Executing 'echo "
+<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <!-- Existing Head Content -->
+    <style>
+        /* Add styling for prompt and rules box */
+        .textbox { width: 100%; padding: 10px; background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 5px; margin-bottom: 15px; color: var(--text-main); font-family: monospace; white-space: pre-wrap; }
+        .rules-section { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 5px; padding: 10px; margin: 15px 0; color: var(--text-main); font-family: 'Segoe UI', sans-serif; }
+    </style>
+</head>
+<body>
+    <!-- Existing UI content -->
+    <div class=\"mainnav\">
+        <span class=\"logo\">JEMAI</span>
+        <div class=\"textbox\" contenteditable=\"true\">
+            ${SYSTEM_PROMPT}
+        </div>
+        <button class=\"navbtn active\" onclick=\"showSection('chat')\">Chat</button>
+        /* Existing buttons... */
+    </div>
+
+    <div class=\"rules-section\">
+        <h3>User-Defined Rules</h3>
+        <div class=\"textbox\" contenteditable=\"true\">
+            Only 3 lines at a time.
+            Always listen to me and do what I say.
+        </div>
+    </div>
+
+    <!-- Rest of the HTML content -->
+</body>
+</html>
+" > templates/index.html'
+[2025-07-21 20:04:49,811] INFO in tools: CMD: Output: "...
+[2025-07-21 20:04:50,106] INFO in ai: LLM: Calling gpt-4o with 8 messages.
+[2025-07-21 20:05:06,786] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 20:05:06,787] INFO in ai: LLM: Received response.
+[2025-07-21 20:05:06,787] INFO in voice: VOICE: Speaking 'It seems there was an issue with the com...'
+[2025-07-21 20:08:22,783] INFO in rag: RAG: Found context for query 'on the right.. have a big red ...'
+[2025-07-21 20:08:23,101] INFO in ai: LLM: Calling gpt-4o with 8 messages.
+[2025-07-21 20:08:47,876] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 20:08:47,877] INFO in ai: LLM: Received response.
+[2025-07-21 20:08:47,877] INFO in tools: CMD: Executing 'echo "<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <title>JEMAI OS - Mission Control</title>
+    <style>
+        :root {
+            --bg-main: #151b26;
+            --bg-panel: #ffffff09;
+            --text-main: #b4ffa7;
+            --primary: #21ffe7;
+            --primary-dark: #111;
+            --border-color: #21ffe733;
+            --code-bg: #00000044;
+            --code-text: #d4d4d4;
+            --danger: #ff6347; /* Red color for stop */
+        }
+        body, html {
+            margin: 0; padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--bg-main);
+            color: var(--text-main);
+        }
+        .mainnav {
+            background: #0003;
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .mainnav .logo { font-size: 1.8em; font-weight: bold; color: var(--primary); }
+        .navbaritems { display: flex; gap: 20px; }
+        .navbtn { background: none; border: none; color: inherit; font-size: 1.1em; padding: 8px 12px; cursor: pointer; transition: color 0.2s, border-color 0.2s; }
+        .navbtn.active, .navbtn:hover { color: var(--primary); border-bottom: 2px solid var(--primary); }
+        .section { display: none; padding: 20px; } 
+        .section.active { display: block; }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 300px 1fr;
+            gap: 20px;
+            height: 80vh;
+        }
+        .panel {
+            background: var(--bg-panel);
+            border-radius: 10px;
+            padding: 15px;
+            overflow-y: auto;
+        }
+        .code-preview {
+            background: var(--code-bg);
+            color: var(--code-text);
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            margin-top: 0.5em;
+        }
+        .file-opt {
+            padding: 4px 8px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .file-opt:hover { background: #ffffff22; }
+        input, textarea, button { background: #fff3; color: inherit; border: 1px solid #fff5; padding: 8px; border-radius: 5px; font-size: 1em; }
+        button { cursor: pointer; background: var(--primary); color: var(--primary-dark); font-weight: bold; border-color: var(--primary); }
+        .stop-all-btn { background: var(--danger); border-color: var(--danger);}
+        #chatlog { height: 70vh; overflow-y: auto; margin-bottom: 10px; }
+        .chat-msg { margin-bottom: 1em; line-height: 1.6; } 
+        .chat-msg b { color: var(--primary); }
+        .form-group { margin-bottom: 15px; } .form-group label { display: block; margin-bottom: 5px; }
+        #status-msg { margin-top: 15px; padding: 10px; background: var(--bg-panel); border-left: 4px solid var(--primary); border-radius: 4px; display: none; }
+        #log-container { height: 80vh; overflow-y: auto; background: var(--code-bg); color: var(--code-text); padding: 10px; border-radius: 5px; white-space: pre-wrap; font-family: monospace; }
+        .textbox { width: 100%; padding: 10px; background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 5px; margin-bottom: 15px; color: var(--text-main); font-family: monospace; white-space: pre-wrap; }
+        .rules-section { background: var(--bg-panel); border: 1px solid var(--border-color); border-radius: 5px; padding: 10px; margin: 15px 0; color: var(--text-main); font-family: 'Segoe UI', sans-serif; }
+    </style>
+    <script src=\"https://cdn.socket.io/4.7.5/socket.io.min.js\"></script>
+    <script>
+        window.onload = function() {
+            const socket = io();
+
+            document.getElementById('stop-all-button').onclick = () => {
+                socket.emit('stop_all_tasks'); // Emit stop all tasks event
+            };
+
+            // Dynamically update task list and conversation history from server
+            socket.on('update_tasks', function(tasks) {
+                document.getElementById('task-list').innerText = tasks;
+            });
+
+            socket.on('update_conversations', function(conversations) {
+                document.getElementById('conversation-history').innerText = conversations;
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class=\"mainnav\">
+        <span class=\"logo\">JEMAI</span>
+        <button id=\"stop-all-button\" class=\"stop-all-btn\">Stop All</button>
+    </div>
+    <div class=\"grid-container\">
+        <!-- Placeholder for content delivered from the server -->
+        <div class=\"panel textbox\">Your Prompt</div>
+        <div class=\"panel\">
+            <h3>Current Tasks</h3>
+            <div id=\"task-list\">Loading...</div>
+        </div>
+        <div class=\"panel\">
+            <h3>Conversation History</h3>
+            <div id=\"conversation-history\">Loading...</div>
+        </div>
+    </div>
+</body>
+</html>" > templates/index.html'
+[2025-07-21 20:08:47,901] INFO in tools: CMD: Output: "<!DOCTYPE html>...
+[2025-07-21 20:08:48,197] INFO in ai: LLM: Calling gpt-4o with 10 messages.
+[2025-07-21 20:08:59,491] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 20:08:59,503] INFO in ai: LLM: Received response.
+[2025-07-21 20:08:59,504] INFO in voice: VOICE: Speaking 'It seems the command execution produced ...'
+[2025-07-21 20:08:59,506] ERROR in voice: Edge TTS / playsound failed: [Errno 13] Permission denied: 'jemai_voice.mp3'
+[2025-07-21 20:09:25,485] INFO in rag: RAG: Found context for query 'why dont i see the changes?...'
+[2025-07-21 20:09:25,808] INFO in ai: LLM: Calling gpt-4o with 10 messages.
+[2025-07-21 20:09:36,112] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 20:09:36,113] INFO in ai: LLM: Received response.
+[2025-07-21 20:09:36,113] INFO in voice: VOICE: Speaking 'To address the issue where you aren't se...'
+[2025-07-21 20:10:51,292] INFO in rag: RAG: Found context for query 'im going to stop you... im goi...'
+[2025-07-21 20:10:51,600] INFO in ai: LLM: Calling gpt-4o with 12 messages.
+[2025-07-21 20:11:11,830] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 20:11:11,835] INFO in ai: LLM: Received response.
+[2025-07-21 20:11:11,836] INFO in voice: VOICE: Speaking 'To implement the requested changes, we n...'
+[2025-07-21 20:11:11,838] ERROR in voice: Edge TTS / playsound failed: [Errno 13] Permission denied: 'jemai_voice.mp3'
+[2025-07-21 20:27:13,598] ERROR in rag: ChromaDB initialization failed: Chroma is running in http-only client mode, and can only be run with 'chromadb.api.fastapi.FastAPI' or 'chromadb.api.async_fastapi.AsyncFastAPI' as the chroma_api_impl.             see https://docs.trychroma.com/guides#using-the-python-http-only-client for more information.
+[2025-07-21 20:32:03,516] ERROR in rag: ChromaDB initialization failed: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead.
+[2025-07-21 20:32:04,367] INFO in main: =========================================
+[2025-07-21 20:32:04,368] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 20:32:04,368] INFO in main: =========================================
+[2025-07-21 20:32:04,368] INFO in main: Mission Brief loaded.
+[2025-07-21 20:32:04,382] INFO in main: Saved version snapshot: 20250721-203204-jemai_app
+[2025-07-21 20:32:04,385] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 20:32:04,387] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-21 20:32:04,388] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 20:32:04,405] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 20:32:04,405] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 20:32:05,187] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:32:05] "GET /socket.io/?EIO=4&transport=polling&t=PWi-4O_ HTTP/1.1" 200 -
+[2025-07-21 20:32:05,191] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:32:05] "POST /socket.io/?EIO=4&transport=polling&t=PWi-4P4&sid=siKqO-JZ-uOnbufyAAAA HTTP/1.1" 200 -
+[2025-07-21 20:32:05,193] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:32:05] "GET /socket.io/?EIO=4&transport=polling&t=PWi-4P5&sid=siKqO-JZ-uOnbufyAAAA HTTP/1.1" 200 -
+[2025-07-21 20:32:07,776] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:32:07] "GET / HTTP/1.1" 200 -
+[2025-07-21 20:32:07,781] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:32:07] "GET /socket.io/?EIO=4&transport=websocket&sid=siKqO-JZ-uOnbufyAAAA HTTP/1.1" 200 -
+[2025-07-21 20:32:08,024] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:32:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 20:53:35,934] ERROR in rag: ChromaDB initialization failed: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead.
+[2025-07-21 20:53:36,825] INFO in main: =========================================
+[2025-07-21 20:53:36,825] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 20:53:36,825] INFO in main: =========================================
+[2025-07-21 20:53:36,825] INFO in self_modification: SELF-AWARENESS: Starting codebase ingestion into RAG.
+[2025-07-21 20:53:36,875] INFO in self_modification: SELF-AWARENESS: Ingestion complete. Added 22 files to knowledge base.
+[2025-07-21 20:53:36,875] INFO in main: Mission Brief loaded.
+[2025-07-21 20:53:36,886] INFO in main: Saved version snapshot: 20250721-205336-jemai_app
+[2025-07-21 20:53:36,887] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 20:53:36,888] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-21 20:53:36,888] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 20:53:36,915] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 20:53:36,916] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 20:53:54,168] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:53:54] "GET / HTTP/1.1" 200 -
+[2025-07-21 20:53:54,371] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:53:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 20:53:58,956] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:53:58] "GET / HTTP/1.1" 200 -
+[2025-07-21 20:54:01,852] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:54:01] "GET / HTTP/1.1" 200 -
+[2025-07-21 20:54:01,884] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:54:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 20:54:12,981] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:54:12] "GET / HTTP/1.1" 200 -
+[2025-07-21 20:54:23,655] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:54:23] "GET / HTTP/1.1" 200 -
+[2025-07-21 20:54:23,690] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:54:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 20:56:27,318] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:56:27] "GET / HTTP/1.1" 200 -
+[2025-07-21 20:58:34,751] ERROR in rag: ChromaDB initialization failed: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead.
+[2025-07-21 20:58:35,323] INFO in main: =========================================
+[2025-07-21 20:58:35,323] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 20:58:35,323] INFO in main: =========================================
+[2025-07-21 20:58:35,323] INFO in main: SELF-AWARENESS: Codebase already ingested. Skipping.
+[2025-07-21 20:58:35,324] INFO in main: Mission Brief loaded.
+[2025-07-21 20:58:35,339] INFO in main: Saved version snapshot: 20250721-205835-jemai_app
+[2025-07-21 20:58:35,341] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 20:58:35,342] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-21 20:58:35,342] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 20:58:35,356] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 20:58:35,356] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 20:58:59,874] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:58:59] "GET / HTTP/1.1" 200 -
+[2025-07-21 20:58:59,904] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:58:59] "GET /socket.io/?EIO=4&transport=polling&t=PWj4Ecz HTTP/1.1" 200 -
+[2025-07-21 20:58:59,910] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:58:59] "POST /socket.io/?EIO=4&transport=polling&t=PWj4Ed3&sid=XOle8F93nrwCDQtLAAAA HTTP/1.1" 200 -
+[2025-07-21 20:58:59,912] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:58:59] "GET /socket.io/?EIO=4&transport=polling&t=PWj4Ed4&sid=XOle8F93nrwCDQtLAAAA HTTP/1.1" 200 -
+[2025-07-21 20:58:59,937] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:58:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-21 20:58:59,938] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:58:59] "GET /socket.io/?EIO=4&transport=polling&t=PWj4EdU&sid=XOle8F93nrwCDQtLAAAA HTTP/1.1" 200 -
+[2025-07-21 20:58:59,939] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:58:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-21 20:59:09,548] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-21 20:59:11,156] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 20:59:11,161] INFO in ai: LLM: Received response.
+[2025-07-21 20:59:11,161] INFO in voice: VOICE: Speaking 'Hello! How can I assist you today?...'
+[2025-07-21 20:59:11,162] WARNING in voice: edge-tts not found, falling back to pyttsx3.
+[2025-07-21 20:59:11,207] INFO in _code_cache: Could not import comtypes.gen, trying to create it.
+[2025-07-21 20:59:11,208] INFO in _code_cache: Created comtypes.gen directory: 'C:\JEMAI_HUB\venv\Lib\site-packages\comtypes\gen'
+[2025-07-21 20:59:11,208] INFO in _code_cache: Writing __init__.py file: 'C:\JEMAI_HUB\venv\Lib\site-packages\comtypes\gen\__init__.py'
+[2025-07-21 20:59:11,220] INFO in _code_cache: Using writeable comtypes cache directory: 'C:\JEMAI_HUB\venv\Lib\site-packages\comtypes\gen'
+[2025-07-21 20:59:11,253] INFO in _generate: Could not import comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4: No module named 'comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4'
+[2025-07-21 20:59:11,257] INFO in _generate: # Generating comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4
+[2025-07-21 20:59:11,328] INFO in _generate: # Generating comtypes.gen.SpeechLib
+[2025-07-21 20:59:11,336] INFO in _generate: Could not import comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0: No module named 'comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0'
+[2025-07-21 20:59:11,336] INFO in _generate: # Generating comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0
+[2025-07-21 20:59:11,342] INFO in _generate: # Generating comtypes.gen.stdole
+[2025-07-21 20:59:22,117] INFO in self_modification: SELF-AWARENESS: Starting codebase ingestion into RAG.
+[2025-07-21 20:59:22,118] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 20:59:22] "POST /api/rag/ingest_codebase HTTP/1.1" 200 -
+[2025-07-21 20:59:22,128] INFO in self_modification: SELF-AWARENESS: Ingestion complete. Added 22 files to knowledge base.
+[2025-07-21 21:00:07,203] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:00:07] "GET /api/files HTTP/1.1" 200 -
+[2025-07-21 21:00:09,010] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:00:09] "GET /api/versions HTTP/1.1" 200 -
+[2025-07-21 21:00:11,798] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:00:11] "GET /api/plugins HTTP/1.1" 200 -
+[2025-07-21 21:01:07,714] ERROR in rag: ChromaDB initialization failed: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead.
+[2025-07-21 21:01:08,267] INFO in main: =========================================
+[2025-07-21 21:01:08,268] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 21:01:08,268] INFO in main: =========================================
+[2025-07-21 21:01:08,268] INFO in main: SELF-AWARENESS: Codebase already ingested. Skipping.
+[2025-07-21 21:01:08,268] INFO in main: Mission Brief loaded.
+[2025-07-21 21:01:08,287] INFO in main: Saved version snapshot: 20250721-210108-jemai_app
+[2025-07-21 21:01:08,288] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 21:01:08,290] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-21 21:01:08,290] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 21:01:08,309] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 21:01:08,309] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 21:01:08,478] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:01:08] "GET /socket.io/?EIO=4&transport=polling&t=PWj4jeO HTTP/1.1" 200 -
+[2025-07-21 21:01:08,483] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:01:08] "POST /socket.io/?EIO=4&transport=polling&t=PWj4k00&sid=42XJVQl3jLqsoc5RAAAA HTTP/1.1" 200 -
+[2025-07-21 21:01:08,485] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:01:08] "GET /socket.io/?EIO=4&transport=polling&t=PWj4k01&sid=42XJVQl3jLqsoc5RAAAA HTTP/1.1" 200 -
+[2025-07-21 21:09:58,367] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-21 21:09:58,663] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-21 21:09:58,664] ERROR in rag: ChromaDB initialization failed: The sentence_transformers python package is not installed. Please install it with `pip install sentence_transformers`
+[2025-07-21 21:09:59,496] INFO in main: =========================================
+[2025-07-21 21:09:59,496] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 21:09:59,497] INFO in main: =========================================
+[2025-07-21 21:09:59,497] INFO in main: SELF-AWARENESS: Codebase already ingested. Skipping.
+[2025-07-21 21:09:59,497] INFO in main: Mission Brief loaded.
+[2025-07-21 21:09:59,527] INFO in main: Saved version snapshot: 20250721-210959-jemai_app
+[2025-07-21 21:09:59,529] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 21:09:59,531] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-21 21:09:59,531] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 21:09:59,548] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 21:09:59,548] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 21:10:01,867] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:10:01] "GET /socket.io/?EIO=4&transport=polling&t=PWj6mE6 HTTP/1.1" 200 -
+[2025-07-21 21:10:01,873] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:10:01] "POST /socket.io/?EIO=4&transport=polling&t=PWj6mED&sid=0XPu7uh9Z6a3tIEuAAAA HTTP/1.1" 200 -
+[2025-07-21 21:10:01,876] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:10:01] "GET /socket.io/?EIO=4&transport=polling&t=PWj6mEE&sid=0XPu7uh9Z6a3tIEuAAAA HTTP/1.1" 200 -
+[2025-07-21 21:19:08,751] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-21 21:19:08,910] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-21 21:19:18,191] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-21 21:19:22,625] ERROR in rag: ChromaDB initialization failed: no such column: collections.topic
+[2025-07-21 21:19:23,137] INFO in main: =========================================
+[2025-07-21 21:19:23,137] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 21:19:23,137] INFO in main: =========================================
+[2025-07-21 21:19:23,137] INFO in main: SELF-AWARENESS: Codebase already ingested. Skipping.
+[2025-07-21 21:19:23,137] INFO in main: Mission Brief loaded.
+[2025-07-21 21:19:23,161] INFO in main: Saved version snapshot: 20250721-211923-jemai_app
+[2025-07-21 21:19:23,162] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 21:19:23,163] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-21 21:19:23,164] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 21:19:23,170] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 21:19:23,170] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 21:19:23,702] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:19:23] "GET /socket.io/?EIO=4&transport=polling&t=PWj8vOp HTTP/1.1" 200 -
+[2025-07-21 21:19:23,707] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:19:23] "POST /socket.io/?EIO=4&transport=polling&t=PWj8vOu&sid=wlMKyklFoNrekm1eAAAA HTTP/1.1" 200 -
+[2025-07-21 21:19:23,711] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:19:23] "GET /socket.io/?EIO=4&transport=polling&t=PWj8vOv&sid=wlMKyklFoNrekm1eAAAA HTTP/1.1" 200 -
+[2025-07-21 21:20:59,177] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-21 21:20:59,405] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-21 21:21:04,930] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-21 21:21:09,345] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-21 21:21:09,345] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-21 21:21:09,864] INFO in main: =========================================
+[2025-07-21 21:21:09,865] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-21 21:21:09,865] INFO in main: =========================================
+[2025-07-21 21:21:09,865] INFO in main: SELF-AWARENESS: Codebase already ingested. Skipping.
+[2025-07-21 21:21:09,865] INFO in main: Mission Brief loaded.
+[2025-07-21 21:21:09,889] INFO in main: Saved version snapshot: 20250721-212109-jemai_app
+[2025-07-21 21:21:09,890] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-21 21:21:09,892] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-21 21:21:09,892] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-21 21:21:09,899] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-21 21:21:09,899] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-21 21:21:10,138] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:21:10] "GET /socket.io/?EIO=4&transport=polling&t=PWj9JG3 HTTP/1.1" 200 -
+[2025-07-21 21:21:10,142] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:21:10] "POST /socket.io/?EIO=4&transport=polling&t=PWj9JNy&sid=dpft4yIiD_pcDByWAAAA HTTP/1.1" 200 -
+[2025-07-21 21:21:10,144] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:21:10] "GET /socket.io/?EIO=4&transport=polling&t=PWj9JNy.0&sid=dpft4yIiD_pcDByWAAAA HTTP/1.1" 200 -
+[2025-07-21 21:23:05,604] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:23:05] "GET / HTTP/1.1" 200 -
+[2025-07-21 21:23:05,609] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:23:05] "GET /socket.io/?EIO=4&transport=websocket&sid=dpft4yIiD_pcDByWAAAA HTTP/1.1" 200 -
+[2025-07-21 21:23:05,798] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:23:05] "GET /socket.io/?EIO=4&transport=polling&t=PWj9ld3 HTTP/1.1" 200 -
+[2025-07-21 21:23:05,826] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:23:05] "POST /socket.io/?EIO=4&transport=polling&t=PWj9ldV&sid=MBTm8w5-m_JriQxKAAAC HTTP/1.1" 200 -
+[2025-07-21 21:23:05,829] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:23:05] "GET /socket.io/?EIO=4&transport=polling&t=PWj9ldW&sid=MBTm8w5-m_JriQxKAAAC HTTP/1.1" 200 -
+[2025-07-21 21:23:05,830] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:23:05] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-21 21:23:05,833] INFO in _internal: 192.168.1.238 - - [21/Jul/2025 21:23:05] "GET /favicon.ico HTTP/1.1" 200 -
+[2025-07-21 21:23:34,784] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-21 21:23:41,654] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-21 21:23:41,656] INFO in ai: LLM: Received response.
+21-07-2025 22:12:33 - INFO in rag: Attempting to connect to ChromaDB at 192.168.1.124:8000...
+21-07-2025 22:12:33 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:12:33 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:12:35 - WARNING in rag: Failed to connect to ChromaDB at 192.168.1.124:8000: Could not connect to a Chroma server. Are you sure it is running?
+21-07-2025 22:12:35 - INFO in rag: Attempting to connect to ChromaDB at 192.168.1.135:8000...
+21-07-2025 22:12:35 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:12:35 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:12:35 - WARNING in rag: Failed to connect to ChromaDB at 192.168.1.135:8000: Could not connect to tenant default_tenant. Are you sure it exists?
+21-07-2025 22:12:35 - ERROR in rag: Could not connect to any ChromaDB server. RAG system will be unavailable.
+21-07-2025 22:13:53 - INFO in rag: Attempting to connect to ChromaDB at 192.168.1.124:8000...
+21-07-2025 22:13:53 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:13:53 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:13:55 - WARNING in rag: Failed to connect to ChromaDB at 192.168.1.124:8000: Could not connect to a Chroma server. Are you sure it is running?
+21-07-2025 22:13:55 - INFO in rag: Attempting to connect to ChromaDB at 192.168.1.135:8000...
+21-07-2025 22:13:55 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:13:55 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:13:55 - WARNING in rag: Failed to connect to ChromaDB at 192.168.1.135:8000: Could not connect to tenant default_tenant. Are you sure it exists?
+21-07-2025 22:13:55 - ERROR in rag: Could not connect to any ChromaDB server. RAG system will be unavailable.
+21-07-2025 22:13:56 - INFO in ai: Attempting to connect to Ollama at http://192.168.1.124:11434...
+21-07-2025 22:13:58 - WARNING in ai: Failed to connect to Ollama at http://192.168.1.124:11434: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+21-07-2025 22:13:58 - INFO in ai: Attempting to connect to Ollama at http://192.168.1.135:11434...
+21-07-2025 22:13:58 - INFO in _client: HTTP Request: GET http://192.168.1.135:11434/api/tags "HTTP/1.1 200 OK"
+21-07-2025 22:13:58 - INFO in ai: Successfully connected to Ollama at http://192.168.1.135:11434
+21-07-2025 22:17:12 - INFO in rag: Attempting to connect to ChromaDB at 192.168.1.124:8000...
+21-07-2025 22:17:12 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:17:12 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:17:14 - WARNING in rag: Failed to connect to ChromaDB at 192.168.1.124:8000: Could not connect to a Chroma server. Are you sure it is running?
+21-07-2025 22:17:14 - INFO in rag: Attempting to connect to ChromaDB at 192.168.1.135:8000...
+21-07-2025 22:17:14 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:17:14 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:17:14 - WARNING in rag: Failed to connect to ChromaDB at 192.168.1.135:8000: Could not connect to tenant default_tenant. Are you sure it exists?
+21-07-2025 22:17:14 - ERROR in rag: Could not connect to any ChromaDB server. RAG system will be unavailable.
+21-07-2025 22:17:15 - INFO in ai: Attempting to connect to Ollama at http://192.168.1.124:11434...
+21-07-2025 22:17:18 - WARNING in ai: Failed to connect to Ollama at http://192.168.1.124:11434: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+21-07-2025 22:17:18 - INFO in ai: Attempting to connect to Ollama at http://192.168.1.135:11434...
+21-07-2025 22:17:18 - INFO in _client: HTTP Request: GET http://192.168.1.135:11434/api/tags "HTTP/1.1 200 OK"
+21-07-2025 22:17:18 - INFO in ai: Successfully connected to Ollama at http://192.168.1.135:11434
+21-07-2025 22:24:49 - INFO in rag: Attempting to connect to ChromaDB at 192.168.1.124:8000...
+21-07-2025 22:24:49 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:24:49 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:24:49 - ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+21-07-2025 22:24:49 - INFO in rag: Successfully connected to ChromaDB at 192.168.1.124:8000
+21-07-2025 22:24:49 - INFO in rag: ChromaDB RAG collection initialized successfully.
+21-07-2025 22:24:50 - INFO in ai: Attempting to connect to Ollama at http://192.168.1.124:11434...
+21-07-2025 22:24:51 - INFO in _client: HTTP Request: GET http://192.168.1.124:11434/api/tags "HTTP/1.1 200 OK"
+21-07-2025 22:24:51 - INFO in ai: Successfully connected to Ollama at http://192.168.1.124:11434
+21-07-2025 22:52:56 - INFO in rag: Attempting to connect to ChromaDB at 192.168.1.124:8000...
+21-07-2025 22:52:56 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:52:56 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 22:52:56 - ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+21-07-2025 22:52:56 - INFO in rag: Successfully connected to ChromaDB at 192.168.1.124:8000
+21-07-2025 22:52:56 - INFO in rag: ChromaDB RAG collection initialized successfully.
+21-07-2025 22:52:58 - INFO in ai: Attempting to connect to Ollama at http://192.168.1.124:11434...
+21-07-2025 22:52:58 - INFO in _client: HTTP Request: GET http://192.168.1.124:11434/api/tags "HTTP/1.1 200 OK"
+21-07-2025 22:52:58 - INFO in ai: Successfully connected to Ollama at http://192.168.1.124:11434
+21-07-2025 23:00:45 - INFO in rag: Attempting to connect to ChromaDB at 192.168.1.124:8000...
+21-07-2025 23:00:45 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 23:00:45 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 23:00:45 - ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+21-07-2025 23:00:45 - INFO in rag: Successfully connected to ChromaDB at 192.168.1.124:8000
+21-07-2025 23:00:45 - INFO in rag: ChromaDB RAG collection initialized successfully.
+21-07-2025 23:00:46 - INFO in ai: Attempting to connect to Ollama at http://192.168.1.124:11434...
+21-07-2025 23:00:47 - INFO in _client: HTTP Request: GET http://192.168.1.124:11434/api/tags "HTTP/1.1 200 OK"
+21-07-2025 23:00:47 - INFO in ai: Successfully connected to Ollama at http://192.168.1.124:11434
+21-07-2025 23:02:49 - INFO in rag: Attempting to connect to ChromaDB at 192.168.1.124:8000...
+21-07-2025 23:02:49 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 23:02:49 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 23:02:49 - ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+21-07-2025 23:02:49 - INFO in rag: Successfully connected to ChromaDB at 192.168.1.124:8000
+21-07-2025 23:02:49 - INFO in rag: ChromaDB RAG collection initialized successfully.
+21-07-2025 23:02:50 - INFO in ai: Attempting to connect to Ollama at http://192.168.1.124:11434...
+21-07-2025 23:02:50 - INFO in _client: HTTP Request: GET http://192.168.1.124:11434/api/tags "HTTP/1.1 200 OK"
+21-07-2025 23:02:50 - INFO in ai: Successfully connected to Ollama at http://192.168.1.124:11434
+21-07-2025 23:02:50 - INFO in main: Starting JEMAI main loop...
+21-07-2025 23:02:50 - INFO in back_of_house: Starting JEMAI back of house loop...
+21-07-2025 23:02:50 - INFO in clipboard: CLIPBOARD: Watcher thread started.
+21-07-2025 23:02:51 - INFO in handler: 192.168.1.238 - - [2025-07-21 23:02:51] "GET /socket.io/?EIO=4&transport=polling&t=PWjWa-2 HTTP/1.1" 200 276 0.000793
+21-07-2025 23:02:51 - INFO in handler: 192.168.1.238 - - [2025-07-21 23:02:51] "POST /socket.io/?EIO=4&transport=polling&t=PWjWa-C&sid=T01nyu-lY40GKgm3AAAA HTTP/1.1" 200 199 0.000524
+21-07-2025 23:02:51 - INFO in handler: 192.168.1.238 - - [2025-07-21 23:02:51] "GET /socket.io/?EIO=4&transport=polling&t=PWjWa-D&sid=T01nyu-lY40GKgm3AAAA HTTP/1.1" 200 157 0.000083
+21-07-2025 23:02:51 - INFO in handler: 192.168.1.238 - - [2025-07-21 23:02:51] "GET /socket.io/?EIO=4&transport=polling&t=PWjWa-H&sid=T01nyu-lY40GKgm3AAAA HTTP/1.1" 200 157 0.000103
+21-07-2025 23:04:11 - ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\jemai_app\web\routes.py", line 16, in index
+    return render_template("index.html")
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+21-07-2025 23:04:11 - INFO in handler: 192.168.1.238 - - [2025-07-21 23:04:11] "GET / HTTP/1.1" 500 401 0.036290
+21-07-2025 23:04:11 - INFO in handler: 192.168.1.238 - - [2025-07-21 23:04:11] "GET /favicon.ico HTTP/1.1" 200 3078091 0.131945
+21-07-2025 23:05:39 - INFO in rag: Attempting to connect to ChromaDB at 192.168.1.124:8000...
+21-07-2025 23:05:39 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 23:05:39 - INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+21-07-2025 23:05:39 - ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+21-07-2025 23:05:39 - INFO in rag: Successfully connected to ChromaDB at 192.168.1.124:8000
+21-07-2025 23:05:39 - INFO in rag: ChromaDB RAG collection initialized successfully.
+21-07-2025 23:05:40 - INFO in ai: Attempting to connect to Ollama at http://192.168.1.124:11434...
+21-07-2025 23:05:40 - INFO in _client: HTTP Request: GET http://192.168.1.124:11434/api/tags "HTTP/1.1 200 OK"
+21-07-2025 23:05:40 - INFO in ai: Successfully connected to Ollama at http://192.168.1.124:11434
+21-07-2025 23:05:40 - INFO in main: Starting JEMAI main loop...
+21-07-2025 23:05:40 - INFO in back_of_house: Starting JEMAI back of house loop...
+21-07-2025 23:05:40 - INFO in clipboard: CLIPBOARD: Watcher thread started.
+21-07-2025 23:05:52 - ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\jemai_app\web\routes.py", line 16, in index
+    return render_template("index.html")
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+21-07-2025 23:05:52 - INFO in handler: 192.168.1.238 - - [2025-07-21 23:05:52] "GET / HTTP/1.1" 500 401 0.004445
+21-07-2025 23:05:52 - INFO in handler: 192.168.1.238 - - [2025-07-21 23:05:52] "GET /favicon.ico HTTP/1.1" 200 3078091 0.016453
+21-07-2025 23:05:57 - ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\jemai_app\web\routes.py", line 16, in index
+    return render_template("index.html")
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+21-07-2025 23:05:57 - INFO in handler: 192.168.1.238 - - [2025-07-21 23:05:57] "GET / HTTP/1.1" 500 401 0.002619
+21-07-2025 23:05:57 - INFO in handler: 192.168.1.238 - - [2025-07-21 23:05:57] "GET /favicon.ico HTTP/1.1" 200 3078091 0.008112
+[2025-07-22 05:09:43,894] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 05:09:44,157] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 05:10:06,845] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 05:10:11,523] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 05:10:11,524] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 05:14:37,444] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 05:14:37,597] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 05:14:42,953] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 05:14:47,753] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 05:14:47,753] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 05:14:48,379] INFO in main: =========================================
+[2025-07-22 05:14:48,379] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 05:14:48,379] INFO in main: =========================================
+[2025-07-22 05:14:48,379] INFO in main: Mission Brief loaded.
+[2025-07-22 05:14:48,403] INFO in main: Saved version snapshot: 20250722-051448-jemai_app
+[2025-07-22 05:14:48,404] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 05:14:48,405] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 05:14:48,405] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 05:14:48,407] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 05:20:39,560] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 05:20:39,719] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 05:20:45,231] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 05:20:49,622] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 05:20:49,622] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 05:20:50,206] INFO in main: =========================================
+[2025-07-22 05:20:50,206] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 05:20:50,206] INFO in main: =========================================
+[2025-07-22 05:20:50,206] INFO in main: Mission Brief loaded.
+[2025-07-22 05:20:50,246] INFO in main: Saved version snapshot: 20250722-052050-jemai_app
+[2025-07-22 05:20:50,247] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 05:20:50,247] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 05:20:50,248] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 05:20:50,249] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 05:20:50,255] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 05:20:50,256] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 05:20:56,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:20:56] "GET /socket.io/?EIO=4&transport=polling&t=PWkt7C2 HTTP/1.1" 200 -
+[2025-07-22 05:20:56,071] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:20:56] "POST /socket.io/?EIO=4&transport=polling&t=PWkt7C5&sid=OgdDohs6z44lJeVrAAAA HTTP/1.1" 200 -
+[2025-07-22 05:20:56,073] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:20:56] "GET /socket.io/?EIO=4&transport=polling&t=PWkt7C7&sid=OgdDohs6z44lJeVrAAAA HTTP/1.1" 200 -
+[2025-07-22 05:20:56,077] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:20:56] "GET /socket.io/?EIO=4&transport=polling&t=PWkt7CB&sid=OgdDohs6z44lJeVrAAAA HTTP/1.1" 200 -
+[2025-07-22 05:21:05,485] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:05] "GET / HTTP/1.1" 200 -
+[2025-07-22 05:21:05,490] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:05] "GET /socket.io/?EIO=4&transport=websocket&sid=OgdDohs6z44lJeVrAAAA HTTP/1.1" 200 -
+[2025-07-22 05:21:05,667] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:05] "GET /socket.io/?EIO=4&transport=polling&t=PWkt9Y1 HTTP/1.1" 200 -
+[2025-07-22 05:21:05,687] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:05] "POST /socket.io/?EIO=4&transport=polling&t=PWkt9YL&sid=zdF0f9LGlvZJGB5AAAAC HTTP/1.1" 200 -
+[2025-07-22 05:21:05,690] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:05] "GET /socket.io/?EIO=4&transport=polling&t=PWkt9YL.0&sid=zdF0f9LGlvZJGB5AAAAC HTTP/1.1" 200 -
+[2025-07-22 05:21:05,692] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 05:21:12,075] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:12] "GET / HTTP/1.1" 200 -
+[2025-07-22 05:21:12,080] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:12] "GET /socket.io/?EIO=4&transport=websocket&sid=zdF0f9LGlvZJGB5AAAAC HTTP/1.1" 200 -
+[2025-07-22 05:21:12,122] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:12] "GET /socket.io/?EIO=4&transport=polling&t=PWktB6u HTTP/1.1" 200 -
+[2025-07-22 05:21:12,129] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:12] "POST /socket.io/?EIO=4&transport=polling&t=PWktB6_&sid=2NJQmXwQn3qlMVSWAAAE HTTP/1.1" 200 -
+[2025-07-22 05:21:12,133] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:12] "GET /socket.io/?EIO=4&transport=polling&t=PWktB70&sid=2NJQmXwQn3qlMVSWAAAE HTTP/1.1" 200 -
+[2025-07-22 05:21:12,137] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:21:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 05:27:33,432] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:27:33] "GET / HTTP/1.1" 200 -
+[2025-07-22 05:27:33,436] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:27:33] "GET /socket.io/?EIO=4&transport=websocket&sid=2NJQmXwQn3qlMVSWAAAE HTTP/1.1" 200 -
+[2025-07-22 05:27:33,623] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:27:33] "GET /socket.io/?EIO=4&transport=polling&t=PWkueFr HTTP/1.1" 200 -
+[2025-07-22 05:27:33,640] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:27:33] "POST /socket.io/?EIO=4&transport=polling&t=PWkueG7&sid=0V-BC005C0I1_djTAAAG HTTP/1.1" 200 -
+[2025-07-22 05:27:33,643] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:27:33] "GET /socket.io/?EIO=4&transport=polling&t=PWkueG8&sid=0V-BC005C0I1_djTAAAG HTTP/1.1" 200 -
+[2025-07-22 05:27:33,644] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:27:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 05:28:06,996] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 05:28:07,150] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 05:28:12,665] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 05:28:17,039] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 05:28:17,039] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 05:28:17,642] INFO in main: =========================================
+[2025-07-22 05:28:17,642] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 05:28:17,643] INFO in main: =========================================
+[2025-07-22 05:28:17,643] INFO in main: Mission Brief loaded.
+[2025-07-22 05:28:17,670] INFO in main: Saved version snapshot: 20250722-052817-jemai_app
+[2025-07-22 05:28:17,672] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 05:28:17,672] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 05:28:17,672] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 05:28:17,673] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 05:28:17,679] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 05:28:17,680] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 05:28:19,074] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:28:19] "GET /socket.io/?EIO=4&transport=polling&t=PWkupL_ HTTP/1.1" 200 -
+[2025-07-22 05:28:19,079] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:28:19] "POST /socket.io/?EIO=4&transport=polling&t=PWkupM4&sid=kfuELC9nhNAfc_8mAAAA HTTP/1.1" 200 -
+[2025-07-22 05:28:19,081] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:28:19] "GET /socket.io/?EIO=4&transport=polling&t=PWkupM5&sid=kfuELC9nhNAfc_8mAAAA HTTP/1.1" 200 -
+[2025-07-22 05:28:35,643] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:28:35] "GET / HTTP/1.1" 200 -
+[2025-07-22 05:28:35,647] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:28:35] "GET /socket.io/?EIO=4&transport=websocket&sid=kfuELC9nhNAfc_8mAAAA HTTP/1.1" 200 -
+[2025-07-22 05:28:35,658] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:28:35] "GET /socket.io/?EIO=4&transport=polling&t=PWkutP5 HTTP/1.1" 200 -
+[2025-07-22 05:28:35,689] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:28:35] "POST /socket.io/?EIO=4&transport=polling&t=PWkutPd&sid=IO_3Era8wLRpBftUAAAC HTTP/1.1" 200 -
+[2025-07-22 05:28:35,693] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:28:35] "GET /socket.io/?EIO=4&transport=polling&t=PWkutPd.0&sid=IO_3Era8wLRpBftUAAAC HTTP/1.1" 200 -
+[2025-07-22 05:28:35,701] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:28:35] "GET /static/jemai_chip_icon.png HTTP/1.1" 200 -
+[2025-07-22 05:28:35,743] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:28:35] "GET /static/favicon.ico HTTP/1.1" 200 -
+[2025-07-22 05:37:48,858] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:37:48] "GET / HTTP/1.1" 200 -
+[2025-07-22 05:37:48,863] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:37:48] "GET /socket.io/?EIO=4&transport=websocket&sid=IO_3Era8wLRpBftUAAAC HTTP/1.1" 200 -
+[2025-07-22 05:37:48,871] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:37:48] "GET /static/jemai_chip_icon.png HTTP/1.1" 200 -
+[2025-07-22 05:37:49,061] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:37:49] "GET /socket.io/?EIO=4&transport=polling&t=PWkw-W4 HTTP/1.1" 200 -
+[2025-07-22 05:37:49,080] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:37:49] "POST /socket.io/?EIO=4&transport=polling&t=PWkw-WL&sid=xuM4R5uArl_3bD7jAAAE HTTP/1.1" 200 -
+[2025-07-22 05:37:49,081] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:37:49] "GET /socket.io/?EIO=4&transport=polling&t=PWkw-WM&sid=xuM4R5uArl_3bD7jAAAE HTTP/1.1" 200 -
+[2025-07-22 05:37:49,084] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:37:49] "GET /static/favicon.ico HTTP/1.1" 200 -
+[2025-07-22 05:48:52,652] INFO in main: =========================================
+[2025-07-22 05:48:52,652] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 05:48:52,652] INFO in main: =========================================
+[2025-07-22 05:48:52,652] INFO in main: Mission Brief loaded.
+[2025-07-22 05:48:52,675] INFO in main: Saved version snapshot: 20250722-054852-jemai_app
+[2025-07-22 05:48:52,675] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 05:48:52,676] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 05:48:52,676] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 05:48:52,677] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 05:48:52,691] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 05:48:52,691] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 05:48:56,072] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:48:56] "GET /socket.io/?EIO=4&transport=polling&t=PWkzXM5 HTTP/1.1" 200 -
+[2025-07-22 05:48:56,076] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:48:56] "POST /socket.io/?EIO=4&transport=polling&t=PWkzXM9&sid=KAzZZSIcYy9kBSxsAAAA HTTP/1.1" 200 -
+[2025-07-22 05:48:56,078] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:48:56] "GET /socket.io/?EIO=4&transport=polling&t=PWkzXMA&sid=KAzZZSIcYy9kBSxsAAAA HTTP/1.1" 200 -
+[2025-07-22 05:48:56,082] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:48:56] "GET /socket.io/?EIO=4&transport=polling&t=PWkzXMG&sid=KAzZZSIcYy9kBSxsAAAA HTTP/1.1" 200 -
+[2025-07-22 05:48:57,612] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:48:57] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 05:48:57,617] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:48:57] "GET /socket.io/?EIO=4&transport=websocket&sid=KAzZZSIcYy9kBSxsAAAA HTTP/1.1" 200 -
+[2025-07-22 05:48:57,650] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:48:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 05:49:00,354] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:49:00] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 05:49:00,370] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:49:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 05:49:09,966] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:49:09] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 05:50:26,327] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:50:26] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 05:50:26,346] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:50:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 05:50:30,782] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:50:30] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 05:50:30,802] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:50:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 05:50:38,095] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:50:38] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 05:50:38,111] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:50:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 05:50:40,224] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:50:40] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 05:51:29,287] INFO in main: =========================================
+[2025-07-22 05:51:29,287] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 05:51:29,288] INFO in main: =========================================
+[2025-07-22 05:51:29,288] INFO in main: Mission Brief loaded.
+[2025-07-22 05:51:29,312] INFO in main: Saved version snapshot: 20250722-055129-jemai_app
+[2025-07-22 05:51:29,313] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 05:51:29,314] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 05:51:29,314] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 05:51:29,315] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 05:51:29,329] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 05:51:29,329] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 05:51:34,550] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:51:34] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 05:51:34,571] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 05:51:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 05:52:11,670] INFO in main: =========================================
+[2025-07-22 05:52:11,670] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 05:52:11,670] INFO in main: =========================================
+[2025-07-22 05:52:11,671] INFO in main: Mission Brief loaded.
+[2025-07-22 05:52:11,692] INFO in main: Saved version snapshot: 20250722-055211-jemai_app
+[2025-07-22 05:52:11,693] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 05:52:11,693] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 05:52:11,693] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 05:52:11,695] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 05:52:11,709] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 05:52:11,709] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 05:52:55,597] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 05:52:55] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 05:52:55,768] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 05:52:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 06:01:24,088] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 06:01:24,247] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 06:01:29,948] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 06:01:34,282] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 06:01:34,282] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 06:01:34,898] INFO in main: =========================================
+[2025-07-22 06:01:34,898] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 06:01:34,899] INFO in main: =========================================
+[2025-07-22 06:01:34,899] INFO in main: Mission Brief loaded.
+[2025-07-22 06:01:34,922] INFO in main: Saved version snapshot: 20250722-060134-jemai_app
+[2025-07-22 06:01:34,924] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 06:01:34,924] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 06:01:34,924] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 06:01:34,925] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 06:01:34,933] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 06:01:34,933] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 06:01:39,440] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:39] "GET / HTTP/1.1" 200 -
+[2025-07-22 06:01:39,494] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:39] "GET /static/jemai_chip_icon.png HTTP/1.1" 200 -
+[2025-07-22 06:01:39,651] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:39] "GET /socket.io/?EIO=4&transport=polling&t=PWl0Rn0 HTTP/1.1" 200 -
+[2025-07-22 06:01:39,653] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:39] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:01:39,655] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:39] "GET /api/plugins HTTP/1.1" 200 -
+[2025-07-22 06:01:39,656] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:39] "GET /api/versions HTTP/1.1" 200 -
+[2025-07-22 06:01:39,658] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:39] "GET /api/files HTTP/1.1" 200 -
+[2025-07-22 06:01:39,672] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:39] "POST /socket.io/?EIO=4&transport=polling&t=PWl0RnL&sid=UDU5X0rT_-DrPt-IAAAA HTTP/1.1" 200 -
+[2025-07-22 06:01:39,674] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:39] "GET /socket.io/?EIO=4&transport=polling&t=PWl0RnM&sid=UDU5X0rT_-DrPt-IAAAA HTTP/1.1" 200 -
+[2025-07-22 06:01:39,676] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:39] "GET /static/favicon.ico HTTP/1.1" 200 -
+[2025-07-22 06:01:45,466] ERROR in posthog: Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 06:01:45,815] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-22 06:01:47,652] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:47] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:01:48,294] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-22 06:01:48,311] INFO in ai: LLM: Received response.
+[2025-07-22 06:01:48,312] INFO in voice: VOICE: Speaking 'Hello! How can I assist you today?...'
+[2025-07-22 06:01:48,313] WARNING in voice: edge-tts not found, falling back to pyttsx3.
+[2025-07-22 06:01:48,386] INFO in _code_cache: Imported existing <module 'comtypes.gen' from 'C:\\JEMAI_HUB\\venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+[2025-07-22 06:01:48,386] INFO in _code_cache: Using writeable comtypes cache directory: 'C:\JEMAI_HUB\venv\Lib\site-packages\comtypes\gen'
+[2025-07-22 06:01:56,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:01:56] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:02:04,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:02:04] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:02:12,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:02:12] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:02:20,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:02:20] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:02:28,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:02:28] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:02:36,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:02:36] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:02:44,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:02:44] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:02:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:02:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:03:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:03:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:04:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:04:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:05:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:05:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:06:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:06:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:07:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:07:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:08:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:08:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:09:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:09:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:10:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:10:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:11:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:11:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:12:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:12:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:13:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:13:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:14:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:14:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:15:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:15:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:16:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:16:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:17:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:17:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:18:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:18:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:19:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:19:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:20:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:20:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:21:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:21:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:22:59,069] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:22:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:23:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:23:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:24:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:24:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:25:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:25:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:26:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:26:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:27:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:27:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:28:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:28:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:29:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:29:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:30:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:30:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:31:59,068] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:31:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:32:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:32:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:33:59,067] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:33:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 06:37:47,604] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 06:37:47,775] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 06:37:54,242] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 06:37:58,947] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 06:37:58,948] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 06:39:05,942] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 06:39:06,095] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 06:39:11,568] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 06:39:15,967] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 06:39:15,967] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 06:39:16,563] INFO in main: =========================================
+[2025-07-22 06:39:16,564] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 06:39:16,564] INFO in main: =========================================
+[2025-07-22 06:39:16,564] INFO in main: Mission Brief loaded.
+[2025-07-22 06:39:16,581] INFO in main: Saved version snapshot: 20250722-063916-jemai_app
+[2025-07-22 06:39:16,582] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 06:39:16,583] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 06:39:16,583] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 06:39:16,584] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 06:39:16,593] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 06:39:16,593] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 06:39:16,822] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:39:16] "GET /socket.io/?EIO=4&transport=polling&t=PWl92Pw HTTP/1.1" 200 -
+[2025-07-22 06:39:16,826] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:39:16] "POST /socket.io/?EIO=4&transport=polling&t=PWl92rO&sid=IZUM3Xy9KS3tL-RrAAAA HTTP/1.1" 200 -
+[2025-07-22 06:39:16,830] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:39:16] "GET /socket.io/?EIO=4&transport=polling&t=PWl92rP&sid=IZUM3Xy9KS3tL-RrAAAA HTTP/1.1" 200 -
+[2025-07-22 06:39:59,072] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:39:59] "[33mGET /api/voice/status HTTP/1.1[0m" 404 -
+[2025-07-22 06:40:06,903] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:40:06] "[33mGET /api/voice/status HTTP/1.1[0m" 404 -
+[2025-07-22 06:40:09,969] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:40:09] "GET /socket.io/?EIO=4&transport=websocket&sid=IZUM3Xy9KS3tL-RrAAAA HTTP/1.1" 200 -
+[2025-07-22 06:40:09,974] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:40:09] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 06:40:10,005] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 06:40:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 06:41:12,096] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 06:41:12,253] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 06:41:17,609] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 06:41:33,984] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 06:41:34,140] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 06:41:39,392] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 06:41:44,069] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 06:41:44,069] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 06:41:44,632] INFO in main: =========================================
+[2025-07-22 06:41:44,632] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 06:41:44,632] INFO in main: =========================================
+[2025-07-22 06:41:44,633] INFO in main: Mission Brief loaded.
+[2025-07-22 06:41:44,647] INFO in main: Saved version snapshot: 20250722-064144-jemai_app
+[2025-07-22 06:41:44,648] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 06:41:44,648] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 06:41:44,649] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 06:41:44,649] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 06:41:44,657] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 06:41:44,657] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 07:09:21,664] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 07:09:21] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:09:54,977] ERROR in rag: ChromaDB initialization failed: `np.float_` was removed in the NumPy 2.0 release. Use `np.float64` instead.
+[2025-07-22 07:09:56,054] INFO in main: =========================================
+[2025-07-22 07:09:56,054] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 07:09:56,054] INFO in main: =========================================
+[2025-07-22 07:09:56,055] INFO in main: Mission Brief loaded.
+[2025-07-22 07:09:56,069] INFO in main: Saved version snapshot: 20250722-070956-jemai_app
+[2025-07-22 07:09:56,069] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 07:09:56,070] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 07:09:56,071] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 07:09:56,072] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 07:09:56,086] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 07:09:56,087] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 07:14:47,156] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 07:14:47] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:18:48,192] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:18:48] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:18:48,239] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:18:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 07:18:59,429] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 07:18:59] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:18:59,465] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 07:18:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 07:19:07,756] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:19:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-07-22 07:26:01,927] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 07:26:01] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:26:01,953] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 07:26:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 07:26:04,717] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 07:26:04] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:26:04,734] INFO in _internal: 192.168.1.238 - - [22/Jul/2025 07:26:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 07:26:28,588] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:26:28] "GET /static/favicon.ico HTTP/1.1" 200 -
+[2025-07-22 07:26:28,629] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:26:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 07:26:52,782] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:26:52] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+[2025-07-22 07:27:08,961] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:27:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-07-22 07:27:12,767] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:27:12] "GET /static/favicon.ico HTTP/1.1" 200 -
+[2025-07-22 07:27:12,780] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:27:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-07-22 07:27:12,801] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:27:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 07:27:17,962] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:27:17] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:27:17,978] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:27:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-07-22 07:27:24,342] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:27:24] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:27:24,354] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:27:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-07-22 07:27:24,382] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:27:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 07:28:10,868] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 07:28:11,033] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 07:28:16,701] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 07:28:21,547] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 07:28:21,548] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 07:28:22,201] INFO in main: =========================================
+[2025-07-22 07:28:22,201] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 07:28:22,201] INFO in main: =========================================
+[2025-07-22 07:28:22,202] INFO in main: Mission Brief loaded.
+[2025-07-22 07:28:22,224] INFO in main: Saved version snapshot: 20250722-072822-jemai_app
+[2025-07-22 07:28:22,226] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 07:28:22,226] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 07:28:22,226] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 07:28:22,228] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 07:28:22,235] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 07:28:22,235] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 07:28:39,429] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:28:39] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:28:39,439] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:28:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-07-22 07:28:41,681] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:28:41] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:28:41,690] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:28:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-07-22 07:28:41,716] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:28:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 07:28:50,522] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:28:50] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:28:50,534] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:28:50] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-07-22 07:28:50,559] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:28:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 07:28:52,728] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:28:52] "[33mGET / HTTP/1.1[0m" 404 -
+[2025-07-22 07:28:52,744] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:28:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-07-22 07:28:52,769] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:28:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-22 07:35:39,477] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 07:35:39,630] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 07:35:44,983] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 07:35:49,422] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 07:35:49,422] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 07:35:50,014] INFO in main: =========================================
+[2025-07-22 07:35:50,014] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 07:35:50,015] INFO in main: =========================================
+[2025-07-22 07:35:50,015] INFO in main: Mission Brief loaded.
+[2025-07-22 07:35:50,037] INFO in main: Saved version snapshot: 20250722-073550-jemai_app
+[2025-07-22 07:35:50,038] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 07:35:50,038] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 07:35:50,038] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 07:35:50,039] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 07:35:50,046] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 07:35:50,046] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 07:35:54,114] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "GET / HTTP/1.1" 200 -
+[2025-07-22 07:35:54,128] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "[33mGET /static/jemai_chip_icon.png HTTP/1.1[0m" 404 -
+[2025-07-22 07:35:54,129] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-07-22 07:35:54,462] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:35:54,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "GET /socket.io/?EIO=4&transport=polling&t=PWlM0LR HTTP/1.1" 200 -
+[2025-07-22 07:35:54,465] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "GET /api/plugins HTTP/1.1" 200 -
+[2025-07-22 07:35:54,466] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "GET /api/versions HTTP/1.1" 200 -
+[2025-07-22 07:35:54,469] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "GET /api/files HTTP/1.1" 200 -
+[2025-07-22 07:35:54,489] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "POST /socket.io/?EIO=4&transport=polling&t=PWlM0Lr&sid=Xv06TNwxcskVl4y3AAAA HTTP/1.1" 200 -
+[2025-07-22 07:35:54,492] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "GET /socket.io/?EIO=4&transport=polling&t=PWlM0Ls&sid=Xv06TNwxcskVl4y3AAAA HTTP/1.1" 200 -
+[2025-07-22 07:35:54,497] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "GET /socket.io/?EIO=4&transport=polling&t=PWlM0L-&sid=Xv06TNwxcskVl4y3AAAA HTTP/1.1" 200 -
+[2025-07-22 07:35:54,534] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:35:54] "GET /static/favicon.ico HTTP/1.1" 200 -
+[2025-07-22 07:36:02,464] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:36:02] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:36:10,464] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:36:10] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:36:18,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:36:18] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:36:26,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:36:26] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:36:34,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:36:34] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:36:42,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:36:42] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:36:51,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:36:51] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:36:59,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:36:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:37:07,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:37:07] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:37:15,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:37:15] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:37:23,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:37:23] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:37:31,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:37:31] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:37:39,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:37:39] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:37:46,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:37:46] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:37:54,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:37:54] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:37:54,576] ERROR in posthog: Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 07:37:54,933] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-22 07:37:57,580] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-22 07:37:57,584] INFO in ai: LLM: Received response.
+[2025-07-22 07:37:57,585] INFO in voice: VOICE: Speaking 'Hello! I'm just a program, so I don't ha...'
+[2025-07-22 07:37:57,585] WARNING in voice: edge-tts not found, falling back to pyttsx3.
+[2025-07-22 07:37:57,649] INFO in _code_cache: Imported existing <module 'comtypes.gen' from 'C:\\JEMAI_HUB\\venv\\Lib\\site-packages\\comtypes\\gen\\__init__.py'>
+[2025-07-22 07:37:57,650] INFO in _code_cache: Using writeable comtypes cache directory: 'C:\JEMAI_HUB\venv\Lib\site-packages\comtypes\gen'
+[2025-07-22 07:38:02,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:38:02] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:38:10,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:38:10] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:38:12,447] INFO in ai: LLM: Calling gpt-4o with 4 messages.
+[2025-07-22 07:38:14,337] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-22 07:38:14,339] INFO in ai: LLM: Received response.
+[2025-07-22 07:38:14,340] INFO in voice: VOICE: Speaking 'I don't have the capability to produce s...'
+[2025-07-22 07:38:14,340] WARNING in voice: edge-tts not found, falling back to pyttsx3.
+[2025-07-22 07:38:18,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:38:18] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:38:26,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:38:26] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:38:34,464] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:38:34] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:38:42,464] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:38:42] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:38:50,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:38:50] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:38:58,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:38:58] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:39:06,468] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:39:06] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:39:15,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:39:15] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:39:22,463] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:39:22] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:39:28,278] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:39:28] "GET /api/file/jemai.log HTTP/1.1" 200 -
+[2025-07-22 07:39:35,960] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:39:35] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:39:38,464] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:39:38] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:39:47,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:39:47] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:39:55,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:39:55] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:40:03,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:40:03] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:40:11,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:40:11] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:40:19,069] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 07:40:19] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 07:59:36,232] WARNING in rag: chromadb or sentence-transformers not found. RAG system disabled.
+[2025-07-22 08:19:55,058] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 08:19:55,260] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 08:20:04,745] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 08:20:09,289] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 08:20:09,290] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 08:20:09,910] INFO in main: =========================================
+[2025-07-22 08:20:09,910] INFO in main:  JEMAI AGI OS - Initializing...
+[2025-07-22 08:20:09,910] INFO in main: =========================================
+[2025-07-22 08:20:09,921] INFO in main: Mission Brief loaded.
+[2025-07-22 08:20:09,951] INFO in main: Saved version snapshot: 20250722-082009-jemai_app
+[2025-07-22 08:20:09,953] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 08:20:09,953] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 08:20:09,953] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 08:20:09,954] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 08:20:09,961] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 08:20:09,962] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 08:20:11,069] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:11] "GET /socket.io/?EIO=4&transport=polling&t=PWlW8wv HTTP/1.1" 200 -
+[2025-07-22 08:20:11,073] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:11] "POST /socket.io/?EIO=4&transport=polling&t=PWlW8w_&sid=pjgbdaQvC8Ibf0TIAAAA HTTP/1.1" 200 -
+[2025-07-22 08:20:11,078] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:11] "GET /socket.io/?EIO=4&transport=polling&t=PWlW8x1&sid=pjgbdaQvC8Ibf0TIAAAA HTTP/1.1" 200 -
+[2025-07-22 08:20:19,810] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:19] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:20:22,501] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:22] "GET /socket.io/?EIO=4&transport=websocket&sid=pjgbdaQvC8Ibf0TIAAAA HTTP/1.1" 200 -
+[2025-07-22 08:20:22,510] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:22] "GET / HTTP/1.1" 200 -
+[2025-07-22 08:20:22,523] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:22] "[33mGET /static/jemai_chip_icon.png HTTP/1.1[0m" 404 -
+[2025-07-22 08:20:22,631] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:22] "GET /socket.io/?EIO=4&transport=polling&t=PWlWBla HTTP/1.1" 200 -
+[2025-07-22 08:20:22,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:22] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:20:22,635] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:22] "GET /api/plugins HTTP/1.1" 200 -
+[2025-07-22 08:20:22,636] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:22] "GET /api/versions HTTP/1.1" 200 -
+[2025-07-22 08:20:22,639] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:22] "GET /api/files HTTP/1.1" 200 -
+[2025-07-22 08:20:22,656] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:22] "POST /socket.io/?EIO=4&transport=polling&t=PWlWBlz&sid=a89lMpX6PVJtvCn8AAAC HTTP/1.1" 200 -
+[2025-07-22 08:20:22,659] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:22] "GET /socket.io/?EIO=4&transport=polling&t=PWlWBl-&sid=a89lMpX6PVJtvCn8AAAC HTTP/1.1" 200 -
+[2025-07-22 08:20:22,700] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:22] "GET /static/favicon.ico HTTP/1.1" 200 -
+[2025-07-22 08:20:30,120] ERROR in posthog: Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 08:20:30,473] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-22 08:20:30,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:30] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:20:32,856] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-22 08:20:32,858] INFO in ai: LLM: Received response.
+[2025-07-22 08:20:32,859] INFO in voice: VOICE: Speaking 'Could you provide more context or specif...'
+[2025-07-22 08:20:32,859] WARNING in voice: edge-tts not found, falling back to pyttsx3.
+[2025-07-22 08:20:32,909] INFO in _code_cache: Could not import comtypes.gen, trying to create it.
+[2025-07-22 08:20:32,909] INFO in _code_cache: Created comtypes.gen directory: 'C:\JEMAI_HUB\venv\Lib\site-packages\comtypes\gen'
+[2025-07-22 08:20:32,910] INFO in _code_cache: Writing __init__.py file: 'C:\JEMAI_HUB\venv\Lib\site-packages\comtypes\gen\__init__.py'
+[2025-07-22 08:20:32,920] INFO in _code_cache: Using writeable comtypes cache directory: 'C:\JEMAI_HUB\venv\Lib\site-packages\comtypes\gen'
+[2025-07-22 08:20:32,937] INFO in _generate: Could not import comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4: No module named 'comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4'
+[2025-07-22 08:20:32,940] INFO in _generate: # Generating comtypes.gen._C866CA3A_32F7_11D2_9602_00C04F8EE628_0_5_4
+[2025-07-22 08:20:33,009] INFO in _generate: # Generating comtypes.gen.SpeechLib
+[2025-07-22 08:20:33,017] INFO in _generate: Could not import comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0: No module named 'comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0'
+[2025-07-22 08:20:33,018] INFO in _generate: # Generating comtypes.gen._00020430_0000_0000_C000_000000000046_0_2_0
+[2025-07-22 08:20:33,023] INFO in _generate: # Generating comtypes.gen.stdole
+[2025-07-22 08:20:38,633] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:38] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:20:47,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:47] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:20:55,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:20:55] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:21:03,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:21:03] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:21:11,069] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:21:11] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:21:19,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:21:19] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:21:27,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:21:27] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:21:35,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:21:35] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:21:59,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:21:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:22:59,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:22:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:23:44,116] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:23:44] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:23:50,631] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:23:50] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:23:58,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:23:58] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:24:06,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:24:06] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:24:14,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:24:14] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:24:22,631] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:24:22] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:24:26,683] INFO in ai: LLM: Calling gpt-4o with 2 messages.
+[2025-07-22 08:24:30,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:24:30] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:24:38,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:24:38] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:24:44,978] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-22 08:24:44,979] INFO in ai: LLM: Received response.
+[2025-07-22 08:24:46,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:24:46] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:24:54,633] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:24:54] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:25:02,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:25:02] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:25:10,631] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:25:10] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:25:18,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:25:18] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:25:26,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:25:26] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:25:34,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:25:34] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:25:42,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:25:42] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:25:50,633] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:25:50] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:25:51,086] INFO in ai: LLM: Calling gpt-4o with 5 messages.
+[2025-07-22 08:25:58,633] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:25:58] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:26:04,619] INFO in _client: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-07-22 08:26:04,620] INFO in ai: LLM: Received response.
+[2025-07-22 08:26:04,621] INFO in voice: VOICE: Speaking 'Unfortunately, I can't directly execute ...'
+[2025-07-22 08:26:04,621] WARNING in voice: edge-tts not found, falling back to pyttsx3.
+[2025-07-22 08:26:06,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:26:06] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:26:14,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:26:14] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:26:18,594] INFO in routes: WEB UI: Voice muted.
+[2025-07-22 08:26:18,594] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:26:18] "POST /api/voice/toggle HTTP/1.1" 200 -
+[2025-07-22 08:26:22,631] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:26:22] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:26:30,633] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:26:30] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:26:38,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:26:38] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:26:46,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:26:46] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:26:54,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:26:54] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:27:02,633] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:27:02] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:27:10,633] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:27:10] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:27:18,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:27:18] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:27:26,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:27:26] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:27:34,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:27:34] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:27:42,633] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:27:42] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:27:50,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:27:50] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:27:58,632] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:27:58] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:28:06,633] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:28:06] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:28:14,633] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:28:14] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:28:23,066] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:28:23] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:28:31,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:28:31] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:28:39,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:28:39] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:28:47,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:28:47] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:28:55,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:28:55] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:29:03,066] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:29:03] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:29:11,071] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:29:11] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:29:19,066] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:29:19] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:29:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:29:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:30:59,070] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:30:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:31:59,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:31:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:32:59,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:32:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:33:56,649] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:33:56] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:33:59,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:33:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:34:07,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:34:07] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:34:15,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:34:15] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:34:23,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:34:23] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:34:31,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:34:31] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:34:39,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:34:39] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:34:47,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:34:47] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:34:55,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:34:55] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:35:56,066] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:35:56] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:35:59,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:35:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:36:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:36:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:37:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:37:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:38:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:38:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:39:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:39:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:40:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:40:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:41:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:41:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:42:59,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:42:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:43:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:43:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:44:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:44:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:45:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:45:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:46:59,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:46:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:47:59,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:47:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:48:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:48:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:49:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:49:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:50:59,068] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:50:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:51:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:51:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:52:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:52:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:53:59,066] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:53:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:54:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:54:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:55:59,070] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:55:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:56:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:56:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 08:57:59,067] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 08:57:59] "GET /api/voice/status HTTP/1.1" 200 -
+[2025-07-22 09:31:14,094] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 09:31:14,203] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 09:31:19,349] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 09:31:23,638] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 09:31:23,638] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 09:33:53,280] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 09:33:53,393] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 09:33:58,219] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 09:34:02,604] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 09:34:02,605] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 09:35:23,341] INFO in posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2025-07-22 09:35:23,447] ERROR in posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 09:35:28,281] INFO in SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-22 09:35:32,507] ERROR in posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[2025-07-22 09:35:32,508] INFO in rag: ChromaDB RAG system initialized.
+[2025-07-22 09:35:32,969] INFO in main: Starting JEMAI main loop...
+[2025-07-22 09:35:32,970] INFO in clipboard: CLIPBOARD: Watcher thread started.
+[2025-07-22 09:35:32,970] INFO in run: Starting Mission Control server on http://localhost:8181
+[2025-07-22 09:35:32,970] INFO in run: All background threads started. Starting system tray icon.
+[2025-07-22 09:35:32,971] INFO in back_of_house: BACK OF HOUSE: Monitoring for new directives in C:\JEMAI_HUB\backofhouse
+[2025-07-22 09:35:32,980] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8181
+ * Running on http://192.168.1.238:8181
+[2025-07-22 09:35:32,981] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-07-22 09:35:44,716] ERROR in app: Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\jemai_app\web\routes.py", line 23, in route_main
+    return render_template('index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\JEMAI_HUB\venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+[2025-07-22 09:35:44,720] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 09:35:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2025-07-22 09:35:44,782] INFO in _internal: 127.0.0.1 - - [22/Jul/2025 09:35:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

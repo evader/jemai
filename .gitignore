@@ -1,4 +1,87 @@
-tesseract-main/
-gitignore/
-.env
-jemai_hub/jemai_github.json
+# === Python & JEMAI AGI OS .gitignore ===
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Bytecode
+__pycache__/
+*.py[cod]
+*.so
+
+# Logs, temp, system
+*.log
+*.bak
+*.swp
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Python tooling
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+
+# VS Code & JetBrains
+.vscode/
+.idea/
+
+# AI models & persistent data
+models/
+chroma_db/
+versions/
+cache/
+output/
+*.pt
+*.pth
+*.ckpt
+
+# Node/npm, frontend
+node_modules/
+package-lock.json
+yarn.lock
+
+# Jupyter, notebook, datasets
+.ipynb_checkpoints/
+*.ipynb
+data/
+datasets/
+
+# Git backups & handoff files
+jemai_app_backup_*/
+save as check_status.py
+check_jemai_status.py
+fix_env.py
+fix_python_env.ps1
+jemai.log
+
+# Others you don’t want
+Old/
+*.b64
+*.zip
+*.tar
+*.gz
+
+# Windows
+*.exe
+*.dll
+
+# macOS
+*.icns
+
+# Misc (add as needed)
+*.sqlite3
+*.db
+*.pem
+*.crt
+*.key
+
+# End of

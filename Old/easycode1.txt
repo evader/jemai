@@ -1,0 +1,73 @@
+Codebase
+back_of_house.py
+def on_created(self, event):
+if event.is_directory: return
+logging.info(f"BACK OF HOUSE: New directive detected: {event.src_path}")
+time.sleep(1)
+try:
+with open(event.src_path, 'r', encoding='utf-8') as f:
+directive_content = f.read()
+if directive_content.strip():
+logging.info("BACK OF HOUSE: Sending directive to AI Director.")
+socketio.emit('director_message', {'directive': directive_content})
+shutil.move(event.src_path, PROCESSED_PATH)
+logging.info(f"BACK OF HOUSE: Archived directive file to {PROCESSED_PATH}")
+except Exception as e:
+logging.error(f"BACK OF HOUSE: Error processing directive {event.src_path}: {e}")
+
+
+Refactor this code:
+
+
+avatar
+Ask GPT
+// ... existing code ...
+PROCESSED_PATH = os.path.join(BOH_PATH, "processed")
+
+class DirectiveHandler(FileSystemEventHandler):
+    def on_created(self, event):
+        if event.is_directory:
+            return
+
+        file_path = event.src_path
+        logging.info(f"BACK OF HOUSE: New directive detected: {file_path}")
+
+        # Wait a moment to ensure the file is fully written before processing.
+        time.sleep(1)
+
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                directive_content = f.read()
+
+            if not directive_content.strip():
+                logging.warning(f"BACK OF HOUSE: Directive file {file_path} is empty. Archiving.")
+                return  # The finally block will still execute.
+
+            logging.info("BACK OF HOUSE: Sending directive to AI Director.")
+            socketio.emit('director_message', {'directive': directive_content})
+
+        except IOError as e:
+            logging.error(f"BACK OF HOUSE: Could not read directive file {file_path}: {e}")
+        except Exception as e:
+            logging.error(f"BACK OF HOUSE: Error processing directive {file_path}: {e}")
+        finally:
+            # Always attempt to archive the file to prevent it from being re-processed
+            # or getting stuck in the watch directory.
+            try:
+                shutil.move(file_path, PROCESSED_PATH)
+                logging.info(f"BACK OF HOUSE: Archived directive file to {PROCESSED_PATH}")
+            except FileNotFoundError:
+                logging.warning(
+                    f"BACK OF HOUSE: Directive file {file_path} not found for archiving, "
+                    f"it may have been moved or deleted by another process."
+                )
+            except shutil.Error as e:
+                logging.error(f"BACK OF HOUSE: Failed to archive directive file {file_path}: {e}")
+
+def start_watcher():
+    os.makedirs(BOH_PATH, exist_ok=True)
+// ... existing code ...
+
+Select a file
+jemai_app/core/back_of_house.py
+Apply
